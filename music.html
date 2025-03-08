@@ -27,6 +27,10 @@
 <body>
 
 
+  <audio id="doom">
+    <source src="resources/audio/doom_imp_se04.mp3" type="audio/mpeg">
+  </audio>
+
 
 
     
@@ -99,7 +103,45 @@
 
 
 
+
+
+
+
+
+
+
+
+      <script>
+
+document.body.addEventListener("click", playAudio);
+    
+   
+    
+
+
+
+
+    function playAudio() {
+       
+
+       
+
+        // Remove event listeners after first interaction to prevent multiple triggers
+      
+        document.getElementById('doom').play();
+        console.log("CLICK!");
+
+        
+
+        
+    }
+
+        
+
+
 </script>
-<script src="resources/js/script.js"></script>  
+
+<script src="resources/js/script.js"></script>
+
 </body>
 </html>
