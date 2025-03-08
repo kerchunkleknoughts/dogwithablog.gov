@@ -10,9 +10,12 @@
 
     <style>
 
+
 #footsy{
             color: white;
         }
+
+
 
 
 
@@ -28,6 +31,12 @@ body {
           color: white;
         }
 
+
+
+        #bgmbt{
+          margin-left: 1000px; /* Push content to the right */
+
+        }
 
     #aboutme {
        /*float: right; */
@@ -106,6 +115,13 @@ body {
 
   
 <body>
+
+
+  <audio id="bgm" loop>
+    <source src="resources/audio/Webinar™ - 09 Underwater Disco 4.mp3" type="audio/mpeg">
+</audio>
+<button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+
 
 
 
@@ -414,6 +430,68 @@ body {
       
   
 
+      <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, 1500); // Delay autoplay
+    
+    
+        
+            
+        });
+    
+    
+     
+    
+    
+    
+        document.body.addEventListener("click", playAudio);
+        document.body.addEventListener("mouseover", playAudio);
+    
+    
+    
+    
+        function playAudio() {
+           
+    
+           
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+            }else{
+    
+    
+    
+                //console.log("music disabled :(");
+            }
+    
+    
+    
+    
+        }
+    
+    
+    
+    
+    
+    
+    </script>
+    
+    
 
 </script>
 <script src="resources/js/script.js"></script>  
