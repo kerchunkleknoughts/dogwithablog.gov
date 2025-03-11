@@ -8,10 +8,28 @@ This a general todolist for this website along with possible self imposed deadli
 
 -> fix navigation so more visable
 
+-> dream journal page
+
+-> journal page
+
+-> find more page assets like buttons
+
+-> record newest music and update site
+
+-> photograph newest art.
+
 
 
 -----later/procrastinate-----
 
+-> look into rss feeds
+
+
+
+
+-----not going to happen lets be real-----
+
 -> make site mobile friendly
 
 -> make site friendly for different types of monitors.
+
