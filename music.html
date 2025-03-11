@@ -15,7 +15,71 @@
     height: auto; /* Maintains aspect ratio */
       }
 
+
+
+      
+body {
+          background-image: url('./resources/image/nightmare.webp');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+
+        #centered{
+
+text-align: center;
+
+}
+
+
+
+.container {
+display: grid;
+grid-template-columns: auto ;
+gap: 5px;
+}
+
+.container2 {
+display: grid;
+grid-template-columns: auto auto;
+gap: 5px;
+}
+
+
+
+.item {
+
+
+padding: 5px;
+text-align: center;
+
+}
+
+.item2 {
+
+
+padding: 5px;
+text-align: center;
+
+width: 200px;
+height: auto; /* Maintains aspect ratio */
+
+}
+
+
+
+
+
+
     </style>
+
+
+
+
+
+
 
 
 </head>
@@ -27,93 +91,179 @@
 <body>
 
 
+
+
+
+
   <audio id="doom">
     <source src="resources/audio/doom_imp_se04.mp3" type="audio/mpeg">
   </audio>
 
 
 
+  <div class="container2">
+
+
+    <div class="item">
+    <img src="./resources/images/corpepant.jpg" class="item2"> </img>
+    </div>
+      
+
+    <div class="item">
+    <p>Currently I am interested in playing thrash, black metal and death metal,
+      although I have found playing music pretty fun so I might branch out to other 
+      types of music when I have the money to do so. I'm thinking maybe I'll get into 
+      making synth in the future :&#41;
+   </p>
+   </div>
+
+
+  </div>
+
+
+
+
     
 
-    <div id="indicator">
+    <div class="container">
         
-        <img src="./resources/images/corpepant.jpg" id=indi> </img>
+      
 
+     
+
+
+      <div class="item">
+      <h3>2024</h3>
       </div>
 
 
-      <h3>2024</h3>
+      <div class="item">
 
       <audio id="sms">
         <source src="resources/my_music/metalstormslayer.mp3" type=audio/mpeg>
     </audio>
-    <button onclick="document.getElementById('sms').play()">slayer metal storm cover</button>
+    <button onclick="document.getElementById('sms').play()" class="item">slayer metal storm cover</button>
+
+      </div>
+
+
+      <div class="item">
+
+
+        
+     <h3>2025</h3>
+      </div>
 
 
 
-    <h3>2025</h3>
+      <div class="item">
 
 
       <audio id="cih">
         <source src="resources/my_music/chopped in half final cover.mp3" type="audio/mpeg">
     </audio>
-    <button onclick="document.getElementById('cih').play()">obituary chopped in half cover</button>
+    <button onclick="document.getElementById('cih').play()" class="item">obituary chopped in half cover</button>
 
+      </div>
     
+
+      <div class="item">
+
 
     <audio id="romc">
       <source src="resources/my_music/riffs of my own creation.mp3" type="audio/mpeg">
   </audio>
-  <button onclick="document.getElementById('romc').play()">some riffs I invented idk</button>
+  <button onclick="document.getElementById('romc').play()" class="item">some riffs I invented idk</button>
+
+      </div>
+
+
+      <div class="item">
 
 
     <audio id="rril">
         <source src="resources/my_music/random riffs I've learned.mp3" type=audio/mpeg>
     </audio>
-    <button onclick="document.getElementById('rril').play()">random riffs I've learned</button>
+    <button onclick="document.getElementById('rril').play()" class="item">random riffs I've learned</button>
+
+
+      </div>
 
     <br><br>
+
+
+    <div class="item">
 
     
     <audio id="sop">
       <source src="resources/my_music/slaves of pain guitar progress 2-8-2025.mp3" type=audio/mpeg>
   </audio>
-  <button onclick="document.getElementById('sop').play()">sepultura slaves of pain progress 2-8-2025</button>
+  <button onclick="document.getElementById('sop').play()" class="item">sepultura slaves of pain progress 2-8-2025</button>
+
+    </div>
+
+
+    <div class="item">
 
 
     <audio id="cot">
         <source src="resources/my_music/circle of the tyrants progress.mp3" type=audio/mpeg>
     </audio>
-    <button onclick="document.getElementById('cot').play()">A little bit of circle of the tyrants by Celtic Frost </button>
+    <button onclick="document.getElementById('cot').play()" class="item">A little bit of circle of the tyrants by Celtic Frost </button>
 
 
+    </div>
+
+
+    <div class="item">
 
     <h5>3-11-2025</h5>
 
+    
+    <p>I just put some dr ddt drop tuning strings on my guitar, not sure how I feel about it
+      while it does sound great with Cannibal corpse, some other artists like death sound muddled and
+      soupy. hmmmm. I've got my guitar tuned to drop b, maybe I need to check the tuning? Idk.   
+  </p>
+
+    </div>
+
+
+
+    <div class="item">
 
     <audio id="sopp">
       <source src="resources/my_music/3-11-2025/Current best cover of slaves of pain.mp3" type=audio/mpeg>
   </audio>
-  <button onclick="document.getElementById('sopp').play()">Final cover of slaves of pain sepultura </button>
+  <button onclick="document.getElementById('sopp').play()" class="item">Final cover of slaves of pain sepultura </button>
+
+
+    </div>
+
+    <div class="item">
 
 
   <audio id="ep">
     <source src="resources/my_music/3-11-2025/Eviceration plauge cover progress 3-11-2025.mp3" type=audio/mpeg>
 </audio>
-<button onclick="document.getElementById('ep').play()"> okay cover of evisceration plague  by Cannibal Corpse </button>
+<button onclick="document.getElementById('ep').play()" class="item"> okay cover of evisceration plague  by Cannibal Corpse </button>
+    </div>
+
+    <div class="item">
 
 
 <audio id="ptp">
   <source src="resources/my_music/3-11-2025/pull the plug cover 3-11-2025   2.mp3" type=audio/mpeg>
 </audio>
-<button onclick="document.getElementById('ptp').play()">okay cover of pull the plug by death </button>
+<button onclick="document.getElementById('ptp').play()" class="item">okay cover of pull the plug by death </button>
+
+    </div>
 
 
 
 
     <br><br>
     
-    <footer style="text-align: center;" id="footsy">
+    <footer style="text-align: center;" id="tiem">
       <div>
         <a href="about.html">about</a>
         <a href="index.html">home</a>
@@ -127,7 +277,7 @@
 
     </footer>
 
-
+  </div>
 
 
 
