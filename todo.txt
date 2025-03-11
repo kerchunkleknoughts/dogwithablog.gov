@@ -24,6 +24,7 @@ This a general todolist for this website along with possible self imposed deadli
 
 -> look into rss feeds
 
+-> have name on photo be auto derived from file name -> art page
 
 
 
