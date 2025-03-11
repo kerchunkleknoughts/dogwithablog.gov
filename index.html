@@ -23,6 +23,14 @@
 
 
     
+    
+    <audio id="bgm" loop>
+      <source src="resources/audio/Captain Beefheart - Frownland 4.mp3" type="audio/mpeg">
+  </audio>
+  <button onclick="simplereplace('bgm')">kill music</button>
+  
+  
+  
 
     <form>
 
@@ -94,8 +102,70 @@
 
 
 
+          <script>
 
-    </script>
-    <script src="resources/js/script.js">about</script>  
+            document.addEventListener("DOMContentLoaded", function() {
+                let audio = document.getElementById("bgm");
+                setTimeout(() => {
+                    audio.play().catch(error => console.log("Autoplay blocked:", error));
+                }, 1500); // Delay autoplay
+        
+        
+            
+                
+            });
+        
+        
+         
+        
+        
+        
+            document.body.addEventListener("click", playAudio);
+            document.body.addEventListener("mouseover", playAudio);
+        
+        
+        
+        
+            function playAudio() {
+               
+        
+               
+        
+                // Remove event listeners after first interaction to prevent multiple triggers
+              
+                let musicenabled=1;
+        
+                
+                
+                if(!(document.getElementById("bgm")==null)){
+        
+                document.body.click();
+                //console.log("MOUSED!");
+                let audio = document.getElementById("bgm");
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+        
+                }else{
+        
+        
+        
+                    //console.log("music disabled :(");
+                }
+        
+        
+        
+        
+            }
+        
+        
+        
+        
+        
+        
+        </script>
+        
+        
+        <script src="resources/js/script.js"></script>  
+        
+        
  </body>
 </html>
