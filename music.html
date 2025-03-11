@@ -52,10 +52,23 @@ justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
 
 
+  flex-wrap: wrap;
+
+
 gap: 1px;
 
 
 
+}
+
+.flexbox {
+  display: flex;
+  gap: 10px; /* Space between items   background-color: lightgray; */
+  
+  padding: 20px;
+
+  width: 700px;  /* Fixed width */
+  height: 50px; /* Fixed height */
 }
 
 
@@ -321,8 +334,10 @@ gap: 1px;
 
     
 
+      <div class="flexbox">
 
-    <div class="item">
+
+    <div>
 
     <audio id="sopp">
       <source src="resources/my_music/3-11-2025/Current best cover of slaves of pain.mp3" type=audio/mpeg>
@@ -332,7 +347,7 @@ gap: 1px;
 
     </div>
 
-    <div class="item">
+    <div>
 
 
   <audio id="ep">
@@ -341,7 +356,7 @@ gap: 1px;
 <button onclick="document.getElementById('ep').play()" class="itemmed"> okay cover of evisceration plague  by Cannibal Corpse </button>
     </div>
 
-    <div class="item">
+    <div>
 
 
 
@@ -354,6 +369,7 @@ gap: 1px;
 
 
 
+  </div>
 
     
   
