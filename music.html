@@ -19,11 +19,11 @@
 
       
 body {
-          background-image: url('./resources/image/nightmare.webp');
-          background-repeat: no-repeat;
+         
           background-attachment: fixed;
           background-size: cover;
         }
+
 
 
 
@@ -65,6 +65,39 @@ text-align: center;
 
 width: 200px;
 height: auto; /* Maintains aspect ratio */
+
+}
+
+
+
+
+.itemgood {
+
+
+padding: 5px;
+text-align: center;
+background-color:springgreen;
+
+}
+
+
+.itemmed {
+
+
+padding: 5px;
+text-align: center;
+background-color: orange;
+
+}
+
+
+
+.itembad {
+
+
+padding: 5px;
+text-align: center;
+background-color: palevioletred;
 
 }
 
@@ -142,7 +175,7 @@ height: auto; /* Maintains aspect ratio */
       <audio id="sms">
         <source src="resources/my_music/metalstormslayer.mp3" type=audio/mpeg>
     </audio>
-    <button onclick="document.getElementById('sms').play()" class="item">slayer metal storm cover</button>
+    <button onclick="document.getElementById('sms').play()" class="itemmed">slayer metal storm cover</button>
 
       </div>
 
@@ -162,7 +195,7 @@ height: auto; /* Maintains aspect ratio */
       <audio id="cih">
         <source src="resources/my_music/chopped in half final cover.mp3" type="audio/mpeg">
     </audio>
-    <button onclick="document.getElementById('cih').play()" class="item">obituary chopped in half cover</button>
+    <button onclick="document.getElementById('cih').play()" class="itemgood">obituary chopped in half cover</button>
 
       </div>
     
@@ -173,7 +206,7 @@ height: auto; /* Maintains aspect ratio */
     <audio id="romc">
       <source src="resources/my_music/riffs of my own creation.mp3" type="audio/mpeg">
   </audio>
-  <button onclick="document.getElementById('romc').play()" class="item">some riffs I invented idk</button>
+  <button onclick="document.getElementById('romc').play()" class="itemmed">some riffs I invented idk</button>
 
       </div>
 
@@ -184,7 +217,7 @@ height: auto; /* Maintains aspect ratio */
     <audio id="rril">
         <source src="resources/my_music/random riffs I've learned.mp3" type=audio/mpeg>
     </audio>
-    <button onclick="document.getElementById('rril').play()" class="item">random riffs I've learned</button>
+    <button onclick="document.getElementById('rril').play()" class="itemmed">random riffs I've learned</button>
 
 
       </div>
@@ -198,7 +231,7 @@ height: auto; /* Maintains aspect ratio */
     <audio id="sop">
       <source src="resources/my_music/slaves of pain guitar progress 2-8-2025.mp3" type=audio/mpeg>
   </audio>
-  <button onclick="document.getElementById('sop').play()" class="item">sepultura slaves of pain progress 2-8-2025</button>
+  <button onclick="document.getElementById('sop').play()" class="itembad">sepultura slaves of pain progress 2-8-2025</button>
 
     </div>
 
@@ -209,7 +242,7 @@ height: auto; /* Maintains aspect ratio */
     <audio id="cot">
         <source src="resources/my_music/circle of the tyrants progress.mp3" type=audio/mpeg>
     </audio>
-    <button onclick="document.getElementById('cot').play()" class="item">A little bit of circle of the tyrants by Celtic Frost </button>
+    <button onclick="document.getElementById('cot').play()" class="itemmed">A little bit of circle of the tyrants by Celtic Frost </button>
 
 
     </div>
@@ -234,7 +267,7 @@ height: auto; /* Maintains aspect ratio */
     <audio id="sopp">
       <source src="resources/my_music/3-11-2025/Current best cover of slaves of pain.mp3" type=audio/mpeg>
   </audio>
-  <button onclick="document.getElementById('sopp').play()" class="item">Final cover of slaves of pain sepultura </button>
+  <button onclick="document.getElementById('sopp').play()" class="itemgood">Final cover of slaves of pain sepultura </button>
 
 
     </div>
@@ -245,7 +278,7 @@ height: auto; /* Maintains aspect ratio */
   <audio id="ep">
     <source src="resources/my_music/3-11-2025/Eviceration plauge cover progress 3-11-2025.mp3" type=audio/mpeg>
 </audio>
-<button onclick="document.getElementById('ep').play()" class="item"> okay cover of evisceration plague  by Cannibal Corpse </button>
+<button onclick="document.getElementById('ep').play()" class="itemmed"> okay cover of evisceration plague  by Cannibal Corpse </button>
     </div>
 
     <div class="item">
@@ -254,7 +287,7 @@ height: auto; /* Maintains aspect ratio */
 <audio id="ptp">
   <source src="resources/my_music/3-11-2025/pull the plug cover 3-11-2025   2.mp3" type=audio/mpeg>
 </audio>
-<button onclick="document.getElementById('ptp').play()" class="item">okay cover of pull the plug by death </button>
+<button onclick="document.getElementById('ptp').play()" class="itemmed">okay cover of pull the plug by death </button>
 
     </div>
 
