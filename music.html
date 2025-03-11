@@ -46,8 +46,9 @@ gap: 5px;
 
 .container2 {
 display: grid;
-grid-template-columns: auto auto;
-gap: 5px;
+grid-template-columns: repeat(2, minmax(10px, 1fr));
+gap: 1px;
+
 }
 
 
@@ -71,6 +72,7 @@ width: 200px;
 height: auto; /* Maintains aspect ratio */
 
 }
+
 
 
 
@@ -182,7 +184,7 @@ background-color: rgb(255, 0, 106);
       </div>
 
 
-      <div class="container2">
+      <div class="container">
 
 
       <div class="item">
@@ -284,13 +286,10 @@ background-color: rgb(255, 0, 106);
 
 
 
+    
     <div class="container2">
 
     
-   
-
-    
-
 
 
     <div class="item">
@@ -315,12 +314,14 @@ background-color: rgb(255, 0, 106);
     <div class="item">
 
 
+
 <audio id="ptp">
   <source src="resources/my_music/3-11-2025/pull the plug cover 3-11-2025   2.mp3" type=audio/mpeg>
 </audio>
 <button onclick="document.getElementById('ptp').play()" class="itemmed">okay cover of pull the plug by death </button>
 
     </div>
+
 
     <p>I just put some dr ddt drop tuning strings on my guitar, not sure how I feel about it
       while it does sound great with Cannibal corpse, some other artists like death sound muddled and
