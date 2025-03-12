@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,106 +7,429 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     
+
+    <style>
+
+
+#footsy{
+            color: white;
+        }
+
+
+
+
+
+body {
+          background-image: url('./resources/images/limi.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+        #intro{
+          color: white;
+        }
+
+
+
+        #bgmbt{
+          margin-left: 1000px; /* Push content to the right */
+
+        }
+
+    #aboutme {
+       /*float: right; */
+       color: rgb(14, 4, 4);
+      text-align: justify; 
+      margin-right: 20px
+      
+    }
+
     
-  </head>
-  <body>
-<br>
-<!-- Button trigger modal -->
+    #personality{
+      margin-left: 500px; /* Push content to the right */
+      padding: 50px;
+      color: white;
+     
+      
+    }
+    #interests{
+      margin-left: 500px; /* Push content to the right */
+      padding: 50px;
+      color: white;
+     
+      
+    }
 
 
-    
 
 
+    #indicator {
+  float: left;
+  margin-right: 100px; /* optional spacing */
+}
 
-    <h1>THIS IS A BIG OL WORK IN PROGRESS, BLOG PLANNED, CURRENTLY SHITPOST</h1>
-    <h4>COME BACK LATER AND IT MIGHT BE SOMETHING</h4>
-    <h5>next scheduled maintence: 3-24-2025 maybe idk</h5>
+#indicator2 {
+  float: left;
+  margin-right: 100px; /* optional spacing */
+  width: 200px;
+  height: auto; /* Maintains aspect ratio */
+}
 
 
-    
-    
-    <audio id="bgm" loop>
-      <source src="resources/audio/Captain Beefheart - Frownland 4.mp3" type="audio/mpeg">
-  </audio>
-  <button onclick="simplereplace('bgm')">kill music</button>
+#button {
+  float: left;
+  margin-right: 10px; /* optional spacing */
+  margin-left: 5px; /* optional spacing */
+  width: 25%;
+  height: auto; /* Maintains aspect ratio */
+
   
+
+}
+
+
+
+
+.vl2 {
+            width: 400px; /* Adjust width as needed */
+            height: 100vh; /* Full height */
+            background-color: #64dbe4; /* Sidebar color */
+            color: white;
+            position: fixed;
+            top: 50;
+            left: 0;
+            padding: 20px;
+}
+
+
+    </style>
+
+
+
+</head>
+
+
+
+
   
-  
-
-    <form>
+<body>
 
 
+  <audio id="bgm" loop>
+    <source src="resources/audio/Webinar™ - 09 Underwater Disco 4.mp3" type="audio/mpeg">
+</audio>
+<button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
 
-      <button type=button onclick="logsubmit()">CLICK ME FUCKER!</button>
-      <br>
 
-      <label for="fname"> enter in a good user name pls pls</label>
-      <input type="text" id="fname" name="fname">
-      <p>hehe I bet you cant guess what name I am thinking of</p>
-      <p>hint hint,. it rhymes with jheff</p>
+
+<audio id="postmusicclick">
+  <source src="resources/audio/yummers.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+
+
+
+    <h1>ABOUT MEE</h1>
+
+    <div id="indicator">
+        
+        <img src="./resources/images/squimpt.jpg"> </img>
+
+      </div>
+
+
+
+      
+      <div id="aboutme">
+        <h3>Intro</h3>
+        <p>Hey</p>
+        <p>I am kerchunkle, 23, currently studying electrical, energy and computer engineering (ECEE)</p>
+        <p>Its pretty hard to find friends with antisocial tendencies while studying engineering,
+            so I've made this site to find some online friends! When I was like 14 I wanted to make 
+            a site like this but now that I'm a little more technically proficient I think its a 
+            great time to start.
+        </p>
+
+        <p>I plan on this site being a little reservoir for my art, music, journal entries, uh, dream logs, and ECT!</p>
+        <p>I've never really been a fan of when people post their artwork on non anonymous social media because it really seems
+            like a way to just brag and enflate their own egos instead of sharing something for the love of the craft.
+        </p>
+
+        <p>So my this will be my anonymous, non braggy art repo!</p>
+
+        <hr></hr>
+       
+      </div>
+
+    
+      
+
+
+
+
+
+      <div id="skull">
+        
+        <img src="./resources/images/skull.gif"> </img>
+        <img src="./resources/images/skull.gif"> </img> 
+        <img src="./resources/images/skull.gif"> </img> 
+        <img src="./resources/images/skull.gif"> </img> 
+        <img src="./resources/images/skull.gif"> </img> 
+        <img src="./resources/images/skull.gif"> </img> 
+        <img src="./resources/images/skull.gif"> </img> 
+        <img src="./resources/images/skull.gif"> </img> 
+
+      </div>
+
+
+      <br><br><br>
+
+      
+   
+
+      <div class="vl"></div>
+
 
       <div id="indicator2">
         
-        <img src="./resources/images/fishspin.gif" id=indicator2> </img>
-
-      </div>
-      <br>
-      <p>its jeff.</p>
-    </form>
-
-
-    <h1>I WOULD SUGGEST GOING SOMEWHERE ELSE ON THE WEBSITE THIS PAGE SUCKS FR FR </h1>
-    <br><br><br>
-
-
-      <br><br>
-
-
-
-      <form>
-        <label for="fnafnightsatfasbears"> OR AM I the REAL FORM?? AHAHAHAHHAHA </label>
-          <input id="fnafnightsatfasbears"></input>
-          <button type=button onclick="checkinput1()">clicke clicke</button>
-      </form>
-
-
-
-
-        <form>
-        <label for="namesubmit"> or is it meeee? hmm?
-        </label>
-        <input type=text name="name" id="namesubmit" type="text">
-        <button type="button" onclick="checkinput()"> touch me </button>
-        </form>
-
-
-
-
-      <div id="indicator">
-        
-        <img src="./resources/images/fedalt.jpg"> </img>
+        <img src="./resources/images/Untitled picture.png" id=indicator2> </img>
 
       </div>
 
-      <div id="indicator2">
-        
-        <img src="./resources/images/damn.jpg" id=indicator2> </img>
+
+   
+      
+      
+     
+
+
+
+
+
+
+      <div id="personality">
+
+
+        <h3>personality</h3>
+
+
+        <p> Intj, I have a few trust issues but overall I would say im doing okay </p>
+        <p> I really like complicated systems and doing technical projects in my free time,
+          although college has made me like projects a little less haha. I am also pretty artistic,
+          I initially wanted to go to school for art but then decided otherwise for financial reasons.
+        </p>
+        <p>contrary to the test on the left I am pretty social around the right people, 
+          people in engineering can be pretty shitty sometimes and that rubs off on you a little.
+         
+        </p>
+        <p> hmm maybe I should not use that image....</p>
 
       </div>
 
-      <div id="indicator2">
-        
-        <img src="./resources/images/fishspin.gif" id=indicator2> </img>
 
-      </div>
-      <div id="indicator2">
-        
-        <img src="./resources/images/fishspin.gif" id=indicator2> </img>
 
-      </div>
+
+
+      <div id="button">  
+        <br><br>
+        <img src="./resources/buttons/fuckfb.png" id=button> </img>
+        <img src="./resources/buttons/wii.gif" id=button> </img>
+        <img src="./resources/buttons/acab.gif" id=button> </img>
+        <img src="./resources/buttons/bl.gif" id=button> </img>
+        <img src="./resources/buttons/gotcoronavirus.gif" id=button></img>
+        <img src="./resources/buttons/gutenberg.gif" id=button></img>
+        <img src="./resources/buttons/ia.png" id=button></img>
+        <img src="./resources/buttons/ilikecomputer.png" id=button></img>
+        <img src="./resources/buttons/lsd.png" id=button></img>
+        <img src="./resources/buttons/pensioner.gif" id=button></img>
+        <img src="./resources/buttons/scenequeen_jerma985.png" id=button></img>
+        <img src="./resources/buttons/webdesign.gif" id=button></img>
+        <img src="./resources/buttons/deathgrips.gif" id=button></img>
+        <img src="./resources/buttons/nichijou.webp" id=button></img>
+        <img src="./resources/buttons/rockydive.gif" id=button></img>
+        <img src="./resources/buttons/daftpunk1.webp" id=button></img>
+     
     
 
+      </div>
+      
 
+
+
+
+
+      <div id="interests">
+
+
+        <h3>Interests</h3>
+
+        <p> Heres a littlee listy with my interests :&#41;
+        <br>
+        &#8226; Video games
+        <br>
+        &#8226; Hiking
+        <br>
+        &#8226; Drawing
+        <br>
+        &#8226; Reading
+        <br>
+        &#8226; Guitar
+        <br>
+        &#8226; chess (sometimes)
+        <br>
+        &#8226; manga
+        <br>
+        &#8226; anime
+        <br>
+        &#8226; writing
+        <br>
+        &#8226; journaling
+        <br>
+        &#8226; puzzles, puzzle games
+        <br>
+        &#8226; board games
+        <br>
+        &#8226; running
+        <br>
+        &#8226; weightlifting
+      
+        </p>
+
+    
+
+      </div>
+
+
+      <div id="interests">
+
+
+        <h3>music</h3>
+
+        <p> Heres some of the music I am into
+        <br>
+        &#8226; machine girl
+        <br>
+        &#8226; death grips
+        <br>
+        &#8226; aphex twin
+        <br>
+        &#8226; windowshopping
+        <br>
+        &#8226; mayhem
+        <br>
+        &#8226; death
+        <br>
+        &#8226; sepultura
+        <br>
+        &#8226; pantera 
+        <br>
+        &#8226; slayer
+        <br>
+        &#8226; vaporwave in general
+        <br>
+        &#8226; a tribe called quest
+        <br>
+        &#8226; wutang clan
+        <br>
+        &#8226; dnb/jungle in general
+        <br>
+        &#8226; NIN
+        <br>
+        &#8226; melvins
+        <br>
+        &#8226; acid bath
+        <br>
+        &#8226; eyehategod
+        <br>
+        &#8226; misfits
+        <br>
+        &#8226; nirvanna 
+        <br>
+        &#8226; the cramps
+        <br>
+        &#8226; joy division
+        <br>
+        &#8226; electric wizard
+        <br>
+        &#8226; sleep
+        <br>
+        &#8226; napalm death
+        <br>
+        &#8226; femtanyl
+        <br>
+        &#8226; obituary
+
+        <br>
+        &#8226; candlemass
+        <br>
+        &#8226; vertigoaway
+        <br>
+        &#8226; sewerslvt
+        <br>
+        &#8226; deftones
+        <br>
+        &#8226; duran duran
+        <br>
+        &#8226; morbid angel
+
+        <br>
+        &#8226; carcass
+        <br>
+        &#8226; type o negative
+        <br>
+        &#8226; crystal castles
+        <br>
+        &#8226; talking heads
+        <br>
+        &#8226; clown core
+        <br>
+        &#8226; cortex
+     
+        <br>
+        &#8226; goreshit
+        <br>
+        &#8226; the doors
+        <br>
+        &#8226; king gizzy an the lizzy wizzy
+        <br>
+        &#8226; µ ziq
+        <br>
+        &#8226; dri
+        <br>
+        &#8226; black flag
+
+        <br>
+        &#8226; the garden 
+        <br>
+        &#8226; alice in chains
+        <br>
+        &#8226; ronnie foster
+        <br>
+        &#8226; roy ayers
+        <br>
+        &#8226; kfc murder chicks
+        <br>
+        &#8226; herbie hancock
+        <br>
+        &#8226; ect
+     
+     
+     
+      
+        </p>
+
+    
+
+      </div>
+
+
+
+      
       <footer style="text-align: center;" id="footsy">
         <div>
           <a href="about.html">about</a>
@@ -119,81 +443,94 @@
 
       </footer>
 
+      
+  
 
+      <script>
 
-
-        </div>
-
-        <div id="holden">
-
-          </div>
-
-
-
-          <script>
-
-            document.addEventListener("DOMContentLoaded", function() {
-                let audio = document.getElementById("bgm");
-                setTimeout(() => {
-                    audio.play().catch(error => console.log("Autoplay blocked:", error));
-                }, 1500); // Delay autoplay
-        
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, 1500); // Delay autoplay
+    
+    
         
             
-                
-            });
-        
-        
-         
-        
-        
-        
-            document.body.addEventListener("click", playAudio);
-            document.body.addEventListener("mouseover", playAudio);
-        
-        
-        
-        
-            function playAudio() {
-               
-        
-               
-        
-                // Remove event listeners after first interaction to prevent multiple triggers
+        });
+    
+    
+     
+    
+    
+    
+        document.body.addEventListener("click", playAudio);
+
+        document.body.addEventListener("mouseover", playAudio);
+
+    
+    
+    
+    
+        function playAudio() {
+           
+    
+           
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+
+
+            if (audio.paused == false) {
               
-                let musicenabled=1;
-        
-                
-                
-                if(!(document.getElementById("bgm")==null)){
-        
-                document.body.click();
-                //console.log("MOUSED!");
-                let audio = document.getElementById("bgm");
-                audio.play().catch(error => console.log("Autoplay blocked:", error));
-        
-                }else{
-        
-        
-        
-                    //console.log("music disabled :(");
-                }
-        
-        
-        
-        
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+              
             }
-        
-        
-        
-        
-        
-        
-        </script>
-        
-        
-        <script src="resources/js/script.js"></script>  
-        
-        
- </body>
+
+
+            }else{
+
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+    
+                console.log("post music click");
+
+              
+
+             
+            }
+    
+    
+    
+    
+        }
+    
+    
+    
+    
+    
+    
+    </script>
+    
+    
+
+</script>
+<script src="resources/js/script.js"></script>  
+</body>
 </html>
