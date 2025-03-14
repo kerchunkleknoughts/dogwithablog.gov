@@ -10,6 +10,77 @@
 
     <style>
 
+
+
+      
+.headstyle{
+
+display: flex;
+text-align: center;
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+}
+
+
+
+.parentbox{
+
+display: flex;
+text-align: center;
+
+
+justify-content: space-evenly;
+
+flex-direction: row;
+
+
+}
+
+.fchildtextbox{
+
+  display: flex;
+text-align: center;
+
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+}
+
+
+.childtextbox{
+
+
+text-align: center;
+
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+}
+
+
+
+
+
+
+
       #indi{
         width: 500px;
     height: auto; /* Maintains aspect ratio */
@@ -171,12 +242,37 @@ gap: 1px;
 
 
 
+  <div class="headstyle">
+
+    <header >
+      <div>
+        <a href="about.html">about</a>
+        <a href="index.html">home</a>
+        <a href="contact.html">socials-contact</a>
+        <a href="music.html">music</a>
+        <a href="drawings.html">art</a>
+        <a href="dreamlog.html">dream log</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+      </div>
+
+
+      <audio id="bgm" loop>
+        
+    </audio>
+  
+
+      <audio id="postmusicclick">
+        <source src="resources/audio/doom_imp_se04.mp3" type="audio/mpeg">
+      </audio>
+      
+
+    </header>
+  </div>
 
 
 
-  <audio id="doom">
-    <source src="resources/audio/doom_imp_se04.mp3" type="audio/mpeg">
-  </audio>
+
 
 
 
@@ -391,20 +487,6 @@ gap: 1px;
 </div>
 
 
-     
-<footer style="text-align: center;" id="footsy">
-  <div>
-    <a href="about.html">about</a>
-    <a href="index.html">home</a>
-    <a href="contact.html">socials-contact</a>
-    <a href="music.html">music</a>
-    <a href="drawings.html">art</a>
-    <a href="dreamlog.html">dream log</a>
-    <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
-
-  </div>
-
-</footer>
 
 
 
@@ -412,38 +494,90 @@ gap: 1px;
 
 
 
+<script>
 
-      <script>
-
-document.body.addEventListener("click", playAudio);
-    
-   
-    
-
-
+  document.addEventListener("DOMContentLoaded", function() {
+      let audio = document.getElementById("bgm");
+      setTimeout(() => {
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+      }, 1500); // Delay autoplay
 
 
-    function playAudio() {
-       
-
-       
-
-        // Remove event listeners after first interaction to prevent multiple triggers
+  
       
-        document.getElementById('doom').play();
-        console.log("CLICK!");
+  });
+
+
+
+
+
+
+  document.body.addEventListener("click", playAudio);
+
+  document.body.addEventListener("mouseover", playAudio);
+
+
+
+
+
+  function playAudio() {
+     
+
+     
+
+      // Remove event listeners after first interaction to prevent multiple triggers
+    
+      let musicenabled=1;
+
+      
+      
+      if(!(document.getElementById("bgm")==null)){
+
+      document.body.click();
+      //console.log("MOUSED!");
+      let audio = document.getElementById("bgm");
+      audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+
+      if (audio.paused == false) {
+        
+        document.body.removeEventListener('mouseover', playAudio);
+        console.log("eventlistener removed :(");
+        let audio = document.getElementById("postmusicclick");
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+        
+      }
+
+
+      }else{
+
+        let audio = document.getElementById("postmusicclick");
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+          console.log("post music click");
 
         
 
-        
-    }
+       
+      }
 
-        
+
+
+
+  }
+
+
+
+
 
 
 </script>
 
-<script src="resources/js/script.js"></script>
 
+</script>
+<script src="resources/js/script.js"></script>  
 </body>
 </html>
