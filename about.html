@@ -11,14 +11,21 @@
     <style>
 
 
-#footsy{
-            color: white;
-        }
+.headstyle{
+
+display: flex;
+text-align: center;
+background-color: aliceblue;
+border-style: double;
 
 
-        #footsy{
-            color: white;
-        }
+
+justify-content: center;
+
+
+
+
+}
 
 
 
@@ -122,18 +129,34 @@ body {
 <body>
 
 
-  <audio id="bgm" loop>
-    <source src="resources/audio/Webinar™ - 09 Underwater Disco 4.mp3" type="audio/mpeg">
-</audio>
-<button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+
+  <div class="headstyle">
+
+    <header >
+      <div>
+        <a href="about.html">about</a>
+        <a href="index.html">home</a>
+        <a href="contact.html">socials-contact</a>
+        <a href="music.html">music</a>
+        <a href="drawings.html">art</a>
+        <a href="dreamlog.html">dream log</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+
+        <audio id="bgm" loop>
+          <source src="resources/audio/Webinar™  - 05 URL 湖 4.mp3" type="audio/mpeg">
+      </audio>
+      
+      </div>
 
 
+      <audio id="postmusicclick">
+        <source src="resources/audio/yummers.mp3" type="audio/mpeg">
+      </audio>
+      
 
-
-<audio id="postmusicclick">
-  <source src="resources/audio/yummers.mp3" type="audio/mpeg">
-</audio>
-
+    </header>
+  </div>
 
 
 
@@ -439,22 +462,7 @@ body {
 
 
       
-      <footer style="text-align: center;" id="footsy">
-        <div>
-          <a href="about.html">about</a>
-          <a href="index.html">home</a>
-          <a href="contact.html">socials-contact</a>
-          <a href="music.html">music</a>
-          <a href="drawings.html">art</a>
-          <a href="dreamlog.html">dream log</a>
-          <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
-
-        </div>
-
-      </footer>
-
-      
-  
+ 
 
       <script>
 
