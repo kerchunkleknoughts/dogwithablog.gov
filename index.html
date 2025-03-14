@@ -40,19 +40,35 @@ flex-direction: row;
 
 }
 
+
+
 .buttonbox{
 
 display: flex;
-text-align: center;
 
 
 justify-content: space-evenly;
 
 flex-direction: row;
-flex-wrap: wrap;
+
+
+
 
 
 }
+
+.buttonchild{
+
+ 
+  
+  width: 25%;
+  height: auto; /* Maintains aspect ratio */
+
+
+
+
+}
+
 
 
 
@@ -183,16 +199,6 @@ body {
 
 
 
-#button {
-  float: left;
-  margin-right: 10px; /* optional spacing */
-  margin-left: 5px; /* optional spacing */
-  width: 25%;
-  height: auto; /* Maintains aspect ratio */
-
-  
-
-}
 
 
 
@@ -437,24 +443,27 @@ body {
     
       <div class="buttonbox">  
         <br><br>
-        <img src="./resources/buttons/fuckfb.png" id=button> </img>
-        <img src="./resources/buttons/wii.gif" id=button> </img>
-        <img src="./resources/buttons/acab.gif" id=button> </img>
-        <img src="./resources/buttons/bl.gif" id=button> </img>
-        <img src="./resources/buttons/gotcoronavirus.gif" id=button></img>
-        <img src="./resources/buttons/gutenberg.gif" id=button></img>
-        <img src="./resources/buttons/ia.png" id=button></img>
-        <img src="./resources/buttons/ilikecomputer.png" id=button></img>
-        <img src="./resources/buttons/lsd.png" id=button></img>
-        <img src="./resources/buttons/pensioner.gif" id=button></img>
-        <img src="./resources/buttons/scenequeen_jerma985.png" id=button></img>
-        <img src="./resources/buttons/webdesign.gif" id=button></img>
-        <img src="./resources/buttons/deathgrips.gif" id=button></img>
-        <img src="./resources/buttons/nichijou.webp" id=button></img>
-        <img src="./resources/buttons/rockydive.gif" id=button></img>
-        <img src="./resources/buttons/daftpunk1.webp" id=button></img>
-     
+        <img src="./resources/buttons/fuckfb.png" class="buttonchild"> </img>
+      <img src="./resources/buttons/wii.gif" class="buttonchild"> </img>
+      <img src="./resources/buttons/acab.gif" class="buttonchild"> </img>
+      <img src="./resources/buttons/bl.gif" class="buttonchild"> </img>
+      <img src="./resources/buttons/gotcoronavirus.gif" class="buttonchild"></img>
+      <img src="./resources/buttons/gutenberg.gif" class="buttonchild"></img>
+      <img src="./resources/buttons/ia.png" class="buttonchild"></img>
+      <img src="./resources/buttons/ilikecomputer.png" class="buttonchild"></img>
+      <img src="./resources/buttons/lsd.png" class="buttonchild"></img>
+      <img src="./resources/buttons/pensioner.gif" class="buttonchild"></img>
+      <img src="./resources/buttons/scenequeen_jerma985.png" class="buttonchild"></img>
+      <img src="./resources/buttons/webdesign.gif" class="buttonchild"></img>
+      <img src="./resources/buttons/deathgrips.gif" class="buttonchild"></img>
+      <img src="./resources/buttons/nichijou.webp" class="buttonchild"></img>
+      <img src="./resources/buttons/rockydive.gif" class="buttonchild"></img>
+      <img src="./resources/buttons/daftpunk1.webp" class="buttonchild"></img>
     
+      
+
+
+
         <a href="https://kerchunkleknoughts.github.io/dogwithablog.gov/index">
         <img src="https://kerchunkleknoughts.github.io/dogwithablog.gov/resources/officialsitebutton/button.png" class="button" id=button></img>
           </a>
@@ -468,7 +477,8 @@ body {
 
   
 
-      <div id="interests">
+      <div class="parentbox">
+        <div class="childtextbox">
 
 
         <h3>music</h3>
@@ -587,7 +597,7 @@ body {
         </p>
 
     
-
+        </div>
       </div>
 
 
