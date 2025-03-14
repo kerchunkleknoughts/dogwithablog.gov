@@ -2,107 +2,165 @@
 
 <!doctype html>
 <html lang="en">
+
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     
-<style>
 
-  
+    <style>
 
-#footsy{
-            color: white;
-        }
-
-
+      #indi{
+        width: 500px;
+    height: auto; /* Maintains aspect ratio */
+      }
 
 
 
-body {
-          background-image: url('./resources/images/limi.jpg');
-          background-repeat: no-repeat;
+      
+
+      body {
+          background-image: url('./resources/images/hello.jpg');
+      
           background-attachment: fixed;
           background-size: cover;
         }
 
 
-        #intro{
-          color: white;
-        }
 
 
 
-        #bgmbt{
-          margin-left: 1000px; /* Push content to the right */
+        #centered{
 
-        }
+text-align: center;
 
-    #aboutme {
-       /*float: right; */
-       color: rgb(14, 4, 4);
-      text-align: justify; 
-      margin-right: 20px
-      
-    }
-
-    
-    #personality{
-      margin-left: 500px; /* Push content to the right */
-      padding: 50px;
-      color: white;
-     
-      
-    }
-    #interests{
-      margin-left: 500px; /* Push content to the right */
-      padding: 50px;
-      color: white;
-     
-      
-    }
-
-
-
-
-    #indicator {
-  float: left;
-  margin-right: 100px; /* optional spacing */
-}
-
-#indicator2 {
-  float: left;
-  margin-right: 100px; /* optional spacing */
-  width: 200px;
-  height: auto; /* Maintains aspect ratio */
 }
 
 
-#button {
-  float: left;
-  margin-right: 10px; /* optional spacing */
-  margin-left: 5px; /* optional spacing */
-  width: 25%;
-  height: auto; /* Maintains aspect ratio */
 
+.container {
+display: grid;
+grid-template-columns: auto  ;
+gap: 5px;
+}
+
+
+.container2 {
+display: flex;
+
+justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+
+
+  flex-wrap: wrap;
+
+
+gap: 1px;
+
+
+
+}
+
+.flexbox {
+  display: flex;
+  gap: 10px; /* Space between items   background-color: lightgray; */
   
+  padding: 20px;
+
+  width: 700px;  /* Fixed width */
+  height: 50px; /* Fixed height */
+}
+
+
+
+
+
+.twoitemcontainer{
+
+  display: grid;
+grid-template-columns: auto auto;
+gap: 1px;
 
 }
 
 
 
 
-.vl2 {
-            width: 400px; /* Adjust width as needed */
-            height: 100vh; /* Full height */
-            background-color: #64dbe4; /* Sidebar color */
-            color: white;
-            position: fixed;
-            top: 50;
-            left: 0;
-            padding: 20px;
+.item {
+
+
+padding: 5px;
+text-align: center;
+color: aliceblue;
+
 }
-</style>
+
+.item2 {
+
+
+padding: 5px;
+text-align: center;
+
+width: 300px;
+height: auto; /* Maintains aspect ratio */
+
+}
+
+
+
+
+
+.itemgood {
+
+
+padding: 5px;
+text-align: center;
+background-color:springgreen;
+
+}
+
+
+.itemmed {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 217, 0);
+
+}
+
+
+
+.itembad {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 0, 106);
+
+}
+
+
+.container3 {
+display: grid;
+grid-template-columns: repeat(1, minmax(10px, 1fr));
+gap: 1px;
+
+}
+
+
+
+
+
+    </style>
+
+
+
+
+
 
 
 
@@ -116,13 +174,21 @@ body {
 <body>
 
 
+
+
   <audio id="bgm" loop>
     <source src="resources/audio/Webinar™ - 09 Underwater Disco 4.mp3" type="audio/mpeg">
 </audio>
 <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
 
 
-    
+
+
+<audio id="postmusicclick">
+  <source src="resources/audio/yummers.mp3" type="audio/mpeg">
+</audio>
+
+
 
 
     
@@ -149,6 +215,7 @@ body {
 
 
 
+  
 
       <script>
 
@@ -169,7 +236,9 @@ body {
     
     
         document.body.addEventListener("click", playAudio);
+
         document.body.addEventListener("mouseover", playAudio);
+
     
     
     
@@ -192,11 +261,30 @@ body {
             let audio = document.getElementById("bgm");
             audio.play().catch(error => console.log("Autoplay blocked:", error));
     
+
+
+            if (audio.paused == false) {
+              
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+              
+            }
+
+
             }else{
+
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
     
     
-    
-                //console.log("music disabled :(");
+                console.log("post music click");
+
+              
+
+             
             }
     
     
