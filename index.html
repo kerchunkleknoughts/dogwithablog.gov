@@ -40,6 +40,35 @@ flex-direction: row;
 
 }
 
+
+.cenparentbox{
+  display: flex;
+text-align: center;
+
+
+justify-content: center;
+
+flex-direction: row;
+
+
+}
+
+
+.sbparentbox{
+  display: flex;
+text-align: center;
+
+
+justify-content: space-between;
+
+flex-direction: row;
+
+
+}
+
+
+
+
 .fchildtextbox{
 
   display: flex;
@@ -69,10 +98,20 @@ justify-content: center;
 
 flex-direction: row;
 
+width: 500px;
+
 
 
 }
 
+
+.indicator2 {
+ 
+ display: flex;
+ width: 200px;
+ height: auto; /* Maintains aspect ratio */
+
+}
 
 
 
@@ -127,12 +166,6 @@ body {
   margin-right: 100px; /* optional spacing */
 }
 
-#indicator2 {
-  float: left;
-  margin-right: 100px; /* optional spacing */
-  width: 200px;
-  height: auto; /* Maintains aspect ratio */
-}
 
 
 #button {
@@ -285,33 +318,26 @@ body {
       
    
 
-      <div class="vl"></div>
 
 
 
-
-</div class="parentbox">
+<div class="sbparentbox">
 
 
       <div>
         
-        <img src="./resources/images/Untitled picture.png"> </img>
+        <img src="./resources/images/Untitled picture.png" > </img>
 
       </div>
-
-
-   
-      
-
 
       <div class="childtextbox">
 
 
         <h3>personality</h3>
-
-
+    
+    
         <p> Intj, I have a few trust issues but overall I would say im doing okay </p>
-
+    
         <p> I really like complicated systems and doing technical projects in my free time, <br>
           although college has made me like projects a little less haha. I am also pretty artistic, <br>
           I initially wanted to go to school for art but then decided otherwise for financial reasons. <br>
@@ -321,19 +347,33 @@ body {
          
         </p>
         <p> hmm maybe I should not use that image....</p>
-
+    
       </div>
+    
+
+
+  </div>
 
 
 
+  
 
-    </div>
+
 
 
 
     <br><br><br><br><br><br><br><br>
 
 
+
+
+
+
+
+
+
+
+    
       <div id="button">  
         <br><br>
         <img src="./resources/buttons/fuckfb.png" id=button> </img>
