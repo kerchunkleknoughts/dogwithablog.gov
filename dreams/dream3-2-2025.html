@@ -14,8 +14,24 @@
     <style>
 
 
+      .headstyle{
+
+        display: flex;
+        text-align: center;
+        background-color: aliceblue;
+        border-style: double;
+
+       
+ 
+  justify-content: center;
 
 
+  
+
+      }
+
+
+      
 
       #indi{
         width: 500px;
@@ -27,7 +43,7 @@
       
 
       body {
-          background-image: url('./resources/dreamsources/blandassrussiahellscape.jpg');
+          background-image: url('../resources/dreamsources/blandassrussiahellscape.jpg');
       
           background-attachment: fixed;
           background-size: cover;
@@ -189,19 +205,38 @@ gap: 1px;
 <body>
 
 
+  <div class="headstyle">
+
+    <header >
+      <div>
+        <a href="about.html">about</a>
+        <a href="index.html">home</a>
+        <a href="contact.html">socials-contact</a>
+        <a href="music.html">music</a>
+        <a href="drawings.html">art</a>
+        <a href="dreamlog.html">dream log</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
 
 
-  <audio id="bgm" loop>
-    <source src="resources/audio/Webinar™ - 09 Underwater Disco 4.mp3" type="audio/mpeg">
-</audio>
-<button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+        <audio id="bgm" loop>
+          <source src="../resource/audio/BORDERLINE CASE 4.mp3" type="audio/mpeg">
+      </audio>
+      <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+      </div>
+
+
+      <audio id="postmusicclick">
+        <source src="../resource/audio/button9.wav" type="audio/mpeg">
+      </audio>
+      
+
+    </header>
+  </div>
 
 
 
 
-<audio id="postmusicclick">
-  <source src="resources/audio/yummers.mp3" type="audio/mpeg">
-</audio>
+
 
 
 
@@ -258,21 +293,7 @@ I kept trying to look for an exit, I remember going down a slide thinking it wou
 
 
 
-
-      <footer style="text-align: center;" id="footsy">
-        <div>
-          <a href="about.html">about</a>
-          <a href="index.html">home</a>
-          <a href="contact.html">socials-contact</a>
-          <a href="music.html">music</a>
-          <a href="drawings.html">art</a>
-          <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
-
-        </div>
-
-      </footer>
-
-
+ 
 
   
 
@@ -361,6 +382,6 @@ I kept trying to look for an exit, I remember going down a slide thinking it wou
     
 
 </script>
-<script src="resources/js/script.js"></script>  
+<script src="../resource/js/script.js"></script>  
 </body>
 </html>
