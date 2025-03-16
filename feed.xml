@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-  <title>Kerchunkle funtime mega adventure blast!</title>
+  <title>Kerchunkles place</title>
   <description>Its a blog.</description>
   <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/index.html</link>
   <lastBuildDate>
@@ -11,7 +11,7 @@
 
 
   <!-- To generate timestamps under pubdate : https://timestampgenerator.com/1742077903/+00:00 -->
-
+  <!-- quick rss refresher: https://caffeineandlasers.neocities.org/blogs/rss -->
 
   <item>
     <title>dream3-2-2025</title>
