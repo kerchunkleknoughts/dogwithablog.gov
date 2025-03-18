@@ -144,17 +144,6 @@ function generateheader(){
         <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
       </div>
 
-
-      <audio id="bgm" loop>
-        <source src="resources/audio/Hylics 2 OST   Prevailing Westerlies 4.mp3" type="audio/mpeg">
-    </audio>
-  
-
-      <audio id="postmusicclick">
-        <source src="resources/audio/yummers.mp3" type="audio/mpeg">
-      </audio>
-      
-
     </header>
   </div>`
   ;

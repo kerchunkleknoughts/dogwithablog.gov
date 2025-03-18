@@ -69,39 +69,21 @@ justify-content: center;
 
 
 
-  <div class="headstyle">
-
-    <header >
-      <div>
-        <a href="about.html">about</a>
-        <a href="index.html">home</a>
-        <a href="contact.html">socials-contact</a>
-        <a href="music.html">music</a>
-        <a href="drawings.html">art</a>
-        <a href="dreamlog.html">dream log</a>
-        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+  <div id="headerholder">
+    <p>test</p>
+</div>
 
 
-        <audio id="bgm" loop>
-          <source src="resources/audio/aride.mp3" type="audio/mpeg">
-      </audio>
-      <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
-      </div>
+<br>
+
+  <audio id="bgm" loop>
+    <source src="resources/audio/aride.mp3" type="audio/mpeg">
+</audio>
 
 
-      <audio id="postmusicclick">
-        <source src="resources/audio/Half life 2 Fast Zombie screaming (Remastered) 4.mp3" type="audio/mpeg">
-      </audio>
-      
-
-    </header>
-  </div>
-  <br>
-  <br>
-
-
-
-
+<audio id="postmusicclick">
+  <source src="resources/audio/Half life 2 Fast Zombie screaming (Remastered) 4.mp3" type="audio/mpeg">
+</audio>
  
     
     
@@ -174,7 +156,11 @@ justify-content: center;
 
   
 
-      <script>
+   
+
+<script src="https://iframe.chat/scripts/main.min.js"></script>
+<script src="resources/js/script.js"></script>  
+<script>
 
         document.addEventListener("DOMContentLoaded", function() {
             let audio = document.getElementById("bgm");
@@ -186,24 +172,12 @@ justify-content: center;
         
             
         });
-    
-    
-     
-    
-    
-    
         document.body.addEventListener("click", playAudio);
-
         document.body.addEventListener("mouseover", playAudio);
-
-    
-    
-    
-    
         function playAudio() {
-           
+          
     
-           
+          
     
             // Remove event listeners after first interaction to prevent multiple triggers
           
@@ -223,7 +197,6 @@ justify-content: center;
             if (audio.paused == false) {
               
               document.body.removeEventListener('mouseover', playAudio);
-
               console.log("eventlistener removed :(");
               let audio = document.getElementById("postmusicclick");
               audio.play().catch(error => console.log("Autoplay blocked:", error));
@@ -242,7 +215,7 @@ justify-content: center;
 
               
 
-             
+            
             }
     
     
@@ -250,16 +223,12 @@ justify-content: center;
     
         }
     
-    
-    
-    
-    
-    
-    </script>
-    
-    
 
+        chattable.initialize({
+        theme : "Tendo"
+      });
+
+      generateheader();
 </script>
-<script src="resources/js/script.js"></script>  
 </body>
 </html>
