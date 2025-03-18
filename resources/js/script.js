@@ -139,6 +139,7 @@ function generateheader(){
         <a href="contact.html">socials-contact</a>
         <a href="music.html">music</a>
         <a href="drawings.html">art</a>
+        <a href="journal.html">journal</a>
         <a href="dreamlog.html">dream log</a>
         <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
         <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
@@ -178,6 +179,7 @@ function generatedreamheader(){
         <a href="../contact.html">socials-contact</a>
         <a href="../music.html">music</a>
         <a href="../drawings.html">art</a>
+        <a href="journal.html">journal</a>
         <a href="../dreamlog.html">dream log</a>
         <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
         <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
