@@ -117,8 +117,7 @@ function gotoprevindex(dreamindex) {
 
 
 
-
-
+//--------------------------------------------------TEMPLATED ITEMS!!!!!
 
 function generateheader(){
 

@@ -304,12 +304,9 @@ body {
 
 
     
-    <div id="headerholder">
-        <p>test</p>
-    </div>
-    
+   
 
-    
+
 
 
 
@@ -389,7 +386,9 @@ body {
 
 
 
- 
+
+<script src="https://iframe.chat/scripts/main.min.js"></script>
+<script src="resources/js/script.js"></script>  
 <script>
 
         document.addEventListener("DOMContentLoaded", function() {
@@ -402,20 +401,8 @@ body {
         
             
         });
-    
-    
-     
-    
-    
-    
         document.body.addEventListener("click", playAudio);
-
         document.body.addEventListener("mouseover", playAudio);
-
-    
-    
-    
-    
         function playAudio() {
            
     
@@ -465,29 +452,17 @@ body {
     
         }
     
-    
-    
-    
-    
-    
-    </script>
-    
-    <script src="https://iframe.chat/scripts/main.min.js"></script>
 
-
-    <script>
-      chattable.initialize({
+        chattable.initialize({
         theme : "Tendo"
       });
-    </script>
+
+      generateheader();
+</script>
     
-</script>
-<script src="resources/js/script.js"></script>  
 
 
-<script>
-    generateheader();
-</script>
+
 
 </body>
 </html>
