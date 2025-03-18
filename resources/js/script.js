@@ -88,6 +88,8 @@ function checkinput1(){
 
 }
 
+
+
 function simplereplace(passedid){
 
     var ussrinput=document.getElementById(passedid);
@@ -95,6 +97,8 @@ function simplereplace(passedid){
     ussrinput.remove();
 
 }
+
+
 
 
 function gotonextindex(dreamindex) {
@@ -108,5 +112,59 @@ function gotoprevindex(dreamindex) {
 
     var urls = ["dream3-2-2025.html", "dream2-31-2025.html", "dream2-28-2025.html", "dream2-3-2025.html", "dream16-29-2023.html", "dream05.html"];
     window.location.href = urls[dreamindex-1];
+
+}
+
+
+
+
+
+
+function generateheader(){
+
+    var correctform=document.getElementById("headerholder");
+    //console.log(correctform.value);
+
+    let fucky=document.createElement('div');
+
+    fucky.innerHTML=
+
+
+    `
+  <div class="headstyle">
+
+    <header >
+      <div>
+        <a href="about.html">about</a>
+        <a href="index.html">home</a>
+        <a href="contact.html">socials-contact</a>
+        <a href="music.html">music</a>
+        <a href="drawings.html">art</a>
+        <a href="dreamlog.html">dream log</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+      </div>
+
+
+      <audio id="bgm" loop>
+        <source src="resources/audio/Hylics 2 OST   Prevailing Westerlies 4.mp3" type="audio/mpeg">
+    </audio>
+  
+
+      <audio id="postmusicclick">
+        <source src="resources/audio/yummers.mp3" type="audio/mpeg">
+      </audio>
+      
+
+    </header>
+  </div>`
+  ;
+
+    
+    correctform.replaceWith(fucky);
+
+
+    
+
 
 }
