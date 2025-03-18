@@ -204,37 +204,21 @@ gap: 1px;
 
 <body>
 
-
-  <div class="headstyle">
-
-    <header >
-      <div>
-        <a href="../about.html">about</a>
-        <a href="../index.html">home</a>
-        <a href="../contact.html">socials-contact</a>
-        <a href="../music.html">music</a>
-        <a href="../drawings.html">art</a>
-        <a href="../dreamlog.html">dream log</a>
-        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
-
-
-        <audio id="bgm" loop>
-          <source src="../resources/audio/Separation Anxiety - Neon Genesis Evangelion 4.mp3" type="audio/mpeg">
-      </audio>
-      <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
-      </div>
-
-
-      <audio id="postmusicclick">
-        <source src="../resources/audio/button9.wav" type="audio/mpeg">
-      </audio>
-      
-
-    </header>
-  </div>
+  <div id="headerholder">
+    <p>test</p>
+</div>
 
 
 
+  <audio id="bgm" loop>
+    <source src="../resources/audio/Separation Anxiety - Neon Genesis Evangelion 4.mp3" type="audio/mpeg">
+</audio>
+
+
+  <audio id="postmusicclick">
+    <source src="../resources/audio/button9.wav" type="audio/mpeg">
+  </audio>
+  
 
  
 
@@ -312,94 +296,77 @@ I screamed at him NO YOU ARE NOT THE PILOT STOP, but it was too late, we took of
 
 
  
-
-  
-
-      <script>
-
-        document.addEventListener("DOMContentLoaded", function() {
-            let audio = document.getElementById("bgm");
-            setTimeout(() => {
-                audio.play().catch(error => console.log("Autoplay blocked:", error));
-            }, 1500); // Delay autoplay
-    
-    
-        
-            
-        });
-    
-    
-     
-    
-    
-    
-        document.body.addEventListener("click", playAudio);
-
-        document.body.addEventListener("mouseover", playAudio);
-
-    
-    
-    
-    
-        function playAudio() {
+   <script src="https://iframe.chat/scripts/main.min.js"></script>
+   <script src="../resources/js/script.js"></script>  
+   <script>
+   
+           document.addEventListener("DOMContentLoaded", function() {
+               let audio = document.getElementById("bgm");
+               setTimeout(() => {
+                   audio.play().catch(error => console.log("Autoplay blocked:", error));
+               }, 1500); // Delay autoplay
+       
+       
            
-    
-           
-    
-            // Remove event listeners after first interaction to prevent multiple triggers
-          
-            let musicenabled=1;
-    
-            
-            
-            if(!(document.getElementById("bgm")==null)){
-    
-            document.body.click();
-            //console.log("MOUSED!");
-            let audio = document.getElementById("bgm");
-            audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
-
-
-            if (audio.paused == false) {
+               
+           });
+           document.body.addEventListener("click", playAudio);
+           document.body.addEventListener("mouseover", playAudio);
+           function playAudio() {
               
-              document.body.removeEventListener('mouseover', playAudio);
-              console.log("eventlistener removed :(");
-              let audio = document.getElementById("postmusicclick");
-              audio.play().catch(error => console.log("Autoplay blocked:", error));
-
+       
               
-            }
-
-
-            }else{
-
-              let audio = document.getElementById("postmusicclick");
-              audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
-    
-                console.log("post music click");
-
-              
-
+       
+               // Remove event listeners after first interaction to prevent multiple triggers
              
-            }
-    
-    
-    
-    
-        }
-    
-    
-    
-    
-    
-    
-    </script>
-    
-    
-
-</script>
-<script src="../resources/js/script.js"></script>  
+               let musicenabled=1;
+       
+               
+               
+               if(!(document.getElementById("bgm")==null)){
+       
+               document.body.click();
+               //console.log("MOUSED!");
+               let audio = document.getElementById("bgm");
+               audio.play().catch(error => console.log("Autoplay blocked:", error));
+       
+   
+   
+               if (audio.paused == false) {
+                 
+                 document.body.removeEventListener('mouseover', playAudio);
+                 console.log("eventlistener removed :(");
+                 let audio = document.getElementById("postmusicclick");
+                 audio.play().catch(error => console.log("Autoplay blocked:", error));
+   
+                 
+               }
+   
+   
+               }else{
+   
+                 let audio = document.getElementById("postmusicclick");
+                 audio.play().catch(error => console.log("Autoplay blocked:", error));
+       
+       
+                   console.log("post music click");
+   
+                 
+   
+                
+               }
+       
+       
+       
+       
+           }
+       
+   
+           chattable.initialize({
+           theme : "Tendo"
+         });
+   
+         generatedreamheader();
+   </script>
 </body>
 </html>
