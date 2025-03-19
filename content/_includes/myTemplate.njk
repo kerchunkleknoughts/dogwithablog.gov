@@ -13,7 +13,16 @@
   <body class="{{ bodyClass }}">
     <header>Header</header>
     <main>
+
+      <p class="{{newvar}}"> test</p>
+
       {{ content | safe }}
+
+
+      {% include "part.njk" %}
+      {% include "../partb.njk" %}
+    
+
     </main>
     <footer>Footer</footer>
   </body>
