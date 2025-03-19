@@ -22,7 +22,9 @@
       {% include "part.njk" %}
       {% include "../partb.njk" %}
 
-      <h1>{{ changelog.title }}</h1>
+      <h1>{{ site.title }}</h1>
+
+      <pre>{{ site | dump }}</pre>
     
 
     </main>
