@@ -1,0 +1,556 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+
+    <style>
+
+
+
+      
+.headstyle{
+
+display: flex;
+text-align: center;
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+}
+
+
+
+.parentbox{
+
+display: flex;
+text-align: center;
+
+
+justify-content: space-evenly;
+
+flex-direction: row;
+
+
+}
+
+.fchildtextbox{
+
+  display: flex;
+text-align: center;
+
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+}
+
+
+.childtextbox{
+
+
+text-align: center;
+
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+}
+
+
+
+
+
+
+
+      #indi{
+        width: 500px;
+    height: auto; /* Maintains aspect ratio */
+      }
+
+
+
+      
+
+      body {
+          background-image: url('./resources/images/hello.jpg');
+      
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+
+
+
+        #centered{
+
+text-align: center;
+
+}
+
+
+
+.container {
+display: grid;
+grid-template-columns: auto  ;
+gap: 5px;
+}
+
+
+.container2 {
+display: flex;
+
+justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+
+
+  flex-wrap: wrap;
+
+
+gap: 1px;
+
+
+
+}
+
+.flexbox {
+  display: flex;
+  gap: 10px; /* Space between items   background-color: lightgray; */
+  
+  padding: 20px;
+
+  width: 700px;  /* Fixed width */
+  height: 50px; /* Fixed height */
+}
+
+
+
+
+
+.twoitemcontainer{
+
+  display: grid;
+grid-template-columns: auto auto;
+gap: 1px;
+
+}
+
+
+
+
+.item {
+
+
+padding: 5px;
+text-align: center;
+color: aliceblue;
+
+}
+
+.item2 {
+
+
+padding: 5px;
+text-align: center;
+
+width: 300px;
+height: auto; /* Maintains aspect ratio */
+
+}
+
+
+
+
+
+.itemgood {
+
+
+padding: 5px;
+text-align: center;
+background-color:springgreen;
+
+}
+
+
+.itemmed {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 217, 0);
+
+}
+
+
+
+.itembad {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 0, 106);
+
+}
+
+
+.container3 {
+display: grid;
+grid-template-columns: repeat(1, minmax(10px, 1fr));
+gap: 1px;
+
+}
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+  
+<body>
+
+
+
+
+
+  <div id="headerholder">
+    <p>test</p>
+</div>
+
+
+
+<audio id="bgm" loop>
+  <source src="" type="audio/mpeg">
+</audio>
+
+
+  <audio id="postmusicclick">
+    <source src="resources/audio/doom_imp_se04.mp3" type="audio/mpeg">
+  </audio>
+  
+
+
+
+
+
+
+  <div class="twoitemcontainer">
+
+
+    <div class="item">
+    <img src="./resources/images/corpepant.jpg" class="item2"> </img>
+    </div>
+      
+
+    <div class="item">
+    <p>Currently I am interested in playing thrash, black metal and death metal,<br>
+      although I have found playing music pretty fun so I might branch out to other <br>
+      types of music when I have the money to do so. I'm thinking maybe I'll get into <br>
+      making synth in the future :&#41;
+
+      <p>Currently the buttons are colored based on how good of a cover I think I did<br>
+        with green being the best, yellow so so and red being abysmal dogshit.<br>
+     </p>
+   </p>
+   </div>
+
+
+
+ 
+
+
+  </div>
+
+
+
+
+    
+
+  
+        
+      
+
+     
+
+      <br><br>
+      <div class="item">
+      <h2>2024</h2>
+      </div>
+
+
+      
+      <div class="container">
+
+
+      <div class="item">
+
+      <audio id="sms">
+        <source src="resources/my_music/metalstormslayer.mp3" type=audio/mpeg>
+    </audio>
+    <button onclick="document.getElementById('sms').play()" class="itemmed">slayer metal storm cover</button>
+
+      </div>
+
+
+      </div>
+
+
+
+
+      <br><br>
+      <div class="item">
+
+     <h2>2025</h2>
+      </div>
+
+
+
+
+
+      <div class="container2">
+
+      <div class="item">
+
+
+      <audio id="cih">
+        <source src="resources/my_music/chopped in half final cover.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="document.getElementById('cih').play()" class="itemgood">obituary chopped in half cover</button>
+
+      </div>
+    
+
+      <div class="item">
+
+
+    <audio id="romc">
+      <source src="resources/my_music/riffs of my own creation.mp3" type="audio/mpeg">
+  </audio>
+  <button onclick="document.getElementById('romc').play()" class="itemmed">some riffs I invented idk</button>
+
+      </div>
+
+
+      <div class="item">
+
+
+    <audio id="rril">
+        <source src="resources/my_music/random riffs I've learned.mp3" type=audio/mpeg>
+    </audio>
+    <button onclick="document.getElementById('rril').play()" class="itemmed">random riffs I've learned</button>
+
+
+      </div>
+
+    <br><br>
+
+
+    <div class="item">
+
+    
+    <audio id="sop">
+      <source src="resources/my_music/slaves of pain guitar progress 2-8-2025.mp3" type=audio/mpeg>
+  </audio>
+  <button onclick="document.getElementById('sop').play()" class="itembad">sepultura slaves of pain progress 2-8-2025</button>
+
+    </div>
+
+
+    <div class="item">
+
+
+    <audio id="cot">
+        <source src="resources/my_music/circle of the tyrants progress.mp3" type=audio/mpeg>
+    </audio>
+    <button onclick="document.getElementById('cot').play()" class="itemmed">A little bit of circle of the tyrants by Celtic Frost </button>
+
+
+    </div>
+
+    
+    </div>  
+
+
+
+
+    <br><br>
+    <div class="item">
+
+    <h3>3-11-2025</h3>
+
+    </div>
+
+
+
+    
+    <div class="container2">
+
+    
+
+      <div class="flexbox">
+
+
+    <div>
+
+    <audio id="sopp">
+      <source src="resources/my_music/3-11-2025/Current best cover of slaves of pain.mp3" type=audio/mpeg>
+  </audio>
+  <button onclick="document.getElementById('sopp').play()" class="itemgood">Final cover of slaves of pain sepultura </button>
+
+
+    </div>
+
+    <div>
+
+
+  <audio id="ep">
+    <source src="resources/my_music/3-11-2025/Eviceration plauge cover progress 3-11-2025.mp3" type=audio/mpeg>
+</audio>
+<button onclick="document.getElementById('ep').play()" class="itemmed"> okay cover of evisceration plague  by Cannibal Corpse </button>
+    </div>
+
+    <div>
+
+
+
+<audio id="ptp">
+  <source src="resources/my_music/3-11-2025/pull the plug cover 3-11-2025   2.mp3" type=audio/mpeg>
+</audio>
+<button onclick="document.getElementById('ptp').play()" class="itemmed">okay cover of pull the plug by death </button>
+
+    </div>
+
+
+
+  </div>
+
+    
+  
+
+
+    <br><br>
+
+  </div>
+  
+
+<div class="container3">
+  <div class="item">
+    <p>I just put some dr ddt drop tuning strings on my guitar, not sure how I feel about it<br>
+      while it does sound great with Cannibal corpse, some other artists like death sound muddled and<br>
+      soupy. hmmmm. I've got my guitar tuned to drop b, maybe I need to check the tuning? Idk.   <br>
+  </p>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="https://iframe.chat/scripts/main.min.js"></script>
+<script src="resources/js/script.js"></script>  
+<script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, 1500); // Delay autoplay
+    
+    
+        
+            
+        });
+        document.body.addEventListener("click", playAudio);
+        document.body.addEventListener("mouseover", playAudio);
+        function playAudio() {
+           
+    
+           
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+
+
+            if (audio.paused == false) {
+              
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+              
+            }
+
+
+            }else{
+
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+    
+                console.log("post music click");
+
+              
+
+             
+            }
+    
+    
+    
+    
+        }
+    
+
+        chattable.initialize({
+        theme : "Tendo"
+      });
+
+      generateheader();
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+
+    <style>
+
+
+      .headstyle{
+
+        display: flex;
+        text-align: center;
+        background-color: aliceblue;
+        border-style: double;
+
+       
+ 
+  justify-content: center;
+
+
+  
+
+      }
+
+
+      
+
+      #indi{
+        width: 500px;
+    height: auto; /* Maintains aspect ratio */
+      }
+
+
+
+      
+
+      body {
+          background-image: url('../resources/images/cruiseclub.jpg');
+      
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+
+
+
+        #centered{
+
+text-align: center;
+
+}
+
+
+
+.container {
+display: grid;
+grid-template-columns: auto  ;
+gap: 5px;
+}
+
+
+.container2 {
+display: flex;
+
+justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+
+
+  flex-wrap: wrap;
+
+
+gap: 1px;
+
+
+
+}
+
+
+
+.flexbox {
+  display: flex;
+  gap: 10px; /* Space between items   background-color: lightgray; */
+  
+  padding: 20px;
+  justify-content: center;
+  
+  
+
+ 
+
+}
+
+.dreamstuff{
+  background-color: rgb(163, 163, 163);
+  border-style: dotted;
+
+
+}
+
+
+
+
+.twoitemcontainer{
+
+  display: grid;
+grid-template-columns: auto auto;
+gap: 1px;
+
+}
+
+
+
+
+.item {
+
+
+padding: 5px;
+text-align: center;
+color: aliceblue;
+
+}
+
+.item2 {
+
+
+padding: 5px;
+text-align: center;
+
+width: 300px;
+height: auto; /* Maintains aspect ratio */
+
+}
+
+
+
+
+
+.itemgood {
+
+
+padding: 5px;
+text-align: center;
+background-color:springgreen;
+
+}
+
+
+.itemmed {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 217, 0);
+
+}
+
+
+
+.itembad {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 0, 106);
+
+}
+
+
+.container3 {
+display: grid;
+grid-template-columns: repeat(1, minmax(10px, 1fr));
+gap: 1px;
+
+}
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+  
+
+<body>
+
+  <div id="headerholder">
+    <p>test</p>
+</div>
+
+
+ 
+
+  <audio id="bgm" loop>
+    <source src="../resources/audio/BORDERLINE CASE 4.mp3" type="audio/mpeg">
+</audio>
+
+
+<audio id="postmusicclick">
+  <source src="../resources/audio/button9.wav" type="audio/mpeg">
+</audio>
+
+
+ 
+
+
+<div class="flexbox">
+  
+  <div class="dreamstuff">
+<p>
+
+  I had a dream that I was on a cruise ship or something of the sort, I was with a team of people tasked with shutting <br>
+  down a criminal or something. Spy stuff. Or maybe it was just a large party I don't remember, there was a scene where I<br>
+   was climbing outside the building by holding onto the bricks of the building and spying in the windows into a large hall. <br>
+The large hall had a party going on in it. [redacted] was there. He was dressed up in vacation clothes. He was glad to see me <br>
+again but it was the sort if glad that was tinted with distrust. I was talking to him a little, he offered a drink to me, I didn't<br>
+want it because I knew I would feel like shit in the morning if I drank .<br>
+Then everyone started dancing in the large hall, I joined with one drink in my hands and started making up dance moves since<br>
+I didn't know how to dance. 
+[redacted] saw and I was slightly embarrassed <br>
+I think he had a girlfriend, there was a scene where we were talking where his girl came over and cozied up to him while we <br>
+talked. That's when I was trying to ask how he'd been and how his life was .<br>
+I remember feeling a sting of jealousy because he had a girl and I didn't. He seemed like his life was great and <br>
+figured out while I was just coming back for scraps of a social life, and I was the pathetic one, I was like a<br>
+beggar in tattered clothes pleading him to help despite the fact that I had turned my back on everyone and ghosted them. <br>
+
+</p>
+  </div>
+ </div>   
+
+
+
+
+
+ <div class="flexbox">
+
+  <div class="headstyle">
+  
+ 
+   <div>
+
+
+     <button onclick="gotoprevindex(3)">Prev dream</button>
+     <button onclick="gotonextindex(3)">Next dream</button>
+
+     
+ 
+     
+ 
+ </div>
+ </div>
+ 
+
+
+
+ 
+
+ <script src="https://iframe.chat/scripts/main.min.js"></script>
+ <script src="../resources/js/script.js"></script>  
+ <script>
+ 
+         document.addEventListener("DOMContentLoaded", function() {
+             let audio = document.getElementById("bgm");
+             setTimeout(() => {
+                 audio.play().catch(error => console.log("Autoplay blocked:", error));
+             }, 1500); // Delay autoplay
+     
+     
+         
+             
+         });
+         document.body.addEventListener("click", playAudio);
+         document.body.addEventListener("mouseover", playAudio);
+         function playAudio() {
+            
+     
+            
+     
+             // Remove event listeners after first interaction to prevent multiple triggers
+           
+             let musicenabled=1;
+     
+             
+             
+             if(!(document.getElementById("bgm")==null)){
+     
+             document.body.click();
+             //console.log("MOUSED!");
+             let audio = document.getElementById("bgm");
+             audio.play().catch(error => console.log("Autoplay blocked:", error));
+     
+ 
+ 
+             if (audio.paused == false) {
+               
+               document.body.removeEventListener('mouseover', playAudio);
+               console.log("eventlistener removed :(");
+               let audio = document.getElementById("postmusicclick");
+               audio.play().catch(error => console.log("Autoplay blocked:", error));
+ 
+               
+             }
+ 
+ 
+             }else{
+ 
+               let audio = document.getElementById("postmusicclick");
+               audio.play().catch(error => console.log("Autoplay blocked:", error));
+     
+     
+                 console.log("post music click");
+ 
+               
+ 
+              
+             }
+     
+     
+     
+     
+         }
+     
+ 
+         chattable.initialize({
+         theme : "Tendo"
+       });
+ 
+       generatedreamheader();
+ </script>
+
+ 
+</body>
+</html>

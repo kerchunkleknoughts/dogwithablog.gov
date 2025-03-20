@@ -1,0 +1,307 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+
+    <style>
+
+      #indi{
+        width: 500px;
+    height: auto; /* Maintains aspect ratio */
+      }
+
+
+
+      
+
+      body {
+          background-image: url('./resources/images/hello.jpg');
+      
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+
+
+
+        #centered{
+
+text-align: center;
+
+}
+
+
+
+.container {
+display: grid;
+grid-template-columns: auto  ;
+gap: 5px;
+}
+
+
+.container2 {
+display: flex;
+
+justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+
+
+  flex-wrap: wrap;
+
+
+gap: 1px;
+
+
+
+}
+
+.flexbox {
+  display: flex;
+  gap: 10px; /* Space between items   background-color: lightgray; */
+  
+  padding: 20px;
+
+  width: 700px;  /* Fixed width */
+  height: 50px; /* Fixed height */
+}
+
+
+
+
+
+.twoitemcontainer{
+
+  display: grid;
+grid-template-columns: auto auto;
+gap: 1px;
+
+}
+
+
+
+
+.item {
+
+
+padding: 5px;
+text-align: center;
+color: aliceblue;
+
+}
+
+.item2 {
+
+
+padding: 5px;
+text-align: center;
+
+width: 300px;
+height: auto; /* Maintains aspect ratio */
+
+}
+
+
+
+
+
+.itemgood {
+
+
+padding: 5px;
+text-align: center;
+background-color:springgreen;
+
+}
+
+
+.itemmed {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 217, 0);
+
+}
+
+
+
+.itembad {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 0, 106);
+
+}
+
+
+.container3 {
+display: grid;
+grid-template-columns: repeat(1, minmax(10px, 1fr));
+gap: 1px;
+
+}
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+  
+
+<body>
+
+
+
+
+  <audio id="bgm" loop>
+    <source src="resources/audio/Webinar™ - 09 Underwater Disco 4.mp3" type="audio/mpeg">
+</audio>
+<button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+
+
+
+
+<audio id="postmusicclick">
+  <source src="resources/audio/yummers.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+    
+
+    <div id="indicator">
+        
+        <img src="./resources/images/squimpt.jpg"> </img>
+
+      </div>
+
+
+      <footer style="text-align: center;" id="footsy">
+        <div>
+          <a href="about.html">about</a>
+          <a href="index.html">home</a>
+          <a href="contact.html">socials-contact</a>
+          <a href="music.html">music</a>
+          <a href="drawings.html">art</a>
+          <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+
+        </div>
+
+      </footer>
+
+
+
+  
+
+      <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, 1500); // Delay autoplay
+    
+    
+        
+            
+        });
+    
+    
+     
+    
+    
+    
+        document.body.addEventListener("click", playAudio);
+
+        document.body.addEventListener("mouseover", playAudio);
+
+    
+    
+    
+    
+        function playAudio() {
+           
+    
+           
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+
+
+            if (audio.paused == false) {
+              
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+              
+            }
+
+
+            }else{
+
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+    
+                console.log("post music click");
+
+              
+
+             
+            }
+    
+    
+    
+    
+        }
+    
+    
+    
+    
+    
+    
+    </script>
+    
+    
+
+</script>
+<script src="resources/js/script.js"></script>  
+</body>
+</html>

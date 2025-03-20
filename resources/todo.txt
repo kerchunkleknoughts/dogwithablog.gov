@@ -1,0 +1,36 @@
+This a general todolist for this website along with possible self imposed deadlines to implement said functionality
+
+----spring break 3-24-2025-----
+
+-> create button for site
+
+-> join web rings
+
+-> fix navigation so more visable
+
+-> dream journal page
+
+-> journal page
+
+-> find more page assets like buttons
+
+-> record newest music and update site
+
+-> photograph newest art.
+
+
+
+-----later/procrastinate-----
+
+-> look into rss feeds
+
+-> have name on photo be auto derived from file name -> art page
+
+
+
+-----not going to happen lets be real-----
+
+-> make site mobile friendly
+
+-> make site friendly for different types of monitors.
+

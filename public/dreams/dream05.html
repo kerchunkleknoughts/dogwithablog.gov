@@ -1,0 +1,372 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+
+    <style>
+
+
+      .headstyle{
+
+        display: flex;
+        text-align: center;
+        background-color: aliceblue;
+        border-style: double;
+
+       
+ 
+  justify-content: center;
+
+
+  
+
+      }
+
+
+      
+
+      #indi{
+        width: 500px;
+    height: auto; /* Maintains aspect ratio */
+      }
+
+
+
+      
+
+      body {
+          background-image: url('../resources/images/actualhell.jpg');
+      
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+
+
+
+        #centered{
+
+text-align: center;
+
+}
+
+
+
+.container {
+display: grid;
+grid-template-columns: auto  ;
+gap: 5px;
+}
+
+
+.container2 {
+display: flex;
+
+justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+
+
+  flex-wrap: wrap;
+
+
+gap: 1px;
+
+
+
+}
+
+
+
+.flexbox {
+  display: flex;
+  gap: 10px; /* Space between items   background-color: lightgray; */
+  
+  padding: 20px;
+  justify-content: center;
+  
+  
+
+ 
+
+}
+
+.dreamstuff{
+  background-color: rgb(163, 163, 163);
+  border-style: dotted;
+
+
+}
+
+
+
+
+.twoitemcontainer{
+
+  display: grid;
+grid-template-columns: auto auto;
+gap: 1px;
+
+}
+
+
+
+
+.item {
+
+
+padding: 5px;
+text-align: center;
+color: aliceblue;
+
+}
+
+.item2 {
+
+
+padding: 5px;
+text-align: center;
+
+width: 300px;
+height: auto; /* Maintains aspect ratio */
+
+}
+
+
+
+
+
+.itemgood {
+
+
+padding: 5px;
+text-align: center;
+background-color:springgreen;
+
+}
+
+
+.itemmed {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 217, 0);
+
+}
+
+
+
+.itembad {
+
+
+padding: 5px;
+text-align: center;
+background-color: rgb(255, 0, 106);
+
+}
+
+
+.container3 {
+display: grid;
+grid-template-columns: repeat(1, minmax(10px, 1fr));
+gap: 1px;
+
+}
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+  
+
+<body>
+
+  <div id="headerholder">
+    <p>test</p>
+</div>
+
+
+
+  <audio id="bgm" loop>
+    <source src="../resources/audio/Separation Anxiety - Neon Genesis Evangelion 4.mp3" type="audio/mpeg">
+</audio>
+
+
+  <audio id="postmusicclick">
+    <source src="../resources/audio/button9.wav" type="audio/mpeg">
+  </audio>
+  
+
+ 
+
+<div class="flexbox">
+  
+  <div class="dreamstuff">
+
+
+1-3-2025<br> 
+One I was walking to my car, which was on the top of a hill, and I had a bunch of stuff with me, I had a fishing pole,<br> 
+I was wearing the wrong kind of shoes, I think I had swimming shorts on, but despite all of these impairments I offered to<br>
+ walk [redacted] to his bus stop which was out of the way just because I wanted to talk the whole way and show him I cared.<br> 
+
+ <br> 
+
+
+At the school in the first day of class I was in a science class room, the lights were dimmed and the teacher passed out<br>
+ little about you quizzes for us to fill out, and there was also two cross word puzzles that he passed out to do as assignments.<br>
+  They were balatro themed. For some reason, I found the puzzles really difficult, so I was avoiding working on one of them, <br>
+  stalling, so people couldn't see how hard of a time I was having with them. Eventually I was one of the few left in class,<br>
+   everyone was gone, they had finished because it was easy .  The lights were dimmed and there were a few clusters of students <br>
+   just talking quietly. At one point the professor came over and said, are you going to work on this thing or keep slacking off?,<br>
+    I apologized and said I'd work on it. <br>
+
+
+
+
+    <br>  11-18-2024 <br> 
+
+Had a dream that I got lost while driving around, so I decided to go downtown to sort myself out and find where I was. I ended up<br>
+ driving to the airport, since I knew how to get home from a flight back to [redacted]. I was still in [redacted] when I stared the trip mind you. <br>
+
+Anyway, When I got on the cockpit was empty and there was a sign that said the pilot was a minute late, I was standing next to an<br>
+ air stewart, which was also looking at the sign, scratched his chin and said hmmmm, then just climbed into the cockpit despite not<br> 
+ being the pilot. 
+
+I screamed at him NO YOU ARE NOT THE PILOT STOP, but it was too late, we took off,<br>
+ with someone who didn't know how to fly. I asked him how often this happened and he said ehh 60% of <br>
+ plane flights were flown by people without any experience, and then later he corrected himself and said<br>
+  only 10% were, in an effort to make me feel better about the situation. <br>
+  <br> <br> 
+
+
+
+  </div>
+ </div>   
+
+
+
+
+
+
+
+
+
+   <div class="flexbox">
+
+    <div class="headstyle">
+    
+   
+     <div>
+
+  
+       <button onclick="gotoprevindex(5)">Prev dream</button>
+       <button onclick="gotonextindex(5)">Next dream</button>
+
+       
+   
+       
+   
+   </div>
+   </div>
+   
+
+
+
+ 
+   <script src="https://iframe.chat/scripts/main.min.js"></script>
+   <script src="../resources/js/script.js"></script>  
+   <script>
+   
+           document.addEventListener("DOMContentLoaded", function() {
+               let audio = document.getElementById("bgm");
+               setTimeout(() => {
+                   audio.play().catch(error => console.log("Autoplay blocked:", error));
+               }, 1500); // Delay autoplay
+       
+       
+           
+               
+           });
+           document.body.addEventListener("click", playAudio);
+           document.body.addEventListener("mouseover", playAudio);
+           function playAudio() {
+              
+       
+              
+       
+               // Remove event listeners after first interaction to prevent multiple triggers
+             
+               let musicenabled=1;
+       
+               
+               
+               if(!(document.getElementById("bgm")==null)){
+       
+               document.body.click();
+               //console.log("MOUSED!");
+               let audio = document.getElementById("bgm");
+               audio.play().catch(error => console.log("Autoplay blocked:", error));
+       
+   
+   
+               if (audio.paused == false) {
+                 
+                 document.body.removeEventListener('mouseover', playAudio);
+                 console.log("eventlistener removed :(");
+                 let audio = document.getElementById("postmusicclick");
+                 audio.play().catch(error => console.log("Autoplay blocked:", error));
+   
+                 
+               }
+   
+   
+               }else{
+   
+                 let audio = document.getElementById("postmusicclick");
+                 audio.play().catch(error => console.log("Autoplay blocked:", error));
+       
+       
+                   console.log("post music click");
+   
+                 
+   
+                
+               }
+       
+       
+       
+       
+           }
+       
+   
+           chattable.initialize({
+           theme : "Tendo"
+         });
+   
+         generatedreamheader();
+   </script>
+</body>
+</html>

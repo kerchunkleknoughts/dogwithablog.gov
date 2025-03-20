@@ -1,0 +1,234 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+
+    <style>
+
+
+.headstyle{
+
+display: flex;
+text-align: center;
+background-color: aliceblue;
+border-style: double;
+
+
+
+justify-content: center;
+
+
+
+
+}
+        body {
+          background-image: url('./resources/images/avgohiotuesday.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+        #contacts{
+            color: white;
+        }
+
+        #socials{
+            color: white;
+        }
+
+
+        #footsy{
+            color: white;
+        }
+
+
+
+
+        </style>
+
+
+   
+
+
+
+
+
+</head>
+
+
+
+
+  
+<body onmouseover>
+
+
+
+  <div id="headerholder">
+    <p>test</p>
+</div>
+
+
+<br>
+
+  <audio id="bgm" loop>
+    <source src="resources/audio/aride.mp3" type="audio/mpeg">
+</audio>
+
+
+<audio id="postmusicclick">
+  <source src="resources/audio/Half life 2 Fast Zombie screaming (Remastered) 4.mp3" type="audio/mpeg">
+</audio>
+ 
+    
+    
+    
+
+
+
+
+
+    <div id="contacts" style="text-align: center;">
+        
+        <img src="./resources/images/elaneevenfaster.gif" style="max-width: 50px; max-height: 50px;"> </img>
+        <img src="./resources/images/elanefaster.gif" style="max-width: 100px; max-height: 100px;"> </img>
+        <img src="./resources/images/elanefast.gif" style="max-width: 200px; max-height: 200px;"> </img>
+        <img src="./resources/images/meirl.gif"> </img>
+        <img src="./resources/images/elanefast.gif" style="max-width: 200px; max-height: 200px;"> </img>
+        <img src="./resources/images/elanefaster.gif" style="max-width: 100px; max-height: 100px;"> </img>
+        <img src="./resources/images/elaneevenfaster.gif" style="max-width: 50px; max-height: 50px;"> </img>
+
+
+      </div>
+      <br><br>
+
+
+
+      <div>
+
+        
+
+      </div>
+
+
+
+      <div id="socials" style="text-align: center;">
+        <h1>TUMBLR</h1>
+        <h2>TUMLR</h2>
+        <h3>TUMBLR</h3>
+        <a href="https://www.tumblr.com/kerchunkleknoughts" style="color: white;">→→→→tumblr←←←←</a>
+
+        
+        <h1>STEAM</h1>
+        <h2>STEAM</h2>
+        
+        
+        <h3>STEAM</h3>
+
+        <a href="https://steamcommunity.com/profiles/76561199033683770" style="color: white;">→→→→steam←←←←</a>
+
+        <h1>EMAIL</h1>
+        <h2>EMAIL</h2>
+        <h3>EMAIL</h3>
+
+        <a href="mailto:theunclekerchunkle@gmail.com" style="color: white;">→→→→email←←←←</a>
+
+
+        
+        
+
+        
+      </div>
+
+     <br><br>
+
+
+
+       
+ 
+
+
+
+  
+
+   
+
+<script src="https://iframe.chat/scripts/main.min.js"></script>
+<script src="resources/js/script.js"></script>  
+<script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, 1500); // Delay autoplay
+    
+    
+        
+            
+        });
+        document.body.addEventListener("click", playAudio);
+        document.body.addEventListener("mouseover", playAudio);
+        function playAudio() {
+          
+    
+          
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+
+
+            if (audio.paused == false) {
+              
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+              
+            }
+
+
+            }else{
+
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+    
+                console.log("post music click");
+
+              
+
+            
+            }
+    
+    
+    
+    
+        }
+    
+
+        chattable.initialize({
+        theme : "Tendo"
+      });
+
+      generateheader();
+</script>
+</body>
+</html>
