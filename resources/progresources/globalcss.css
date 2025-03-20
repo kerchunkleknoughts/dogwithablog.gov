@@ -1,11 +1,5 @@
 
 
-body {
-    background-image: url('./resources/images/limi.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
 
 
 
@@ -166,12 +160,6 @@ flex-direction: row;
 
 
 
-body {
-          background-image: url('./resources/images/limi.jpg');
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-size: cover;
-        }
 
 
         #intro{
