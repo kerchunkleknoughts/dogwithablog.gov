@@ -43,7 +43,7 @@
       
 
       body {
-          background-image: url('../resources/dreamsources/blandassrussiahellscape.jpg');
+          background-image: url('../../resources/backgrounds/blandassrussiahellscape.jpg');
       
           background-attachment: fixed;
           background-size: cover;
@@ -205,35 +205,20 @@ gap: 1px;
 <body>
 
 
-  <div class="headstyle">
-
-    <header >
-      <div>
-        <a href="../about.html">about</a>
-        <a href="../index.html">home</a>
-        <a href="../contact.html">socials-contact</a>
-        <a href="../music.html">music</a>
-        <a href="../drawings.html">art</a>
-        <a href="../dreamlog.html">dream log</a>
-        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+  {% include "partials/dreamheader.njk" %}
 
 
-        <audio id="bgm" loop>
-          <source src="../resources/audio/BORDERLINE CASE 4.mp3" type="audio/mpeg">
-      </audio>
-      <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
-      </div>
+
+  <audio id="bgm" loop>
+    <source src="../../resources/audio/BORDERLINE CASE 4.mp3" type="audio/mpeg">
+</audio>
+
+</div>
 
 
-      <audio id="postmusicclick">
-        <source src="../resources/audio/button9.wav" type="audio/mpeg">
-      </audio>
-      
-
-    </header>
-  </div>
-
-
+<audio id="postmusicclick">
+  <source src="../../resources/onclickaudio/button9.wav" type="audio/mpeg">
+</audio>
 
 
 
@@ -311,8 +296,6 @@ I kept trying to look for an exit, I remember going down a slide thinking it wou
 
      
  
-     
- 
  </div>
  </div>
  
@@ -322,91 +305,7 @@ I kept trying to look for an exit, I remember going down a slide thinking it wou
 
   
 
-      <script>
+ {% include "partials/dreamscripts.njk" %}
 
-        document.addEventListener("DOMContentLoaded", function() {
-            let audio = document.getElementById("bgm");
-            setTimeout(() => {
-                audio.play().catch(error => console.log("Autoplay blocked:", error));
-            }, 1500); // Delay autoplay
-    
-    
-        
-            
-        });
-    
-    
-     
-    
-    
-    
-        document.body.addEventListener("click", playAudio);
-
-        document.body.addEventListener("mouseover", playAudio);
-
-    
-    
-    
-    
-        function playAudio() {
-           
-    
-           
-    
-            // Remove event listeners after first interaction to prevent multiple triggers
-          
-            let musicenabled=1;
-    
-            
-            
-            if(!(document.getElementById("bgm")==null)){
-    
-            document.body.click();
-            //console.log("MOUSED!");
-            let audio = document.getElementById("bgm");
-            audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
-
-
-            if (audio.paused == false) {
-              
-              document.body.removeEventListener('mouseover', playAudio);
-              console.log("eventlistener removed :(");
-              let audio = document.getElementById("postmusicclick");
-              audio.play().catch(error => console.log("Autoplay blocked:", error));
-
-              
-            }
-
-
-            }else{
-
-              let audio = document.getElementById("postmusicclick");
-              audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
-    
-                console.log("post music click");
-
-              
-
-             
-            }
-    
-    
-    
-    
-        }
-    
-    
-    
-    
-    
-    
-    </script>
-    
-    
-
-</script>
-<script src="../resources/js/script.js"></script>  
 </body>
 </html>
