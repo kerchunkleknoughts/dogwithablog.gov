@@ -5,7 +5,7 @@
   <description>Its a blog.</description>
   <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/index.html</link>
   <lastBuildDate>
-    1742077903
+    1742577946
   </lastBuildDate>
   <ttl>10080</ttl>
 
@@ -129,7 +129,7 @@
     <description>
       Refactored site to support 11ty, thanks to the tutorial I found here:  https://petrapixel.neocities.org/coding/eleventy-tutorial
     </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov</link>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/l</link>
     <pubDate>
       1742577946
     </pubDate>
