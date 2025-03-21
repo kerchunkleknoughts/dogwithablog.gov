@@ -11,6 +11,7 @@
 
 
   <!-- To generate timestamps under pubdate : https://timestampgenerator.com/1742077903/+00:00 -->
+  <!-- These are called unix time stamps-->
 
   <!-- quick rss refresher: https://caffeineandlasers.neocities.org/blogs/automatingYourRSS -->
 
@@ -119,6 +120,21 @@
       1742250703
     </pubDate>
   </item>
+
+
+
+
+  <item>
+    <title>11ty refactor</title>
+    <description>
+      Refactored site to support 11ty, thanks to the tutorial I found here:  https://petrapixel.neocities.org/coding/eleventy-tutorial
+    </description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov</link>
+    <pubDate>
+      1742577946
+    </pubDate>
+  </item>
+
 
 
 
