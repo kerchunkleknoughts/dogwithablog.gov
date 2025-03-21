@@ -1,0 +1,638 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+<style>
+
+
+
+
+.headstyle{
+
+display: flex;
+text-align: center;
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+}
+
+
+
+.parentbox{
+
+display: flex;
+text-align: center;
+
+
+justify-content: space-evenly;
+
+flex-direction: row;
+
+
+}
+
+.fchildtextbox{
+
+  display: flex;
+text-align: center;
+
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+}
+
+
+.childtextbox{
+
+
+text-align: center;
+
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+}
+
+
+
+
+
+#flip-horizontalm1 {
+    transform: rotate(-90deg);
+    margin-right: 100px; /* optional spacing */
+  width: 800px;
+  height: auto; /* Maintains aspect ratio */
+  }
+
+  #flip-horizontal {
+    transform: rotate(90deg);
+    margin-right: 100px; /* optional spacing */
+  width: 800px;
+  height: auto; /* Maintains aspect ratio */
+  }
+
+  #flip-horizontalx2 {
+    transform: rotate(180deg);
+    margin-right: 100px; /* optional spacing */
+  width: 800px;
+  height: auto; /* Maintains aspect ratio */
+  }
+
+
+
+  #flip-vertical {
+    transform: scaleY(-1);
+    transform: scaleX(-1);
+    margin-right: 100px; /* optional spacing */
+    width: 800px;
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+
+#footsy{
+            color: white;
+        }
+
+
+
+
+
+body {
+          background-image: url('../resources/backgrounds/beeeetle.webp');
+      
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+        #intro{
+          color: white;
+        }
+
+
+
+ 
+    #aboutme {
+       /*float: right; */
+       color: rgb(14, 4, 4);
+      text-align: justify; 
+      margin-right: 20px
+      
+    }
+
+    
+    #personality{
+      margin-left: 500px; /* Push content to the right */
+      padding: 50px;
+      color: white;
+     
+      
+    }
+    #interests{
+      margin-left: 500px; /* Push content to the right */
+      padding: 50px;
+      color: white;
+     
+      
+    }
+
+
+
+
+    #indicator {
+  float: left;
+  margin-right: 100px; /* optional spacing */
+}
+
+#indicator2 {
+
+  
+  margin-right: 100px; /* optional spacing */
+  width: 800px;
+  height: auto; /* Maintains aspect ratio */
+}
+
+
+#button {
+  float: left;
+  margin-right: 10px; /* optional spacing */
+  margin-left: 5px; /* optional spacing */
+  width: 25%;
+  height: auto; /* Maintains aspect ratio */
+
+  
+
+}
+
+
+
+
+.vl2 {
+            width: 400px; /* Adjust width as needed */
+            height: 100vh; /* Full height */
+            background-color: #64dbe4; /* Sidebar color */
+            color: white;
+            position: fixed;
+            top: 50;
+            left: 0;
+            padding: 20px;
+}
+
+
+#centered{
+
+    text-align: center;
+
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: auto ;
+  gap: 100px;
+}
+
+
+.item {
+ 
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+</style>
+
+
+
+</head>
+
+
+
+
+  
+<body>
+
+
+
+
+  {% include "partials/header.njk" %}
+
+
+  <audio id="bgm" loop>
+    <source src="../resources/audio/Waltzing Flutes (Remastered) 4.mp3" type="audio/mpeg">
+</audio>
+
+
+  <audio id="postmusicclick">
+    <source src="../resources/onclickaudio/cough4.wav" type="audio/mpeg">
+  </audio>
+  
+
+    
+
+   
+
+<h1 id="centered">3-11-2025 art</h1>
+
+
+
+<div class="container">
+  <div class="item">
+      <img src="../resources/art/drawings/latest 3-11-2025/aifishman.jpg" id="indicator2"> </img>
+      </div>
+    
+  
+      <div class="item">
+        <img src="../resources/art/drawings/latest 3-11-2025/ant hell.jpg" id="flip-horizontalm1"> </img>
+        </div>
+      
+  
+        <div class="item">
+            <img src="../resources/art/drawings/latest 3-11-2025/bosh practice 1.jpg" id="flip-horizontalm1"> </img>
+            </div>
+          
+  
+            <div class="item">
+                <img src="../resources/art/drawings/latest 3-11-2025/rabbit practice.jpg" id="indicator2"> </img>
+                </div>
+              
+  
+                <div class="item">
+                    <img src="../resources/art/drawings/latest 3-11-2025/rp2.jpg" id="indicator2"> </img>
+                    </div>
+                  
+  
+                    <div class="item">
+                        <img src="../resources/art/drawings/latest 3-11-2025/rp3.jpg" id="indicator2"> </img>
+                        </div>
+                      
+  
+                        <div class="item">
+                            <img src="../resources/art/drawings/latest 3-11-2025/rp4.jpg" id="indicator2"> </img>
+                            </div>
+                          
+  
+                            <div class="item">
+                                <img src="../resources/art/drawings/latest 3-11-2025/sqeeble.jpg" id="indicator2"> </img>
+                                </div>
+                              
+  
+                                <div class="item">
+                                    <img src="../resources/art/drawings/latest 3-11-2025/willy.jpg" id="indicator2"> </img>
+                                    </div>
+                                  
+  
+      
+  
+                                                                       
+                                        
+
+</div>
+
+
+
+
+
+
+
+    <h1 id="centered">LATEST ART</h1>
+
+
+
+      <div class="container">
+        <div class="item">
+            <img src="../resources/art/drawings/newest1/abstract1.jpg" id="indicator2"> </img>
+            </div>
+
+        <div class="item">
+            <img src="../resources/art/drawings/newest1/another1.jpg" id="flip-horizontalm1"> </img>
+            </div>
+            
+        
+            <div class="item">
+                <img src="../resources/art/drawings/newest1/another2.jpg" id="indicator2"> </img>
+                </div>
+
+                <div class="item">
+                    <img src="../resources/art/drawings/newest1/bee.jpg" id="indicator2"> </img>
+                    </div>
+                
+                    <div class="item">
+                        <img src="../resources/art/drawings/newest1/beetle.jpg" id="indicator2"> </img>
+                        </div>
+                
+                        <div class="item">
+                            <img src="../resources/art/drawings/newest1/boschpractice1.jpg" id="indicator2"> </img>
+                            </div>
+                            <div class="item">
+                                <img src="../resources/art/drawings/newest1/boschpractice2.jpg" id="indicator2"> </img>
+                                </div>
+                
+                              
+                                    
+      
+                                    <div class="item">
+                                        <img src="../resources/art/drawings/newest1/combine.jpg" id="indicator2"> </img>
+                                        </div>
+                                    
+                                        <div class="item">
+                                            <img src="../resources/art/drawings/newest1/pinsneedles.jpg" id="indicator2"> </img>
+                                            </div>
+                                    
+                                            <div class="item">
+                                                <img src="../resources/art/drawings/newest1/randopractice.jpg" id="indicator2"> </img>
+                                                </div>
+                                    
+                                                <div class="item">
+                                                    <img src="../resources/art/drawings/newest1/scm2.jpg" id="indicator2"> </img>
+                                                    </div>
+                                    
+                                                    <div class="item">
+                                                        <img src="../resources/art/drawings/newest1/scm3.jpg" id="indicator2"> </img>
+                                                        </div>
+                                    
+                                                        <div class="item">
+                                                            <img src="../resources/art/drawings/newest1/scm4.jpg" id="indicator2"> </img>
+                                                            </div>
+                                    
+                                                            <div class="item">
+                                                                <img src="../resources/art/drawings/newest1/scm5.jpg" id="indicator2"> </img>
+                                                                </div>
+                                                                
+                                                                <div class="item">
+                                                                    <img src="../resources/art/drawings/newest1/scm6.jpg" id="indicator2"> </img>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <img src="../resources/art/drawings/newest1/scm7.jpg" id="indicator2"> </img>
+                                                                        </div>
+                                                                        <div class="item">
+                                                                            <img src="../resources/art/drawings/newest1/scm8.jpg" id="indicator2"> </img>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <img src="../resources/art/drawings/newest1/sketchclubmisc.jpg" id="indicator2"> </img>
+                                                                                </div>
+                                                                             
+                                              
+      
+      </div>
+
+
+
+
+      <h1 id="centered">OLDER ART</h1>
+
+      
+      <div class="container">
+        <div class="item">
+            <img src="../resources/art/drawings/slightly new 2/collagefinal.jpg" id="indicator2"> </img>
+            </div>
+
+            <div class="item">
+                <img src="../resources/art/drawings/slightly new 2/collageoutline.jpg" id="indicator2"> </img>
+                </div>
+                <div class="item">
+                    <img src="../resources/art/drawings/slightly new 2/designp.jpg" id="indicator2"> </img>
+                    </div>
+                    <div class="item">
+                        <img src="../resources/art/drawings/slightly new 2/dp.jpg" id="indicator2"> </img>
+                        </div>
+                        <div class="item">
+                            <img src="../resources/art/drawings/slightly new 2/gridfinal.jpg" id="indicator2"> </img>
+                            </div>
+                            <div class="item">
+                                <img src="../resources/art/drawings/slightly new 2/gridmp.jpg" id="indicator2"> </img>
+                                </div>
+                                <div class="item">
+                                    <img src="../resources/art/drawings/slightly new 2/randoo.jpg" id="indicator2"> </img>
+                                    </div>
+                                    <div class="item">
+                                        <img src="../resources/art/drawings/slightly new 2/rano1.jpg" id="indicator2"> </img>
+                                        </div>
+                                        <div class="item">
+                                            <img src="../resources/art/drawings/slightly new 2/stilllife.jpg" id="indicator2"> </img>
+                                            </div>
+                                            <div class="item">
+                                                <img src="../resources/art/drawings/slightly new 2/stilllife2.jpg" id="indicator2"> </img>
+                                                </div>
+                                               
+                                              
+      
+      </div>
+
+
+      <h1 id="centered">EVEN OLDER ART</h1>
+
+
+      <div class="container">
+        <div class="item">
+            <img src="../resources/art/drawings/older 3/faces.jpg" id="flip-horizontalm1"> </img>
+            </div>
+            
+
+          
+            <div class="item">
+                <img src="../resources/art/drawings/older 3/faces2.jpg" id="flip-horizontalm1"> </img>
+                </div>
+
+                <div class="item">
+                    <img src="../resources/art/drawings/older 3/fuckedthing.jpg" id="flip-horizontalm1"> </img>
+                    </div>
+
+                    <div class="item">
+                        <img src="../resources/art/drawings/older 3/ghast2hplove.jpg" id="flip-horizontal"> </img>
+                        </div>
+
+                        
+                        <div class="item">
+                            <img src="../resources/art/drawings/older 3/ghasthplove.jpg" id="flip-horizontal"> </img>
+                            </div>
+    
+                    
+
+                            <div class="item">
+                                <img src="../resources/art/drawings/older 3/hl2sketch.jpg" id="flip-horizontalm1"> </img>
+                                </div>
+
+                                <div class="item">
+                                    <img src="../resources/art/drawings/older 3/idk.jpg" id="flip-horizontalm1"> </img>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="../resources/art/drawings/older 3/keytre.jpg" id="flip-horizontal"> </img>
+                                        </div>
+
+                                        <div class="item">
+                                            <img src="../resources/art/drawings/older 3/lovecraftbeast.jpg" id="flip-horizontal"> </img>
+                                            </div>
+                                
+
+                                            <div class="item">
+                                                <img src="../resources/art/drawings/older 3/me2beersin.jpg" id="flip-horizontalm1"> </img>
+                                                </div>
+
+                                                <div class="item">
+                                                    <img src="../resources/art/drawings/older 3/shandakbirdunkownkadath.jpg" id="flip-horizontalm1"> </img>
+                                                    </div>
+
+                                                    <div class="item">
+                                                        <img src="../resources/art/drawings/older 3/spearhighlandsbs.jpg" id="flip-horizontal"> </img>
+                                                        </div>
+                                            
+                                                        <div class="item">
+                                                            <img src="../resources/art/drawings/older 3/tree.jpg" id="flip-horizontal"> </img>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <img src="../resources/art/drawings/older 3/villageofthemoonbeastslovecraft.jpg" id="flip-horizontal"> </img>
+                                                                </div>
+
+                                                                <div class="item">
+                                                                    <img src="../resources/art/drawings/older 3/you.jpg" id="flip-horizontal"> </img>
+                                                                    </div>
+
+  
+                                        
+                                                                             
+                                              
+      
+      </div>
+
+
+
+      <h1 id="centered">ANCIENT ART!</h1>
+
+
+      <div class="container">
+        <div class="item">
+            <img src="../resources/art/drawings/oldest 4/monsterpractice.jpg" id="flip-horizontal"> </img>
+            </div>
+
+            <div class="container">
+                <div class="item">
+                    <img src="../resources/art/drawings/oldest 4/monstpractice2.jpg" id="flip-horizontal"> </img>
+                    </div>
+
+                    <div class="container">
+                        <div class="item">
+                            <img src="../resources/art/drawings/oldest 4/randosketch.jpg" id="indicator2"> </img>
+                            </div>
+
+                            <div class="container">
+                                <div class="item">
+                                    <img src="../resources/art/drawings/oldest 4/soundofpreserverance.jpg" id="flip-horizontal"> </img>
+                                    </div>
+                        
+
+
+    
+                                                                             
+                                              
+      
+      </div>
+
+
+
+      <br><br> <br><br> <br><br> <br><br>
+
+      
+
+
+
+      
+      <script src="https://iframe.chat/scripts/main.min.js"></script>
+      <script src="../resources/progresources/js/script.js"></script>  
+      <script>
+      
+              document.addEventListener("DOMContentLoaded", function() {
+                  let audio = document.getElementById("bgm");
+                  setTimeout(() => {
+                      audio.play().catch(error => console.log("Autoplay blocked:", error));
+                  }, 1500); // Delay autoplay
+          
+          
+              
+                  
+              });
+              document.body.addEventListener("click", playAudio);
+              document.body.addEventListener("mouseover", playAudio);
+              function playAudio() {
+                 
+          
+                 
+          
+                  // Remove event listeners after first interaction to prevent multiple triggers
+                
+                  let musicenabled=1;
+          
+                  
+                  
+                  if(!(document.getElementById("bgm")==null)){
+          
+                  document.body.click();
+                  //console.log("MOUSED!");
+                  let audio = document.getElementById("bgm");
+                  audio.play().catch(error => console.log("Autoplay blocked:", error));
+          
+      
+      
+                  if (audio.paused == false) {
+                    
+                    document.body.removeEventListener('mouseover', playAudio);
+                    console.log("eventlistener removed :(");
+                    let audio = document.getElementById("postmusicclick");
+                    audio.play().catch(error => console.log("Autoplay blocked:", error));
+      
+                    
+                  }
+      
+      
+                  }else{
+      
+                    let audio = document.getElementById("postmusicclick");
+                    audio.play().catch(error => console.log("Autoplay blocked:", error));
+          
+          
+                      console.log("post music click");
+      
+                    
+      
+                   
+                  }
+          
+          
+          
+          
+              }
+          
+      
+              chattable.initialize({
+              theme : "Tendo"
+            });
+      
+            generateheader();
+      </script>
+
+</body>
+</html>

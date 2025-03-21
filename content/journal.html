@@ -1,0 +1,469 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+
+    <style>
+
+
+
+
+.journalindicator{
+
+ display: flex;
+  width: 100px;
+  height: auto; /* Maintains aspect ratio */
+
+
+
+
+}
+
+
+.flexbox {
+  display: flex;
+  gap: 10px; /* Space between items   background-color: lightgray; */
+  
+  padding: 20px;
+  justify-content: center;
+  
+  
+
+ 
+
+}
+
+.dreamstuff{
+  background-color:aliceblue;
+  border-style: double;
+
+
+}
+
+
+
+.dreamtest{
+  background-color:aliceblue;
+  border-style: double;
+  white-space: pre-line;
+
+}
+
+
+
+.twoitemcontainer{
+
+  display: grid;
+grid-template-columns: auto auto;
+gap: 1px;
+
+}
+
+
+
+
+
+
+#statuscafe {
+    padding: .5em;
+    background-color: azure;
+    border: 1px solid midnightblue;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
+
+
+
+.headstyle{
+
+display: flex;
+text-align: center;
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+}
+
+
+
+.parentbox{
+
+display: flex;
+text-align: center;
+
+
+justify-content: space-evenly;
+
+flex-direction: row;
+
+
+}
+
+
+
+.buttonbox{
+
+display: flex;
+
+
+justify-content: space-evenly;
+
+flex-direction: row;
+
+
+
+
+
+}
+
+.buttonchild{
+
+ 
+  
+  width: 25%;
+  height: auto; /* Maintains aspect ratio */
+
+
+
+
+}
+
+
+
+
+.cenparentbox{
+  display: flex;
+text-align: center;
+
+
+justify-content: center;
+
+flex-direction: row;
+
+
+}
+
+
+.sbparentbox{
+  display: flex;
+text-align: center;
+
+
+justify-content: space-between;
+
+flex-direction: row;
+
+
+}
+
+
+
+
+.fchildtextbox{
+
+  display: flex;
+text-align: center;
+
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+}
+
+
+.childtextbox{
+
+
+text-align: center;
+
+background-color: aliceblue;
+border-style: double;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+
+
+}
+
+
+.indicator2 {
+ 
+ display: flex;
+ width: 200px;
+ height: auto; /* Maintains aspect ratio */
+
+}
+
+
+
+
+
+
+
+body {
+          background-image: url('../resources/backgrounds/boiler1.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+        #intro{
+          color: white;
+        }
+
+
+
+
+    #aboutme {
+       /*float: right; */
+       color: rgb(14, 4, 4);
+      text-align: justify; 
+      margin-right: 20px
+      
+    }
+
+    
+    #personality{
+      margin-left: 500px; /* Push content to the right */
+      padding: 50px;
+      color: white;
+     
+      
+    }
+    #interests{
+      margin-left: 500px; /* Push content to the right */
+      padding: 50px;
+      color: white;
+     
+      
+    }
+
+
+
+
+    #indicator {
+  float: left;
+  margin-right: 100px; /* optional spacing */
+}
+
+
+
+
+
+
+
+.vl2 {
+            width: 400px; /* Adjust width as needed */
+            height: 100vh; /* Full height */
+            background-color: #64dbe4; /* Sidebar color */
+            color: white;
+            position: fixed;
+            top: 50;
+            left: 0;
+            padding: 20px;
+}
+
+
+    </style>
+
+
+
+</head>
+
+
+
+
+  
+<body>
+
+
+
+
+  {% include "partials/header.njk" %}
+    
+
+
+
+
+
+
+
+  <div class="flexbox">
+  
+
+
+    <div>
+        <img src="../resources/images/death.jpg" class="journalindicator"></img>
+    </div>
+    
+
+
+    <div class="dreamstuff">
+
+
+        
+
+        <h1>1-10-2025<h1>
+
+    
+    
+        </div>
+  </div>
+
+   
+  <div class="flexbox">
+  
+    <div class="dreamtest">
+  <p>
+    its almost the end of winter break, I haven't written much in this journal lately. I'm on day 5 of my coffee detox, feeling 
+    pretty good right now. Earlier on in the semester I cut back by a cup and now I am not drinking coffee at all. Feeling much
+     more relaxed, but that could just be the effects of being on break.  I've spent a lot of my break just depressed honestly,
+      not having any connections from the semester made it so that I didn't have anyone to do anything with. And forget being 
+      outside, the weather is too damn cold to be out there. 
+    Another thing I've been doing a lot of is just staring into space trying to figure out what I even want to do, Sometimes 
+    I'll finish eating or finish up what I was doing previously and be at a complete loss as to what I should do with myself. 
+    During the semester I've mostly filled my free time with video games and tv shows, but now that I have time off I feel
+     like I really should be working on more fulfilling things, like some of my previous hobbies, like drawing or writing or 
+     making stuff.  and sometimes I just don’t have the will to get into those things, but I have a feeling that  I want to 
+     be working on that stuff. I guess just starting is really difficult. The problem I had  yesterday was that I wanted to 
+     draw but didn't know what to draw, so I just reverted back to drawing more of the garden of earthly delights, knowing
+      that it would probably just be good practice, starting. I think maybe thats the way to do it, just have like some 
+      really easy practice material to start up with, like a warm up exercise, do that for like 15 minutes or 10 minutes,
+       and then get into some of the hard stuff. Idk. 
+    I am not looking forwards to capstone 2. the others will be fine, just in terms of the material,  but I am also not 
+    looking forwards to the social aspect. I just fucking know that people are going to be terrible, I just know that 
+    I'll try to make friends in class and it will fall flat on its face, its never worked out in my engineering classes 
+    the people there fucking suck so bad.  I think that if I join a club and be consistent with it, maybe the running club,
+     maybe I can get some friends at the end of the  semester. I want to do the running club, but I am a little afraid that
+      they would leave me in the dust, or that it would be too hard since [redacted]
+    I plan on doing a meeting this next Friday, see how it goes, and then if it doesn't work out the first time I will go
+     over to the card game club. 
+    I do really want to do the running club however, the running meetup I did around [redacted] seemed promising, it was
+     all older people but if it was younger people I think I could get into it. 
+    Plus when I mentioned my plan to [redacted] he said that he heard that running people are extra horny.  I don’t know
+     where he heard this, but I looked it up and I guess some people report that they get  horned up after they run. on 
+     reddit. If that has any validity, that could be a good way to have a little fun, I couldn't get the dating apps to
+      work for attracting women and I just  really don’t want to go through with that for men. I don’t like the idea of
+       meeting up with strangers until I've at least seen them a few times and feel comfortable with being around them,
+        to make sure they are not  serial killers or will rob me or something.  plus there are plenty of ugly men out 
+        there who kept hitting me up. wasn't a fan of that. 
+    There is a strange pain in my ear, it sucks. 
+    I was completely filled with dread yesterday thinking about returning to college, and the next four years of the 
+     trump presidency. It should be okay overall, its a pretty balanced schedule but I still couldn't help it.  Sometimes 
+     I think that I seriously need help, its my break and I've just been in bed most of the time,  I guess I just need to 
+     learn how to effectively switch tasks because whenever I am working on something or  playing a game I feel okay, so
+      maybe its just that I need to get better at getting into stuff, just starting. 
+  </p>
+    </div>
+   </div>   
+
+     
+      
+
+
+
+
+<script src="https://iframe.chat/scripts/main.min.js"></script>
+<script src="../resources/progresources/js/script.js"></script>  
+<script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, 1500); // Delay autoplay
+    
+    
+        
+            
+        });
+        document.body.addEventListener("click", playAudio);
+        document.body.addEventListener("mouseover", playAudio);
+        function playAudio() {
+           
+    
+           
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+
+
+            if (audio.paused == false) {
+              
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+              
+            }
+
+
+            }else{
+
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+    
+                console.log("post music click");
+
+              
+
+             
+            }
+    
+    
+    
+    
+        }
+    
+
+        chattable.initialize({
+        theme : "Tendo"
+      });
+
+      generateheader();
+</script>
+    
+
+
+
+
+</body>
+</html>
+
