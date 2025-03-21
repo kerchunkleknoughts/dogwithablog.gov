@@ -7,6 +7,24 @@
   <lastBuildDate>Fri, 21 Mar 2025 12:45:46 GMT</lastBuildDate>
   <ttl>10080</ttl>
 
+
+
+  <!-- To generate timestamps under pubdate : https://timestampgenerator.com/1742077903/+00:00 -->
+  <!-- These are called unix time stamps-->
+  <!-- quick rss refresher: https://caffeineandlasers.neocities.org/blogs/automatingYourRSS -->
+    <!-- Dont forget to remake the counter on ur website ever so often for semi accurate counting -->
+    <!-- https://blogtrottr.com/-->
+
+
+<!-- This app should update other services when rss feed is updated. -->
+    <!-- https://ifttt.com/activity/applet/BGnuFHxv-->
+
+
+
+
+
+
+
   <item>
     <title>Dream 3-2-2025</title>
     <description>It's a dream, guys.</description>
