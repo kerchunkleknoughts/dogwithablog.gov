@@ -4,16 +4,18 @@
 
 
 
+
+
 #statuscafe {
-    padding: .5em;
-    background-color: azure;
-    border: 1px solid midnightblue;
+  padding: .5em;
+  background-color: azure;
+  border: 1px solid midnightblue;
 }
 #statuscafe-username {
-    margin-bottom: .5em;
+  margin-bottom: .5em;
 }
 #statuscafe-content {
-    margin: 0 1em 0.5em 1em;
+  margin: 0 1em 0.5em 1em;
 }
 
 
@@ -69,10 +71,10 @@ flex-direction: row;
 
 .buttonchild{
 
- 
-  
-  width: 25%;
-  height: auto; /* Maintains aspect ratio */
+
+
+width: 25%;
+height: auto; /* Maintains aspect ratio */
 
 
 
@@ -83,7 +85,7 @@ flex-direction: row;
 
 
 .cenparentbox{
-  display: flex;
+display: flex;
 text-align: center;
 
 
@@ -96,7 +98,7 @@ flex-direction: row;
 
 
 .sbparentbox{
-  display: flex;
+display: flex;
 text-align: center;
 
 
@@ -112,7 +114,7 @@ flex-direction: row;
 
 .fchildtextbox{
 
-  display: flex;
+display: flex;
 text-align: center;
 
 background-color: aliceblue;
@@ -147,10 +149,10 @@ flex-direction: row;
 
 
 .indicator2 {
- 
- display: flex;
- width: 200px;
- height: auto; /* Maintains aspect ratio */
+
+display: flex;
+width: 200px;
+height: auto; /* Maintains aspect ratio */
 
 }
 
@@ -162,43 +164,43 @@ flex-direction: row;
 
 
 
-        #intro{
-          color: white;
-        }
+      #intro{
+        color: white;
+      }
 
 
 
 
-    #aboutme {
-       /*float: right; */
-       color: rgb(14, 4, 4);
-      text-align: justify; 
-      margin-right: 20px
-      
-    }
-
+  #aboutme {
+     /*float: right; */
+     color: rgb(14, 4, 4);
+    text-align: justify; 
+    margin-right: 20px
     
-    #personality{
-      margin-left: 500px; /* Push content to the right */
-      padding: 50px;
-      color: white;
-     
-      
-    }
-    #interests{
-      margin-left: 500px; /* Push content to the right */
-      padding: 50px;
-      color: white;
-     
-      
-    }
+  }
+
+  
+  #personality{
+    margin-left: 500px; /* Push content to the right */
+    padding: 50px;
+    color: white;
+   
+    
+  }
+  #interests{
+    margin-left: 500px; /* Push content to the right */
+    padding: 50px;
+    color: white;
+   
+    
+  }
 
 
 
 
-    #indicator {
-  float: left;
-  margin-right: 100px; /* optional spacing */
+  #indicator {
+float: left;
+margin-right: 100px; /* optional spacing */
 }
 
 
@@ -208,14 +210,14 @@ flex-direction: row;
 
 
 .vl2 {
-            width: 400px; /* Adjust width as needed */
-            height: 100vh; /* Full height */
-            background-color: #64dbe4; /* Sidebar color */
-            color: white;
-            position: fixed;
-            top: 50;
-            left: 0;
-            padding: 20px;
+          width: 400px; /* Adjust width as needed */
+          height: 100vh; /* Full height */
+          background-color: #64dbe4; /* Sidebar color */
+          color: white;
+          position: fixed;
+          top: 50;
+          left: 0;
+          padding: 20px;
 }
 
 
@@ -278,276 +280,310 @@ flex-direction: row;
 
 .journalindicator{
 
-    display: flex;
-     width: 100px;
-     height: auto; /* Maintains aspect ratio */
-   
-   
-   
-   
-   }
-   
-   
-   .flexbox {
-     display: flex;
-     gap: 10px; /* Space between items   background-color: lightgray; */
-     
-     padding: 20px;
-     justify-content: center;
-     
-     
-   
-    
-   
-   }
-   
-   .dreamstuff{
-     background-color:aliceblue;
-     border-style: double;
-   
-   
-   }
-   
-   
-   
-   .dreamtest{
-     background-color:aliceblue;
-     border-style: double;
-     white-space: pre-line;
-   
-   }
-   
-
-
-   .betterp{
-    background-color:aliceblue;
-    white-space: pre-line;
-  
-  }
-  
-   
-   
-   .twoitemcontainer{
-   
-     display: grid;
-   grid-template-columns: auto auto;
-   gap: 1px;
-   
-   }
-   
-   
-   
-   
-   
-   
-   #statuscafe {
-       padding: .5em;
-       background-color: azure;
-       border: 1px solid midnightblue;
-   }
-   #statuscafe-username {
-       margin-bottom: .5em;
-   }
-   #statuscafe-content {
-       margin: 0 1em 0.5em 1em;
-   }
-   
-   
-   
-   
-   .headstyle{
-   
+  display: flex;
+   width: 100px;
+   height: auto; /* Maintains aspect ratio */
+ 
+ 
+ 
+ 
+ }
+ 
+ 
+ .flexbox {
    display: flex;
-   text-align: center;
-   background-color: aliceblue;
-   border-style: double;
+   gap: 10px; /* Space between items   background-color: lightgray; */
    
+   padding: 20px;
    justify-content: center;
-   
-   flex-direction: row;
-   
-   
-   }
-   
-   
-   
-   .parentbox{
-   
-   display: flex;
-   text-align: center;
-   
-   
-   justify-content: space-evenly;
-   
-   flex-direction: row;
-   
-   
-   }
-   
-   
-   
-   .buttonbox{
-   
-   display: flex;
-   
-   
-   justify-content: space-evenly;
-   
-   flex-direction: row;
-   
-   
-   
-   
-   
-   }
-   
-   .buttonchild{
-   
-    
-     
-     width: 25%;
-     height: auto; /* Maintains aspect ratio */
-   
-   
-   
-   
-   }
-   
-   
-   
-   
-   .cenparentbox{
-     display: flex;
-   text-align: center;
-   
-   
-   justify-content: center;
-   
-   flex-direction: row;
-   
-   
-   }
-   
-   
-   .sbparentbox{
-     display: flex;
-   text-align: center;
-   
-   
-   justify-content: space-between;
-   
-   flex-direction: row;
-   
-   
-   }
-   
-   
-   
-   
-   .fchildtextbox{
-   
-     display: flex;
-   text-align: center;
-   
-   background-color: aliceblue;
-   border-style: double;
-   
-   justify-content: center;
-   
-   flex-direction: row;
-   
-   
-   
-   }
-   
-   
-   .childtextbox{
-   
-   
-   text-align: center;
-   
-   background-color: aliceblue;
-   border-style: double;
-   
-   justify-content: center;
-   
-   flex-direction: row;
-   
-   
-   
-   
-   
-   }
-   
-   
-   .indicator2 {
-    
-    display: flex;
-    width: 200px;
-    height: auto; /* Maintains aspect ratio */
-   
-   }
-   
-   
-   
-   
    
    
  
+  
+ 
+ }
+ 
+ .dreamstuff{
+   background-color:aliceblue;
+   border-style: double;
+ 
+ 
+ }
+ 
+ 
+ 
+ .dreamtest{
+   background-color:aliceblue;
+   border-style: double;
+   white-space: pre-line;
+ 
+ }
+ 
+
+
+ .betterp{
+  background-color:aliceblue;
+  white-space: pre-line;
+
+}
+
+
+.betterpscroll{
+
+  text-align: center;
+  background-color: aliceblue;
+  border-style: double;
+  justify-content: center;
+  flex-direction: row;
+
+  display: flex;
+  max-width: 400px;
+max-height: 400px;
+overflow: auto; /* Enables scrolling when content exceeds max height */
+
+
+}
+
+
+
+.childscrolltextbox{
+
+
+
+ 
+
+  max-width: 100px; /* Adjust width as needed */
+  max-height: 100px; /* Adjust height as needed */
+  overflow: auto; /* Enables scrolling when content exceeds max height */
+  word-wrap: break-word; /* Ensures long words wrap properly */
+
+
+
+}
+
+ 
+ 
+ .twoitemcontainer{
+ 
+   display: grid;
+ grid-template-columns: auto auto;
+ gap: 1px;
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ #statuscafe {
+     padding: .5em;
+     background-color: azure;
+     border: 1px solid midnightblue;
+ }
+ #statuscafe-username {
+     margin-bottom: .5em;
+ }
+ #statuscafe-content {
+     margin: 0 1em 0.5em 1em;
+ }
+ 
+ 
+ 
+ 
+ .headstyle{
+ 
+ display: flex;
+ text-align: center;
+ background-color: aliceblue;
+ border-style: double;
+ 
+ justify-content: center;
+ 
+ flex-direction: row;
+ 
+ 
+ }
+ 
+ 
+ 
+ .parentbox{
+ 
+ display: flex;
+ text-align: center;
+ 
+ 
+ justify-content: space-evenly;
+ 
+ flex-direction: row;
+ 
+ 
+ }
+ 
+ 
+ 
+ .buttonbox{
+ 
+ display: flex;
+ 
+ 
+ justify-content: space-evenly;
+ 
+ flex-direction: row;
+ 
+ 
+ 
+ 
+ 
+ }
+ 
+ .buttonchild{
+ 
+  
    
-   
-           #intro{
-             color: white;
-           }
-   
-   
-   
-   
-       #aboutme {
-          /*float: right; */
-          color: rgb(14, 4, 4);
-         text-align: justify; 
-         margin-right: 20px
-         
-       }
-   
+   width: 25%;
+   height: auto; /* Maintains aspect ratio */
+ 
+ 
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ .cenparentbox{
+   display: flex;
+ text-align: center;
+ 
+ 
+ justify-content: center;
+ 
+ flex-direction: row;
+ 
+ 
+ }
+ 
+ 
+ .sbparentbox{
+   display: flex;
+ text-align: center;
+ 
+ 
+ justify-content: space-between;
+ 
+ flex-direction: row;
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ .fchildtextbox{
+ 
+   display: flex;
+ text-align: center;
+ 
+ background-color: aliceblue;
+ border-style: double;
+ 
+ justify-content: center;
+ 
+ flex-direction: row;
+ 
+ 
+ 
+ }
+ 
+ 
+ .childtextbox{
+ 
+ 
+ text-align: center;
+ 
+ background-color: aliceblue;
+ border-style: double;
+ 
+ justify-content: center;
+ 
+ flex-direction: row;
+ 
+ 
+ 
+ 
+ 
+ }
+ 
+ 
+ .indicator2 {
+  
+  display: flex;
+  width: 200px;
+  height: auto; /* Maintains aspect ratio */
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+         #intro{
+           color: white;
+         }
+ 
+ 
+ 
+ 
+     #aboutme {
+        /*float: right; */
+        color: rgb(14, 4, 4);
+       text-align: justify; 
+       margin-right: 20px
        
-       #personality{
-         margin-left: 500px; /* Push content to the right */
-         padding: 50px;
-         color: white;
-        
-         
-       }
-       #interests{
-         margin-left: 500px; /* Push content to the right */
-         padding: 50px;
-         color: white;
-        
-         
-       }
-   
-   
-   
-   
-       #indicator {
-     float: left;
-     margin-right: 100px; /* optional spacing */
-   }
-   
-   
-   
-   
-   
-   
-   
-   .vl2 {
-               width: 400px; /* Adjust width as needed */
-               height: 100vh; /* Full height */
-               background-color: #64dbe4; /* Sidebar color */
-               color: white;
-               position: fixed;
-               top: 50;
-               left: 0;
-               padding: 20px;
-   }
+     }
+ 
+     
+     #personality{
+       margin-left: 500px; /* Push content to the right */
+       padding: 50px;
+       color: white;
+      
+       
+     }
+     #interests{
+       margin-left: 500px; /* Push content to the right */
+       padding: 50px;
+       color: white;
+      
+       
+     }
+ 
+ 
+ 
+ 
+     #indicator {
+   float: left;
+   margin-right: 100px; /* optional spacing */
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ .vl2 {
+             width: 400px; /* Adjust width as needed */
+             height: 100vh; /* Full height */
+             background-color: #64dbe4; /* Sidebar color */
+             color: white;
+             position: fixed;
+             top: 50;
+             left: 0;
+             padding: 20px;
+ }
