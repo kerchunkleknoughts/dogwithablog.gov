@@ -2,6 +2,23 @@
 
 
 
+#guestbook{
+
+  display: flex;
+  width: 700px;
+  height: 700px;
+
+justify-content: center;
+
+flex-direction: row;
+
+
+
+}
+
+
+
+
 
 
 

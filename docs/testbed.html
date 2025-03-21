@@ -1,0 +1,278 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+    <style>
+
+body {
+          background-image: url("./resources/backgrounds/office.png");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+    </style>
+
+    <link rel="stylesheet" href="./resources/progresources/globalcss.css">
+
+
+</head>
+
+
+
+
+  
+
+
+<body>
+
+
+
+  
+
+
+<div class="headstyle">
+
+    <header >
+      <div>
+        <a href="about.html">about</a>
+        <a href="index.html">home</a>
+        <a href="contact.html">socials-contact</a>
+        <a href="music.html">music</a>
+        <a href="drawings.html">art</a>
+        <a href="journal.html">journal</a>
+        <a href="todo.html">todo</a>
+        <a href="dreamlog.html">dream log</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+      </div>
+
+    </header>
+  </div>`
+
+
+
+
+
+
+
+<audio id="bgm" loop>
+  <source src="./resources/audio/Hylics 2 OST   Prevailing Westerlies 4.mp3" type="audio/mpeg">
+</audio>
+
+
+<audio id="postmusicclick">
+<source src="./resources/onclickaudio/yummers.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<div class="parentbox">
+
+
+    
+  
+       
+    
+    
+
+        
+            
+        <p class="betterpscroll"> Todo high importance 
+            <br>
+            &#8226; Make site button
+            <br>
+            &#8226; Join a few webrings
+            <br>
+            &#8226; Make journal background a little less shit 
+            <br>
+            &#8226; Update image paths to use 11ty functionality
+            <br>
+            &#8226; 
+            <br>
+            &#8226;
+            <br>
+            &#8226; 
+            <br>
+            &#8226; 
+            <br>
+            &#8226; 
+            <br>
+            &#8226; 
+            <br>
+            &#8226; 
+            <br>
+            &#8226; 
+            <br>
+            &#8226; 
+            <br>
+            &#8226; 
+          
+            </p>
+     
+            <p class="betterpscroll"> Todo med importance 
+                <br>
+                &#8226; Maybe add in chess.com profile to chess up randos
+                <br>
+                &#8226; organize art page a bit
+                <br>
+                &#8226; find background for art page that isnt shitposty
+                <br>
+                &#8226; Make home page, move current home page to about
+                <br>
+                &#8226; Add Games played to about 
+                <br>
+                &#8226; Add movies to about 
+                <br>
+                &#8226; Add tv shows to about 
+                <br>
+                &#8226; Add names to drawings
+                <br>
+                &#8226; Fix ITTT web integrations
+                <br>
+                &#8226; find freezing moon cover, add to music 
+                <br>
+                &#8226; Edit soldier wheeze on click audio
+                <br>
+                &#8226; find more onclick audio files
+                <br>
+                &#8226; figure out how to have multiple statusfm posts on widget
+                <br>
+                &#8226; 
+              
+                </p>
+
+                <p class="betterpscroll"> Todo low importance 
+                    <br>
+                    &#8226; Add in functionality to randomize dream log music/onclick
+                    <br>
+                    &#8226; embed piclog
+                    <br>
+                    &#8226; add more dreams
+                    <br>
+                    &#8226; add more journal entires
+                    <br>
+                    &#8226; add support for different monitor sizes
+                    <br>
+                    &#8226;
+                    <br>
+                    &#8226; 
+                    <br>
+                    &#8226; 
+                    <br>
+                    &#8226; 
+                    <br>
+                    &#8226; 
+                    <br>
+                    &#8226; 
+                    <br>
+                    &#8226; 
+                    <br>
+                    &#8226; 
+                    <br>
+                    &#8226; 
+                  
+                    </p>
+
+        
+    
+  
+  
+  </div>
+
+
+
+  <section>
+    
+
+
+
+    <iframe aria-label="Guestbook" id="guestbook" src="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85" loading="lazy"></iframe>
+
+    
+</section>
+
+
+     
+      <script src="https://iframe.chat/scripts/main.min.js"></script>
+      <script src="./resources/progresources/js/script.js"></script>  
+      <script>
+      
+              document.addEventListener("DOMContentLoaded", function() {
+                  let audio = document.getElementById("bgm");
+                  setTimeout(() => {
+                      audio.play().catch(error => console.log("Autoplay blocked:", error));
+                  }, 1500); // Delay autoplay
+          
+          
+              
+                  
+              });
+              document.body.addEventListener("click", playAudio);
+              document.body.addEventListener("mouseover", playAudio);
+              function playAudio() {
+                 
+          
+                 
+          
+                  // Remove event listeners after first interaction to prevent multiple triggers
+                
+                  let musicenabled=1;
+          
+                  
+                  
+                  if(!(document.getElementById("bgm")==null)){
+          
+                  document.body.click();
+                  //console.log("MOUSED!");
+                  let audio = document.getElementById("bgm");
+                  audio.play().catch(error => console.log("Autoplay blocked:", error));
+          
+      
+      
+                  if (audio.paused == false) {
+                    
+                    document.body.removeEventListener('mouseover', playAudio);
+                    console.log("eventlistener removed :(");
+                    let audio = document.getElementById("postmusicclick");
+                    audio.play().catch(error => console.log("Autoplay blocked:", error));
+      
+                    
+                  }
+      
+      
+                  }else{
+      
+                    let audio = document.getElementById("postmusicclick");
+                    audio.play().catch(error => console.log("Autoplay blocked:", error));
+          
+          
+                      console.log("post music click");
+      
+                    
+      
+                   
+                  }
+          
+          
+          
+          
+              }
+          
+      
+              chattable.initialize({
+              theme : "Tendo"
+            });
+      
+            generateheader();
+      </script>
+
+</body>
+</html>
+
