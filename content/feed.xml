@@ -4,142 +4,57 @@
   <title>Kerchunkles place</title>
   <description>Its a blog.</description>
   <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/index.html</link>
-  <lastBuildDate>
-    1742577946
-  </lastBuildDate>
+  <lastBuildDate>Fri, 21 Mar 2025 12:45:46 GMT</lastBuildDate>
   <ttl>10080</ttl>
 
-
-  <!-- To generate timestamps under pubdate : https://timestampgenerator.com/1742077903/+00:00 -->
-  <!-- These are called unix time stamps-->
-
-  <!-- quick rss refresher: https://caffeineandlasers.neocities.org/blogs/automatingYourRSS -->
-
-    <!-- Dont forget to remake the counter on ur website ever so often for semi accurate counting -->
-
-    <!-- https://blogtrottr.com/-->
-
-
-
-<!-- This app should update other services when rss feed is updated. -->
-    <!-- https://ifttt.com/activity/applet/BGnuFHxv-->
-
+  <item>
+    <title>Dream 3-2-2025</title>
+    <description>It's a dream, guys.</description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream3-2-2025.html</link>
+    <pubDate>Sun, 02 Mar 2025 12:25:03 GMT</pubDate>
+  </item>
 
   <item>
-    <title>dream3-2-2025</title>
-    <description>
-      its a dream guys
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream3-2-2025.html</link>
-    <pubDate>
-      1742077903
-    </pubDate>
-  </item>
-
-
-<item>
-    <title>dream2-31-2025</title>
-    <description>
-      New dream
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream2-31-2025.html</link>
-    <pubDate>
-      1742077903
-    </pubDate>
-  </item>
-
-
-<item>
-    <title>Dream 2-3-2025</title>
-    <description>
-      another, dream. 
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream2-3-2025.html</link>
-    <pubDate>
-      1742077903
-    </pubDate>
-  </item>
-
-
-
-<item>
-    <title>Dream 2-3-2025</title>
-    <description>
-      Really sad dream
-    </description>
+    <title>Dream 2-28-2025</title>
+    <description>Really sad dream.</description>
     <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream2-28-2025.html</link>
-    <pubDate>
-      1742082163
-    </pubDate>
+    <pubDate>Fri, 28 Feb 2025 14:09:23 GMT</pubDate>
   </item>
-
 
   <item>
     <title>Dream 6-29-2023</title>
-    <description>
-      dream I had last year that I still think about
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream16-29-2023.html</link>
-    <pubDate>
-      1742082163
-    </pubDate>
+    <description>Dream I had last year that I still think about.</description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream6-29-2023.html</link>
+    <pubDate>Thu, 29 Jun 2023 08:30:00 GMT</pubDate>
   </item>
 
-
   <item>
-    <title>Dreams 05</title>
-    <description>
-      to save time I will begin mushing up dreams in no particular order, sorrz.
-    </description>
+    <title>Dreams Collection 05</title>
+    <description>To save time, I will begin mushing up dreams in no particular order. Sorrz.</description>
     <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream05.html</link>
-    <pubDate>
-      1742082163
-    </pubDate>
+    <pubDate>Sat, 15 Mar 2025 10:10:00 GMT</pubDate>
   </item>
-
 
   <item>
-    <title>journal 1-10-2025</title>
-    <description>
-      made a journal page and a single entry.
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream05.html</link>
-    <pubDate>
-      1742250703
-    </pubDate>
+    <title>Journal Entry 1-10-2025</title>
+    <description>Made a journal page and a single entry.</description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/journal/journal1-10-2025.html</link>
+    <pubDate>Fri, 10 Jan 2025 17:45:03 GMT</pubDate>
   </item>
-
 
   <item>
-    <title>journal 1-10-2025</title>
-    <description>
-      Redid headers on website, now its super efficient!
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream05.html</link>
-    <pubDate>
-      1742250703
-    </pubDate>
+    <title>Website Update - Headers Refactored</title>
+    <description>Redid headers on the website. Now it's super efficient!</description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/updates/headers-refactor.html</link>
+    <pubDate>Fri, 10 Jan 2025 18:00:00 GMT</pubDate>
   </item>
-
-
-
 
   <item>
-    <title>11ty refactor</title>
-    <description>
-      Refactored site to support 11ty, thanks to the tutorial I found here:  https://petrapixel.neocities.org/coding/eleventy-tutorial
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/l</link>
-    <pubDate>
-      2025-03-21
-    </pubDate>
+    <title>11ty Refactor</title>
+    <description>Refactored site to support 11ty, thanks to this tutorial: https://petrapixel.neocities.org/coding/eleventy-tutorial</description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/updates/11ty-refactor.html</link>
+    <pubDate>Fri, 21 Mar 2025 12:00:00 GMT</pubDate>
   </item>
-
-
-
-
-
-
 
 </channel>
 </rss>
