@@ -43,7 +43,7 @@
       
 
       body {
-          background-image: url('../resources/images/cruiseclub.jpg');
+          background-image: url('../../resources/backgrounds/cruiseclub.jpg');
       
           background-attachment: fixed;
           background-size: cover;
@@ -204,20 +204,37 @@ gap: 1px;
 
 <body>
 
-  <div id="headerholder">
-    <p>test</p>
-</div>
 
 
  
 
+
+<div class="headstyle">
+
+    <header >
+      <div>
+        <a href="../about.html">about</a>
+        <a href="../index.html">home</a>
+        <a href="../contact.html">socials-contact</a>
+        <a href="../music.html">music</a>
+        <a href="../drawings.html">art</a>
+        <a href="../journal.html">journal</a>
+        <a href="../dreamlog.html">dream log</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+      </div>
+
+    </header>
+  </div>`
+ 
+
   <audio id="bgm" loop>
-    <source src="../resources/audio/BORDERLINE CASE 4.mp3" type="audio/mpeg">
+    <source src="../../resources/audio/BORDERLINE CASE 4.mp3" type="audio/mpeg">
 </audio>
 
 
 <audio id="postmusicclick">
-  <source src="../resources/audio/button9.wav" type="audio/mpeg">
+  <source src="../../resources/onclickaudio/button9.wav" type="audio/mpeg">
 </audio>
 
 
@@ -276,7 +293,7 @@ beggar in tattered clothes pleading him to help despite the fact that I had turn
  
 
  <script src="https://iframe.chat/scripts/main.min.js"></script>
- <script src="../resources/js/script.js"></script>  
+ <script src="../../resources/progresources/js/script.js"></script>  
  <script>
  
          document.addEventListener("DOMContentLoaded", function() {
