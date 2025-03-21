@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
       dir: {
         input: "content",
         data: "_data",
-        output: "public",
+        output: "docs",
       },
     };
   };
