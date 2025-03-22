@@ -206,7 +206,33 @@ flex-direction: row;
   
   
   }
+
+
+  .smallkingchildtextbox{
+
+
+
+    font-family: 'Kingthings Facetype', sans-serif; /* Fallback font */
+    
+    font-size: 10px;
   
+    text-align: center;
+    
+    background-color: aliceblue;
+    border-style: double;
+    
+    justify-content: center;
+    
+    flex-direction: row;
+    
+    
+    
+    }
+  
+  
+  
+
+
 
 
 .indicator2 {
