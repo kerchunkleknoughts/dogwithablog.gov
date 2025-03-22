@@ -175,9 +175,37 @@ flex-direction: row;
 
 
 
-
-
 }
+
+
+@font-face {
+  font-family: 'Kingthings Facetype';
+  src: url('KingthingsFacetype.ttf') format('truetype');
+}
+
+
+
+
+.kingchildtextbox{
+
+
+
+  font-family: 'Kingthings Facetype', sans-serif; /* Fallback font */
+  
+
+  text-align: center;
+  
+  background-color: aliceblue;
+  border-style: double;
+  
+  justify-content: center;
+  
+  flex-direction: row;
+  
+  
+  
+  }
+  
 
 
 .indicator2 {
