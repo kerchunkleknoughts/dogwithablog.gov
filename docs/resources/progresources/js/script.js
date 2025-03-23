@@ -103,14 +103,14 @@ function simplereplace(passedid){
 
 function gotonextindex(dreamindex) {
 
-    var urls = ["dream3-2-2025.html", "dream2-31-2025.html", "dream2-28-2025.html", "dream2-3-2025.html", "dream16-29-2023.html", "dream05.html"];
+    var urls = ["dream3-2-2025.html", "dream2-31-2025.html", "dream2-28-2025.html", "dream2-3-2025.html", "dream16-29-2023.html", "dream05.html","dream06.html"];
     window.location.href = urls[dreamindex+1];
 
 }
 
 function gotoprevindex(dreamindex) {
 
-    var urls = ["dream3-2-2025.html", "dream2-31-2025.html", "dream2-28-2025.html", "dream2-3-2025.html", "dream16-29-2023.html", "dream05.html"];
+    var urls = ["dream3-2-2025.html", "dream2-31-2025.html", "dream2-28-2025.html", "dream2-3-2025.html", "dream16-29-2023.html", "dream05.html","dream06.html"];
     window.location.href = urls[dreamindex-1];
 
 }
