@@ -349,7 +349,14 @@ function displayart(artindex){
  
   <div id=currentart>
 
-    <h1 id="centered">LATEST ART</h1>
+    
+  <div class="parentbox">  
+
+  <h1 class="childtextbox">later college art</h1>
+</div>
+
+
+    <div class="parentbox">  
 
 
 
@@ -450,7 +457,11 @@ function displayart(artindex){
   `
 
    <div id=currentart>
-   <h1 id="centered">OLDER ART</h1>
+
+   <div class="parentbox">  
+
+  <h1 class="childtextbox">mid college art</h1>
+</div>
 
       
       <div class="container">
@@ -502,7 +513,11 @@ fucky1.innerHTML=
 `
 
    <div id=currentart>
-   <h1 id="centered">EVEN OLDER ART</h1>
+   
+   <div class="parentbox">  
+
+  <h1 class="childtextbox">early college art</h1>
+</div>
 
 
       <div class="container">
@@ -591,7 +606,11 @@ fucky0.innerHTML=
 `
  
  <div id=currentart>
-      <h1 id="centered">ANCIENT ART!</h1>
+      
+ <div class="parentbox">  
+
+  <h1 class="childtextbox">highschool art</h1>
+</div>
 
 
       <div class="container">
