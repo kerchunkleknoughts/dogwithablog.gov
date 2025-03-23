@@ -338,6 +338,83 @@ function displayart(artindex){
 
 
 
+  let fucky4=document.createElement('div');
+
+  fucky4.innerHTML=
+
+  `
+ 
+   <div id="currentart">
+
+
+<div class="parentbox">  
+
+  <h1 class="childtextbox">3-11-2025 art</h1>
+</div>
+
+
+<div class="container">
+  <div class="item">
+      <img src="./resources/art/drawings/latest 3-11-2025/aifishman.jpg" id="indicator2"> </img>
+      </div>
+    
+  
+      <div class="item">
+        <img src="./resources/art/drawings/latest 3-11-2025/ant hell.jpg" id="flip-horizontalm1"> </img>
+        </div>
+      
+  
+        <div class="item">
+            <img src="./resources/art/drawings/latest 3-11-2025/bosh practice 1.jpg" id="flip-horizontalm1"> </img>
+            </div>
+          
+  
+            <div class="item">
+                <img src="./resources/art/drawings/latest 3-11-2025/rabbit practice.jpg" id="indicator2"> </img>
+                </div>
+              
+  
+                <div class="item">
+                    <img src="./resources/art/drawings/latest 3-11-2025/rp2.jpg" id="indicator2"> </img>
+                    </div>
+                  
+  
+                    <div class="item">
+                        <img src="./resources/art/drawings/latest 3-11-2025/rp3.jpg" id="indicator2"> </img>
+                        </div>
+                      
+  
+                        <div class="item">
+                            <img src="./resources/art/drawings/latest 3-11-2025/rp4.jpg" id="indicator2"> </img>
+                            </div>
+                          
+  
+                            <div class="item">
+                                <img src="./resources/art/drawings/latest 3-11-2025/sqeeble.jpg" id="indicator2"> </img>
+                                </div>
+                              
+  
+                                <div class="item">
+                                    <img src="./resources/art/drawings/latest 3-11-2025/willy.jpg" id="indicator2"> </img>
+                                    </div>
+                                  
+  
+      
+  
+                                                                       
+                                        
+
+</div>
+
+
+</div>
+
+
+
+`
+;
+
+
 
 
 
@@ -652,8 +729,8 @@ fucky0.innerHTML=
 
 
 
-let artarray=[fucky0,fucky1,fucky2,fucky3]
-let buttonarray=["a0","a1","a2","a3"]
+let artarray=[fucky0,fucky1,fucky2,fucky3,fucky4]
+let buttonarray=["a0","a1","a2","a3","a4"]
 
   
   correctform.replaceWith(artarray[artindex]);
