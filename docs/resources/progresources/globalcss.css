@@ -85,6 +85,21 @@ flex-direction: row;
 }
 
 
+.parentboxcenter{
+
+  display: flex;
+  text-align: center;
+  
+  
+  justify-content: center;
+  
+  flex-direction: row;
+  
+  
+  }
+  
+
+
 
 .buttonbox{
 
@@ -613,6 +628,25 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
  
  }
+
+ .childtextboxpadded{
+ 
+ 
+  text-align: center;
+  
+
+  
+  
+  justify-content: center;
+  
+  flex-direction: row;
+  padding: 20px;
+  
+  
+  
+  
+  }
+
  
  
  .indicator2 {

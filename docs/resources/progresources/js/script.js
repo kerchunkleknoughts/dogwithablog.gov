@@ -2,7 +2,7 @@
 
 
 const globe = {
-  prevart: 3
+  prevart: 100
 };
 
 
