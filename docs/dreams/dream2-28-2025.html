@@ -297,78 +297,96 @@ gap: 1px;
  
 
   
+ 
+<script>
 
- <script src="https://iframe.chat/scripts/main.min.js"></script>
- <script src="../resources/progresources/js/script.js"></script>  
- <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        randodreamaudio()
+        let audio = document.getElementById("bgm");
+        setTimeout(() => {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+        }, 1500); // Delay autoplay
+
+
+        
+    
+        
+    });
+
+
  
-         document.addEventListener("DOMContentLoaded", function() {
-             let audio = document.getElementById("bgm");
-             setTimeout(() => {
-                 audio.play().catch(error => console.log("Autoplay blocked:", error));
-             }, 1500); // Delay autoplay
-     
-     
+
+
+
+    document.body.addEventListener("click", playAudio);
+
+    document.body.addEventListener("mouseover", playAudio);
+
+
+
+
+
+    function playAudio() {
+       
+
+       
+
+        // Remove event listeners after first interaction to prevent multiple triggers
+      
+        let musicenabled=1;
+
+        
+        
+        if(!(document.getElementById("bgm")==null)){
+
+        document.body.click();
+        //console.log("MOUSED!");
+        let audio = document.getElementById("bgm");
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+
+        if (audio.paused == false) {
+          
+          document.body.removeEventListener('mouseover', playAudio);
+          console.log("eventlistener removed :(");
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+          
+        }
+
+
+        }else{
+
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+            console.log("post music click");
+
+          
+
          
-             
-         });
-         document.body.addEventListener("click", playAudio);
-         document.body.addEventListener("mouseover", playAudio);
-         function playAudio() {
-            
-     
-            
-     
-             // Remove event listeners after first interaction to prevent multiple triggers
-           
-             let musicenabled=1;
-     
-             
-             
-             if(!(document.getElementById("bgm")==null)){
-     
-             document.body.click();
-             //console.log("MOUSED!");
-             let audio = document.getElementById("bgm");
-             audio.play().catch(error => console.log("Autoplay blocked:", error));
-     
- 
- 
-             if (audio.paused == false) {
-               
-               document.body.removeEventListener('mouseover', playAudio);
-               console.log("eventlistener removed :(");
-               let audio = document.getElementById("postmusicclick");
-               audio.play().catch(error => console.log("Autoplay blocked:", error));
- 
-               
-             }
- 
- 
-             }else{
- 
-               let audio = document.getElementById("postmusicclick");
-               audio.play().catch(error => console.log("Autoplay blocked:", error));
-     
-     
-                 console.log("post music click");
- 
-               
- 
-              
-             }
-     
-     
-     
-     
-         }
-     
- 
-         chattable.initialize({
-         theme : "Tendo"
-       });
- 
-       generatedreamheader();
- </script>
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+</script>
+<script src="../resources/progresources/js/script.js"></script>  
+
 </body>
 </html>

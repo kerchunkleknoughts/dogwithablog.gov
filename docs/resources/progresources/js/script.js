@@ -228,3 +228,97 @@ function generatedreamheader(){
 
 
 }
+
+
+
+
+function randodreamaudio(){
+
+  var correctform=document.getElementById("bgm");
+  //console.log(correctform.value);
+
+  let fucky=document.createElement('div');
+
+  fucky.innerHTML=
+
+  `
+<audio id="bgm" loop>
+    <source src="../resources/audio/Separation Anxiety - Neon Genesis Evangelion 4.mp3" type="audio/mpeg">
+</audio>`
+;
+
+
+
+let fucky1=document.createElement('div');
+
+fucky1.innerHTML=
+
+
+`
+  <audio id="bgm" loop>
+    <source src="../resources/audio/BORDERLINE CASE 4.mp3" type="audio/mpeg">
+</audio>`
+;
+
+
+
+let fucky2=document.createElement('div');
+
+fucky2.innerHTML=
+
+
+`
+  <audio id="bgm" loop>
+    <source src="../resources/audio/Roedelius - Freudentanz 4.mp3" type="audio/mpeg">
+</audio>`
+;
+
+
+let fucky3=document.createElement('div');
+
+fucky3.innerHTML=
+
+
+`
+  <audio id="bgm" loop>
+    <source src="../resources/audio/the third place 4.mp3" type="audio/mpeg">
+</audio>`
+;
+
+
+
+
+
+
+var rando=Math.floor(Math.random() * 22);
+console.log(rando);
+
+
+if(rando>20){
+  correctform.replaceWith(fucky3);
+  }
+  if(rando>15){
+    correctform.replaceWith(fucky2);
+    }
+    if(rando>10){
+      correctform.replaceWith(fucky1);
+      }
+      if(rando>5){
+        correctform.replaceWith(fucky);
+        }
+      
+  
+  
+
+
+
+
+
+
+
+      
+  
+
+
+}
+

@@ -317,13 +317,16 @@ Under the supervision of time Cops we were looking around<br>
  
 <script>
 
+
     document.addEventListener("DOMContentLoaded", function() {
+        randodreamaudio()
         let audio = document.getElementById("bgm");
         setTimeout(() => {
             audio.play().catch(error => console.log("Autoplay blocked:", error));
         }, 1500); // Delay autoplay
 
 
+        
     
         
     });
