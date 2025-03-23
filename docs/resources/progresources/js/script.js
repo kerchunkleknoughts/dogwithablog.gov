@@ -1,9 +1,6 @@
 
 
 
-const globe = {
-  prevart: 100
-};
 
 
 
@@ -326,9 +323,28 @@ if(rando>15){
 }
 
 
+class globe {
+  static prevart = 100; // Static variable
+
+  updateprevart(index){
+    this.prevart=index
+  }
+
+}
+
+
+
+
 
 
 function displayart(artindex){
+
+
+ 
+  
+
+  console.log("prevart")
+  console.log(globe.prevart)
 
  
   var correctform=document.getElementById("currentart");
@@ -739,7 +755,7 @@ let buttonarray=["a0","a1","a2","a3","a4"]
   var currentbutt=document.getElementById(buttonarray[artindex]);
 
 
-  currentbutt.style.backgroundColor = "yellow";
+  //currentbutt.style.backgroundColor = "yellow";
   
   
   
@@ -749,6 +765,7 @@ let buttonarray=["a0","a1","a2","a3","a4"]
   currentbutt.style.backgroundColor = "white";
 
 
-  globe.prevart=artindex;
+  globe.updateprevart(artindex);
+
 }
 
