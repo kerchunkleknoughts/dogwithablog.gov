@@ -1,0 +1,231 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    
+        
+    <style>
+
+        body {
+                  background-image: url("../resources/backgrounds/largecock.jpg");
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-size: cover;
+                }
+        
+        
+            </style>
+        
+            <link rel="stylesheet" href="../resources/progresources/globalcss.css">
+
+
+
+
+
+</head>
+
+
+
+
+  
+
+<body>
+  
+
+  
+
+
+<div class="headstyle">
+
+    <header >
+      <div>
+        <a href="../about.html">about</a>
+        <a href="../index.html">home</a>
+        <a href="../contact.html">socials-contact</a>
+        <a href="../music.html">music</a>
+        <a href="../drawings.html">art</a>
+        <a href="../journal.html">journal</a>
+        <a href="../todo.html">todo</a>
+        <a href="../dreamlog.html">dream log</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+      </div>
+
+    </header>
+  </div>`
+
+
+  <audio id="bgm" loop>
+    <source src="../resources/audio/Separation Anxiety - Neon Genesis Evangelion 4.mp3" type="audio/mpeg">
+</audio>
+
+
+  <audio id="postmusicclick">
+    <source src="../resources/onclickaudio/button9.wav" type="audio/mpeg">
+  </audio>
+  
+
+ 
+
+
+  
+   
+  <div class="flexbox">
+  
+    <div class="dreamstuff">
+  <p>
+    11-23-2024
+
+    Had a dream that I was given a handgun that had both a little cigarette holder compartments, along with a lighter which shot a
+     little plume of flame out of the front of the gun, and to light the cigarette you would need to point the gun at your face 
+    
+     2-15-2023
+
+    I was going out with a waitress after we met at a pizza restaurant. They kept fucking up my order, I never got the pizza, 
+    I went to the restaurant as a break from my exam studies with the intention to come back We ended up going out to the mountains
+     for a hike, we drove up there and there was a forest of  manikins like the cacti that cover New Mexico. We finally got to a 
+     super steep cliff and positioned the car like a squirrel resting on a branch, the underbelly in contact with the mountain so
+      it didn’t fall off the knife edge of the mountain. Later I woke up and realized it was a dream, that I had more time to study, 
+      And I was wasting my time, but the waitress returned , and mocked me since she was a figment of my imagination and that she was a hallucination.
+    
+      5-7-2023
+
+    last night I had a dream that me and [redacted] were in some sort of biomedical major together, and he had submitted a 
+    project to the professor in front of me which was an anatomically correct model of the brain made out of clay, and the 
+    professor, or he might have been an industry professional or something idk took a pair of tweezers and started ripping 
+    apart the brain to see each layer below. prior to this I saw him greeting his girlfriend, with a kiss on the cheek after 
+    [redacted]  had submitted the brain, the professional seemed very impressed, and I felt this horrible jealousy, but 
+    soon after, when I was walking alone, his girlfriend had come up to me and kissed me and I thought well this is where 
+    I can exact my revenge, by hooking up with his girlfriend
+  </p>
+    </div>
+   </div>   
+
+
+
+
+
+
+
+
+
+   <div class="flexbox">
+
+    <div class="headstyle">
+    
+   
+     <div>
+
+  
+       <button onclick="gotoprevindex(7)">Prev dream</button>
+       <button onclick="gotonextindex(7)">Next dream</button>
+
+       
+   
+       
+   
+   </div>
+   </div>
+   
+
+
+
+ 
+   
+<script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        let audio = document.getElementById("bgm");
+        setTimeout(() => {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+        }, 1500); // Delay autoplay
+
+
+    
+        
+    });
+
+
+ 
+
+
+
+    document.body.addEventListener("click", playAudio);
+
+    document.body.addEventListener("mouseover", playAudio);
+
+
+
+
+
+    function playAudio() {
+       
+
+       
+
+        // Remove event listeners after first interaction to prevent multiple triggers
+      
+        let musicenabled=1;
+
+        
+        
+        if(!(document.getElementById("bgm")==null)){
+
+        document.body.click();
+        //console.log("MOUSED!");
+        let audio = document.getElementById("bgm");
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+
+        if (audio.paused == false) {
+          
+          document.body.removeEventListener('mouseover', playAudio);
+          console.log("eventlistener removed :(");
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+          
+        }
+
+
+        }else{
+
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+            console.log("post music click");
+
+          
+
+         
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+</script>
+<script src="../resources/progresources/js/script.js"></script>  
+
+
+</body>
+</html>
