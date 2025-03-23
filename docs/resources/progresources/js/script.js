@@ -1,6 +1,9 @@
 
 
 
+const globe = {
+  prevart: 3
+};
 
 
 
@@ -327,7 +330,7 @@ if(rando>15){
 
 function displayart(artindex){
 
-
+ 
   var correctform=document.getElementById("currentart");
   //console.log(correctform.value);
 
@@ -650,13 +653,25 @@ fucky0.innerHTML=
 
 
 let artarray=[fucky0,fucky1,fucky2,fucky3]
-
+let buttonarray=["a0","a1","a2","a3"]
 
   
   correctform.replaceWith(artarray[artindex]);
 
 
+  var currentbutt=document.getElementById(buttonarray[artindex]);
+
+
+  currentbutt.style.backgroundColor = "yellow";
+  
+  
   
 
 
+  var currentbutt=document.getElementById(buttonarray[globe.prevart]);
+  currentbutt.style.backgroundColor = "white";
+
+
+  globe.prevart=artindex;
 }
+
