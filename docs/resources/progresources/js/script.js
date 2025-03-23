@@ -294,16 +294,16 @@ var rando=Math.floor(Math.random() * 22);
 console.log(rando);
 
 
-if(rando>20){
+if(rando>15){
   correctform.replaceWith(fucky3);
   }
-  if(rando>15){
+  if(rando>10){
     correctform.replaceWith(fucky2);
     }
-    if(rando>10){
+    if(rando>5){
       correctform.replaceWith(fucky1);
       }
-      if(rando>5){
+      if(rando>0){
         correctform.replaceWith(fucky);
         }
       
