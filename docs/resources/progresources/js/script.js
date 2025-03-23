@@ -303,7 +303,7 @@ if(rando>15){
     if(rando>5){
       correctform.replaceWith(fucky1);
       }
-      if(rando>0){
+      if(rando>=0){
         correctform.replaceWith(fucky);
         }
       
