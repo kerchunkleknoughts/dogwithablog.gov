@@ -328,18 +328,25 @@ if(rando>15){
 
 
 
-var test;
-let previndex=0;
 
+
+var test;
+let previndex=3;
+let maxindex=4;
 
 function displayart(artindex){
 
+  
 
-  test=artindex
+  if(previndex==artindex){
+    previndex=previndex+1;
+   }
 
-  console.log(test);
-  test=test+1;
-  console.log(test);
+   if(previndex==maxindex){
+    previndex=0;
+   }
+
+
 
 
   console.log("previndex")
