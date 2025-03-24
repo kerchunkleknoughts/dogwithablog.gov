@@ -88,154 +88,27 @@
 
 
 
-
-
-
-
- 
-
-
-
- 
-
-
-
- 
-
- <div class="parentboxcenter">
+  <div class="parentboxcenter">
 
     <div class="headstyle">
     
-  
-      
-
-       <button onclick="gotoprevindex(0)">Prev dream</button>
-       <button onclick="gotonextindex(0)">Next dream</button>
-
-       <button onclick="randomdream()">random dream</button>
-       <button onclick="location.href='./dreamlibrary.html'">dream library</button>
 
 
-   
-   </div>
-   </div>
-   
-
-<br><br><br><br>
-<footer>
-
-    <br><br>
-    <div class="parentboxcenter">
-
-
-    <a href="feed.xml" class="childtextboxpadded">
-        <img src="../resources/images/RSS_Logo.png" alt="RSS Feed" style="width: 20px; height: 20px"> 
-    </a>
-
-    <a href="#top" class="childtextboxpadded">Back to top</a>
-
-
-    
-<script>
-
-
-    document.addEventListener("DOMContentLoaded", function() {
-        randodreamaudio()
-        let audio = document.getElementById("bgm");
-        setTimeout(() => {
-            audio.play().catch(error => console.log("Autoplay blocked:", error));
-        }, 1500); // Delay autoplay
-
-
-        
-    
-        
-    });
-
+<button onclick="gotoprevindex(0)">Dream0</button>
+<button onclick="gotoprevindex(1)">Dream1</button>
+<button onclick="gotoprevindex(2)">Dream2</button>
+<button onclick="gotoprevindex(3)">Dream3</button>
+<button onclick="gotoprevindex(4)">Dream4</button>
+<button onclick="gotoprevindex(5)">Dream5</button>
+<button onclick="gotoprevindex(6)">Dream6</button>
+<button onclick="gotoprevindex(7)">Dream7</button>
 
  
 
+    </div>
+  </div>
 
 
-    document.body.addEventListener("click", playAudio);
-
-    document.body.addEventListener("mouseover", playAudio);
-
-
-
-
-
-    function playAudio() {
-       
-
-       
-
-        // Remove event listeners after first interaction to prevent multiple triggers
-      
-        let musicenabled=1;
-
-        
-        
-        if(!(document.getElementById("bgm")==null)){
-
-        document.body.click();
-        //console.log("MOUSED!");
-        let audio = document.getElementById("bgm");
-        audio.play().catch(error => console.log("Autoplay blocked:", error));
-
-
-
-        if (audio.paused == false) {
-          
-          document.body.removeEventListener('mouseover', playAudio);
-          console.log("eventlistener removed :(");
-          let audio = document.getElementById("postmusicclick");
-          audio.play().catch(error => console.log("Autoplay blocked:", error));
-
-          
-        }
-
-
-        }else{
-
-          let audio = document.getElementById("postmusicclick");
-          audio.play().catch(error => console.log("Autoplay blocked:", error));
-
-
-            console.log("post music click");
-
-          
-
-         
-        }
-
-
-
-
-    }
-
-
-
-
-
-
-</script>
-
-
-
-</script>
-<script src="../resources/progresources/js/script.js"></script>  
-
-</div>
-
-    </footer>
-
-
-
-    
-
-
-    
 
  
 
