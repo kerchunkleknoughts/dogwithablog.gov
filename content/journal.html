@@ -43,34 +43,13 @@ body {
 
 
 
-  
-<a id="top"></a>
-
-<div class="headstyle">
-
-    <header >
-      <div>
-        <a href="about.html">about</a>
-        <a href="index.html">home</a>
-        <a href="contact.html">socials-contact</a>
-        <a href="music.html">music</a>
-        <a href="drawings.html">art</a>
-        <a href="journal.html">journal</a>
-        <a href="todo.html">☻todo☻</a>
-        <a href="dreamlog.html">dream log</a>
-        <a href="neighborhood.html">neighborhood</a>
-        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
-        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
-      </div>
-
-    </header>
-  </div>`
+  {% include "partials/header.njk" %}
     
 
 
 
   <audio id="bgm" loop>
-    <source src="" type="audio/mpeg">
+    <source src="./resources/audio/Seven Angels 4.mp3" type="audio/mpeg">
   </audio>
   
   
@@ -87,8 +66,11 @@ body {
 
 
 
-  <div class="parentboxcenter">
+ 
 
+
+
+  <div class="parentboxcenter">
 
 
 
@@ -107,16 +89,11 @@ body {
   </div>
   
 
-
        
  
-
   
-
 <div class="parentbox">
-
  
-
   <p class="betterp">
  
     Lately I've been spending a lot of time working on my website. I find that Even though it’s a lot 
@@ -124,7 +101,6 @@ body {
      my tech undergrad studies. This is what I have been hoping ECEE would be. I think if I’m going to
       be able to stay sane for the next few years I need to consistently be working on projects. I think 
       I'll get into making games next!
-
 I just can’t believe all it took to get me back to the game was taking a web design course, how something 
 so simple as that was all that I needed. I've missed two quizzes in that course, and my grade has suffered.
  I’m at a 82 percent, spring break is here. I don’t like how low that grade is, but I've learned that the 
@@ -163,15 +139,12 @@ I watched an episode of squid games s2 today with mumsy. It was decent.  god I h
    the whole dream log needs to be updated. All the while I could have been making new stuff for the site. 
 I've got to sign up for summer courses, I haven't done that yet. Also, I need a haircut. SO MUCH SHIT TO DO! I just need 
 a month off. to fully detox/.
-
  
-
 
 
 
   </p>
   
-
      
 </div>
 
@@ -188,22 +161,16 @@ a month off. to fully detox/.
 
 
 
-
    
 
-
    
-
 
 
  
 
-
       
 
-
 <div class="parentboxcenter">
-
 
 
 
@@ -211,16 +178,13 @@ a month off. to fully detox/.
   <div>
     <img src="./resources/images/bleeder.jpg" class="journalindicator"></img>
 </div>
-
 <div class="childtextbox">
 <h1>3-2-2025<h1>
 </div>
 
 
 
-
 </div>
-
 
 
 <div class="parentbox">
@@ -233,12 +197,10 @@ a month off. to fully detox/.
     time to go for a walk which really isn't often, I find myself crying while I drive back home.  I guess 
     having time to reflect on my feelings opens everything I've been bottling inside.  Hard to be emotional 
     when you are stressed out and overworked. 
-
     During my last walk I could hardly enjoy it, I couldn't keep myself thinking about the future, how 
     terrible life would be, working a 9-5 until I fucking die. and even a 9-5 isn't even guaranteed with 
     the way things look politically. Worker rights might be eroded to the point of global slavery. Who knows, things are bleak.
     The thought of killing myself has danced across my mind once or twice, lucky my schedule is manageable or that might be a more prominent idea.
-
     I recently played delta rune, it was great but now I am left empty without much to look forwards to. Not really being moved 
     by any of my games or shows. I guess game of thrones is cool scratch that.  I have to remind myself of what is good in life 
     lately. I think it’s pretty easy to think negatively. 
@@ -257,27 +219,21 @@ a month off. to fully detox/.
     
   </p>
   
-
      
 </div>
       
-
 <div class="parentboxcenter">
-
           
   <div>
     <img src="./resources/images/death.jpg" class="journalindicator"></img>
 </div>
-
 <div class="childtextbox">
 <h1>1-10-2025<h1>
 </div>
 
 
 
-
 </div>
-
 
 
 
@@ -285,7 +241,6 @@ a month off. to fully detox/.
 
 
 <div class="parentbox">
-
 
 <p class="betterp">
 its almost the end of winter break, I haven't written much in this journal lately. I'm on day 5 of my coffee detox, feeling 
@@ -326,111 +281,19 @@ maybe its just that I need to get better at getting into stuff, just starting.
 </p>
 
 
-
 </div>
-
-
-
-
 
 
 
    
-<footer>
-
-    <br><br>
-    <div class="parentboxcenter">
 
 
-    <a href="feed.xml" class="childtextboxpadded">
-        <img src="./resources/images/RSS_Logo.png" alt="RSS Feed" style="width: 20px; height: 20px"> 
-    </a>
-
-    <a href="#top" class="childtextboxpadded">Back to top</a>
+   
 
 
-    <script src="https://iframe.chat/scripts/main.min.js"></script>
-<script src="./resources/progresources/js/script.js"></script>  
-<script>
-
-        document.addEventListener("DOMContentLoaded", function() {
-            let audio = document.getElementById("bgm");
-            setTimeout(() => {
-                audio.play().catch(error => console.log("Autoplay blocked:", error));
-            }, 1500); // Delay autoplay
-    
-    
-        
-            
-        });
-        document.body.addEventListener("click", playAudio);
-        document.body.addEventListener("mouseover", playAudio);
-        function playAudio() {
-           
-    
-           
-    
-            // Remove event listeners after first interaction to prevent multiple triggers
-          
-            let musicenabled=1;
-    
-            
-            
-            if(!(document.getElementById("bgm")==null)){
-    
-            document.body.click();
-            //console.log("MOUSED!");
-            let audio = document.getElementById("bgm");
-            audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
 
 
-            if (audio.paused == false) {
-              
-              document.body.removeEventListener('mouseover', playAudio);
-              console.log("eventlistener removed :(");
-              let audio = document.getElementById("postmusicclick");
-              audio.play().catch(error => console.log("Autoplay blocked:", error));
-
-              
-            }
-
-
-            }else{
-
-              let audio = document.getElementById("postmusicclick");
-              audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
-    
-                console.log("post music click");
-
-              
-
-             
-            }
-    
-    
-    
-    
-        }
-    
-
-        chattable.initialize({
-        theme : "Tendo"
-      });
-
-      generateheader();
-</script>
-
-</div>
-
-    </footer>
-
-
-    
-
-
-    
+   {% include "partials/footer.njk" %}
 
 </body>
 </html>
