@@ -58,22 +58,29 @@
   <div class="parentboxcenter">
 
     <div class="headstyle">
+
+
     
 
 
-<button onclick="gotoprevindex(0)">Dream0</button>
-<button onclick="gotoprevindex(1)">Dream1</button>
-<button onclick="gotoprevindex(2)">Dream2</button>
-<button onclick="gotoprevindex(3)">Dream3</button>
-<button onclick="gotoprevindex(4)">Dream4</button>
-<button onclick="gotoprevindex(5)">Dream5</button>
-<button onclick="gotoprevindex(6)">Dream6</button>
-<button onclick="gotoprevindex(7)">Dream7</button>
+        <button onclick="navdreams(0)">Dream0</button>
+        <button onclick="navdreams(1)">Dream1</button>
+        <button onclick="navdreams(2)">Dream2</button>
+        <button onclick="navdreams(3)">Dream3</button>
+        <button onclick="navdreams(4)">Dream4</button>
+        <button onclick="navdreams(5)">Dream5</button>
+        <button onclick="navdreams(6)">Dream6</button>
+        <button onclick="navdreams(7)">Dream7</button>
 
  
 
     </div>
   </div>
+
+
+  {% assign index = -1 %}
+
+  {% include "partials/dreamfooter.njk" %}
 
 
 

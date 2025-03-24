@@ -2,6 +2,35 @@
 
 
 
+let rurls = [
+  "dream00.html", 
+  "dream01.html", 
+  "dream02.html", 
+  "dream03.html", 
+  "dream04.html", 
+  "dream05.html", 
+  "dream06.html",
+  "dream07.html",
+];
+
+
+ 
+let urls = [
+  "dream00.html", 
+  "dream01.html", 
+  "dream02.html", 
+  "dream03.html", 
+  "dream04.html", 
+  "dream05.html", 
+  "dream06.html",
+  "dream07.html",
+  "dream08.html",
+  "dream09.html",
+  "dream010.html",
+  "dream011.html",
+  "dream012.html"
+];
+
 
 
 
@@ -105,22 +134,6 @@ function gotonextindex(dreamindex) {
 
 
   
- 
-  var urls = [
-    "dream00.html", 
-    "dream01.html", 
-    "dream02.html", 
-    "dream03.html", 
-    "dream04.html", 
-    "dream05.html", 
-    "dream06.html",
-    "dream07.html",
-    "dream08.html",
-    "dream09.html",
-    "dream010.html",
-    "dream011.html",
-    "dream012.html"
-  ];
 
     window.location.href = urls[dreamindex+1];
 
@@ -128,21 +141,6 @@ function gotonextindex(dreamindex) {
 
 function gotoprevindex(dreamindex) {
 
-  var urls = [
-    "dream3-2-2025.html", 
-    "dream2-31-2025.html", 
-    "dream2-28-2025.html", 
-    "dream2-3-2025.html", 
-    "dream16-29-2023.html", 
-    "dream05.html", 
-    "dream06.html",
-    "dream07.html",
-    "dream08.html",
-    "dream09.html",
-    "dream010.html",
-    "dream011.html",
-    "dream012.html"
-  ];
 
   
     window.location.href = urls[dreamindex-1];
@@ -800,25 +798,25 @@ buttonA.onclick = () => {
 
 function randomdream() {
 
-  var urls = [
-    "dream00.html", 
-    "dream01.html", 
-    "dream02.html", 
-    "dream03.html", 
-    "dream04.html", 
-    "dream05.html", 
-    "dream06.html",
-    "dream07.html",
-  ];
 
 
 
-  console.log(urls.length)
-  var rando=Math.floor(Math.random() * (urls.length));
+
+  console.log(rurls.length)
+  var rando=Math.floor(Math.random() * (rurls.length));
   console.log(rando);
 
   
-   window.location.href = urls[rando];
+   window.location.href = rurls[rando];
+
+}
+
+
+
+
+function navdreams(dreamindex) {
+  
+  window.location.href = urls[dreamindex];
 
 }
 
