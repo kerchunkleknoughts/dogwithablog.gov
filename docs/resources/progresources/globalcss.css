@@ -1255,6 +1255,23 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
            
            
            }
+
+                
+           .buttonboxcenter{
+           
+            display: flex;
+            
+            
+            justify-content: center;
+            
+            flex-direction: row;
+            
+            
+            
+            
+            
+            }
+            
            
            .buttonchild{
            
