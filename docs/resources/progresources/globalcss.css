@@ -1267,6 +1267,19 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
            
            
            }
+
+                      
+           .neighborhoodbuttonchild{
+           
+            
+             
+            width: 150px;
+            height: auto; /* Maintains aspect ratio */
+          
+          
+          
+          
+          }
            
            
            
