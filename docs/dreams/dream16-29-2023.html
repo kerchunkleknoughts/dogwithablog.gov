@@ -14,30 +14,6 @@
     <style>
 
 
-      .headstyle{
-
-        display: flex;
-        text-align: center;
-        background-color: aliceblue;
-        border-style: double;
-
-       
- 
-  justify-content: center;
-
-
-  
-
-      }
-
-
-      
-
-      #indi{
-        width: 500px;
-    height: auto; /* Maintains aspect ratio */
-      }
-
 
 
       
@@ -53,143 +29,10 @@
 
 
 
-        #centered{
-
-text-align: center;
-
-}
-
-
-
-.container {
-display: grid;
-grid-template-columns: auto  ;
-gap: 5px;
-}
-
-
-.container2 {
-display: flex;
-
-justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-
-
-  flex-wrap: wrap;
-
-
-gap: 1px;
-
-
-
-}
-
-
-
-.flexbox {
-  display: flex;
-  gap: 10px; /* Space between items   background-color: lightgray; */
-  
-  padding: 20px;
-  justify-content: center;
-  
-  
-
- 
-
-}
-
-.dreamstuff{
-  background-color: rgb(163, 163, 163);
-  border-style: dotted;
-
-
-}
-
-
-
-
-.twoitemcontainer{
-
-  display: grid;
-grid-template-columns: auto auto;
-gap: 1px;
-
-}
-
-
-
-
-.item {
-
-
-padding: 5px;
-text-align: center;
-color: aliceblue;
-
-}
-
-.item2 {
-
-
-padding: 5px;
-text-align: center;
-
-width: 300px;
-height: auto; /* Maintains aspect ratio */
-
-}
-
-
-
-
-
-.itemgood {
-
-
-padding: 5px;
-text-align: center;
-background-color:springgreen;
-
-}
-
-
-.itemmed {
-
-
-padding: 5px;
-text-align: center;
-background-color: rgb(255, 217, 0);
-
-}
-
-
-
-.itembad {
-
-
-padding: 5px;
-text-align: center;
-background-color: rgb(255, 0, 106);
-
-}
-
-
-.container3 {
-display: grid;
-grid-template-columns: repeat(1, minmax(10px, 1fr));
-gap: 1px;
-
-}
-
-
-
-
-
     </style>
 
 
-
+<link rel="stylesheet" href="../resources/progresources/globalcss.css">
 
 
 
@@ -248,15 +91,15 @@ gap: 1px;
 
  
 
-<div class="flexbox">
+  <div class="parentboxcenter">
   
-  <div class="dreamstuff">
-<p>
+    <div class="childtextbox">
+    <p class="betterp">
 
-    Had a dream where me and a friend were scamming a restaurant. He got a job at the restaurant and I would purposely <br>
-     seek him out to be my waiter, then I would order a singular french-fry and then complain about it, too soggy or something, <br>
-     then he would be like, oh I'm so sorry let me get you something for compensation and he would just start giving me bags upon <br>
-     bags of food, and we would both leave that day with a fuck ton of food lol<br>
+    Had a dream where me and a friend were scamming a restaurant. He got a job at the restaurant and I would purposely 
+     seek him out to be my waiter, then I would order a singular french-fry and then complain about it, too soggy or something, 
+     then he would be like, oh I'm so sorry let me get you something for compensation and he would just start giving me bags upon 
+     bags of food, and we would both leave that day with a fuck ton of food lol
 
 
 </p>
@@ -271,13 +114,12 @@ gap: 1px;
 
 
 
-   <div class="flexbox">
+ <div class="parentboxcenter">
 
-    <div class="headstyle">
+  <div class="headstyle">
     
    
-     <div>
-
+ 
   
        <button onclick="gotoprevindex(4)">Prev dream</button>
        <button onclick="gotonextindex(4)">Next dream</button>
@@ -296,6 +138,22 @@ gap: 1px;
  
 
    
+
+<br><br><br><br>
+<footer>
+
+    <br><br>
+    <div class="parentboxcenter">
+
+
+    <a href="feed.xml" class="childtextboxpadded">
+        <img src="../resources/images/RSS_Logo.png" alt="RSS Feed" style="width: 20px; height: 20px"> 
+    </a>
+
+    <a href="#top" class="childtextboxpadded">Back to top</a>
+
+
+    
 <script>
 
 
@@ -385,5 +243,15 @@ gap: 1px;
 
 </script>
 <script src="../resources/progresources/js/script.js"></script>  
+
+</div>
+
+    </footer>
+
+
+    
+
+
+    
 </body>
 </html>
