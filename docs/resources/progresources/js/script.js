@@ -344,6 +344,8 @@ function displayart(artindex){
 
    if(previndex==maxindex+1){
     previndex=previndex-1;
+    return;
+    
    }
 
 
