@@ -7,224 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     
-<style>
-
-
-
-
-.headstyle{
-
-display: flex;
-text-align: center;
-background-color: aliceblue;
-border-style: double;
-
-justify-content: center;
-
-flex-direction: row;
-
-
-}
-
-
-
-.parentbox{
-
-display: flex;
-text-align: center;
-
-
-justify-content: space-evenly;
-
-flex-direction: row;
-
-
-}
-
-.fchildtextbox{
-
-  display: flex;
-text-align: center;
-
-background-color: aliceblue;
-border-style: double;
-
-justify-content: center;
-
-flex-direction: row;
-
-
-
-}
-
-
-.childtextbox{
-
-
-text-align: center;
-
-background-color: aliceblue;
-border-style: double;
-
-justify-content: center;
-
-flex-direction: row;
-
-
-
-}
-
-
-
-
-
-#flip-horizontalm1 {
-    transform: rotate(-90deg);
-    margin-right: 100px; /* optional spacing */
-  width: 800px;
-  height: auto; /* Maintains aspect ratio */
-  }
-
-  #flip-horizontal {
-    transform: rotate(90deg);
-    margin-right: 100px; /* optional spacing */
-  width: 800px;
-  height: auto; /* Maintains aspect ratio */
-  }
-
-  #flip-horizontalx2 {
-    transform: rotate(180deg);
-    margin-right: 100px; /* optional spacing */
-  width: 800px;
-  height: auto; /* Maintains aspect ratio */
-  }
-
-
-
-  #flip-vertical {
-    transform: scaleY(-1);
-    transform: scaleX(-1);
-    margin-right: 100px; /* optional spacing */
-    width: 800px;
-    height: auto; /* Maintains aspect ratio */
-  }
+    <style>
+    body {
+      background-image: url('./resources/backgrounds/reddd.jpeg');
   
-
-#footsy{
-            color: white;
-        }
-
-
-
-
-
-body {
-          background-image: url('./resources/backgrounds/reddd.jpeg');
+      background-attachment: fixed;
       
-          background-attachment: fixed;
-          
 
-        }
-
-
-        #intro{
-          color: white;
-        }
-
-
-
- 
-    #aboutme {
-       /*float: right; */
-       color: rgb(14, 4, 4);
-      text-align: justify; 
-      margin-right: 20px
-      
     }
 
-    
-    #personality{
-      margin-left: 500px; /* Push content to the right */
-      padding: 50px;
-      color: white;
-     
-      
-    }
-    #interests{
-      margin-left: 500px; /* Push content to the right */
-      padding: 50px;
-      color: white;
-     
-      
-    }
+    </style>
 
-
-
-
-    #indicator {
-  float: left;
-  margin-right: 100px; /* optional spacing */
-}
-
-#indicator2 {
-
-  
-  margin-right: 100px; /* optional spacing */
-  width: 800px;
-  height: auto; /* Maintains aspect ratio */
-}
-
-
-#button {
-  float: left;
-  margin-right: 10px; /* optional spacing */
-  margin-left: 5px; /* optional spacing */
-  width: 25%;
-  height: auto; /* Maintains aspect ratio */
-
-  
-
-}
-
-
-
-
-.vl2 {
-            width: 400px; /* Adjust width as needed */
-            height: 100vh; /* Full height */
-            background-color: #64dbe4; /* Sidebar color */
-            color: white;
-            position: fixed;
-            top: 50;
-            left: 0;
-            padding: 20px;
-}
-
-
-#centered{
-
-    text-align: center;
-
-}
-
-
-.container {
-  display: grid;
-  grid-template-columns: auto ;
-  gap: 100px;
-}
-
-
-.item {
- 
-  padding: 10px;
-  text-align: center;
-}
-
-
-
-</style>
-
+<link rel="stylesheet" href="./resources/progresources/globalcss.css">
 
 
 </head>
@@ -345,7 +139,8 @@ body {
      <!-- <button id="button_A">Press me</button> --> 
 <!--<h3 id="heading_A"></h3> -->
 
-      
+{% include "partials/footer.njk" %}
+
       <script src="https://iframe.chat/scripts/main.min.js"></script>
       <script src="./resources/progresources/js/script.js"></script>  
       <script>
