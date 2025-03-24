@@ -342,6 +342,10 @@ function displayart(artindex){
     previndex=previndex+1;
    }
 
+   if(previndex==maxindex+1){
+    previndex=previndex-1;
+   }
+
 
 
 
