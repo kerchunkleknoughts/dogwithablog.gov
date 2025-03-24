@@ -76,9 +76,18 @@
 
  
 
+
+
+
 <audio id="bgm" loop>
    
 </audio>
+
+
+
+
+
+
 
 
 <audio id="postmusicclick">
@@ -168,18 +177,25 @@ beggar in tattered clothes pleading him to help despite the fact that I had turn
 <script>
 
 
+
+
+
+
     document.addEventListener("DOMContentLoaded", function() {
+
+        
         randodreamaudio()
+        
+
+
         let audio = document.getElementById("bgm");
         setTimeout(() => {
             audio.play().catch(error => console.log("Autoplay blocked:", error));
         }, 1500); // Delay autoplay
 
-
-        
-    
-        
     });
+
+
 
 
  

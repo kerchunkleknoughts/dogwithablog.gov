@@ -77,9 +77,18 @@
 
   
 
+
+
+
 <audio id="bgm" loop>
    
 </audio>
+
+
+
+
+
+
 
 
 <audio id="postmusicclick">
@@ -192,18 +201,25 @@ I screamed at him NO YOU ARE NOT THE PILOT STOP, but it was too late, we took of
 <script>
 
 
+
+
+
+
     document.addEventListener("DOMContentLoaded", function() {
+
+        
         randodreamaudio()
+        
+
+
         let audio = document.getElementById("bgm");
         setTimeout(() => {
             audio.play().catch(error => console.log("Autoplay blocked:", error));
         }, 1500); // Delay autoplay
 
-
-        
-    
-        
     });
+
+
 
 
  

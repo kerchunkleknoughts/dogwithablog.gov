@@ -65,9 +65,18 @@
 
   
 
+
+
+
 <audio id="bgm" loop>
    
 </audio>
+
+
+
+
+
+
 
 
 <audio id="postmusicclick">
@@ -173,18 +182,25 @@
 <script>
 
 
+
+
+
+
     document.addEventListener("DOMContentLoaded", function() {
+
+        
         randodreamaudio()
+        
+
+
         let audio = document.getElementById("bgm");
         setTimeout(() => {
             audio.play().catch(error => console.log("Autoplay blocked:", error));
         }, 1500); // Delay autoplay
 
-
-        
-    
-        
     });
+
+
 
 
  

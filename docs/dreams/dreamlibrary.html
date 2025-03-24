@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
 
@@ -47,6 +46,10 @@
 
 <body>
 
+  
+  
+
+
 
   
 
@@ -75,9 +78,18 @@
 
   
 
+
+
+
+
+
+
+
 <audio id="bgm" loop>
-   
+  <source src="../resources/audio/thisshitfirebro.mp3" type="audio/mpeg">
 </audio>
+
+
 
 
 <audio id="postmusicclick">
@@ -111,7 +123,6 @@
   </div>
 
 
-  
 
   
 
@@ -137,18 +148,23 @@
 <script>
 
 
+
+
+
+
     document.addEventListener("DOMContentLoaded", function() {
-        randodreamaudio()
+
+        
+
+
         let audio = document.getElementById("bgm");
         setTimeout(() => {
             audio.play().catch(error => console.log("Autoplay blocked:", error));
         }, 1500); // Delay autoplay
 
-
-        
-    
-        
     });
+
+
 
 
  

@@ -1,8 +1,23 @@
 
 
+
+{% if index!=-1 %}
+
 <audio id="bgm" loop>
    
 </audio>
+
+{% endif %}
+
+
+
+{% if index==-1 %}
+
+<audio id="bgm" loop>
+  <source src="../resources/audio/thisshitfirebro.mp3" type="audio/mpeg">
+</audio>
+
+{% endif %}
 
 
 <audio id="postmusicclick">

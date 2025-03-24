@@ -75,9 +75,18 @@
 
   
 
+
+
+
 <audio id="bgm" loop>
    
 </audio>
+
+
+
+
+
+
 
 
 <audio id="postmusicclick">
@@ -196,18 +205,25 @@ I kept trying to look for an exit, I remember going down a slide thinking it wou
 <script>
 
 
+
+
+
+
     document.addEventListener("DOMContentLoaded", function() {
+
+        
         randodreamaudio()
+        
+
+
         let audio = document.getElementById("bgm");
         setTimeout(() => {
             audio.play().catch(error => console.log("Autoplay blocked:", error));
         }, 1500); // Delay autoplay
 
-
-        
-    
-        
     });
+
+
 
 
  
