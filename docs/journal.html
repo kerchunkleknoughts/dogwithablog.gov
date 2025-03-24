@@ -136,16 +136,14 @@ body {
      draw but didn't know what to draw, so I just reverted back to drawing more of the garden of earthly delights, knowing
       that it would probably just be good practice, starting. I think maybe thats the way to do it, just have like some 
       really easy practice material to start up with, like a warm up exercise, do that for like 15 minutes or 10 minutes,
-       and then get into some of the hard stuff. Idk. 
-    I am not looking forwards to capstone 2. the others will be fine, just in terms of the material,  but I am also not 
-    looking forwards to the social aspect. I just fucking know that people are going to be terrible, I just know that 
+       and then get into some of the hard stuff. Idk. I am not looking forwards to capstone 2. the others will be fine, just in terms 
+      of the material,  but I am also not  looking forwards to the social aspect. I just fucking know that people are going to be terrible, I just know that 
     I'll try to make friends in class and it will fall flat on its face, its never worked out in my engineering classes 
     the people there fucking suck so bad.  I think that if I join a club and be consistent with it, maybe the running club,
      maybe I can get some friends at the end of the  semester. I want to do the running club, but I am a little afraid that
       they would leave me in the dust, or that it would be too hard since [redacted]
     I plan on doing a meeting this next Friday, see how it goes, and then if it doesn't work out the first time I will go
-     over to the card game club. 
-    I do really want to do the running club however, the running meetup I did around [redacted] seemed promising, it was
+     over to the card game club.  I do really want to do the running club however, the running meetup I did around [redacted] seemed promising, it was
      all older people but if it was younger people I think I could get into it. 
     Plus when I mentioned my plan to [redacted] he said that he heard that running people are extra horny.  I don’t know
      where he heard this, but I looked it up and I guess some people report that they get  horned up after they run. on 
@@ -153,8 +151,7 @@ body {
       work for attracting women and I just  really don’t want to go through with that for men. I don’t like the idea of
        meeting up with strangers until I've at least seen them a few times and feel comfortable with being around them,
         to make sure they are not  serial killers or will rob me or something.  plus there are plenty of ugly men out 
-        there who kept hitting me up. wasn't a fan of that. 
-    There is a strange pain in my ear, it sucks. 
+        there who kept hitting me up. wasn't a fan of that. There is a strange pain in my ear, it sucks. 
     I was completely filled with dread yesterday thinking about returning to college, and the next four years of the 
      trump presidency. It should be okay overall, its a pretty balanced schedule but I still couldn't help it.  Sometimes 
      I think that I seriously need help, its my break and I've just been in bed most of the time,  I guess I just need to 
@@ -257,6 +254,80 @@ body {
     </a>
 
     <a href="#top" class="childtextboxpadded">Back to top</a>
+
+
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+<script src="./resources/progresources/js/script.js"></script>  
+<script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let audio = document.getElementById("bgm");
+            setTimeout(() => {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, 1500); // Delay autoplay
+    
+    
+        
+            
+        });
+        document.body.addEventListener("click", playAudio);
+        document.body.addEventListener("mouseover", playAudio);
+        function playAudio() {
+           
+    
+           
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+
+
+            if (audio.paused == false) {
+              
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+              
+            }
+
+
+            }else{
+
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+    
+                console.log("post music click");
+
+              
+
+             
+            }
+    
+    
+    
+    
+        }
+    
+
+        chattable.initialize({
+        theme : "Tendo"
+      });
+
+      generateheader();
+</script>
 
 </div>
 
