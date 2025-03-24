@@ -792,3 +792,29 @@ buttonA.onclick = () => {
 
 
 */
+
+
+
+function randomdream() {
+
+  var urls = [
+    "dream3-2-2025.html", 
+    "dream2-31-2025.html", 
+    "dream2-28-2025.html", 
+    "dream2-3-2025.html", 
+    "dream16-29-2023.html", 
+    "dream05.html", 
+    "dream06.html",
+    "dream07.html",
+  ];
+
+
+
+  console.log(urls.length)
+  var rando=Math.floor(Math.random() * (urls.length));
+  console.log(rando);
+
+  
+   window.location.href = urls[rando];
+
+}
