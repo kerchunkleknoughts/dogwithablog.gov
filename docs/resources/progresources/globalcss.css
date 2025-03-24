@@ -98,6 +98,9 @@ flex-direction: row;
   
   }
   
+ 
+
+
 
 
 
@@ -622,6 +625,7 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
  
  }
+ 
 
  .childtextboxpadded{
  
