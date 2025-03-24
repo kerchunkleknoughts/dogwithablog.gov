@@ -291,7 +291,7 @@ fucky3.innerHTML=
 
 
 
-var rando=Math.floor(Math.random() * 22);
+var rando=Math.floor(Math.random() * 21);
 console.log(rando);
 
 
