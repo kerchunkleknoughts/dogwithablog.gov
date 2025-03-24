@@ -323,28 +323,31 @@ if(rando>15){
 }
 
 
-class globe {
-  static prevart = 100; // Static variable
-
-  updateprevart(index){
-    this.prevart=index
-  }
-
-}
 
 
 
 
+
+var test;
+let previndex=0;
 
 
 function displayart(artindex){
 
 
- 
+  test=artindex
+
+  console.log(test);
+  test=test+1;
+  console.log(test);
+
+
+  console.log("previndex")
+
+  console.log(previndex);
   
 
-  console.log("prevart")
-  console.log(globe.prevart)
+
 
  
   var correctform=document.getElementById("currentart");
@@ -429,11 +432,6 @@ function displayart(artindex){
 
 `
 ;
-
-
-
-
-
 
 
 
@@ -538,9 +536,6 @@ function displayart(artindex){
 
 `
 ;
-
-
-
 
 
 
@@ -755,17 +750,36 @@ let buttonarray=["a0","a1","a2","a3","a4"]
   var currentbutt=document.getElementById(buttonarray[artindex]);
 
 
-  //currentbutt.style.backgroundColor = "yellow";
+  currentbutt.style.backgroundColor = "yellow";
   
   
   
 
 
-  var currentbutt=document.getElementById(buttonarray[globe.prevart]);
+  var currentbutt=document.getElementById(buttonarray[previndex]);
   currentbutt.style.backgroundColor = "white";
 
 
-  globe.updateprevart(artindex);
+  
+  previndex=artindex;
 
 }
 
+
+
+
+
+/*
+const buttonA = document.querySelector("#button_A");
+const headingA = document.querySelector("#heading_A");
+
+let count = 1;
+
+buttonA.onclick = () => {
+  buttonA.textContent = "Try again!";
+  headingA.textContent = `${count} clicks so far`;
+  count += 1;
+};
+
+
+*/
