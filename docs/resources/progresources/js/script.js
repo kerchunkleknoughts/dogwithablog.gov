@@ -342,10 +342,6 @@ function displayart(artindex){
     previndex=previndex+1;
    }
 
-   if(previndex==maxindex){
-    previndex=0;
-   }
-
 
 
 
