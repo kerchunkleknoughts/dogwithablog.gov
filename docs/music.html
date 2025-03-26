@@ -316,6 +316,21 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             let audio = document.getElementById("bgm");
+
+            if (document.referrer.includes("google.")) {
+    console.log("User came from Google!");
+}
+
+
+
+const params = new URLSearchParams(window.location.search);
+const source = params.get("source");
+
+if (source) {
+  console.log("hey you used parameters!")
+}
+
+
             setTimeout(() => {
                 audio.play().catch(error => console.log("Autoplay blocked:", error));
             }, 1500); // Delay autoplay
