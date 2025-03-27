@@ -382,6 +382,19 @@ function displayart(artindex){
 
 
 <div class="container">
+
+
+ <div class="item">
+      <img src="./resources/art/drawings/latest 3-11-2025/fm2.png" id="indicator2"> </img>
+      </div>
+
+      
+ <div class="item">
+      <img src="./resources/art/drawings/latest 3-11-2025/fm1.png" id="indicator2"> </img>
+      </div>
+
+
+
   <div class="item">
       <img src="./resources/art/drawings/latest 3-11-2025/aifishman.jpg" id="indicator2"> </img>
       </div>
