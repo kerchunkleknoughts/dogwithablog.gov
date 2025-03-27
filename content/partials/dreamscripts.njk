@@ -10,14 +10,10 @@
 
         {% if index!=-1 %}
         randodreamaudio()
-        updateoption(0)
-        {% endif %}
-
     
-        {% if goption==1 %}
-
-        updateoption(1)            
         {% endif %}
+
+
 
 
         let audio = document.getElementById("bgm");
@@ -101,4 +97,20 @@
 
 
 </script>
+
+
+  
+{% if goption==1 %}
+
+<script src="../resources/progresources/js/pscript.js"></script>  
+
+{% endif %}
+
+
+{% if goption==2 %}
+
 <script src="../resources/progresources/js/script.js"></script>  
+
+{% endif %}
+
+

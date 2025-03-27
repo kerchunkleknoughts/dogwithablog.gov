@@ -8,14 +8,11 @@ let option=0;
 
 
 let urls = [
-  "dream00.html", 
-  "dream01.html", 
-  "dream02.html", 
-  "dream03.html", 
-  "dream04.html", 
-  "dream05.html", 
-  "dream06.html",
-  "dream07.html"
+  "project00.html", 
+  "project01.html", 
+  "project02.html", 
+  "project03.html"
+
 ];
 
 
