@@ -1,6 +1,8 @@
 
 
 
+let option=0;
+
 
 let rurls = [
   "dream00.html", 
@@ -32,7 +34,24 @@ let urls = [
 ];
 
 
+ 
+let purls = [
+  "project00.html", 
+  "project01.html", 
+  "project02.html",
+  "project03.html"  
+];
 
+
+
+
+function updateoption(value){
+  console.log("o1")
+  console.log(option)
+  option=value;
+  console.log("o1+1")
+  console.log(option)
+}
 
 
 function logsubmit(){
@@ -133,18 +152,31 @@ function simplereplace(passedid){
 function gotonextindex(dreamindex) {
 
 
+
+
+  console.log(option)
+ 
+
+  if(option==1){
+    window.location.href = purls[dreamindex+1];
+  }
+
+  if(option==0){
+  window.location.href = urls[dreamindex+1];
+  }
+
   
-
-    window.location.href = urls[dreamindex+1];
-
 }
 
 function gotoprevindex(dreamindex) {
 
+  if(option==1){
+    window.location.href = purls[dreamindex-1];
+  }
 
-  
+    if(option==0){
     window.location.href = urls[dreamindex-1];
-
+    }
 }
 
 

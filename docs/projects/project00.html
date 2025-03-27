@@ -48,11 +48,56 @@
 <body>
 
 
-  {% include "partials/dreamheader.njk" %}
+  
+
+
+<div class="headstyle">
+
+    <header >
+      <div>
+        <a href="../about.html">about</a>
+        <a href="../index.html">home</a>
+        <a href="../contact.html">socials-contact</a>
+        <a href="../music.html">music</a>
+        
+        <a href="../drawings.html">art</a>
+        <a href="../journal.html">journal</a>
+        <a href="../todo.html">☻todo☻</a>
+        <a href="../resources.html">resources</a>
+        <a href="../dreamlog.html">dream log</a>
+        <a href="../neighborhood.html">neighborhood</a>
+        <a href="../dogshit.html">dogshit</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+      </div>
+
+    </header>
+  </div>`
 
 
 
-  {% include "partials/dreamaudio.njk" %}
+  
+
+
+
+
+<audio id="bgm" loop>
+   
+</audio>
+
+
+
+
+
+
+
+
+<audio id="postmusicclick">
+  <source src="../resources/onclickaudio/button9.wav" type="audio/mpeg">
+</audio>
+
+
+
 
 
 
@@ -112,12 +157,169 @@ I kept trying to look for an exit, I remember going down a slide thinking it wou
 
 
 
- {% assign index = 0 %}
- {% assign goption = 2 %}
+ 
+ 
 
 
 
- {% include "partials/dreamfooter.njk" %}
+ 
+
+
+
+
+
+ 
+
+ <div class="parentboxcenter">
+
+    <div class="headstyle">
+    
+  
+      
+
+       <button onclick="gotoprevindex(0)">Prev dream</button>
+       <button onclick="gotonextindex(0)">Next dream</button>
+
+       <button onclick="randomdream()">random dream</button>
+       <button onclick="location.href='./dreamlibrary.html'">dream library</button>
+
+
+   
+   </div>
+   </div>
+   
+
+
+
+<br><br><br><br>
+<footer>
+
+    <br><br>
+    <div class="parentboxcenter">
+
+
+    <a href="../feed.xml" class="childtextboxpadded">
+        <img src="../resources/images/RSS_Logo.png" alt="RSS Feed" style="width: 20px; height: 20px"> 
+    </a>
+
+    <a href="#top" class="childtextboxpadded">Back to top</a>
+
+
+    
+<script>
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        
+        randodreamaudio()
+        updateoption(0)
+        
+
+    
+        
+
+        updateoption(1)            
+        
+
+
+        let audio = document.getElementById("bgm");
+        setTimeout(() => {
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+        }, 1500); // Delay autoplay
+
+    });
+
+
+
+
+ 
+
+
+
+    document.body.addEventListener("click", playAudio);
+
+    document.body.addEventListener("mouseover", playAudio);
+
+
+
+
+
+    function playAudio() {
+       
+
+       
+
+        // Remove event listeners after first interaction to prevent multiple triggers
+      
+        let musicenabled=1;
+
+        
+        
+        if(!(document.getElementById("bgm")==null)){
+
+        document.body.click();
+        //console.log("MOUSED!");
+        let audio = document.getElementById("bgm");
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+
+        if (audio.paused == false) {
+          
+          document.body.removeEventListener('mouseover', playAudio);
+          console.log("eventlistener removed :(");
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+          
+        }
+
+
+        }else{
+
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+            console.log("post music click");
+
+          
+
+         
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+</script>
+<script src="../resources/progresources/js/script.js"></script>  
+
+</div>
+
+    </footer>
+
+
+
+    
+
+
+    
 
  
 
