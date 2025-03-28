@@ -17,13 +17,7 @@ module.exports = function (eleventyConfig) {
 
 
 
-    eleventyConfig.addExtension("txt", {
-      outputFileExtension: "txt",
-      compile: async function (inputContent) {
-        return async (data) => inputContent;
-      },
-    });
-  
+   
   
     // This defines the input and output directories
     return {
