@@ -37,7 +37,11 @@ eleventyImport:
 
   <item>
     <title>{{ post.data.title }}</title>
-    <description>{{ post.data.description }}</description>
+    <description>{{ post.data.description }}
+      <![CDATA[
+      {{post.data.image}}
+    ]]>
+    </description>
     <link>https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}</link>
     <pubDate>{{ post.date}}</pubDate>
   </item>
