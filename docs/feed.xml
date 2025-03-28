@@ -157,7 +157,8 @@
 
   <item>
     <title> automated dream log updates on rss feed </title>
-    <description> 
+    <description> Rss feed now automatically updates with new dream log entries, based on this tutorial: https://caffeineandlasers.neocities.org/blogs/automatingYourRSS
+    still need to figure out how to automate rss entries which rely on javascript replacements to fit on one page rather than having a set of individual pages. 
     <![CDATA[
         <img src="https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif" alt="Cool Image">
       ]]>
