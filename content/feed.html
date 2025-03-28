@@ -49,10 +49,10 @@ eleventyImport:
   {% endfor %}
 
 
-  <!-- 11ty AUTOMATED data updates! -->
+  <!-- 11ty AUTOMATED CONTENT UPDATES! -->
 
 
-  {% for post in xmlposts %}
+  {% for post in posts %}
 
   <item>
     <title>{{ post.title }}</title>
@@ -66,6 +66,27 @@ eleventyImport:
   </item>
 
   {% endfor %}
+
+
+
+    <!-- 11ty AUTOMATED SITE UPDATE UPDATES!-->
+
+
+    {% for post in updates %}
+
+    <item>
+      <title>{{ post.title }}</title>
+      <description>{{ post.description }}
+        <![CDATA[
+        {{post.image}}
+      ]]>
+      </description>
+      <link>https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}</link>
+      <pubDate>{{ post.date}}</pubDate>
+    </item>
+  
+    {% endfor %}
+  
 
 
 
