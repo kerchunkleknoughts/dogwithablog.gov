@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
@@ -21,44 +22,90 @@
    <!-- https://ifttt.com/activity/applet/BGnuFHxv-->
 
 
+<!--https://www.11ty.dev/docs/collections/ -->
 
 
 
 
-  <item>
-    <title>Dream 3-2-2025</title>
-    <description>It's a dream, guys.</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream3-2-2025.html</link>
-    <pubDate>Sun, 02 Mar 2025 12:25:03 GMT</pubDate>
-  </item>
+<!-- 11ty AUTOMATED DREAM LOG UPDATES ! -->
+
+  
 
   <item>
-    <title>Dream 2-28-2025</title>
-    <description>Really sad dream.</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream2-28-2025.html</link>
-    <pubDate>Fri, 28 Feb 2025 14:09:23 GMT</pubDate>
+    <title>dream00</title>
+    <description>New dream in my world of dreams...</description>
+    <link>https://YOURSITEGOESHERE.neocities.org/dreams/dream00.html</link>
+    <pubDate>Thu, 27 Mar 2025 18:00:00 -0600</pubDate>
   </item>
 
-  <item>
-    <title>Dream 6-29-2023</title>
-    <description>Dream I had last year that I still think about.</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream6-29-2023.html</link>
-    <pubDate>Thu, 29 Jun 2023 08:30:00 GMT</pubDate>
-  </item>
+  
 
   <item>
-    <title>Dreams Collection 05</title>
-    <description>To save time, I will begin mushing up dreams in no particular order. Sorrz.</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream05.html</link>
-    <pubDate>Sat, 15 Mar 2025 10:10:00 GMT</pubDate>
+    <title>dream01</title>
+    <description>New dream in my world of dreams...</description>
+    <link>https://YOURSITEGOESHERE.neocities.org/dreams/dream01.html</link>
+    <pubDate>Thu, 27 Mar 2025 18:00:00 -0600</pubDate>
   </item>
 
+  
+
   <item>
-    <title>Journal Entry 1-10-2025</title>
-    <description>Made a journal page and a single entry.</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/journal.html</link>
-    <pubDate>Fri, 10 Jan 2025 17:45:03 GMT</pubDate>
+    <title>dream02</title>
+    <description>New dream in my world of dreams...</description>
+    <link>https://YOURSITEGOESHERE.neocities.org/dreams/dream02.html</link>
+    <pubDate>Thu, 27 Mar 2025 18:00:00 -0600</pubDate>
   </item>
+
+  
+
+  <item>
+    <title>dream03</title>
+    <description>New dream in my world of dreams...</description>
+    <link>https://YOURSITEGOESHERE.neocities.org/dreams/dream03.html</link>
+    <pubDate>Thu, 27 Mar 2025 18:00:00 -0600</pubDate>
+  </item>
+
+  
+
+  <item>
+    <title>dream04</title>
+    <description>New dream in my world of dreams...</description>
+    <link>https://YOURSITEGOESHERE.neocities.org/dreams/dream04.html</link>
+    <pubDate>Thu, 27 Mar 2025 18:00:00 -0600</pubDate>
+  </item>
+
+  
+
+  <item>
+    <title>dream05</title>
+    <description>New dream in my world of dreams...</description>
+    <link>https://YOURSITEGOESHERE.neocities.org/dreams/dream05.html</link>
+    <pubDate>Thu, 27 Mar 2025 18:00:00 -0600</pubDate>
+  </item>
+
+  
+
+  <item>
+    <title>dream06</title>
+    <description>New dream in my world of dreams...</description>
+    <link>https://YOURSITEGOESHERE.neocities.org/dreams/dream06.html</link>
+    <pubDate>Thu, 27 Mar 2025 18:00:00 -0600</pubDate>
+  </item>
+
+  
+
+  <item>
+    <title>dream07</title>
+    <description>New dream in my world of dreams...</description>
+    <link>https://YOURSITEGOESHERE.neocities.org/dreams/dream07.html</link>
+    <pubDate>Thu, 27 Mar 2025 18:00:00 -0600</pubDate>
+  </item>
+
+  
+
+
+
+  <!-- MANUAL UPDATES!  -->
 
   <item>
     <title>Website Update - Headers Refactored</title>
@@ -67,12 +114,14 @@
     <pubDate>Fri, 10 Jan 2025 18:00:00 GMT</pubDate>
   </item>
 
+
   <item>
     <title>11ty Refactor</title>
     <description>Refactored site to support 11ty, thanks to this tutorial: https://petrapixel.neocities.org/coding/eleventy-tutorial</description>
     <link>https://kerchunkle.neocities.org</link>
     <pubDate>Fri, 21 Mar 2025 21:04:20 GMT</pubDate>
   </item>
+
 
    <item>
     <title>Added todopage</title>
@@ -81,23 +130,7 @@
     <pubDate>Fri, 21 Mar 2025 21:05:20 GMT</pubDate>
   </item>
 
-    <item>
-    <title>new dreamlog</title>
-    <description>more dreams alright!</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream06.html</link>
-    <pubDate>Sat, 22 Mar 2025 02:34:56 GMT</pubDate>
-
-  </item>
-
-
-    <item>
-    <title>new dreamlog</title>
-    <description>more dreams alright! Also swapped out shitty low res prev dreamlog background images</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/dreams/dream07.html</link>
-    <pubDate>Sat, 22 Mar 2025 02:34:56 GMT</pubDate>
-
-  </item>
-
+ 
 
     <item>
     <title>Art page refactor</title>
@@ -107,12 +140,13 @@
 
   </item>
 
+
     <item>
     <title> New art! New music! </title>
     <description> Added a cover of suffer the children by napalm death to music page. 
     Also added some stuff to art page!
     <![CDATA[
-        <img src="./resources/images/fishspin.gif" alt="Cool Image">
+        <img src="https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif" alt="Cool Image">
       ]]>
      </description>
     <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/music.html</link>
@@ -121,6 +155,18 @@
   </item>
 
 
+  <item>
+    <title> automated dream log updates on rss feed </title>
+    <description> 
+    <![CDATA[
+        <img src="https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif" alt="Cool Image">
+      ]]>
+     </description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/music.html</link>
+    <pubDate>Thu, 27 Mar 2025 12:45:30 GMT</pubDate>
+
+  </item>
+ 
 
 
 

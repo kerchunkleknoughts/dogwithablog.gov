@@ -1,4 +1,7 @@
-
+---
+eleventyImport:
+  collections: ["post"]
+---
 
 <!doctype html>
 <html lang="en">
@@ -37,6 +40,15 @@ body {
   {% include "partials/header.njk" %}
 
 
+  {% for post in collections.post %}
+  <br>
+  <item>
+    <title>{{ post.data.title }}</title>
+    <description>{{ post.data.description }}</description>
+    <link>https://YOURSITEGOESHERE.neocities.org{{ post.url }}</link>
+    <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+  </item>
+  {% endfor %}
 
 
 
@@ -180,7 +192,7 @@ body {
     
 
 
-    
+
     
   
 </section>

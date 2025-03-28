@@ -10,9 +10,20 @@ module.exports = function (eleventyConfig) {
   
     // This will copy this folder to the output without modifying it at all
     eleventyConfig.addPassthroughCopy("content/assets");
-  
+
     // This defines which files will be copied
     eleventyConfig.setTemplateFormats(["html", "njk", "txt", "jds", "css", "xml", "json"]);
+
+
+
+
+    eleventyConfig.addExtension("txt", {
+      outputFileExtension: "txt",
+      compile: async function (inputContent) {
+        return async (data) => inputContent;
+      },
+    });
+  
   
     // This defines the input and output directories
     return {
@@ -25,3 +36,7 @@ module.exports = function (eleventyConfig) {
   };
 
 
+
+  
+
+  
