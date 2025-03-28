@@ -2,22 +2,21 @@
 [
 
 {
-    "title": " New drawing!",
-    "description": "new drawing of some medieval creature",
-    "url": "/drawings.html",
-    "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-    "date": "2025-03-28"
-  },
-  
-  
-  
-
-{
-    "title": " New drawing!",
-    "description": "new drawing of some medieval creature",
-    "url": "/drawings.html",
+    "title": " automated dream log updates on rss feed",
+    "description": "Rss feed now automatically updates with new dream log entries, based on this tutorial: https://caffeineandlasers.neocities.org/blogs/automatingYourRSS still need to figure out how to automate rss entries which rely on javascript replacements to fit on one page rather than having a set of individual pages.",
+    "url": "/index.html",
     "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
     "date": "2025-03-28"
   }
+  
+  
+  
+
+
 
 ]
+
+
+
+
+
