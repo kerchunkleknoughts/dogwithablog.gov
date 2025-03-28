@@ -40,15 +40,6 @@ body {
   {% include "partials/header.njk" %}
 
 
-  {% for post in collections.post %}
-  <br>
-  <item>
-    <title>{{ post.data.title }}</title>
-    <description>{{ post.data.description }}</description>
-    <link>https://YOURSITEGOESHERE.neocities.org{{ post.url }}</link>
-    <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-  </item>
-  {% endfor %}
 
 
 
@@ -180,6 +171,65 @@ body {
 
 
 
+
+  {% for post in collections.dreampost %}
+
+<br>
+
+ {{ post.data.title }}
+ {{ post.data.description }}
+   
+   <img src="{{post.data.image}}"></img>
+  
+
+  https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}
+ {{ post.date}}
+
+
+{% endfor %}
+
+<br><br>
+
+
+{% for post in posts %}
+<br>
+
+ {{ post.title }}
+  {{ post.description }}
+    <![CDATA[
+    {{post.image}}
+  ]]>
+
+https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}
+  {{ post.date}}
+
+
+{% endfor %}
+
+
+<br><br><br>
+
+{% for post in updates%}
+<br>
+
+ {{ post.title }}
+  {{ post.description }}
+    <![CDATA[
+    {{post.image}}
+  ]]>
+
+https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}
+  {{ post.date}}
+
+
+{% endfor %}
+
+
+
+
+
+
+
   <section>
     
 
@@ -201,12 +251,53 @@ body {
 
 
 
+
+
 <div style=" overflow: hidden; margin: 15px auto; max-width: 500px;">
     <iframe scrolling="yes" src="https://status.cafe/users/kerchunkleknoughts" style="border: 0px none; margin-left: -370px; height: 950px; margin-top: 0px; width: 926px;">
     </iframe>
     </div>
 
 
+
+
+
+
+    
+
+{% for post in collections.dreampost %}
+
+<br>
+
+ {{ post.data.title }}
+ {{ post.data.description }}
+   
+   <img src="{{post.data.image}}"></img>
+  
+
+  https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}
+ {{ post.date}}
+
+
+{% endfor %}
+
+<br><br>
+
+
+{% for post in posts %}
+<br>
+
+ {{ post.title }}
+  {{ post.description }}
+    <![CDATA[
+    {{post.image}}
+  ]]>
+
+https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}
+  {{ post.date}}
+
+
+{% endfor %}
 
 
 
