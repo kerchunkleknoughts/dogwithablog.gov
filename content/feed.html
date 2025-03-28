@@ -38,11 +38,31 @@ eleventyImport:
   <item>
     <title>{{ post.data.title }}</title>
     <description>{{ post.data.description }}</description>
-    <link>https://YOURSITEGOESHERE.neocities.org{{ post.url }}</link>
-    <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}</link>
+    <pubDate>{{ post.date}}</pubDate>
   </item>
 
   {% endfor %}
+
+
+  <!-- 11ty AUTOMATED data updates! -->
+
+
+  {% for post in xmlposts %}
+
+  <item>
+    <title>{{ post.title }}</title>
+    <description>{{ post.description }}
+      <![CDATA[
+      {{post.image}}
+    ]]>
+    </description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}</link>
+    <pubDate>{{ post.date}}</pubDate>
+  </item>
+
+  {% endfor %}
+
 
 
 
