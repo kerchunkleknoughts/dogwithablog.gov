@@ -1,9 +1,3 @@
----
-title: blogpost01
-date: 2025-03-28
-description: DESCRIPTION
-tags: post
----
 
 <!doctype html>
 <html lang="en">
@@ -22,7 +16,7 @@ tags: post
       
 
       body {
-          background-image: url('../resources/backgrounds/blandassrussiahellscape.jpg');
+          background-image: url('../resources/backgrounds/drlib.jpg');
       
           background-attachment: fixed;
           background-size: cover;
@@ -52,6 +46,10 @@ tags: post
 
 <body>
 
+  
+  {% assign index = -1 %}
+  {% assign goption = 3 %}
+
 
   {% include "partials/dreamheader.njk" %}
 
@@ -60,31 +58,28 @@ tags: post
   {% include "partials/dreamaudio.njk" %}
 
 
-
-
-
-
   <div class="parentboxcenter">
-  
-    <div class="childtextbox">
-    <p class="betterp">
-uHH blog post cancelled, not feelin it. 
+
+    <div class="headstyle">
 
 
-</p>
+    
+
+
+        <button onclick="navdreams(0)">blogpost0</button>
+        <button onclick="navdreams(1)">blogpost1</button>
+
+
+ 
+
+    </div>
   </div>
- </div>   
 
 
 
+  {% include "partials/dreamfooter.njk" %}
 
 
- {% assign index = 1 %}
- {% assign goption = 3 %}
-
-
-
- {% include "partials/dreamfooter.njk" %}
 
  
 

@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
 
@@ -14,12 +13,10 @@
     <style>
 
 
-
-
       
 
       body {
-          background-image: url('../resources/backgrounds/aunt.jpeg');
+          background-image: url('../resources/backgrounds/drlib.jpg');
       
           background-attachment: fixed;
           background-size: cover;
@@ -29,10 +26,12 @@
 
 
 
+
     </style>
 
 
 <link rel="stylesheet" href="../resources/progresources/globalcss.css">
+
 
 
 
@@ -48,6 +47,10 @@
 <body>
 
   
+  
+  
+
+
   
 
 
@@ -78,19 +81,18 @@
 
 
 
-
   
 
 
 
 
+
+
+
+
 <audio id="bgm" loop>
-   
+  <source src="../resources/audio/thisshitfirebro.mp3" type="audio/mpeg">
 </audio>
-
-
-
-
 
 
 
@@ -101,68 +103,30 @@
 
 
 
-  
 
-
- 
 
   <div class="parentboxcenter">
-  
-    <div class="childtextbox">
-    <p class="betterp">
-
-    Had a dream where me and a friend were scamming a restaurant. He got a job at the restaurant and I would purposely 
-     seek him out to be my waiter, then I would order a singular french-fry and then complain about it, too soggy or something, 
-     then he would be like, oh I'm so sorry let me get you something for compensation and he would just start giving me bags upon 
-     bags of food, and we would both leave that day with a fuck ton of food lol
-
-
-</p>
-  </div>
- </div>   
-
-
-
-
-
-
-
-
-
- 
- 
-
-
-
-
- 
-
-   
-
-
-
-
-
- 
-
- <div class="parentboxcenter">
 
     <div class="headstyle">
+
+
     
+
+
+        <button onclick="navdreams(0)">blogpost0</button>
+        <button onclick="navdreams(1)">blogpost1</button>
+
+
+ 
+
+    </div>
+  </div>
+
+
+
   
-      
-
-       <button onclick="gotoprevindex(4)">Prev dream</button>
-       <button onclick="gotonextindex(4)">Next dream</button>
-
-       <button onclick="randomdream()">random dream</button>
-       <button onclick="location.href='./dreamlibrary.html'">dream library</button>
 
 
-   
-   </div>
-   </div>
-   
 
 
 
@@ -190,9 +154,6 @@
 
     document.addEventListener("DOMContentLoaded", function() {
 
-        
-        randodreamaudio()
-    
         
 
 
@@ -287,10 +248,10 @@
 
 
 
-<script src="../resources/progresources/js/script.js"></script>  
 
 
 
+<script src="../resources/progresources/js/bscript.js"></script>  
 
 
 
@@ -308,5 +269,10 @@
 
 
     
+
+
+
+ 
+
 </body>
 </html>
