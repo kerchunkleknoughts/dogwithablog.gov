@@ -237,7 +237,7 @@ function randodreamaudio(){
 
   `
 <audio id="bgm" loop>
-    <source src="../resources/audio/Separation Anxiety - Neon Genesis Evangelion 4.mp3" type="audio/mpeg">
+    <source src="../resources/audio/EASTERN MIND (TONG NOU ZEN MIX) 4.mp3" type="audio/mpeg">
 </audio>`
 ;
 
@@ -250,7 +250,7 @@ fucky1.innerHTML=
 
 `
   <audio id="bgm" loop>
-    <source src="../resources/audio/BORDERLINE CASE 4.mp3" type="audio/mpeg">
+    <source src="../resources/audio/EASTERN MIND (TONG NOU ZEN MIX) 4.mp3" type="audio/mpeg">
 </audio>`
 ;
 
@@ -263,7 +263,7 @@ fucky2.innerHTML=
 
 `
   <audio id="bgm" loop>
-    <source src="../resources/audio/Roedelius - Freudentanz 4.mp3" type="audio/mpeg">
+    <source src="../resources/audio/EASTERN MIND (TONG NOU ZEN MIX) 4.mp3" type="audio/mpeg">
 </audio>`
 ;
 
@@ -275,7 +275,7 @@ fucky3.innerHTML=
 
 `
   <audio id="bgm" loop>
-    <source src="../resources/audio/the third place 4.mp3" type="audio/mpeg">
+    <source src="../resources/audio/EASTERN MIND (TONG NOU ZEN MIX) 4.mp3" type="audio/mpeg">
 </audio>`
 ;
 
