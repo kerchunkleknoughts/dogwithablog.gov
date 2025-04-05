@@ -35,8 +35,8 @@ body {
 <body>
 
 
-
-
+  
+    
 
 
 
@@ -45,13 +45,10 @@ body {
 
 
 <audio id="bgm" loop>
-  <source src="./resources/audio/Hylics 2 OST   Prevailing Westerlies 4.mp3" type="audio/mpeg">
+  <source src="./resources/audio/This Must Be the Place (Naive Melody) (2005 Remaster) 4 (1).mp3" type="audio/mpeg">
 </audio>
 
 
-<audio id="postmusicclick">
-<source src="./resources/onclickaudio/yummers.mp3" type="audio/mpeg">
-</audio>
 
 
 
@@ -60,6 +57,130 @@ body {
 <div class="parentboxcenter">
     <img src="./resources/images/heybaby.gif"> </img>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+    <br><br>
+    <div class="parentboxcenter">
+
+
+
+
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+<script src="./resources/progresources/js/script.js"></script>  
+<script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+
+          displayart(4);
+
+
+            let audio = document.getElementById("bgm");
+
+            if (document.referrer.includes("google.")) {
+    console.log("User came from Google!");
+}
+
+
+
+
+const params = new URLSearchParams(window.location.search);
+const source = params.get("source");
+
+if (source) {
+  console.log("hey you used parameters!")
+  console.log(source)
+}
+
+
+
+            setTimeout(() => {
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+            }, 1500); // Delay autoplay
+    
+    
+        
+            
+        });
+        document.body.addEventListener("click", playAudio);
+        document.body.addEventListener("mouseover", playAudio);
+        function playAudio() {
+           
+    
+           
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+
+
+            if (audio.paused == false) {
+              
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+              
+            }
+
+
+            }else{
+
+              let audio = document.getElementById("postmusicclick");
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+    
+    
+                console.log("post music click");
+
+              
+
+             
+            }
+    
+    
+    
+    
+        }
+    
+
+        chattable.initialize({
+        theme : "Tendo"
+      });
+
+      generateheader();
+</script>
+
+</div>
+
+    </footer>
+
+
 
 
 
