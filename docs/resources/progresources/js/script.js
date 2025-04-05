@@ -15,7 +15,8 @@ let urls = [
   "dream04.html", 
   "dream05.html", 
   "dream06.html",
-  "dream07.html"
+  "dream07.html",
+  "dream08.html"
 ];
 
 
