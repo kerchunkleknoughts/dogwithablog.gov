@@ -285,7 +285,16 @@ if (source) {
 
 
             setTimeout(() => {
+              var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
+
                 audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
             }, 1500); // Delay autoplay
     
     

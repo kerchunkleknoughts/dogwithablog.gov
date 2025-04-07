@@ -226,7 +226,18 @@ I screamed at him NO YOU ARE NOT THE PILOT STOP, but it was too late, we took of
 
         let audio = document.getElementById("bgm");
         setTimeout(() => {
+            
+
+            var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
             audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
         }, 1500); // Delay autoplay
 
     });

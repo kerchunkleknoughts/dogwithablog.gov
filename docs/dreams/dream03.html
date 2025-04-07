@@ -203,7 +203,18 @@ beggar in tattered clothes pleading him to help despite the fact that I had turn
 
         let audio = document.getElementById("bgm");
         setTimeout(() => {
+            
+
+            var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
             audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
         }, 1500); // Delay autoplay
 
     });
