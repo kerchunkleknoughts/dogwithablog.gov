@@ -10,12 +10,16 @@ console.log("MUSIC ENABLE VALUE:")
 
 console.log(value)
 
-if(value==1){
+if(value==1 ){
 
 localStorage.setItem('enablemusic', 1);
 
 }else{
 
+}
+
+if(value==null){
+  localStorage.setItem('enablemusic', 1);
 }
 
 
