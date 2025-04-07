@@ -186,19 +186,35 @@ function stoprepaudio(passedid){
 
 function stoprepaudio1(passedid){
 
-  var ussrinput=document.getElementById(passedid);
-  console.log(ussrinput);
-
-
-  ussrinput.replaceWith(savedbgm);
+  
   localStorage.setItem('enablemusic', 1);
   window.location.reload();
-
 
 
 }
 
 
+
+
+function checkboxx(){
+
+  console.log("CHECKBOXX RAN")
+
+  var ussrinput=document.getElementById(autoplay);
+
+  var value = localStorage.getItem('enablemusic');
+  console.log("MUSIC ENABLE VALUE:")
+
+ console.log(value)
+ if(value==1){
+  ussrinput.checked=true;
+ }
+ else{
+  ussrinput.checked=false;
+ }
+
+
+}
 
 
 
