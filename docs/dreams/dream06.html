@@ -261,8 +261,10 @@ Then the dream ended.
           document.body.removeEventListener('mouseover', playAudio);
           console.log("eventlistener removed :(");
           let audio = document.getElementById("postmusicclick");
-          audio.play().catch(error => console.log("Autoplay blocked:", error));
 
+          if(value==1){
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+          }
           
         }
 
