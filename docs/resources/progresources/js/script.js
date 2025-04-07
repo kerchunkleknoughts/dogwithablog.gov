@@ -218,6 +218,27 @@ function checkboxx(){
 
 
 
+function toggleaudio(){
+
+
+  var value = localStorage.getItem('enablemusic');
+  console.log("MUSIC ENABLE VALUE:")
+
+
+
+  if(value==1){
+    stoprepaudio('bgm');
+  }
+  else{
+    stoprepaudio1('bgm')
+  }
+
+
+}
+
+
+
+
 
 function gotonextindex(dreamindex) {
 
