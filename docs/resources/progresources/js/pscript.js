@@ -1,6 +1,20 @@
 
 
 
+let value = localStorage.getItem('enablemusic');
+console.log("MUSIC ENABLE VALUE:")
+
+console.log(value)
+
+if(value==1){
+
+localStorage.setItem('enablemusic', 1);
+
+}else{
+
+}
+
+
 let option=0;
 
 
@@ -17,6 +31,108 @@ let urls = [
 
 
  
+function stopaudio(passedid){
+
+  var ussrinput=document.getElementById(passedid);
+  console.log(ussrinput);
+  ussrinput.pause();
+
+}
+
+
+var savedbgm=document.createElement('div');
+
+
+
+
+function stoprepaudio(passedid){
+
+  var ussrinput=document.getElementById(passedid);
+  console.log(ussrinput);
+  savedbgm=ussrinput;
+
+ 
+  let fucky=document.createElement('div');
+  
+
+  fucky.innerHTML=`
+ <audio id="bgm" loop>
+ 
+</audio>
+  
+  `
+
+  localStorage.setItem('enablemusic', 0);
+
+
+ 
+ 
+ 
+  
+
+  ussrinput.replaceWith(fucky);
+
+
+}
+
+
+
+
+function stoprepaudio1(passedid){
+
+  
+  localStorage.setItem('enablemusic', 1);
+  window.location.reload();
+
+
+}
+
+
+
+
+function checkboxx(){
+
+  console.log("CHECKBOXX RAN")
+
+  var ussrinput=document.getElementById(autoplay);
+
+  var value = localStorage.getItem('enablemusic');
+  console.log("MUSIC ENABLE VALUE:")
+
+ console.log(value)
+ if(value==1){
+  ussrinput.checked=true;
+ }
+ else{
+  ussrinput.checked=false;
+ }
+
+
+}
+
+
+
+function toggleaudio(){
+
+
+  var value = localStorage.getItem('enablemusic');
+  console.log("MUSIC ENABLE VALUE:")
+
+
+
+  if(value==1){
+    stoprepaudio('bgm');
+  }
+  else{
+    stoprepaudio1('bgm')
+  }
+
+
+}
+
+
+
+
 
 
 
