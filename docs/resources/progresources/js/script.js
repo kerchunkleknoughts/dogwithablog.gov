@@ -24,6 +24,10 @@ if(value==null){
 
 
 
+if(true){
+  checkboxx();
+}
+
 
 let urls = [
   "dream00.html", 
@@ -204,7 +208,7 @@ function checkboxx(){
 
   console.log("CHECKBOXX RAN")
 
-  var ussrinput=document.getElementById(autoplay);
+  var ussrinput=document.getElementById("autoplay");
 
   var value = localStorage.getItem('enablemusic');
   console.log("MUSIC ENABLE VALUE:")

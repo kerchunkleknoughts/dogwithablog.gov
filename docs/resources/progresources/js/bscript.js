@@ -19,6 +19,10 @@ if(value==null){
 
 
 
+if(true){
+  checkboxx();
+}
+
 
 let option=0;
 
@@ -96,7 +100,7 @@ function checkboxx(){
 
   console.log("CHECKBOXX RAN")
 
-  var ussrinput=document.getElementById(autoplay);
+  var ussrinput=document.getElementById("autoplay");
 
   var value = localStorage.getItem('enablemusic');
   console.log("MUSIC ENABLE VALUE:")
