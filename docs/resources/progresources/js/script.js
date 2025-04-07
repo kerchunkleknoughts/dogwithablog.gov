@@ -5,6 +5,20 @@ let option=0;
 
 
 
+let value = localStorage.getItem('enablemusic');
+console.log("MUSIC ENABLE VALUE:")
+
+console.log(value)
+
+if(value==1){
+
+localStorage.setItem('enablemusic', 1);
+
+}else{
+
+}
+
+
 
 
 let urls = [
@@ -120,6 +134,71 @@ function simplereplace(passedid){
     ussrinput.remove();
 
 }
+
+
+
+function stopaudio(passedid){
+
+  var ussrinput=document.getElementById(passedid);
+  console.log(ussrinput);
+  ussrinput.pause();
+
+}
+
+
+var savedbgm=document.createElement('div');
+
+
+
+
+function stoprepaudio(passedid){
+
+  var ussrinput=document.getElementById(passedid);
+  console.log(ussrinput);
+  savedbgm=ussrinput;
+
+ 
+  let fucky=document.createElement('div');
+  
+
+  fucky.innerHTML=`
+ <audio id="bgm" loop>
+ 
+</audio>
+  
+  `
+
+  localStorage.setItem('enablemusic', 0);
+
+
+ 
+ 
+ 
+  
+
+  ussrinput.replaceWith(fucky);
+
+
+}
+
+
+
+
+function stoprepaudio1(passedid){
+
+  var ussrinput=document.getElementById(passedid);
+  console.log(ussrinput);
+
+
+  ussrinput.replaceWith(savedbgm);
+  localStorage.setItem('enablemusic', 1);
+  window.location.reload();
+
+
+
+}
+
+
 
 
 

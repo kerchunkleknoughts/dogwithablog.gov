@@ -65,7 +65,12 @@ body {
         <a href="neighborhood.html">neighborhood</a>
         <a href="dogshit.html">dogshit</a>
         <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
-        <button onclick="simplereplace('bgm')" id="bgmbt">kill music</button>
+        <button onclick="stoprepaudio('bgm')" id="bgmbt">kill music</button>
+
+
+    enable autoplay:
+    <input type="checkbox" id="autoplay" name="autoplayy" value="autoplayyy" onChange="stoprepaudio1('bgm')">
+
       </div>
 
     </header>
@@ -279,8 +284,15 @@ if (source) {
             document.body.click();
             //console.log("MOUSED!");
             let audio = document.getElementById("bgm");
+
+             var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
             audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
+              }
 
 
             if (audio.paused == false) {
@@ -297,8 +309,11 @@ if (source) {
             }else{
 
               let audio = document.getElementById("postmusicclick");
+
+              
+              
               audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
+              
     
                 console.log("post music click");
 

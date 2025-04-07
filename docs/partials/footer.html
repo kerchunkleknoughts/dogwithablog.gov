@@ -72,8 +72,15 @@ if (source) {
             document.body.click();
             //console.log("MOUSED!");
             let audio = document.getElementById("bgm");
+
+             var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
             audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
+              }
 
 
             if (audio.paused == false) {
@@ -90,8 +97,11 @@ if (source) {
             }else{
 
               let audio = document.getElementById("postmusicclick");
+
+              
+              
               audio.play().catch(error => console.log("Autoplay blocked:", error));
-    
+              
     
                 console.log("post music click");
 
