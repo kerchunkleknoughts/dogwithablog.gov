@@ -989,3 +989,36 @@ function skullyrep(skullindex){
 
 
 }
+
+
+
+
+
+function flyyoufool(){
+
+  var correctform=document.getElementById("marqtrip");
+  //console.log(correctform.value);
+
+  let fucky=document.createElement('div');
+
+  fucky.innerHTML=
+
+
+  `
+    <marquee behavior="scroll" direction="left" scrollamount="500" loop=1 id="marqtrip" onmouseover="flyyoufool()" >
+   
+        AHHHHH
+        
+    
+      </marquee>
+`
+;
+
+  
+  correctform.replaceWith(fucky);
+
+
+  
+
+
+}
