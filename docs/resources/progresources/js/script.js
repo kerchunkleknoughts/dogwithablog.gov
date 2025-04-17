@@ -1006,10 +1006,7 @@ function flyyoufool(){
 
   `
     <marquee behavior="scroll" direction="left" scrollamount="500" loop=1 id="marqtrip" onmouseover="flyyoufool()" >
-   
         AHHHHH
-        
-    
       </marquee>
 `
 ;
