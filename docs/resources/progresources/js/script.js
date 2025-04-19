@@ -1005,8 +1005,8 @@ function flyyoufool(){
 
 
   `
-    <marquee behavior="scroll" direction="left" scrollamount="500" loop=1 id="marqtrip" onmouseover="flyyoufool()" >
-        AHHHHH
+    <marquee behavior="scroll" direction="right" scrollamount="150" loop=1 id="marqtrip" onmouseover="flyyoufool()">
+        <img src="./resources/images/skeleton-run.gif" style="height:50px; width:auto;">
       </marquee>
 `
 ;
