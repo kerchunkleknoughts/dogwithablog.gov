@@ -643,10 +643,11 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
 }
 .photolay{
+  position: fixed;
   display: none;
   width: 1000px;
   height: auto;
-  position: absolute;
+
   top: 50%;
   left: 50%;
  
