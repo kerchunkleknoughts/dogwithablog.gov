@@ -814,10 +814,6 @@ function on(element) {
   console.log(element);
  
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 942cc0715112b56a1ff9743a647d62ff352f1037
 }
 function overlayon(){
   document.getElementById('overlay').style.display = "block";
@@ -845,10 +841,4 @@ function off(element) {
   console.log(element);
   document.getElementsByClassName('overlay').style.display = "none";
 
-<<<<<<< HEAD
 }
-=======
-
-}
-
->>>>>>> 942cc0715112b56a1ff9743a647d62ff352f1037
