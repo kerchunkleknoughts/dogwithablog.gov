@@ -750,6 +750,7 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
+  cursor: pointer;
 }
  
 
@@ -1468,6 +1469,15 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
            
            
            
+           
+           .indicator2gal {
+            
+            display: flex;
+            width: 200px;
+            height: auto; /* Maintains aspect ratio */
+            cursor: pointer;
+           
+           }
            
 
            
