@@ -1024,8 +1024,30 @@ function flyyoufool(){
 
 function on(element) {
   document.getElementById(element).style.display = "block";
+  console.log("ELEMENT TURNED ON:");
+  console.log(element);
+ 
+
+
 }
+
+function overlayon(){
+  document.getElementById('overlay').style.display = "block";
+}
+
+
+function overlayoff(){
+  document.getElementById('overlay').style.display = "none";
+}
+
+
 
 function off(element) {
   document.getElementById(element).style.display = "none";
+  console.log("ELEMENT TURNED off:");
+  console.log(element);
+  document.getElementsByClassName('overlay').style.display = "none";
+
+
 }
+

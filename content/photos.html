@@ -73,9 +73,14 @@ body {
      
     
             <div>
-                <img src="./resources/photos/coldcurly.jpg" class="indicator2"></img>
+                <img src="./resources/photos/coldcurly.jpg" class="indicator2gal" onclick="on(10)"></img>
                  </div>
     
+
+                 <div>
+                    <img src="./resources/photos/coldcurly.jpg" class="photolay" id="10" onclick="off(10)"></img>
+                     </div>
+        
           
     
     
@@ -93,12 +98,15 @@ body {
      
     
                 <div>
-                    <img src="./resources/photos/miffed.jpg" class="indicator2"></img>
+                    <img src="./resources/photos/miffed.jpg" class="indicator2gal" onclick="on(11)"></img>
 
 
                      </div>
         
               
+                     <div>
+                        <img src="./resources/photos/miffed.jpg" class="photolay" id="11" onclick="off(11)"></img>
+                         </div>
         
         
                      <div>
@@ -116,10 +124,14 @@ body {
      
     
                     <div>
-                        <img src="./resources/photos/toes.jpg" class="indicator2"></img>
+                        <img src="./resources/photos/toes.jpg" class="indicator2gal" onclick="on(12)"></img>
                          </div>
             
                   
+                         
+                     <div>
+                        <img src="./resources/photos/toes.jpg" class="photolay" id="12" onclick="off(12)"></img>
+                         </div>
             
             
                          <div>
@@ -138,9 +150,13 @@ body {
      
     
                         <div>
-                            <img src="./resources/photos/curly.jpg" class="indicator2"></img>
+                            <img src="./resources/photos/curly.jpg" class="indicator2gal" onclick="on(13)" ></img>
                              </div>
                 
+                             <div>
+                                <img src="./resources/photos/curly.jpg" class="photolay" id="13" onclick="off(13)"></img>
+                                 </div>
+                    
                       
                 
                 
@@ -163,12 +179,10 @@ body {
     
     
 
-                
 
 
 
-
-
+<button onclick="overlayon()">clickme</button>
 
    {% include "partials/footer.njk" %}
 
