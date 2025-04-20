@@ -3,34 +3,24 @@
 
 
 #guestbook{
-
   display: flex;
   width: 700px;
   height: 700px;
-
 justify-content: center;
-
 flex-direction: row;
 
 
-
 }
-
 
 #status{
-
   display: flex;
   width: 700px;
   height: 700px;
-
 justify-content: center;
-
 flex-direction: row;
 
 
-
 }
-
 
 
 
@@ -54,39 +44,27 @@ flex-direction: row;
 
 
 
-
 .headstyle{
-
 display: flex;
 text-align: center;
 background-color: aliceblue;
 border-style: double;
-
 justify-content: center;
-
 flex-direction: row;
 
-
 }
-
 
 
 .parentbox{
-
 display: flex;
 text-align: center;
 
-
 justify-content: space-evenly;
-
 flex-direction: row;
-
 
 }
 
-
 .parentboxcenter{
-
   display: flex;
   text-align: center;
   
@@ -103,24 +81,17 @@ flex-direction: row;
 
 
 
-
 .buttonbox{
-
 display: flex;
 
-
 justify-content: space-evenly;
-
 flex-direction: row;
 
 
 
 
-
 }
-
 .buttonchild{
-
 
 
 width: 25%;
@@ -128,9 +99,7 @@ height: auto; /* Maintains aspect ratio */
 
 
 
-
 }
-
 
 
 
@@ -138,63 +107,43 @@ height: auto; /* Maintains aspect ratio */
 display: flex;
 text-align: center;
 
-
 justify-content: center;
-
 flex-direction: row;
 
-
 }
-
 
 .sbparentbox{
 display: flex;
 text-align: center;
 
-
 justify-content: space-between;
-
 flex-direction: row;
 
-
 }
-
 
 
 
 .fchildtextbox{
-
 display: flex;
 text-align: center;
-
 background-color: aliceblue;
 border-style: double;
-
 justify-content: center;
-
 flex-direction: row;
 
 
-
 }
-
 
 .childtextbox{
 
-
 text-align: center;
-
 background-color: aliceblue;
 border-style: double;
-
 justify-content: center;
-
 flex-direction: row;
 
 
-
 }
-
 
 @font-face {
   font-family: 'Kingthings Facetype';
@@ -203,15 +152,12 @@ flex-direction: row;
 
 
 
-
 .kingchildtextbox{
-
 
 
   font-family: 'Kingthings Facetype', sans-serif; /* Fallback font */
   
   font-size: 200px;
-
   text-align: center;
   
   background-color: aliceblue;
@@ -225,9 +171,7 @@ flex-direction: row;
   
   }
 
-
   .smallkingchildtextbox{
-
 
 
     font-family: 'Kingthings Facetype', sans-serif; /* Fallback font */
@@ -252,15 +196,11 @@ flex-direction: row;
 
 
 
-
 .indicator2 {
-
 display: flex;
 width: 200px;
 height: auto; /* Maintains aspect ratio */
-
 }
-
 
 
 
@@ -275,7 +215,6 @@ height: auto; /* Maintains aspect ratio */
 
 
 
-
   #aboutme {
      /*float: right; */
      color: rgb(14, 4, 4);
@@ -283,7 +222,6 @@ height: auto; /* Maintains aspect ratio */
     margin-right: 20px
     
   }
-
   
   #personality{
     margin-left: 500px; /* Push content to the right */
@@ -302,12 +240,10 @@ height: auto; /* Maintains aspect ratio */
 
 
 
-
   #indicator {
 float: left;
 margin-right: 100px; /* optional spacing */
 }
-
 
 
 
@@ -382,9 +318,7 @@ margin-right: 100px; /* optional spacing */
 
 
 
-
 .journalindicator{
-
   display: flex;
    width: 100px;
    height: auto; /* Maintains aspect ratio */
@@ -408,7 +342,6 @@ margin-right: 100px; /* optional spacing */
  
  }
  
-
  
  
  .dreamtest{
@@ -417,9 +350,7 @@ margin-right: 100px; /* optional spacing */
    white-space: pre-line;
  
  }
-
  .dreamstuff{
-
   
     background-color: rgb(163, 163, 163);
     border-style: dotted;
@@ -427,57 +358,42 @@ margin-right: 100px; /* optional spacing */
     white-space: pre-line;
  
   
-
  }
  
-
 
  .betterp{
   background-color:aliceblue;
   white-space: pre-line;
-
 }
-
 .betterptrn{
-
   white-space: pre-line;
-
 }
-
 
 .betterpscroll{
-
   text-align: center;
   background-color: aliceblue;
   border-style: double;
   justify-content: center;
   flex-direction: row;
-
   display: flex;
   max-width: 400px;
 max-height: 400px;
 overflow: auto; /* Enables scrolling when content exceeds max height */
 
-
 }
-
 
 
 .childscrolltextbox{
 
 
-
  
-
   max-width: 100px; /* Adjust width as needed */
   max-height: 100px; /* Adjust height as needed */
   overflow: auto; /* Enables scrolling when content exceeds max height */
   word-wrap: break-word; /* Ensures long words wrap properly */
 
 
-
 }
-
  
  
  .twoitemcontainer{
@@ -537,7 +453,6 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
  }
  
-
  .parentboxscroll{
  
   display: flex;
@@ -551,10 +466,8 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
   
   max-width: 200px;
   max-height: 120px;
-
   }
   
-
 
 
  
@@ -588,32 +501,10 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
 
 
- #overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
-}
 
 
 
 
-#overlaytext{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 50px;
-  color: white;
-  transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-}
 
  
  
@@ -681,14 +572,12 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
  }
  
-
  .childtextboxpadded{
  
  
   text-align: center;
   background-color: aliceblue;
  border-style: double;
-
   
   
   justify-content: center;
@@ -701,7 +590,6 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
   
   
   }
-
  
  
  .indicator2 {
@@ -712,7 +600,6 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
  }
  
-
  .indicator3 {
   
   display: flex;
@@ -720,7 +607,6 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
   height: auto; /* Maintains aspect ratio */
  
  }
-
 
 
  
@@ -742,7 +628,33 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
  }
  
-
+ .overlay{
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+ 
+}
+.photolay{
+  display: none;
+  width: 1000px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ 
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  cursor: pointer;
+}
+ 
  
  
          #intro{
@@ -811,11 +723,8 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
 
 
 
-
  
-
 .headstyle{
-
   display: flex;
   text-align: center;
   background-color: aliceblue;
@@ -920,7 +829,6 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
   
   
   
-
   
   
           #intro{
@@ -1017,24 +925,19 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
     text-align: center;
   }
   
-
   #contacts{
     color: white;
 }
-
 #socials{
     color: white;
 }
-
 
 #footsy{
     color: white;
 }
 
 
-
 .headstyle{
-
   display: flex;
   text-align: center;
   background-color: aliceblue;
@@ -1107,11 +1010,8 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
         }
   
   
-
         
-
         #centered{
-
           text-align: center;
           
           }
@@ -1228,9 +1128,7 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
           
           }
           
-
           .journalindicator{
-
             display: flex;
              width: 100px;
              height: auto; /* Maintains aspect ratio */
@@ -1339,7 +1237,6 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
            
            
            }
-
                 
            .buttonboxcenter{
            
@@ -1367,7 +1264,6 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
            
            
            }
-
                       
            .neighborhoodbuttonchild{
            
@@ -1459,59 +1355,13 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
            
            
            
-
+           .indicator2gal {
+            
+            display: flex;
+            width: 200px;
+            height: auto; /* Maintains aspect ratio */
+            cursor: pointer;
            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+           }
+           
+           
