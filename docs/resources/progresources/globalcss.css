@@ -734,7 +734,7 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
   justify-content: center;
   
   flex-direction: row;
-  padding: 25px;
+  padding: 20px;
 
   
   }
