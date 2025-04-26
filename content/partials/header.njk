@@ -1,4 +1,8 @@
 
+
+{% if supoption==1 %}
+
+
 <a id="top"></a>
 
 <div class="headstyle">
@@ -43,3 +47,51 @@
   <div id="overlay" class="overlay" onclick="overlayoff()"> 
 
   </div>
+
+  {% endif %}
+
+
+
+
+  {% if supoption==null %}
+
+
+
+<div class="headstyle">
+
+    <header>
+      <div>
+       <a href="about.html">about</a>
+       <a href="index.html">home</a>
+       <a href="music.html">music</a>
+       <a href="drawings.html">art</a>
+       <a href="blog.html">blog</a> 
+       <a href="wikifun.html">wikifun!</a>
+       <a href="dreamlog.html">dream log</a>
+       <a href="journal.html">journal</a>
+       <a href="photos.html">photos</a>
+       <a href="resources.html">resources</a>
+       <a href="neighborhood.html">neighborhood</a>
+       <a href="todo.html">☻todo☻</a>
+       <a href="dogshit.html">dogshit</a>
+       <a href="contact.html">socials-contact</a>
+       <a href="https://users3.smartgb.com/g/g.php?a=s&amp;i=g36-38132-85">guestbook</a>
+      
+
+
+
+
+    autoplay enabled:
+    <input type="checkbox" id="autoplay" name="autoplayy" value="autoplayyy" onchange="toggleaudio()">
+
+      </div>
+
+    </header>
+  </div>
+
+
+
+
+
+
+   {% endif %}
