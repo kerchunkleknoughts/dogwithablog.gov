@@ -857,6 +857,8 @@ let photo0 = Object.assign(document.createElement('div'), {
   `
 });
 
+
+
 let photo1 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
@@ -1029,6 +1031,7 @@ let photos = [
 
 
 
+
 function repphotocontent(index){
   //this replaces the currently viewed photo with the passed index. The passed index 
   //is generated via the return update next index function.
@@ -1058,4 +1061,5 @@ function returnupdatenextindex(){
   return currentindex;
 
 }
+
 
