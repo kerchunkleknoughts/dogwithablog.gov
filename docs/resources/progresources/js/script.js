@@ -880,6 +880,7 @@ let photo1 = Object.assign(document.createElement('div'), {
   `
 });
 
+
 let photo2 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
@@ -889,12 +890,157 @@ let photo2 = Object.assign(document.createElement('div'), {
 });
 
 
+let photo3 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/boots.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo4 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/snoweyes.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo5 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/sleepypaws.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo6 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/blanketball.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo7 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/hopdrop.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo8 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/tilthead.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo9 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/windowwatch.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo10 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/grumpysquint.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo11 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/earwiggle.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo12 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/yawnstretch.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo13 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/puddleprint.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo14 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/bellyflop.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo15 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/hidingtail.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo16 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/couchpeek.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo17 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/snacktime.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo18 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/sandroll.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo19 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/sneakstep.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo20 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/zoomtail.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
 
 
 let photos = [
-  photo0,
-  photo1,
-  photo2
+  photo0, photo1, photo2, photo3, photo4,
+  photo5, photo6, photo7, photo8, photo9,
+  photo10, photo11, photo12, photo13, photo14,
+  photo15, photo16, photo17, photo18, photo19, photo20
 ];
 
 
