@@ -1,0 +1,333 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0; url=../404.html">
+    <title>Home</title>
+    
+        
+    <style>
+
+        body {
+                  background-image: url("../resources/backgrounds/thewitch.webp");
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-size: cover;
+                }
+        
+        
+            </style>
+        
+            <link rel="stylesheet" href="../resources/progresources/globalcss.css">
+
+
+
+
+
+</head>
+
+
+
+
+  
+
+<body>
+  
+
+  
+
+
+<div class="headstyle">
+
+    <header >
+      <div>
+        <a href="../about.html">about</a>
+        <a href="../index.html">home</a>
+        <a href="../music.html">music</a>
+        <a href="../drawings.html">art</a>
+        <a href="../blog.html">blog</a>
+        <a href="../wikifun.html">wikifun!</a>
+        <a href="../dreamlog.html">dream log</a>
+        <a href="../journal.html">journal</a>
+        <a href="../photos.html">photos</a>
+        <a href="../resources.html">resources</a>
+        <a href="../neighborhood.html">neighborhood</a>
+        <a href="../todo.html">☻todo☻</a>
+        <a href="../dogshit.html">dogshit</a>
+        <a href="../contact.html">socials-contact</a>
+        <a href="https://users3.smartgb.com/g/g.php?a=s&i=g36-38132-85">guestbook</a>
+      
+
+          autoplay enabled:
+    <input type="checkbox" id="autoplay" name="autoplayy" value="autoplayyy" onChange="toggleaudio()">
+
+      </div>
+
+    </header>
+  </div>`
+
+
+  
+
+
+
+
+<audio id="bgm" loop>
+   
+</audio>
+
+
+
+
+
+
+
+
+<audio id="postmusicclick">
+  <source src="../resources/onclickaudio/button9.wav" type="audio/mpeg">
+</audio>
+
+
+
+ 
+
+
+  
+   
+  <div class="parentboxcenter">
+  
+  <div class="childtextbox">
+  <p class="betterp">
+    1-19-2023
+    the witch:
+    a scientist trapped in another dimension of her finding, 
+    like being trapped in hades, food was impossible to obtain in this realm,
+    so using her science she was able to briefly interact with the real world, but to her horror she found she could only interact with people. so to survive she found people, and ate them. we were in an attic or something of some sort, the witch was after us, but another scientist was attempting to save us. He created a sort of salt circle, and deployed an experimental device which created some sort of  field which nullified their presence. 
+    the reason why this was a nightmare was because we were huddled in this circle, unsure if the device would work as the witch's minions were after us, the cry of wolves were heard in the distance.  When they finally came, they couldn’t harm us, and the witch appeared, crying that the first children  she ate destroyed her internally, but after several more meals she has begun to enjoy the hunt, and the taste of human flesh. Once a Nobel women, she had been turned into a monster.
+    
+    6-1-2024
+    I had a dream that I was on a cruise ship and knew about some defect in the life boats. for some reason that I knew of or not, the cruise ship had malfunctioned on the high seas, and all of the passengers were forced overboard, where the lifeboats, which were compressed into small little capsules were also floating around.  Knowing of their defective nature, I waited for them to deploy before I got any closer. They all suddenly violently exploded, killing several people who were too close to them, and afterwards I'd calmly  gotten on one and my mother and I floated to shore. 
+    We spent the rest of the dream as homeless people trying to raise enough money for a plane ticket back to our country, we kept trying to convince people that we had been victim to a horrible accident, and kept trying to show them some news  about the cruise ship which had become stranded, but no-one would believe us. I kept trying to find evidence on my phone of the news, but I just couldn't locate anything. 
+    
+    
+
+  </p>
+  
+  </div>
+   </div>   
+
+
+
+
+
+
+
+
+   
+   
+
+   
+
+
+ 
+   
+
+
+
+
+
+ 
+
+ <div class="parentboxcenter">
+
+    <div class="headystyle">
+    
+  
+      
+
+       <button onclick="gotoprevindex(10)">Prev post</button>
+       <button onclick="gotonextindex(10)">Next post</button>
+
+       <button onclick="randomdream()">random post</button>
+       <button onclick="location.href='./dreamlibrary.html'">post library</button>
+
+
+   
+   </div>
+   </div>
+   
+
+
+
+<br><br><br><br>
+<footer>
+
+    <br><br>
+    <div class="parentboxcenter">
+
+
+    <a href="../feed.xml" class="childtextboxpadded">
+        <img src="../resources/images/RSS_Logo.png" alt="RSS Feed" style="width: 20px; height: 20px"> 
+    </a>
+
+    <a href="#top" class="childtextboxpadded">Back to top</a>
+
+
+    
+<script>
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        
+        randodreamaudio()
+    
+        
+
+
+
+
+        let audio = document.getElementById("bgm");
+        setTimeout(() => {
+            
+
+            var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
+        }, 1500); // Delay autoplay
+
+    });
+
+
+
+
+ 
+
+
+
+    document.body.addEventListener("click", playAudio);
+
+    document.body.addEventListener("mouseover", playAudio);
+
+
+
+
+
+    function playAudio() {
+       
+
+       
+
+        // Remove event listeners after first interaction to prevent multiple triggers
+      
+        let musicenabled=1;
+
+        
+        
+        if(!(document.getElementById("bgm")==null)){
+
+        document.body.click();
+        //console.log("MOUSED!");
+        let audio = document.getElementById("bgm");
+
+
+               var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+        audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
+        if (audio.paused == false) {
+          
+          document.body.removeEventListener('mouseover', playAudio);
+          console.log("eventlistener removed :(");
+          let audio = document.getElementById("postmusicclick");
+
+          if(value==1){
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+          }
+          
+        }
+
+
+        }else{
+
+          let audio = document.getElementById("postmusicclick");
+          audio.play().catch(error => console.log("Autoplay blocked:", error));
+
+
+            console.log("post music click");
+
+          
+
+         
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+</script>
+
+
+  
+
+
+
+
+
+<script src="../resources/progresources/js/script.js"></script>  
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </footer>
+
+
+
+    
+
+
+    
+
+
+</body>
+</html>
