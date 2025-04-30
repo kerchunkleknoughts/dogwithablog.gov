@@ -1020,6 +1020,13 @@ let photo20 = Object.assign(document.createElement('div'), {
 });
 
 
+let reset = Object.assign(document.createElement('div'), {
+  innerHTML: `
+  <div id="reptarget">
+  </div>
+  `
+});
+
 
 
 let photos = [
@@ -1040,6 +1047,7 @@ function repphotocontent(index){
 
   var correctform=document.getElementById("reptarget");
 
+ 
   correctform.replaceWith(photos[index]);
 
   on("reptarget");
