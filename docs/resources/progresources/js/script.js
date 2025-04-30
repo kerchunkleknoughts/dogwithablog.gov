@@ -844,3 +844,71 @@ function off(element) {
   document.getElementsByClassName('overlay').style.display = "none";
 
 }
+
+
+
+let currentindex=-1;
+
+
+
+function returnupdatenextindex(){
+
+
+  currentindex=currentindex+1;
+  return currentindex;
+
+}
+
+
+
+
+
+
+let photo0 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/coldcurly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo1 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/miffed.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo2 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
+      <img src="./resources/photos/toes.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+
+
+
+let photos = [
+  photo0,
+  photo1,
+  photo2
+];
+
+
+
+function repphotocontent(index){
+  //this replaces the currently viewed photo with the passed index. The passed index 
+  //is generated via the return update next index function.
+  
+  
+
+  var correctform=document.getElementById("reptarget");
+
+  correctform.replaceWith(photos[index]);
+
+  on("reptarget");
+
+}
