@@ -847,21 +847,6 @@ function off(element) {
 
 
 
-let currentindex=-1;
-
-
-
-function returnupdatenextindex(){
-
-
-  currentindex=currentindex+1;
-  return currentindex;
-
-}
-
-
-
-
 
 
 let photo0 = Object.assign(document.createElement('div'), {
@@ -875,13 +860,20 @@ let photo0 = Object.assign(document.createElement('div'), {
 let photo1 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
+      <img src="./resources/photos/coldcurly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+    </div>
+  `
+});
+
+let photo2 = Object.assign(document.createElement('div'), {
+  innerHTML: `
+    <div>
       <img src="./resources/photos/miffed.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
 
-
-let photo2 = Object.assign(document.createElement('div'), {
+let photo3 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
       <img src="./resources/photos/toes.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
@@ -889,19 +881,10 @@ let photo2 = Object.assign(document.createElement('div'), {
   `
 });
 
-
-let photo3 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/boots.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
 let photo4 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/snoweyes.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/curly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -909,7 +892,7 @@ let photo4 = Object.assign(document.createElement('div'), {
 let photo5 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/sleepypaws.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/feld.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -917,7 +900,7 @@ let photo5 = Object.assign(document.createElement('div'), {
 let photo6 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/blanketball.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/blimp.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -925,7 +908,7 @@ let photo6 = Object.assign(document.createElement('div'), {
 let photo7 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/hopdrop.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/filth.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -933,7 +916,7 @@ let photo7 = Object.assign(document.createElement('div'), {
 let photo8 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/tilthead.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/gay.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -941,7 +924,7 @@ let photo8 = Object.assign(document.createElement('div'), {
 let photo9 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/windowwatch.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/hot.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -949,7 +932,7 @@ let photo9 = Object.assign(document.createElement('div'), {
 let photo10 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/grumpysquint.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/hunter1.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -957,7 +940,7 @@ let photo10 = Object.assign(document.createElement('div'), {
 let photo11 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/earwiggle.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/Iwant.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -965,7 +948,7 @@ let photo11 = Object.assign(document.createElement('div'), {
 let photo12 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/yawnstretch.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/rattle.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -973,7 +956,7 @@ let photo12 = Object.assign(document.createElement('div'), {
 let photo13 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/puddleprint.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/largesink.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -981,7 +964,7 @@ let photo13 = Object.assign(document.createElement('div'), {
 let photo14 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/bellyflop.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/orgy.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -989,7 +972,7 @@ let photo14 = Object.assign(document.createElement('div'), {
 let photo15 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/hidingtail.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/ponge.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -997,7 +980,7 @@ let photo15 = Object.assign(document.createElement('div'), {
 let photo16 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/couchpeek.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/sant.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -1005,7 +988,7 @@ let photo16 = Object.assign(document.createElement('div'), {
 let photo17 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/snacktime.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/sant2.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -1013,7 +996,7 @@ let photo17 = Object.assign(document.createElement('div'), {
 let photo18 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/sandroll.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/silly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -1021,7 +1004,7 @@ let photo18 = Object.assign(document.createElement('div'), {
 let photo19 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/sneakstep.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/springboulder.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
@@ -1029,10 +1012,11 @@ let photo19 = Object.assign(document.createElement('div'), {
 let photo20 = Object.assign(document.createElement('div'), {
   innerHTML: `
     <div>
-      <img src="./resources/photos/zoomtail.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
+      <img src="./resources/photos/wahoo.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
     </div>
   `
 });
+
 
 
 
@@ -1058,3 +1042,20 @@ function repphotocontent(index){
   on("reptarget");
 
 }
+
+
+
+
+
+
+let currentindex=-1;
+
+
+function returnupdatenextindex(){
+
+
+  currentindex=currentindex+1;
+  return currentindex;
+
+}
+
