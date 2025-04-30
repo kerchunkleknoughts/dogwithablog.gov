@@ -849,186 +849,6 @@ function off(element) {
 
 
 
-let photo0 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/coldcurly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-
-
-let photo1 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/coldcurly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo2 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/miffed.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo3 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/toes.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo4 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/curly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo5 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/feld.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo6 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/blimp.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo7 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/filth.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo8 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/gay.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo9 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/hot.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo10 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/hunter1.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo11 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/Iwant.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo12 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/rattle.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo13 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/largesink.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo14 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/orgy.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo15 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/ponge.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo16 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/sant.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo17 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/sant2.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo18 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/silly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo19 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/springboulder.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-let photo20 = Object.assign(document.createElement('div'), {
-  innerHTML: `
-    <div>
-      <img src="./resources/photos/wahoo.jpg" class="photolay" id="reptarget" onclick="off('reptarget')">
-    </div>
-  `
-});
-
-
-let reset = Object.assign(document.createElement('div'), {
-  innerHTML: `
-  <div id="reptarget">
-  </div>
-  `
-});
-
-
-
 
 
 let photos = [
@@ -1037,6 +857,35 @@ let photos = [
   photo10, photo11, photo12, photo13, photo14,
   photo15, photo16, photo17, photo18, photo19, photo20
 ];
+
+
+
+
+
+
+
+function repphotocontent1(index){
+
+  console.log(photo)
+
+
+  var correctform=document.getElementById("reptarget");
+
+  console.log(correctform)
+
+  correctform.src=photo[index];
+  on("reptarget");
+
+  console.log(correctform)
+
+
+}
+
+
+
+
+
+
 
 //next time around just swap this out for image paths, 
 //this way you can target the div and then just update the current image path used by the src. 
