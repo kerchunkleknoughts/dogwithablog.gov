@@ -1,0 +1,226 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+     content="Hey! This is a little blog where I put my art, music, dreams and journal entries!! Come on in the water's just right! ">
+    <title>Home</title>
+    
+    <style>
+
+body {
+          background-image: url("./resources/backgrounds/bear.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
+
+    </style>
+
+    <link rel="stylesheet" href="./resources/progresources/globalcss.css">
+
+</head>
+
+
+
+
+  
+
+
+<body>
+
+
+  
+    
+
+
+
+
+
+
+
+<audio id="bgm" loop>
+  <source src="./resources/audio/This Must Be the Place (Naive Melody) (2005 Remaster) 4 (1).mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<div class="parentboxcenter">
+    <img src="./resources/video/Hermeto Pascoal - Música da Lagoa (Sinfonia do Alto Ribeira, 1985).mp4"> </img>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+    <br><br>
+    <div class="parentboxcenter">
+
+
+
+
+    <script src="https://iframe.chat/scripts/main.min.js"></script>
+
+<link rel="stylesheet" href="https://ultrakill.nekoweb.org/onionring.css">
+
+<script src="./resources/progresources/js/script.js"></script>  
+<script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+
+
+          displayart(4);
+
+
+          
+
+
+
+          
+          
+          checkboxx();
+
+
+            let audio = document.getElementById("bgm");
+
+            if (document.referrer.includes("google.")) {
+    console.log("User came from Google!");
+}
+
+
+
+
+const params = new URLSearchParams(window.location.search);
+const source = params.get("source");
+
+if (source) {
+  console.log("hey you used parameters!")
+  console.log(source)
+}
+
+
+
+            setTimeout(() => {
+              var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
+
+                audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+            }, 1500); // Delay autoplay
+    
+    
+        
+            
+        });
+        document.body.addEventListener("click", playAudio);
+        document.body.addEventListener("mouseover", playAudio);
+        function playAudio() {
+           
+    
+           
+    
+            // Remove event listeners after first interaction to prevent multiple triggers
+          
+            let musicenabled=1;
+    
+            
+            
+            if(!(document.getElementById("bgm")==null)){
+    
+            document.body.click();
+            //console.log("MOUSED!");
+            let audio = document.getElementById("bgm");
+
+             var value = localStorage.getItem('enablemusic');
+               console.log("MUSIC ENABLE VALUE:")
+
+              console.log(value)
+              if(value==1){
+
+            audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+
+
+            if (audio.paused == false) {
+              
+              document.body.removeEventListener('mouseover', playAudio);
+              console.log("eventlistener removed :(");
+              let audio = document.getElementById("postmusicclick");
+
+              if(value==1){
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+              
+            }
+
+
+            }else{
+
+              let audio = document.getElementById("postmusicclick");
+
+              
+              
+              audio.play().catch(error => console.log("Autoplay blocked:", error));
+              
+    
+                console.log("post music click");
+
+              
+
+             
+            }
+    
+    
+    
+    
+        }
+    
+
+        chattable.initialize({
+        theme : "Tendo"
+      });
+
+      generateheader();
+</script>
+
+</div>
+
+    </footer>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
