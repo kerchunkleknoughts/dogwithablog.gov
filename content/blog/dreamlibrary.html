@@ -14,6 +14,7 @@
     <style>
 
 
+
       
 
       body {
@@ -59,22 +60,52 @@
   {% include "partials/dreamaudio.njk" %}
 
 
-  <div class="parentboxcenter">
 
-    <div class="headstyle">
-
-
-    
-
-
-        <button onclick="navdreams(0)">blogpost0</button>
-        <button onclick="navdreams(1)">blogpost1</button>
 
 
  
 
+  {% assign indi = 0 %}
+  
+
+  <div class="parentboxcenter" onclick="navdreams({{indi}})" style=" cursor: pointer; ">
+
+
+  
+  {% for post in collections.blogpost %}
+
+  {% assign indi = indi | plus: 1 %}
+
+  
+  <div class="childtextbox" style="height:230px" >
+     
+    
+    <div>
+        <img src="{{post.data.image}}" class="indicator2" ></img>
+         </div>
+
+  
+
+
+    <div>
+   <p class="betterp" style="width:200px">
+    {{ post.data.title }}
+   </p> 
     </div>
+   
+
+    </div>
+
+
+
+
+
+  {% endfor %}
+
   </div>
+
+
+
 
 
 
