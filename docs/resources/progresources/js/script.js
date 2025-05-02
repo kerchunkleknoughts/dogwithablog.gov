@@ -684,11 +684,11 @@ fucky0.innerHTML=
 
       <div class="container">
         <div class="item">
-            <img src="./resources/art/drawings/oldest 4/monsterpractice.jpg" id="indicator2"> </img>
+            <img src="./resources/art/drawings/oldest 4/monsterpractice.png" id="indicator2"> </img>
             </div>
             <div class="container">
                 <div class="item">
-                    <img src="./resources/art/drawings/oldest 4/monstpractice2.jpg" id="indicator2"> </img>
+                    <img src="./resources/art/drawings/oldest 4/monstpractice2.png" id="indicator2"> </img>
                     </div>
                     <div class="container">
                         <div class="item">
@@ -696,7 +696,7 @@ fucky0.innerHTML=
                             </div>
                             <div class="container">
                                 <div class="item">
-                                    <img src="./resources/art/drawings/oldest 4/soundofpreserverance.jpg" id="indicator2"> </img>
+                                    <img src="./resources/art/drawings/oldest 4/soundofpreserverance.png" id="indicator2"> </img>
                                     </div>
                         
 
