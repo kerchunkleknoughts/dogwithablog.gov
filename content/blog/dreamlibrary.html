@@ -65,10 +65,10 @@
 
  
 
-  {% assign indi = 0 %}
+  {% assign indi = -1 %}
   
 
-  <div class="parentboxcenter" onclick="navdreams({{indi}})" style=" cursor: pointer; ">
+  <div class="parentboxcenter">
 
 
   
@@ -77,7 +77,7 @@
   {% assign indi = indi | plus: 1 %}
 
   
-  <div class="childtextbox" style="height:230px" >
+  <div class="childtextbox" onclick="navdreams({{indi}})" style="height:230px;cursor: pointer;" >
      
     
     <div>
