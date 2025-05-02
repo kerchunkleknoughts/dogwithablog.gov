@@ -390,7 +390,7 @@ function displayart(artindex){
 
 
 <div class="item">
-<img src="./resources/art/drawings/latest 3-11-2025/aifishman.jpg" id="indicator2"> </img>
+<img src="./resources/art/drawings/latest 3-11-2025/aifishman.png" id="indicator2"> </img>
 </div>
 
  <div class="item">
@@ -404,12 +404,12 @@ function displayart(artindex){
 
   
       <div class="item">
-        <img src="./resources/art/drawings/latest 3-11-2025/ant hell.jpg" id="flip-horizontalm1"> </img>
+        <img src="./resources/art/drawings/latest 3-11-2025/ant hell.jpg" id="indicator2"> </img>
         </div>
       
   
         <div class="item">
-            <img src="./resources/art/drawings/latest 3-11-2025/bosh practice 1.jpg" id="flip-horizontalm1"> </img>
+            <img src="./resources/art/drawings/latest 3-11-2025/bosh practice 1.jpg" id="indicator2"> </img>
             </div>
           
   
@@ -474,7 +474,7 @@ function displayart(artindex){
             <img src="./resources/art/drawings/newest1/abstract1.jpg" id="indicator2"> </img>
             </div>
         <div class="item">
-            <img src="./resources/art/drawings/newest1/another1.jpg" id="flip-horizontalm1"> </img>
+            <img src="./resources/art/drawings/newest1/another1.png" id="indicator2 > </img>
             </div>
             
         
@@ -482,7 +482,7 @@ function displayart(artindex){
                 <img src="./resources/art/drawings/newest1/another2.jpg" id="indicator2"> </img>
                 </div>
                 <div class="item">
-                    <img src="./resources/art/drawings/newest1/bee.jpg" id="indicator2"> </img>
+                    <img src="./resources/art/drawings/newest1/bee.png" id="indicator2"> </img>
                     </div>
                 
                     <div class="item">
@@ -610,56 +610,56 @@ fucky1.innerHTML=
 
       <div class="container">
         <div class="item">
-            <img src="./resources/art/drawings/older 3/faces.jpg" id="flip-horizontalm1"> </img>
+            <img src="./resources/art/drawings/older 3/faces.png" id="indicator2"> </img>
             </div>
             
           
             <div class="item">
-                <img src="./resources/art/drawings/older 3/faces2.jpg" id="flip-horizontalm1"> </img>
+                <img src="./resources/art/drawings/older 3/faces2.png" id="indicator2"> </img>
                 </div>
                 <div class="item">
-                    <img src="./resources/art/drawings/older 3/fuckedthing.jpg" id="flip-horizontalm1"> </img>
+                    <img src="./resources/art/drawings/older 3/fuckedthing.png" id="indicator2"> </img>
                     </div>
                     <div class="item">
-                        <img src="./resources/art/drawings/older 3/ghast2hplove.jpg" id="flip-horizontal"> </img>
+                        <img src="./resources/art/drawings/older 3/ghast2hplove.png" id="indicator2"> </img>
                         </div>
                         
                         <div class="item">
-                            <img src="./resources/art/drawings/older 3/ghasthplove.jpg" id="flip-horizontal"> </img>
+                            <img src="./resources/art/drawings/older 3/ghasthplove.png" id="indicator2"> </img>
                             </div>
     
                     
                             <div class="item">
-                                <img src="./resources/art/drawings/older 3/hl2sketch.jpg" id="flip-horizontalm1"> </img>
+                                <img src="./resources/art/drawings/older 3/hl2sketch.png" id="indicator2"> </img>
                                 </div>
                                 <div class="item">
-                                    <img src="./resources/art/drawings/older 3/idk.jpg" id="flip-horizontalm1"> </img>
+                                    <img src="./resources/art/drawings/older 3/idk.png" id="indicator2"> </img>
                                     </div>
                                     <div class="item">
-                                        <img src="./resources/art/drawings/older 3/keytre.jpg" id="flip-horizontal"> </img>
+                                        <img src="./resources/art/drawings/older 3/keytre.png" id="indicator2"> </img>
                                         </div>
                                         <div class="item">
-                                            <img src="./resources/art/drawings/older 3/lovecraftbeast.jpg" id="flip-horizontal"> </img>
+                                            <img src="./resources/art/drawings/older 3/lovecraftbeast.png" id="indicator2"> </img>
                                             </div>
                                 
                                             <div class="item">
-                                                <img src="./resources/art/drawings/older 3/me2beersin.jpg" id="flip-horizontalm1"> </img>
+                                                <img src="./resources/art/drawings/older 3/me2beersin.png" id="indicator2"> </img>
                                                 </div>
                                                 <div class="item">
-                                                    <img src="./resources/art/drawings/older 3/shandakbirdunkownkadath.jpg" id="flip-horizontalm1"> </img>
+                                                    <img src="./resources/art/drawings/older 3/shandakbirdunkownkadath.png" id="indicator2m1"> </img>
                                                     </div>
                                                     <div class="item">
-                                                        <img src="./resources/art/drawings/older 3/spearhighlandsbs.jpg" id="flip-horizontal"> </img>
+                                                        <img src="./resources/art/drawings/older 3/spearhighlandsbs.png" id="indicator2"> </img>
                                                         </div>
                                             
                                                         <div class="item">
-                                                            <img src="./resources/art/drawings/older 3/tree.jpg" id="flip-horizontal"> </img>
+                                                            <img src="./resources/art/drawings/older 3/tree.png" id="indicator2"> </img>
                                                             </div>
                                                             <div class="item">
-                                                                <img src="./resources/art/drawings/older 3/villageofthemoonbeastslovecraft.jpg" id="flip-horizontal"> </img>
+                                                                <img src="./resources/art/drawings/older 3/villageofthemoonbeastslovecraft.png" id="indicator2"> </img>
                                                                 </div>
                                                                 <div class="item">
-                                                                    <img src="./resources/art/drawings/older 3/you.jpg" id="flip-horizontal"> </img>
+                                                                    <img src="./resources/art/drawings/older 3/you.png" id="indicator2"> </img>
                                                                     </div>
   
                                         
@@ -684,11 +684,11 @@ fucky0.innerHTML=
 
       <div class="container">
         <div class="item">
-            <img src="./resources/art/drawings/oldest 4/monsterpractice.jpg" id="flip-horizontal"> </img>
+            <img src="./resources/art/drawings/oldest 4/monsterpractice.jpg" id="indicator2"> </img>
             </div>
             <div class="container">
                 <div class="item">
-                    <img src="./resources/art/drawings/oldest 4/monstpractice2.jpg" id="flip-horizontal"> </img>
+                    <img src="./resources/art/drawings/oldest 4/monstpractice2.jpg" id="indicator2"> </img>
                     </div>
                     <div class="container">
                         <div class="item">
@@ -696,7 +696,7 @@ fucky0.innerHTML=
                             </div>
                             <div class="container">
                                 <div class="item">
-                                    <img src="./resources/art/drawings/oldest 4/soundofpreserverance.jpg" id="flip-horizontal"> </img>
+                                    <img src="./resources/art/drawings/oldest 4/soundofpreserverance.jpg" id="indicator2"> </img>
                                     </div>
                         
 
