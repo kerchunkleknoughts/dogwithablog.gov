@@ -14,6 +14,7 @@
     <style>
 
 
+
       
 
       body {
@@ -52,7 +53,6 @@
   {% assign goption = 1 %}
 
 
-
   {% include "partials/dreamheader.njk" %}
 
 
@@ -60,27 +60,52 @@
   {% include "partials/dreamaudio.njk" %}
 
 
-  <div class="parentboxcenter">
-
-    <div class="headstyle">
 
 
-    
-
-
-        <button onclick="navdreams(0)">Arduino uno pcb</button>
-        <button onclick="navdreams(1)">8bit computer</button>
-        <button onclick="navdreams(2)">16 bit computer</button>
-        <button onclick="navdreams(3)">Dream3</button>
-        <button onclick="navdreams(4)">Dream4</button>
-        <button onclick="navdreams(5)">Dream5</button>
-        <button onclick="navdreams(6)">Dream6</button>
-        <button onclick="navdreams(7)">Dream7</button>
 
  
 
+  {% assign indi = -1 %}
+  
+
+  <div class="parentboxcenter">
+
+
+  
+  {% for post in collections.projects %}
+
+  {% assign indi = indi | plus: 1 %}
+
+  
+  <div class="childtextbox" onclick="navdreams({{indi}})" style="height:230px;cursor: pointer;" >
+     
+    
+    <div>
+        <img src="{{post.data.image}}" class="indicator2" ></img>
+         </div>
+
+  
+
+
+    <div>
+   <p class="betterp" style="width:200px">
+    {{ post.data.title }}
+   </p> 
     </div>
+   
+
+    </div>
+
+
+
+
+
+  {% endfor %}
+
   </div>
+
+
+
 
 
 
