@@ -10,9 +10,13 @@
     <div class="parentboxcenter">
 
 
+
+{% if not site.censor1 %}
     <a href="feed.xml" class="childtextboxpadded">
         <img src="./resources/images/RSS_Logo.png" alt="RSS Feed" style="width: 20px; height: 20px"> 
     </a>
+{% endif %}
+
 
     <a href="#top" class="childtextboxpadded">Back to top</a>
 
@@ -20,6 +24,9 @@
     {% include "./scripts.njk" %}
 
 </div>
+
+    <a id="bottomm"></a>
+
 
     </footer>
 

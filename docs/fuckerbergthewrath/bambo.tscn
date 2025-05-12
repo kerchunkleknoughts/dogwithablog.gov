@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs6khlh8aoe0x"]
+
+[ext_resource type="AudioStream" uid="uid://dtxmhlolgg13c" path="res://Game assets/Bamboo Hit (Anime_Cartoon Bonk) - Sound Effect for Editing 4.mp3" id="1_j2t3q"]
+[ext_resource type="Script" uid="uid://cvvi1fii63ocb" path="res://scripts/bambo.gd" id="2_d17am"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_j2t3q")
+script = ExtResource("2_d17am")
+
+[connection signal="ready" from="." to="." method="_on_ready"]

@@ -70,9 +70,12 @@ body {
 
   </div>
 
+
+  {% if not site.censor1 %}
   <div class="parentboxcenter">
     <a href="index.html"style="color: white">back to index</a>
 </div>
+{% endif %}
 
 {% include "partials/footer.njk" %}
 

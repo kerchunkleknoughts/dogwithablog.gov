@@ -3,6 +3,9 @@
 {% if supoption==1 %}
 
 
+<!-- EXPERIMENTAL FORMAT, FOR FUTURE USE IF TOO MANY ITEMS IN HEADER BAR BECOMES PROBLEM !! -->
+
+
 <a id="top"></a>
 
 <div class="headstyle">
@@ -12,6 +15,7 @@
   
 
       <div>
+
         <a href="about.html" class="checkerclass">about</a>
          <a href="music.html" class="checkerclass">music</a>
           <a href="blog.html" class="checkerclass">blog</a> 
@@ -61,27 +65,77 @@
 
 
 
+
 <div class="headstyle">
+
+
 
     <header>
       <div>
-       <a href="about.html">about</a>
-       <a href="index.html">home</a>
+
+
+
+
+
+
+{% if not site.censor1 %}
+  <a href="about.html">about</a>
+  <a href="index.html">home</a>
+{% endif %}
+  
+
+
+
+
+
+
+
        <a href="music.html">music</a>
        <a href="drawings.html">art</a>
        <a href="blog.html">blog</a> 
        <a href="projects.html">projects</a> 
        <a href="wikifun.html">wikifun!</a>
+
+
+{% if not site.censor1 %}
        <a href="dreamlog.html">dream log</a>
+{% endif %}
+
+
+{% if not site.censor1 %}
        <a href="journal.html">journal</a>
+{% endif %}
+
+
+{% if not site.censor1 %}
        <a href="photos.html">photos</a>
+{% endif %}
+      
+{% if not site.censor1 %}
        <a href="resources.html">resources</a>
+{% endif %}
+
+
+{% if not site.censor1 %}
        <a href="neighborhood.html">neighborhood</a>
        <a href="todo.html">☻todo☻</a>
+{% endif %}
+
+
+
        <a href="dogshit.html">dogshit</a>
+
+
+{% if not site.censor1 %}
        <a href="contact.html">socials-contact</a>
+{% endif %}
+
+
+  {% if not site.censor1 %}
        <a href="https://users3.smartgb.com/g/g.php?a=s&amp;i=g36-38132-85">guestbook</a>
-      
+{% endif %}
+
+       <!-- <a href="#bottomm">To bottom</a> -->
 
 
 

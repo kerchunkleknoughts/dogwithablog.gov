@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://qbed55n83k4q"]
+
+[ext_resource type="Script" uid="uid://bwqepoq2ycqfd" path="res://scripts/super_drug.gd" id="1_fr33m"]
+[ext_resource type="Texture2D" uid="uid://c6vomh33ioqko" path="res://Game assets/simples_pimples.png" id="1_trp6a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr33m"]
+atlas = ExtResource("1_trp6a")
+region = Rect2(447, 462, 17, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioife"]
+atlas = ExtResource("1_trp6a")
+region = Rect2(447, 479, 17, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u08hd"]
+atlas = ExtResource("1_trp6a")
+region = Rect2(447, 495, 17, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbkj7"]
+atlas = ExtResource("1_trp6a")
+region = Rect2(447, 511, 17, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y18f6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fr33m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioife")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u08hd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbkj7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioife"]
+
+[node name="super drug" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_fr33m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_y18f6")
+autoplay = "default"
+frame_progress = 0.437365
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ioife")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
