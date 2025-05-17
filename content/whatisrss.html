@@ -113,6 +113,13 @@
 
 
 
+
+
+
+
+
+{% if not site.censor1 %}
+
 <div class="parentbox">
 
 
@@ -130,7 +137,32 @@ Click <a href="mailto:theunclekerchunkle@gmail.com?subject=Maillist%20join%20req
 
 </div>
 
+{% endif %}
 
+
+
+
+{% if site.censor1 %}
+
+
+<div class="parentbox">
+
+
+
+<div class="parentbox">
+
+
+<p class="betterp">
+send an email to plamptonsplampton@gmail.com with a mailing list join request
+</p>
+
+
+</div>
+
+</div>
+
+
+{% endif %}
 
 
 
