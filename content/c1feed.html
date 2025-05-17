@@ -1,0 +1,38 @@
+---
+permalink: /c1feed.xml
+eleventyImport:
+  collections: ["c1post"]
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Bloggy</title>
+  <description>Its a blog.</description>
+  <lastBuildDate>Fri, 21 Mar 2025 12:45:46 GMT</lastBuildDate>
+  <ttl>10080</ttl>
+
+
+
+
+
+<!-- 11ty AUTOMATED PAGE UPDATES, THIS SHOULD BE CONTENT ONLY! -->
+
+  {% for post in collections.c1post %}
+
+  <item>
+    <title>{{ post.data.title }}</title>
+    <description>{{ post.data.description }}
+      <![CDATA[
+      {{post.data.image}}
+    ]]>
+    </description>
+
+    <pubDate>{{ post.date}}</pubDate>
+  </item>
+
+  {% endfor %}
+
+
+
+</channel>
+</rss>
