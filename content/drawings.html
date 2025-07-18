@@ -9,13 +9,19 @@
     <title>Home</title>
     
     <style>
-    body {
-      background-image: url('./resources/backgrounds/reddd.jpeg');
-  
-      background-attachment: fixed;
-      
 
-    }
+
+
+
+
+
+body {
+          background-image: url('./resources/backgrounds/reddd.jpeg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+
 
     </style>
 
@@ -26,50 +32,137 @@
 
 
 
-
   
 <body>
 
 
 
+    {% assign indi = -1 %}
+   
+    {% assign brcnt = 0 %}
+
+    {% assign midcond = 1 %}
+
+    {% assign swapper = 1 %}
+
+    {% assign swappee = 3 %}
+
 
   {% include "partials/header.njk" %}
-
+    
 
   <audio id="bgm" loop>
-    <source src="./resources/audio/Waltzing Flutes (Remastered) 4.mp3" type="audio/mpeg">
-</audio>
-
-
-  <audio id="postmusicclick">
-    <source src="./resources/onclickaudio/cough4.wav" type="audio/mpeg">
+    <source src="./resources/audio/Pulsewidth 4.mp3" type="audio/mpeg">
   </audio>
   
+  
 
-  <br><br>
 
-    <div class="parentbox">
 
-      <button id="a4" onclick="displayart(4)">current art</button>
-      <button id="a3" onclick="displayart(3)">later college art</button>
-      <button id="a2" onclick="displayart(2)">mid college art</button>
-      <button id="a1" onclick="displayart(1)">early college art</button>
-      <button id="a0" onclick="displayart(0)">highschool art</button>
-      
+
+
+<br><br>
+<div class="parentbox">
+
+ 
+
+  <div class="childtextbox" style="height:150px" >
+             
+            
+                                            
+                                                  
+                                            
+                                            
+    <div>
+       <p class="betterp">
+       Here is a chronologically ordered collection of my artwork, with
+       my most recent work at the top. Clicking on any picture will bring 
+       it to full screen view, and clicking the full screen image minimizes it again.</p> 
+        </div>
+       
+       
+       
+
+</div>
+</div>
+
+
+
+
+
+     
+<div class="parentbox">
+
     
+  
+        <div>
+            <img src="./resources/photos/coldcurly.jpg" class="photolay" id="reptarget" onclick="off('reptarget')"></img>
+             </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% for post in artpaths %}
+{% assign brcnt = brcnt | plus: 1 %}
+{% assign midcond = 1 %}
+
+
+
+<br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+{%- if brcnt == 1 -%}
+{% assign midcond = 0 %}
+
+<div class="parentbox">
+
+
+
+
+
+    <div class="childtextbox" style="height:200px" id="1">
+
+        {% assign indi = indi | plus: 1 %}
+        <div>
+            <img src="{{ post.path }}" class="indicator3gal" onclick="repphotocontent1({{indi}})"></img>
+        </div>
 
     </div>
 
-   
-    <br><br><br><br><br><br><br>
-
-  <div id="currentart">
-
-
-</div>
-
-
-</div>
+{%- endif -%}
 
 
 
@@ -77,16 +170,201 @@
 
 
 
-      <br><br> <br><br> <br><br> <br><br>
-
-      
 
 
-     <!-- <button id="button_A">Press me</button> --> 
-<!--<h3 id="heading_A"></h3> -->
 
-{% include "partials/footer.njk" %}
+
+
+
+
+{%- if brcnt == swappee -%}
+{% assign brcnt = 0 %}
+{% assign midcond = 0 %}
+
+
+
+
+
+{% assign swapper = swapper | times: -1 %}
+
+
+{%- if swapper == 1 -%}
+{% assign swappee = 3 %}
+
+
+
+{%- else -%}
+{% assign swappee = 2 %}
+
+
+{%- endif -%}
+
+
+
+
+<!-- this is end condition -->
+
+ <div class="childtextbox" style="height:200px" id="1">
+
+        {% assign indi = indi | plus: 1 %}
+        <div>
+            <img src="{{ post.path }}" class="indicator3gal" onclick="repphotocontent1({{indi}})"></img>
+        </div>
+
+        <div>
+            
+        </div>
+
+    </div>
+
 
     
+
+
+
+
+    </div>
+
+
+  
+    {%- endif -%}
+
+
+
+
+
+
+
+{%- if midcond == 1 -%}
+
+    <!-- this is cont condition -->
+
+     <div class="childtextbox" style="height:200px" id="1">
+
+        {% assign indi = indi | plus: 1 %}
+        <div>
+            <img src="{{ post.path }}" class="indicator3gal" onclick="repphotocontent1({{indi}})"></img>
+        </div>
+
+       
+
+    </div>
+
+  {%- endif -%}
+
+
+
+
+
+
+
+
+{% endfor %}
+        
+
+            
+
+
+
+
+
+
+
+
+
+
+
+   
+            <script>
+let photo = [
+   "./resources/art/drawings/art 7-18-2025/20250718_093212.jpg",              
+"./resources/art/drawings/art 7-18-2025/20250718_093234.jpg",
+"./resources/art/drawings/art 7-18-2025/20250718_093300.jpg",
+
+"./resources/art/drawings/art 7-18-2025/20250718_093520.jpg",
+
+"./resources/art/drawings/art 7-18-2025/20250718_093613.jpg",
+
+"./resources/art/drawings/art 7-18-2025/20250718_093638.jpg",
+
+"./resources/art/drawings/art 7-18-2025/20250718_093647.jpg",
+
+"./resources/art/drawings/art 7-18-2025/20250718_093658.jpg",
+
+
+
+"./resources/art/drawings/art 7-18-2025/spect.png",
+
+"./resources/art/drawings/art 7-18-2025/spidderrr.png",
+
+"./resources/art/drawings/art 7-18-2025/wretch.png",
+
+  "./resources/art/drawings/latest 3-11-2025/aifishman.png",
+  "./resources/art/drawings/latest 3-11-2025/fm2.png",
+  "./resources/art/drawings/latest 3-11-2025/fm1.png",
+  "./resources/art/drawings/latest 3-11-2025/ant hell.jpg",
+  "./resources/art/drawings/latest 3-11-2025/bosh practice 1.jpg",
+  "./resources/art/drawings/latest 3-11-2025/rabbit practice.jpg",
+  "./resources/art/drawings/latest 3-11-2025/rp2.jpg",
+  "./resources/art/drawings/latest 3-11-2025/rp3.jpg",
+  "./resources/art/drawings/latest 3-11-2025/rp4.jpg",
+  "./resources/art/drawings/latest 3-11-2025/sqeeble.jpg",
+  "./resources/art/drawings/latest 3-11-2025/willy.jpg",
+  "./resources/art/drawings/newest1/abstract1.jpg",
+  "./resources/art/drawings/newest1/another1.png",
+  "./resources/art/drawings/newest1/another2.jpg",
+  "./resources/art/drawings/newest1/bee.png",
+  "./resources/art/drawings/newest1/beetle.jpg",
+  "./resources/art/drawings/newest1/boschpractice1.jpg",
+  "./resources/art/drawings/newest1/boschpractice2.jpg",
+  "./resources/art/drawings/newest1/combine.jpg",
+  "./resources/art/drawings/newest1/pinsneedles.jpg",
+  "./resources/art/drawings/newest1/randopractice.jpg",
+  "./resources/art/drawings/newest1/scm2.jpg",
+  "./resources/art/drawings/newest1/scm3.jpg",
+  "./resources/art/drawings/newest1/scm4.jpg",
+  "./resources/art/drawings/newest1/scm5.jpg",
+  "./resources/art/drawings/newest1/scm6.jpg",
+  "./resources/art/drawings/newest1/scm7.jpg",
+  "./resources/art/drawings/newest1/scm8.jpg",
+  "./resources/art/drawings/newest1/sketchclubmisc.jpg",
+  "./resources/art/drawings/slightly new 2/collagefinal.jpg",
+  "./resources/art/drawings/slightly new 2/collageoutline.jpg",
+  "./resources/art/drawings/slightly new 2/designp.jpg",
+  "./resources/art/drawings/slightly new 2/dp.jpg",
+  "./resources/art/drawings/slightly new 2/gridfinal.jpg",
+  "./resources/art/drawings/slightly new 2/gridmp.jpg",
+  "./resources/art/drawings/slightly new 2/randoo.jpg",
+  "./resources/art/drawings/slightly new 2/rano1.jpg",
+  "./resources/art/drawings/slightly new 2/stilllife.jpg",
+  "./resources/art/drawings/slightly new 2/stilllife2.jpg",
+  "./resources/art/drawings/older 3/faces.png",
+  "./resources/art/drawings/older 3/faces2.png",
+  "./resources/art/drawings/older 3/fuckedthing.png",
+  "./resources/art/drawings/older 3/ghast2hplove.png",
+  "./resources/art/drawings/older 3/ghasthplove.png",
+  "./resources/art/drawings/older 3/hl2sketch.png",
+  "./resources/art/drawings/older 3/idk.png",
+  "./resources/art/drawings/older 3/keytre.png",
+  "./resources/art/drawings/older 3/lovecraftbeast.png",
+  "./resources/art/drawings/older 3/me2beersin.png",
+  "./resources/art/drawings/older 3/shandakbirdunkownkadath.png",
+  "./resources/art/drawings/older 3/spearhighlandsbs.png",
+  "./resources/art/drawings/older 3/tree.png",
+  "./resources/art/drawings/older 3/villageofthemoonbeastslovecraft.png",
+  "./resources/art/drawings/older 3/you.png",
+  "./resources/art/drawings/oldest 4/monsterpractice.png",
+  "./resources/art/drawings/oldest 4/monstpractice2.png",
+  "./resources/art/drawings/oldest 4/randosketch.jpg",
+  "./resources/art/drawings/oldest 4/soundofpreserverance.png"
+];
+
+
+            </script>
+
+
+   {% include "partials/footer.njk" %}
+
+
 </body>
 </html>
