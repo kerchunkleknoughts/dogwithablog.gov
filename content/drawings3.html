@@ -39,7 +39,7 @@ body {
 
     {% assign indi = -1 %}
    
- 
+    {% assign brcnt = 0 %}
 
 
   {% include "partials/header.njk" %}
@@ -107,13 +107,84 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% for post in artpaths %}
+{% assign brcnt = brcnt | plus: 1 %}
 
 
-<br><br>
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+{%- if brcnt == 1 -%}
+
+
 <div class="parentbox">
 
+
+
+
+
     <div class="childtextbox" style="height:200px" id="1">
+
+        {% assign indi = indi | plus: 1 %}
+        <div>
+            <img src="{{ post.path }}" class="indicator2gal" onclick="repphotocontent1({{indi}})"></img>
+        </div>
+
+    </div>
+
+{%- endif -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%- if brcnt == 3 -%}
+{% assign brcnt = 0 %}
+
+<!-- this is end condition -->
+
+ <div class="childtextbox" style="height:200px" id="1">
 
         {% assign indi = indi | plus: 1 %}
         <div>
@@ -126,16 +197,59 @@ body {
 
     </div>
 
-</div>
+
+    
+
+
+
+
+    </div>
+
+
+  
+    {%- endif -%}
+
+
+
+
+{%- if brcnt == 2 -%}
+
+    <!-- this is cont condition -->
+
+     <div class="childtextbox" style="height:200px" id="1">
+
+        {% assign indi = indi | plus: 1 %}
+        <div>
+            <img src="{{ post.path }}" class="indicator2gal" onclick="repphotocontent1({{indi}})"></img>
+        </div>
+
+       
+
+    </div>
+
+  {%- endif -%}
 
 
 
 
 
-    {% endfor %}
+
+
+
+{% endfor %}
         
 
             
+
+
+
+
+
+
+
+
+
+
 
    
             <script>
