@@ -1406,5 +1406,16 @@ padding-left: 20px;
             cursor: pointer;
            
            }
+
+
+                      .indicator3gal {
+            
+            display: flex;
+            width: 300px;
+            height: auto; /* Maintains aspect ratio */
+            cursor: pointer;
+           
+           }
+           
            
            
