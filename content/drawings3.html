@@ -41,6 +41,12 @@ body {
    
     {% assign brcnt = 0 %}
 
+    {% assign midcond = 1 %}
+
+    {% assign swapper = 1 %}
+
+    {% assign swappee = 3 %}
+
 
   {% include "partials/header.njk" %}
     
@@ -132,12 +138,13 @@ body {
 
 {% for post in artpaths %}
 {% assign brcnt = brcnt | plus: 1 %}
-
+{% assign midcond = 1 %}
 
 
 
 <br>
 <br>
+
 
 
 
@@ -147,7 +154,7 @@ body {
 
 
 {%- if brcnt == 1 -%}
-
+{% assign midcond = 0 %}
 
 <div class="parentbox">
 
@@ -179,8 +186,30 @@ body {
 
 
 
-{%- if brcnt == 3 -%}
+{%- if brcnt == swappee -%}
 {% assign brcnt = 0 %}
+{% assign midcond = 0 %}
+
+
+
+
+
+{% assign swapper = swapper | times: -1 %}
+
+
+{%- if swapper == 1 -%}
+{% assign swappee = 3 %}
+
+
+
+{%- else -%}
+{% assign swappee = 2 %}
+
+
+{%- endif -%}
+
+
+
 
 <!-- this is end condition -->
 
@@ -212,7 +241,10 @@ body {
 
 
 
-{%- if brcnt == 2 -%}
+
+
+
+{%- if midcond == 1 -%}
 
     <!-- this is cont condition -->
 
