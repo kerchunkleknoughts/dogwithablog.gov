@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwkbehlv5eve0"]
+
+[ext_resource type="Script" uid="uid://crubr4pnk5tx4" path="res://scenes/creaturee_2.gd" id="1_4wa5i"]
+[ext_resource type="Texture2D" uid="uid://drheslehxbj1" path="res://Game assets/hyptosis_sprites-and-tiles-for-you.png" id="2_4wa5i"]
+[ext_resource type="PackedScene" uid="uid://c7ous4bdae7j7" path="res://scenes/killzone.tscn" id="3_hwbkn"]
+[ext_resource type="Script" uid="uid://bimvxycelwt7p" path="res://scenes/creature2.gd" id="4_hwbkn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1gbs"]
+atlas = ExtResource("2_4wa5i")
+region = Rect2(656, 0, 75, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn2ya"]
+atlas = ExtResource("2_4wa5i")
+region = Rect2(660, 0, 74, 106)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6jglq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1gbs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qn2ya")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qn2ya"]
+size = Vector2(92.5, 92.5)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4wa5i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6jglq")
+autoplay = "default"
+frame_progress = 0.241192
+
+[node name="killzone" parent="AnimatedSprite2D" instance=ExtResource("3_hwbkn")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/killzone"]
+position = Vector2(-3, 8)
+shape = SubResource("RectangleShape2D_qn2ya")
+script = ExtResource("4_hwbkn")
+
+[node name="raycastright" type="RayCast2D" parent="."]
+target_position = Vector2(56, 1)
+
+[node name="raycastleft2" type="RayCast2D" parent="."]
+target_position = Vector2(-66, -1)

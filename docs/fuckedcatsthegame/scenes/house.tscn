@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm6lb6odmicmd"]
+
+[ext_resource type="Texture2D" uid="uid://5pbva2fss5if" path="res://Game assets/hyptosis_tile-art-batch-1.png" id="1_d7po0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_d7po0")
+region_enabled = true
+region_rect = Rect2(65, 328, 30, 25)

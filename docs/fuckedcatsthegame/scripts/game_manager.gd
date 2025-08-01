@@ -1,0 +1,92 @@
+extends Node
+
+
+
+@onready var money_label=$"../moneylabel"
+
+@onready var houses=$"../houses"
+
+func money_change(change):
+	GlobalVariables.money += 1
+	#Global.score+=1
+	
+	#print("GLOBAL SCORE")
+	#print(Global.score)
+	print("Test")
+	print(GlobalVariables.money)
+	update_label()
+	#create_house()
+	
+
+	#moneylabel.text="Drugs consumed: " + str(score)
+	
+
+
+
+
+
+func update_label():
+	money_label.text=str(GlobalVariables.money)
+	
+
+
+
+func lloadsc(path,targetnode):
+	var scene = load(path).instantiate()
+	var origin = Vector2(1000, 800)
+	scene.set_position(origin)
+	targetnode.add_child(scene)
+
+
+
+
+
+func report_node(targetnode):
+	for child in targetnode.get_children():
+		print(child.name)
+
+
+
+func house_report():
+	report_node(houses)
+
+
+
+
+
+func create_house(xpos,ypos):
+	
+	var money_req=50;
+	
+	#this code creates a creature at the given position.
+	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
+	#var origin = Vector2(1000, 800)
+	#house.set_position(origin)
+	#add_child(house)
+	
+	if(GlobalVariables.money>=money_req):
+		lloadsc("res://scenes/house.tscn",houses)
+		GlobalVariables.money=0;
+	
+	update_label()
+	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
+	#var origin = Vector2(1000, 800)
+	#house.set_position(origin)
+	#add_child(house)
+
+
+
+func find_vector_difference(node1,node2):
+	
+	#print(node1.position.x)
+	#print(node1.position.y)
+	
+	var difx=node1.position.x-node2.position.x
+	var dify=node1.position.y-node2.position.y
+	
+	var b = Vector2()
+	b.x = difx
+	b.y = dify
+	
+	return b
+	
