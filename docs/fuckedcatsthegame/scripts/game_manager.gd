@@ -90,3 +90,50 @@ func find_vector_difference(node1,node2):
 	
 	return b
 	
+	
+func find_angle(differencevector):
+	var angle=atan(differencevector.y/differencevector.x)
+	return angle;
+	
+	
+	
+	
+	
+	
+func movenode(vect,node):
+		#this function gives a node the 
+		#passed xy velocity vector
+	node.xvel=vect.x
+	node.yvel=vect.y
+	
+	
+func advancedmovetonode(mag,node1,node2):
+	#this function takes a desired velocity magnitude, 
+	#and calculates the x and y portions of
+	#that velcity vector, and assigns 
+	#the subject node that velocity. 
+	var vectordif=self.find_vector_difference(node1,node2)
+	var angle=self.find_angle(vectordif);
+	var opposite=sin(angle)*mag;
+	var adjacent=cos(angle)*mag;
+	var b = Vector2()
+	b.x = adjacent
+	b.y = opposite
+	self.movenode(b,node1)
+	
+	
+	
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

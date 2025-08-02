@@ -1,6 +1,8 @@
 extends Node2D
 
 
+
+
 var health=10;
 var healthmax=10;
 
@@ -9,6 +11,15 @@ var hungermax=100;
 
 var sleep=1200;
 var sleepmax=17;
+var sleepmin=1000;
+#sleepmin is the threshold that
+#determines if npc navigates to 
+#nearist station to regenerate sleep. 
+
+var sleepvel=50;
+
+var xvel=0;
+var yvel=0;
 
 
 var onticksleepdep=1;
@@ -16,10 +27,10 @@ var onticksleepdep=1;
 
 
 @onready var control=$"../GameManager"
+@onready var houses=$"../houses"
 
 
-
-const speed=70;
+#const speed=70;
 
 var direction=1;
 
@@ -37,6 +48,8 @@ func report():
 	print("sleepmax " + str(self.sleepmax))
 	print("hunger " + str(self.hunger))
 	print("hungermax " + str(self.hungermax))
+	print("x velocity "+ str(self.xvel))
+	print("y velocity "+ str(self.yvel))
 
 
 
@@ -47,12 +60,17 @@ func depsleep():
 
 
 
-
+func checksleep():
+	if(self.sleep<self.sleepmin):
+		for child in houses.get_children():
+			#control.find_vector_difference()
+			control.advancedmovetonode(sleepvel,self,child)
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	
 	
 	#my_random_number = rng.randf_range(-1, 10)
@@ -67,14 +85,16 @@ func _process(delta: float) -> void:
 
 	#direction=direction*my_random_number
 	
-	#position.x+=direction*speed*delta;
-	#position.y+=direction*speed*delta;
 	
+	
+	position.x+=direction*self.xvel*delta;
+	position.y+=direction*self.yvel*delta;
 	
 	
 	
 	
 	#run physical processes on the creature :)
 	depsleep()
+	checksleep()
 	
 	

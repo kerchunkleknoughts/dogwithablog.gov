@@ -58,4 +58,4 @@ offset_bottom = 258.0
 text = "0"
 
 [node name="john" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(401, 747)
+position = Vector2(580, 828)
