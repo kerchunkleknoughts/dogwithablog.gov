@@ -2,6 +2,16 @@ extends Node2D
 
 
 
+var state=states.WAIT;
+#default state. equal to just waiting. This is evaluated every tick via the state machine eval function
+
+
+enum states{
+	WAIT=0,
+	MOVING=1,
+	RECHARGE=2
+}
+
 
 var health=10;
 var healthmax=10;
@@ -24,6 +34,15 @@ var yvel=0;
 
 var onticksleepdep=1;
 
+#this is an array which is processed on a FCFS basis. 
+var needfulfillment = [0,0,0]
+
+#I guess this enum is literally 
+enum needs{
+	WATER=0,
+	HUNGER=1,
+	SLEEP=2,
+}
 
 
 @onready var control=$"../GameManager"
@@ -62,16 +81,60 @@ func depsleep():
 
 func checksleep():
 	if(self.sleep<self.sleepmin):
+		return 1;
+	else:
+		return 0;	
+		
+
+
+
+
+func checkneeds():
+	needfulfillment[needs.SLEEP]=checksleep();
+
+
+
+func evalneeds():
+	if(needfulfillment[needs.HUNGER]==1):
+		var a
+	if(needfulfillment[needs.WATER]==1):
+		var a 
+	if(needfulfillment[needs.SLEEP]==1):
+		#print()
 		for child in houses.get_children():
-			#control.find_vector_difference()
+			
 			control.advancedmovetonode(sleepvel,self,child)
+			self.state=states.MOVING
 
 
+
+
+
+
+func evalstate(delta):
+	if(self.state==states.WAIT):
+		evalphy(delta)
+		depsleep()
+		checkneeds()
+		evalneeds()
+	if(self.state==states.MOVING):
+		evalphy(delta)
+		depsleep()
+		checkneeds()
+		#evalneeds()
+		#for now, only one need is served at a time. 
+		#
+
+
+
+
+func evalphy(delta):
+	position.x+=direction*self.xvel*delta;
+	position.y+=direction*self.yvel*delta;
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	
 	
 	#my_random_number = rng.randf_range(-1, 10)
 	#my_random_number = floor(my_random_number)
@@ -82,19 +145,12 @@ func _process(delta: float) -> void:
 	#if(my_random_number >5):
 	#	direction=direction*-1
 		
-
 	#direction=direction*my_random_number
-	
-	
-	
-	position.x+=direction*self.xvel*delta;
-	position.y+=direction*self.yvel*delta;
-	
-	
-	
+
 	
 	#run physical processes on the creature :)
-	depsleep()
-	checksleep()
+	
+	
+	evalstate(delta)
 	
 	
