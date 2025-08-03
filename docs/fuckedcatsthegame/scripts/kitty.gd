@@ -2,6 +2,11 @@ extends Node2D
 
 
 
+
+
+
+
+
 var state=states.WAIT;
 #default state. equal to just waiting. This is evaluated every tick via the state machine eval function
 
@@ -108,6 +113,10 @@ func evalneeds():
 
 
 
+func check_boxes():
+	#if house_hitbox.is_colliding():
+	#	self.state=states.RECHARGE
+	var a 
 
 
 
@@ -117,13 +126,20 @@ func evalstate(delta):
 		depsleep()
 		checkneeds()
 		evalneeds()
+		check_boxes()
 	if(self.state==states.MOVING):
 		evalphy(delta)
 		depsleep()
 		checkneeds()
+		check_boxes()
 		#evalneeds()
 		#for now, only one need is served at a time. 
 		#
+	if(self.state==states.RECHARGE):
+		self.xvel=0
+		self.yvel=0
+		evalphy(delta)
+		checkneeds()
 
 
 

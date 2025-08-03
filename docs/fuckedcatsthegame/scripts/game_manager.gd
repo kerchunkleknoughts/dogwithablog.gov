@@ -122,9 +122,30 @@ func advancedmovetonode(mag,node1,node2):
 	self.movenode(b,node1)
 	
 	
+func find_distance(node1,node2):
+	var dv = Vector2()
+	
+	dv=find_vector_difference(node1,node2);
+	var asq=(dv.x)^2
+	var bsq=(dv.y)^2
+	var csq=sqrt(asq+bsq)
+	
+	return csq
+	
+	
+	
+	
+func check_building_collision(node1,building):
+	#node 2 is the building
+	var distance=find_distance(node1,building)
+	if(distance<=building.col_radius):
+		return true;
+	else:
+		return false;
+	
+	
 	
 
-		
 		
 		
 		

@@ -1,11 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bm6lb6odmicmd"]
+[gd_scene load_steps=4 format=3 uid="uid://bm6lb6odmicmd"]
 
 [ext_resource type="Texture2D" uid="uid://5pbva2fss5if" path="res://Game assets/hyptosis_tile-art-batch-1.png" id="1_d7po0"]
+[ext_resource type="Script" uid="uid://b5ka7snv3rvy6" path="res://scripts/house.gd" id="1_qtlar"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qtlar"]
+radius = 69.0072
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_qtlar")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
 texture = ExtResource("1_d7po0")
 region_enabled = true
 region_rect = Rect2(65, 328, 30, 25)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_qtlar")
