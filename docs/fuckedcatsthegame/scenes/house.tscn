@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://cnc0c54dqni2i" path="res://scripts/game_manager.gd" id="2_rk7hg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qtlar"]
-radius = 65.0692
+radius = 33.1361
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qtlar")

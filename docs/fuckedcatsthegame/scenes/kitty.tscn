@@ -167,7 +167,7 @@ scale = Vector2(0.73625, 0.56125)
 sprite_frames = SubResource("SpriteFrames_r7qoi")
 animation = &"blink"
 autoplay = "blink"
-frame_progress = 0.850902
+frame_progress = 0.56009
 
 [node name="Area2D" type="Area2D" parent="."]
 

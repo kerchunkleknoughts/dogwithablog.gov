@@ -1,11 +1,13 @@
 extends Node2D
 
 
+@onready var anime=$AnimatedSprite2D
 
 
 
 var state=states.WAIT;
 #default state. equal to just waiting. This is evaluated every tick via the state machine eval function
+
 
 
 enum states{
@@ -16,9 +18,24 @@ enum states{
 
 
 
+enum anistates{
+	CENTERLOOK=0,
+	LEFTLOOK=1,
+	RIGHTLOOK=2,
+	BLINK=3, 
+	LEFTMOVEMENT=4,
+	RIGHTMOVEMENT=5,
+	MOVEMENT=6
+}
+
+
+var anistate=anistates.CENTERLOOK;
+
+
 func change_state(changeto):
 	self.state=changeto
 	
+
 
 var health=10;
 var healthmax=10;
@@ -97,6 +114,8 @@ func checksleep():
 
 
 
+
+
 func checkneeds():
 	needfulfillment[needs.SLEEP]=checksleep();
 
@@ -116,11 +135,25 @@ func evalneeds():
 
 
 
+
 func check_boxes():
 	var a 
 	#if(GlobalVariables.kittyhome==1):
 	#	self.state=self.states.RECHARGE
 
+
+
+func anime_change():
+	if(self.state==states.MOVING):
+		anime.play("walk")
+		
+		
+
+func sb_anime_change():
+	if(self.state==states.MOVING):
+		self.anistate=anistates.MOVEMENT
+	
+	anime_change()
 
 
 
@@ -130,12 +163,16 @@ func evalstate(delta):
 		depsleep()
 		checkneeds()
 		evalneeds()
-		check_boxes()
+		sb_anime_change()
+		self.visible=true;
+	
 	if(self.state==states.MOVING):
 		evalphy(delta)
 		depsleep()
 		checkneeds()
-		check_boxes()
+		sb_anime_change()
+		self.visible=true;
+
 		#evalneeds()
 		#for now, only one need is served at a time. 
 		#
@@ -144,8 +181,10 @@ func evalstate(delta):
 		self.yvel=0
 		evalphy(delta)
 		checkneeds()
-		check_boxes()
+		self.visible=false;
+	
 		
+
 
 
 
