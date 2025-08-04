@@ -19,17 +19,31 @@ enum states{
 
 
 enum anistates{
-	CENTERLOOK=0,
-	LEFTLOOK=1,
-	RIGHTLOOK=2,
-	BLINK=3, 
-	LEFTMOVEMENT=4,
-	RIGHTMOVEMENT=5,
-	MOVEMENT=6
+	IDLE=1,
+	MOVEMENT=2
+	
 }
 
 
-var anistate=anistates.CENTERLOOK;
+enum subanistates{
+	BLINK=1,
+	LEFTLOOK=2,
+	RIGHTLOOK=3,
+	IVLEFTLOOK=4,
+	IVRIGHTLOOK=5,
+	LEFTMOVE=6,
+	RIGHTMOVE=7,
+	CENTER=8,
+	
+}
+
+
+
+
+
+var anistate=anistates.IDLE;
+
+var subanistate=subanistates.CENTER;
 
 
 func change_state(changeto):
@@ -143,17 +157,91 @@ func check_boxes():
 
 
 
+var ani_start=0;
+
 func anime_change():
-	if(self.state==states.MOVING):
+	
+	print(self.subanistate)
+	
+	if(self.anistate==anistates.IDLE):
+		if(self.subanistate==subanistates.CENTER):
+			
+			anime.play("center")
+			var rng = RandomNumberGenerator.new()
+			var my_random_number = rng.randf_range(-10.0, 10.0)
+			if(my_random_number >5):
+				print("GREATER THAN!")
+				self.subanistate=subanistates.LEFTLOOK;
+				
+			if(my_random_number<5):
+				print("LESS THAN!")
+				self.subanistate=subanistates.RIGHTLOOK;
+			
+			
+				
+				
+				
+				
+		if(self.subanistate==subanistates.LEFTLOOK):
+			
+			if(!(anime.is_playing())):
+				self.subanistate=subanistates.IVLEFTLOOK
+			anime.play("center_to_left")
+			
+			
+			
+		if(self.subanistate==subanistates.RIGHTLOOK):
+			
+			if(!(anime.is_playing())):
+				self.subanistate=subanistates.IVRIGHTLOOK
+			anime.play("center_to_right")
+			
+			
+		if(self.subanistate==subanistates.IVLEFTLOOK):
+			
+			if(!(anime.is_playing())):
+				self.subanistate=subanistates.CENTER
+			anime.play("Left_to_center")
+			
+			
+		if(self.subanistate==subanistates.IVRIGHTLOOK):
+			
+			if(!(anime.is_playing())):
+				self.subanistate=subanistates.CENTER
+			anime.play("Right_to_center")
+	
+	
+	#if(self.anistate==anistates.MOVEMENT):
+		#anime.play("walk")
+		
+	#if(self.anistate==anistates.BLINK):
+		#anime.play("blink")
+		var a
+		
+	#if(self.anistate==anistates.CENTERLOOK):
+		#var rng = RandomNumberGenerator.new()
+		#var my_random_number = rng.randf_range(-10.0, 10.0)
+		#if(my_random_number >5):
+				
+		#anime.play("blink")
+		
+	if(self.anistate==anistates.MOVEMENT):
 		anime.play("walk")
+				
+
 		
 		
+
+
 
 func sb_anime_change():
 	if(self.state==states.MOVING):
 		self.anistate=anistates.MOVEMENT
+	if(self.state==states.WAIT):
+		self.anistate=anistates.IDLE;
 	
 	anime_change()
+
 
 
 
@@ -165,6 +253,8 @@ func evalstate(delta):
 		evalneeds()
 		sb_anime_change()
 		self.visible=true;
+	
+	
 	
 	if(self.state==states.MOVING):
 		evalphy(delta)
