@@ -1,6 +1,8 @@
 extends Node2D
 
 
+
+
 #these two variables keep both scenes in memory,
 #this way the game is not reset every time 
 #you open up the pause menu. 

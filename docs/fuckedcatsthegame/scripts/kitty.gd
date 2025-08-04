@@ -4,9 +4,6 @@ extends Node2D
 
 
 
-
-
-
 var state=states.WAIT;
 #default state. equal to just waiting. This is evaluated every tick via the state machine eval function
 
@@ -17,6 +14,11 @@ enum states{
 	RECHARGE=2
 }
 
+
+
+func change_state(changeto):
+	self.state=changeto
+	
 
 var health=10;
 var healthmax=10;
@@ -77,6 +79,7 @@ func report():
 
 
 
+
 func depsleep():
 	if(self.sleep>0):
 		self.sleep=sleep-onticksleepdep
@@ -114,9 +117,10 @@ func evalneeds():
 
 
 func check_boxes():
-	#if house_hitbox.is_colliding():
-	#	self.state=states.RECHARGE
 	var a 
+	#if(GlobalVariables.kittyhome==1):
+	#	self.state=self.states.RECHARGE
+
 
 
 
@@ -140,6 +144,9 @@ func evalstate(delta):
 		self.yvel=0
 		evalphy(delta)
 		checkneeds()
+		check_boxes()
+		
+
 
 
 
@@ -168,5 +175,8 @@ func _process(delta: float) -> void:
 	
 	
 	evalstate(delta)
+	
+	
+
 	
 	

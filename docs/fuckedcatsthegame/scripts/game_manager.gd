@@ -6,6 +6,11 @@ extends Node
 
 @onready var houses=$"../houses"
 
+
+
+
+
+
 func money_change(change):
 	GlobalVariables.money += 1
 	#Global.score+=1
@@ -144,9 +149,9 @@ func check_building_collision(node1,building):
 		return false;
 	
 	
-	
 
 		
+
 		
 		
 		

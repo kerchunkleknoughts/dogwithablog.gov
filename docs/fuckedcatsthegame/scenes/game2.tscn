@@ -21,9 +21,6 @@ script = ExtResource("1_xrrf0")
 
 [node name="kittys" type="Node" parent="."]
 
-[node name="john" parent="kittys" instance=ExtResource("7_kh4a2")]
-position = Vector2(580, 828)
-
 [node name="fucker2" parent="." instance=ExtResource("1_7pxbb")]
 position = Vector2(591, 787)
 script = ExtResource("2_u48pd")
@@ -61,3 +58,6 @@ text = "0"
 
 [node name="Node2D3" parent="." instance=ExtResource("5_dflkw")]
 position = Vector2(637, 384)
+
+[node name="john" parent="." instance=ExtResource("7_kh4a2")]
+position = Vector2(704, 577)
