@@ -159,9 +159,16 @@ func check_boxes():
 
 var ani_start=0;
 
+
+
+
+
+
 func anime_change():
 	
 	print(self.subanistate)
+	#print(anime.get("parameters/playback") )	
+	
 	
 	if(self.anistate==anistates.IDLE):
 		if(self.subanistate==subanistates.CENTER):
@@ -177,39 +184,56 @@ func anime_change():
 				print("LESS THAN!")
 				self.subanistate=subanistates.RIGHTLOOK;
 			
-			
+			ani_start=1
 				
 				
 				
 				
 		if(self.subanistate==subanistates.LEFTLOOK):
+			ani_start=1
 			
 			if(!(anime.is_playing())):
 				self.subanistate=subanistates.IVLEFTLOOK
-			anime.play("center_to_left")
-			
+				
+		
+			if(ani_start):
+				anime.play("center_to_left")
+				ani_start=0		
 			
 			
 		if(self.subanistate==subanistates.RIGHTLOOK):
+			ani_start=1
 			
 			if(!(anime.is_playing())):
 				self.subanistate=subanistates.IVRIGHTLOOK
-			anime.play("center_to_right")
+				
+			if(ani_start):
+				anime.play("center_to_right")
+				ani_start=0		
+			
 			
 			
 		if(self.subanistate==subanistates.IVLEFTLOOK):
+			ani_start=1
 			
 			if(!(anime.is_playing())):
 				self.subanistate=subanistates.CENTER
-			anime.play("Left_to_center")
-			
+				
+				
+			if(ani_start):
+				anime.play("Left_to_center")
+				ani_start=0		
 			
 		if(self.subanistate==subanistates.IVRIGHTLOOK):
+			ani_start=1
 			
 			if(!(anime.is_playing())):
 				self.subanistate=subanistates.CENTER
-			anime.play("Right_to_center")
-	
+				
+			
+			if(ani_start):
+				anime.play("Right_to_center")
+				ani_start=0		
 	
 	#if(self.anistate==anistates.MOVEMENT):
 		#anime.play("walk")

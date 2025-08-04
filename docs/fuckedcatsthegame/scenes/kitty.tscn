@@ -265,8 +265,10 @@ script = ExtResource("1_tqbcw")
 position = Vector2(3, 2)
 scale = Vector2(0.73625, 0.56125)
 sprite_frames = SubResource("SpriteFrames_r7qoi")
-animation = &"center_to_left"
+animation = &"Right_to_center"
 autoplay = "blink"
+frame = 3
+frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="."]
 
