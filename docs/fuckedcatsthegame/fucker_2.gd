@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		print("YUHHHH!")
 		print(self.position)
 		
-		control.money_change(1)
+		control.money_change(10)
 		
 	if Input.is_action_just_pressed("opress"):
 		print("ohasbeenpressed")
@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("mpress"):
 		print("time to summon some dogshit I guess")
 		#control.create_house(1000, 800)
-		control.create_mult_house(1000, 800)
+		control.create_mult_house(self.position.x+100,self.position.y+100)
 		
 			
 	if Input.is_action_just_pressed("kpress"):

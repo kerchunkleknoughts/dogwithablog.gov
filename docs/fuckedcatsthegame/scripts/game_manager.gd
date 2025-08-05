@@ -2,9 +2,9 @@ extends Node
 
 
 
-@onready var money_label=$"../moneylabel"
+@onready var money_label=get_tree().get_root().get_node("game2/moneylabel")#$"../moneylabel"
 
-@onready var houses=$"../houses"
+@onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
 
 
 
@@ -12,7 +12,7 @@ extends Node
 
 
 func money_change(change):
-	GlobalVariables.money += 1
+	GlobalVariables.money += change
 	#Global.score+=1
 	
 	#print("GLOBAL SCORE")
@@ -44,19 +44,22 @@ func lloadsc(path,targetnode):
 
 
 
-func new_house():
+func new_house(xpos,ypos):
 	#this function will create a new house, then 
 	#it will update the house id, then store it in the houses array.
 	var path="res://scenes/multhouse.tscn"
 	var targetnode=houses
+	print("here2!")
 	var scene = load(path).instantiate()
-	var origin = Vector2(1000, 800)
+	var origin = Vector2(xpos, ypos)
 	scene.set_position(origin)
+	print("here1!")
 	scene.hid=GlobalVariables.h_id_counter;
 	GlobalVariables.h_id_counter=GlobalVariables.h_id_counter+1
 	targetnode.add_child(scene)
 	print("scene hid"+str(scene.hid))
 	print("global hid"+ str(GlobalVariables.h_id_counter))
+	print("here3!")
 
 
 
@@ -108,7 +111,7 @@ func create_mult_house(xpos,ypos):
 	#add_child(house)
 	
 	if(GlobalVariables.money>=money_req):
-		new_house();
+		new_house(xpos,ypos);
 		#Create a new house, store in the houses array. 
 		GlobalVariables.money=0;
 		
