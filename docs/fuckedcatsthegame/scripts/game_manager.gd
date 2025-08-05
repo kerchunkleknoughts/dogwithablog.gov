@@ -6,7 +6,7 @@ extends Node
 
 @onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
 
-
+@onready var kittys=get_tree().get_root().get_node("game2/kittys")#$"../houses"
 
 
 
@@ -49,17 +49,35 @@ func new_house(xpos,ypos):
 	#it will update the house id, then store it in the houses array.
 	var path="res://scenes/multhouse.tscn"
 	var targetnode=houses
-	print("here2!")
+	#print("here2!")
 	var scene = load(path).instantiate()
 	var origin = Vector2(xpos, ypos)
 	scene.set_position(origin)
-	print("here1!")
+	#print("here1!")
 	scene.hid=GlobalVariables.h_id_counter;
 	GlobalVariables.h_id_counter=GlobalVariables.h_id_counter+1
 	targetnode.add_child(scene)
 	print("scene hid"+str(scene.hid))
 	print("global hid"+ str(GlobalVariables.h_id_counter))
-	print("here3!")
+	#print("here3!")
+
+
+func new_cat(xpos,ypos):
+	var path="res://scenes/multkitty.tscn"
+	var targetnode=kittys
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	#print("here1!")
+	scene.ktid=GlobalVariables.ki_id_counter;
+	GlobalVariables.ki_id_counter=GlobalVariables.ki_id_counter+1
+	targetnode.add_child(scene)
+	print("scene hid"+str(scene.ktid))
+	print("global hid"+ str(GlobalVariables.ki_id_counter))
+	#print("here3!")
+
+
 
 
 
@@ -97,6 +115,11 @@ func create_house(xpos,ypos):
 	#house.set_position(origin)
 	#add_child(house)
 
+
+
+#func create_mult_kitty(xpos,ypos):
+	
+	
 
 
 

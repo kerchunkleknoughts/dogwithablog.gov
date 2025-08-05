@@ -35,10 +35,13 @@ func _physics_process(delta: float) -> void:
 		
 		control.money_change(10)
 		
+		
 	if Input.is_action_just_pressed("opress"):
 		print("ohasbeenpressed")
-		kitty.report()
-		control.house_report()
+		control.new_cat(self.position.x+100,self.position.y+100)
+		
+		#kitty.report()
+		#control.house_report()
 		
 		
 		
