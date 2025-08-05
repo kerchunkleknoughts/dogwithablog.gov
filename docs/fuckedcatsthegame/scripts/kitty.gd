@@ -9,6 +9,8 @@ var state=states.WAIT;
 #default state. equal to just waiting. This is evaluated every tick via the state machine eval function
 
 
+var npc_name="undef"
+
 
 enum states{
 	WAIT=0,
@@ -166,7 +168,7 @@ var ani_start=0;
 
 func anime_change():
 	
-	print(self.subanistate)
+	#print(self.subanistate)
 	#print(anime.get("parameters/playback") )	
 	
 	
@@ -177,11 +179,11 @@ func anime_change():
 			var rng = RandomNumberGenerator.new()
 			var my_random_number = rng.randf_range(-10.0, 10.0)
 			if(my_random_number >5):
-				print("GREATER THAN!")
+				#print("GREATER THAN!")
 				self.subanistate=subanistates.LEFTLOOK;
 				
 			if(my_random_number<5):
-				print("LESS THAN!")
+				#print("LESS THAN!")
 				self.subanistate=subanistates.RIGHTLOOK;
 			
 			ani_start=1

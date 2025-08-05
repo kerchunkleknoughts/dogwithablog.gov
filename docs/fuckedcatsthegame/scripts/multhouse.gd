@@ -4,21 +4,14 @@ extends Node
 
 @onready var control=$GameManager
 
-@onready var john=get_tree().get_root().get_node("game2/john")
+@onready var howner;
 
-@onready var howner
+@onready var hid;
 
 
 
 
 #@onready var house_hitbox=$CollisionShape2D
-
-enum states{
-	WAIT=0,
-	MOVING=1,
-	RECHARGE=2
-}
-
 
 
 
@@ -55,6 +48,6 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("COL!")
-	john.state=john.states.RECHARGE
+	howner.state=howner.states.RECHARGE
 	#GlobalVariables.kitty.state=GlobalVariables.kitty.states.RECHARGE;
 	pass # Replace with function body.

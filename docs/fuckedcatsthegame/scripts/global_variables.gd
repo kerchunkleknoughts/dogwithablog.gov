@@ -10,3 +10,5 @@ var kittyhome=0;
 
 
 @onready var kitty=$john
+
+var h_id_counter=0;

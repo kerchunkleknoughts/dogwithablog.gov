@@ -44,6 +44,20 @@ func lloadsc(path,targetnode):
 
 
 
+func new_house():
+	#this function will create a new house, then 
+	#it will update the house id, then store it in the houses array.
+	var path="res://scenes/multhouse.tscn"
+	var targetnode=houses
+	var scene = load(path).instantiate()
+	var origin = Vector2(1000, 800)
+	scene.set_position(origin)
+	scene.hid=GlobalVariables.h_id_counter;
+	GlobalVariables.h_id_counter=GlobalVariables.h_id_counter+1
+	targetnode.add_child(scene)
+	print("scene hid"+str(scene.hid))
+	print("global hid"+ str(GlobalVariables.h_id_counter))
+
 
 
 func report_node(targetnode):
@@ -54,6 +68,7 @@ func report_node(targetnode):
 
 func house_report():
 	report_node(houses)
+
 
 
 
@@ -78,6 +93,42 @@ func create_house(xpos,ypos):
 	#var origin = Vector2(1000, 800)
 	#house.set_position(origin)
 	#add_child(house)
+
+
+
+
+func create_mult_house(xpos,ypos):
+	
+	var money_req=50;
+	
+	#this code creates a creature at the given position.
+	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
+	#var origin = Vector2(1000, 800)
+	#house.set_position(origin)
+	#add_child(house)
+	
+	if(GlobalVariables.money>=money_req):
+		new_house();
+		#Create a new house, store in the houses array. 
+		GlobalVariables.money=0;
+		
+		
+		
+	
+	update_label()
+	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
+	#var origin = Vector2(1000, 800)
+	#house.set_position(origin)
+	#add_child(house)
+
+
+
+#func set_mult_house_ownership(houseid):
+	
+
+
+
+
 
 
 
