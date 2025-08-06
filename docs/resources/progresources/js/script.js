@@ -813,6 +813,7 @@ var toptoggle=1;
 function bouncy_item(skullindex,leftpx,uppx){
 
 
+
   var usedleft=leftpx;
   var usedtop=uppx;
 
@@ -824,14 +825,15 @@ var correctform=document.getElementById(skullindex)
   var currentTop = parseInt(window.getComputedStyle(correctform).top, 10);
 
 
-  if((currentLeft>=1920) ||(currentLeft<=0)){
+  if((currentLeft>=window.innerWidth) ||(currentLeft<=0)){
     lefttoggle=lefttoggle*-1;
     
 
   }
 
-  if((currentTop>=1080)||(currentTop<=0)){
+  if((currentTop>=window.innerHeight+this.scrollY)||(currentTop<=0)){
     toptoggle=toptoggle*-1;
+    
     
 
   }
@@ -846,6 +848,7 @@ var correctform=document.getElementById(skullindex)
 
 
 }
+
 
 
 
@@ -869,6 +872,8 @@ function infloop(time){
 function traveler(time){
     // do whatever you like here
   
+    //console.log("CURRENT HEIGHT: "+ (window.innerHeight+element.scrollTop))
+
     //move_item('skully52',1,1)
   bouncy_item('skully52',1,1)
 
