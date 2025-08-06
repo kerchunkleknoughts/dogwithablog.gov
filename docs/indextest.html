@@ -188,7 +188,78 @@ body {
   <h1>ABOUT MEE</h1>
 
 
-  <img src="./resources/images/skull.gif" id="skully14" onmouseover="skullyrep('skully14')" > </img>
+  <img src="./resources/images/skull.gif" id="skully52" class= "floaty" onmouseover="move_item('skully52',100,100)"  > </img>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
 
@@ -1174,9 +1245,14 @@ if (source) {
         });
         document.body.addEventListener("click", playAudio);
         document.body.addEventListener("mouseover", playAudio);
+       
         function playAudio() {
            
-    
+
+
+            // this also serves as a main loop I guess
+
+            //move_item()
            
     
             // Remove event listeners after first interaction to prevent multiple triggers

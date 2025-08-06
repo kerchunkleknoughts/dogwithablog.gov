@@ -788,15 +788,22 @@ function skullyrep(skullindex){
 }
 
 
-function move_item(skullindex,leftpx,rightpx,uppx,downpx){
+
+function move_item(skullindex,leftpx,uppx){
+
+  var correctform=document.getElementById(skullindex)
 
 
-var correctform=document.getElementById(skullindex)
+  var currentLeft = parseInt(window.getComputedStyle(correctform).left, 10);
+  var currentTop = parseInt(window.getComputedStyle(correctform).top, 10);
 
-correctform.style.left=
+  // Set new positions
+  correctform.style.left = (currentLeft + leftpx) + "px";
+  correctform.style.top = (currentTop + uppx) + "px";
 
 
 }
+
 
 
 

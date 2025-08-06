@@ -422,9 +422,14 @@ if (source) {
         });
         document.body.addEventListener("click", playAudio);
         document.body.addEventListener("mouseover", playAudio);
+       
         function playAudio() {
            
-    
+
+
+            // this also serves as a main loop I guess
+
+            //move_item()
            
     
             // Remove event listeners after first interaction to prevent multiple triggers
