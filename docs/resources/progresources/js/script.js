@@ -874,11 +874,21 @@ function traveler(time){
   
     //console.log("CURRENT HEIGHT: "+ (window.innerHeight+element.scrollTop))
 
+
+
     //move_item('skully52',1,1)
-  bouncy_item('skully52',1,1)
+
+
+  //bouncy_item('skully52',1,1)
+
+
+
+alert(location.pathname);
 
 
     setTimeout(traveler, time);
+
+    
 }
 
 
