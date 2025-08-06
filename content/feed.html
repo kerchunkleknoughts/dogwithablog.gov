@@ -61,7 +61,7 @@ eleventyImport:
  
     </description>
     <link>https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}</link>
-    <pubDate>{{ post.date}}</pubDate>
+    <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
   </item>
 
   {% endfor %}
@@ -80,7 +80,7 @@ eleventyImport:
     
       </description>
       <link>https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}</link>
-      <pubDate>{{ post.date}}</pubDate>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     </item>
   
     {% endfor %}
