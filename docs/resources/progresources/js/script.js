@@ -871,24 +871,14 @@ function infloop(time){
 
 
 function traveler(time){
-    // do whatever you like here
-  
-    //console.log("CURRENT HEIGHT: "+ (window.innerHeight+element.scrollTop))
+   
+ 
 
 
-
-    //move_item('skully52',1,1)
-
-
-  bouncy_item('skully52',1,1)
-
-
-
-//alert(location.pathname);
-
-
+    bouncy_item('skully52',1,1)
     setTimeout(traveler, time);
 
+    
     
 }
 
