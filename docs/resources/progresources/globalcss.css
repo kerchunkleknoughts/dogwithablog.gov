@@ -71,6 +71,15 @@ flex-direction: row;
 
 
 
+
+.floaty{
+  position:absolute;
+  z-index: 5;
+}
+
+
+
+
 .bparentbox{
 display: flex;
 text-align: center;

@@ -788,6 +788,18 @@ function skullyrep(skullindex){
 }
 
 
+function move_item(skullindex,leftpx,rightpx,uppx,downpx){
+
+
+var correctform=document.getElementById(skullindex)
+
+correctform.style.left=
+
+
+}
+
+
+
 
 
 function flyyoufool(){
