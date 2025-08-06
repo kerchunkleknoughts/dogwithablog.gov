@@ -42,7 +42,7 @@ eleventyImport:
     </description>
     <link>https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}</link>
     <guid>https://kerchunkleknoughts.github.io/dogwithablog.gov{{ post.url }}</guid>
-    <pubDate>{{ post.date}}</pubDate>
+    <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
   </item>
 
 
