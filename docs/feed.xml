@@ -207,8 +207,8 @@
   
 
   <item>
-    <title></title>
-    <description>
+    <title> More journal entries</title>
+    <description>More of me whining to noone in particular.
       <![CDATA[
       https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif
     ]]>
@@ -220,8 +220,8 @@
   
 
   <item>
-    <title></title>
-    <description>
+    <title> Cover of symbolic by death</title>
+    <description> An okay cover of symbollic by death. Come check it out!
       <![CDATA[
       https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif
     ]]>
@@ -233,8 +233,8 @@
   
 
   <item>
-    <title></title>
-    <description>
+    <title>Photos! Game update! Journal entries!</title>
+    <description> Added some more photos to photo page, along with some journal entries! Also Made some decent progress on the godot game, just need to clean up some of the textures and expand the world a bit and I think it will be complete!
       <![CDATA[
       https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif
     ]]>
@@ -255,7 +255,7 @@
 
     <item>
       <title> automated dream log updates on rss feed</title>
-      <description>
+      <description>Rss feed now automatically updates with new dream log entries, based on this tutorial: https://caffeineandlasers.neocities.org/blogs/automatingYourRSS still need to figure out how to automate rss entries which rely on javascript replacements to fit on one page rather than having a set of individual pages.
         <![CDATA[
         https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif
       ]]>
@@ -268,7 +268,7 @@
 
     <item>
       <title> Added sitewide autoplay enable</title>
-      <description>
+      <description> Users can now enable and disable autoplay, and have said option persist throughout entire website without re-enabling.
         <![CDATA[
         https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif
       ]]>
@@ -281,7 +281,7 @@
 
     <item>
       <title>Added WIKIFUN! page</title>
-      <description>
+      <description>Added a page full of fun wiki links! YIPPIEE!
         <![CDATA[
         https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif
       ]]>
@@ -294,7 +294,7 @@
 
     <item>
       <title>Added Photos page</title>
-      <description>
+      <description>Added a page to put random photos from the depths of my hard-drive
         <![CDATA[
         https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif
       ]]>
@@ -307,7 +307,7 @@
 
     <item>
       <title>Major art page refactor + MORE ART YIPPIE</title>
-      <description>
+      <description>Yeah it should be way easier to add new artwork to my website now, 11ty rocks dude.
         <![CDATA[
         https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif
       ]]>
