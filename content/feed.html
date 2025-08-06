@@ -56,8 +56,8 @@ eleventyImport:
   {% for post in posts %}
 
   <item>
-    <title>{{ post.title }}</title>
-    <description>{{ post.description }}
+    <title>{{ post.data.title }}</title>
+    <description>{{ post.data.description }}
       <![CDATA[
       {{post.image}}
     ]]>
@@ -77,8 +77,8 @@ eleventyImport:
     {% for post in updates %}
 
     <item>
-      <title>{{ post.title }}</title>
-      <description>{{ post.description }}
+      <title>{{ post.data.title }}</title>
+      <description>{{ post.data.description }}
         <![CDATA[
         {{post.image}}
       ]]>
