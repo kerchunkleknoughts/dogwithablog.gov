@@ -207,34 +207,12 @@
   
 
   <item>
-    <title> More journal entries</title>
-    <description>More of me whining to noone in particular.
- 
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/journal.html</link>
-    <pubDate>Fri, 04 Apr 2025 22:10:37 GMT</pubDate>
-  </item>
-
-  
-
-  <item>
-    <title> Cover of symbolic by death</title>
-    <description> An okay cover of symbollic by death. Come check it out!
- 
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/music.html</link>
-    <pubDate>Fri, 04 Apr 2025 22:10:37 GMT</pubDate>
-  </item>
-
-  
-
-  <item>
     <title>Photos! Game update! Journal entries!</title>
     <description> Added some more photos to photo page, along with some journal entries! Also Made some decent progress on the godot game, just need to clean up some of the textures and expand the world a bit and I think it will be complete!
  
     </description>
     <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/projects/project00.html</link>
-    <pubDate>Mon, 12 May 2025 00:42:00 GMT</pubDate>
+    <pubDate>Mon, 12 May 25 16:53:30 +0000</pubDate>
   </item>
 
   
@@ -248,45 +226,12 @@
     
 
     <item>
-      <title> automated dream log updates on rss feed</title>
-      <description>Rss feed now automatically updates with new dream log entries, based on this tutorial: https://caffeineandlasers.neocities.org/blogs/automatingYourRSS still need to figure out how to automate rss entries which rely on javascript replacements to fit on one page rather than having a set of individual pages.
-    
-      </description>
-      <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/index.html</link>
-      <pubDate>2025-03-28</pubDate>
-    </item>
-  
-    
-
-    <item>
-      <title> Added sitewide autoplay enable</title>
-      <description> Users can now enable and disable autoplay, and have said option persist throughout entire website without re-enabling.
-    
-      </description>
-      <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/index.html</link>
-      <pubDate>2025-04-6</pubDate>
-    </item>
-  
-    
-
-    <item>
-      <title>Added WIKIFUN! page</title>
-      <description>Added a page full of fun wiki links! YIPPIEE!
-    
-      </description>
-      <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/wikifun.html</link>
-      <pubDate>Thu, 10 Apr 2025 22:10:37 GMT</pubDate>
-    </item>
-  
-    
-
-    <item>
       <title>Added Photos page</title>
       <description>Added a page to put random photos from the depths of my hard-drive
     
       </description>
       <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/photos.html</link>
-      <pubDate>Sat, 19 Apr 2025 04:31:24 GMT</pubDate>
+      <pubDate>Fri, 18 Apr 25 16:53:30 +0000</pubDate>
     </item>
   
     
@@ -297,7 +242,7 @@
     
       </description>
       <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/drawings.html</link>
-      <pubDate>Thu, 18 Jul 2025 17:00:00 GMT</pubDate>
+      <pubDate>Fri, 18 Jul 25 16:53:30 +0000</pubDate>
     </item>
   
     
@@ -310,50 +255,6 @@
 
   <!-- MANUAL UPDATES!  -->
 
-  <item>
-    <title>Website Update - Headers Refactored</title>
-    <description>Redid headers on the website. Now it's super efficient!</description>
-    <link>https://kerchunkle.neocities.org</link>
-    <pubDate>Fri, 10 Jan 2025 18:00:00 GMT</pubDate>
-  </item>
-
-
-  <item>
-    <title>11ty Refactor</title>
-    <description>Refactored site to support 11ty, thanks to this tutorial: https://petrapixel.neocities.org/coding/eleventy-tutorial</description>
-    <link>https://kerchunkle.neocities.org</link>
-    <pubDate>Fri, 21 Mar 2025 21:04:20 GMT</pubDate>
-  </item>
-
-
-   <item>
-    <title>Added todopage</title>
-    <description>Added a todo page, but mostly this is a ITTT test</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/todo.html</link>
-    <pubDate>Fri, 21 Mar 2025 21:05:20 GMT</pubDate>
-  </item>
-
- 
-
-    <item>
-    <title>Art page refactor</title>
-    <description>Refactored art page, it looks way nicer now!</description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/drawings.html</link>
-    <pubDate>Sun, 23 Mar 2025 02:12:30 GMT</pubDate>
-
-  </item>
-
-
-    <item>
-    <title> New art! New music! </title>
-    <description> Added a cover of suffer the children by napalm death to music page. 
-    Also added some stuff to art page!
-
-     </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/music.html</link>
-    <pubDate>Thu, 27 Mar 2025 12:45:30 GMT</pubDate>
-
-  </item>
 
 
 

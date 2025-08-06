@@ -1,30 +1,14 @@
 
 [
 
-    {
-        "title": " More journal entries",
-        "description": "More of me whining to noone in particular.",
-        "url": "/journal.html",
-        "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-        "date": "Fri, 04 Apr 2025 22:10:37 GMT"
-      },
-
-      {
-        "title": " Cover of symbolic by death",
-        "description": " An okay cover of symbollic by death. Come check it out!",
-        "url": "/music.html",
-        "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-        "date": "Fri, 04 Apr 2025 22:10:37 GMT"
-      },
-
-
+ 
 
       {
         "title": "Photos! Game update! Journal entries!",
         "description": " Added some more photos to photo page, along with some journal entries! Also Made some decent progress on the godot game, just need to clean up some of the textures and expand the world a bit and I think it will be complete!",
         "url": "/projects/project00.html",
         "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-        "date": "Mon, 12 May 2025 00:42:00 GMT"
+        "date": "Mon, 12 May 25 16:53:30 +0000"
       }
       
       

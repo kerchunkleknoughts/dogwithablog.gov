@@ -1,40 +1,13 @@
 
 [
 
-{
-    "title": " automated dream log updates on rss feed",
-    "description": "Rss feed now automatically updates with new dream log entries, based on this tutorial: https://caffeineandlasers.neocities.org/blogs/automatingYourRSS still need to figure out how to automate rss entries which rely on javascript replacements to fit on one page rather than having a set of individual pages.",
-    "url": "/index.html",
-    "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-    "date": "2025-03-28"
-  },
-  
-  
-  
-{
-  "title": " Added sitewide autoplay enable",
-  "description": " Users can now enable and disable autoplay, and have said option persist throughout entire website without re-enabling.",
-  "url": "/index.html",
-  "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-  "date": "2025-04-6"
-},
-
-  
-{
-  "title": "Added WIKIFUN! page",
-  "description": "Added a page full of fun wiki links! YIPPIEE!",
-  "url": "/wikifun.html",
-  "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-  "date": "Thu, 10 Apr 2025 22:10:37 GMT"
-},
-
 
 {
   "title": "Added Photos page",
   "description": "Added a page to put random photos from the depths of my hard-drive",
   "url": "/photos.html",
   "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-  "date": "Sat, 19 Apr 2025 04:31:24 GMT"
+  "date": "Fri, 18 Apr 25 16:53:30 +0000"
 },
 
   
@@ -43,7 +16,7 @@
   "description": "Yeah it should be way easier to add new artwork to my website now, 11ty rocks dude.",
   "url": "/drawings.html",
   "image": "https://media1.tenor.com/m/R5IECfIf34YAAAAd/fish-spinning.gif",
-  "date": "Thu, 18 Jul 2025 17:00:00 GMT"
+  "date": "Fri, 18 Jul 25 16:53:30 +0000"
 }
 
 
