@@ -807,6 +807,46 @@ function move_item(skullindex,leftpx,uppx){
 }
 
 
+var lefttoggle=1;
+var toptoggle=1;
+
+function bouncy_item(skullindex,leftpx,uppx){
+
+
+  var usedleft=leftpx;
+  var usedtop=uppx;
+
+var correctform=document.getElementById(skullindex)
+
+
+
+  var currentLeft = parseInt(window.getComputedStyle(correctform).left, 10);
+  var currentTop = parseInt(window.getComputedStyle(correctform).top, 10);
+
+
+  if((currentLeft>=1920) ||(currentLeft<=0)){
+    lefttoggle=lefttoggle*-1;
+    
+
+  }
+
+  if((currentTop>=1080)||(currentTop<=0)){
+    toptoggle=toptoggle*-1;
+    
+
+  }
+
+
+
+  // Set new positions
+  correctform.style.left = (currentLeft + usedleft*lefttoggle) + "px";
+  correctform.style.top = (currentTop + usedtop*toptoggle) + "px";
+
+
+
+
+}
+
 
 
 
@@ -814,8 +854,8 @@ function move_item(skullindex,leftpx,uppx){
 function infloop(time){
     // do whatever you like here
   
+    //move_item('skully52',100,100)
     move_item('skully52',100,100)
-
 
 
     setTimeout(infloop, time);
@@ -826,19 +866,16 @@ function infloop(time){
 
 
 
-
-
-
-
 function traveler(time){
     // do whatever you like here
   
-    move_item('skully52',1,1)
-
+    //move_item('skully52',1,1)
+  bouncy_item('skully52',1,1)
 
 
     setTimeout(traveler, time);
 }
+
 
 
 
