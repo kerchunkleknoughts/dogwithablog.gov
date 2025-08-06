@@ -789,6 +789,8 @@ function skullyrep(skullindex){
 
 
 
+
+
 function move_item(skullindex,leftpx,uppx){
 
   var correctform=document.getElementById(skullindex)
@@ -803,6 +805,48 @@ function move_item(skullindex,leftpx,uppx){
 
 
 }
+
+
+
+
+
+
+function infloop(time){
+    // do whatever you like here
+  
+    move_item('skully52',100,100)
+
+
+
+    setTimeout(infloop, time);
+}
+
+
+
+
+
+
+
+
+
+
+function traveler(time){
+    // do whatever you like here
+  
+    move_item('skully52',1,1)
+
+
+
+    setTimeout(traveler, time);
+}
+
+
+
+
+
+
+
+
 
 
 
