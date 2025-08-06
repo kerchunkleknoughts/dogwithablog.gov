@@ -869,6 +869,7 @@ function infloop(time){
 
 
 
+
 function traveler(time){
     // do whatever you like here
   
@@ -879,11 +880,11 @@ function traveler(time){
     //move_item('skully52',1,1)
 
 
-  //bouncy_item('skully52',1,1)
+  bouncy_item('skully52',1,1)
 
 
 
-alert(location.pathname);
+//alert(location.pathname);
 
 
     setTimeout(traveler, time);
