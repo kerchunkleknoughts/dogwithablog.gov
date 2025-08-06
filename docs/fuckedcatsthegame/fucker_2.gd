@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		print("YUHHHH!")
 		print(self.position)
 		
-		control.money_change(10)
+		control.money_change(50)
 		
 		
 	if Input.is_action_just_pressed("opress"):

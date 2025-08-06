@@ -4,6 +4,8 @@ extends Node2D
 @onready var anime=$AnimatedSprite2D
 @onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
 
+
+
 @onready var myhouse;
 
 
@@ -136,6 +138,7 @@ func find_my_house():
 		for child in houses.get_children():
 			if(child.hid==self.ktid):
 				self.myhouse=child
+				self.myhouse.howner=self
 			
 
 

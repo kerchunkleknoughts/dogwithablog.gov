@@ -55,6 +55,6 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("COL!")
-	john.state=john.states.RECHARGE
+	#john.state=john.states.RECHARGE
 	#GlobalVariables.kitty.state=GlobalVariables.kitty.states.RECHARGE;
 	pass # Replace with function body.

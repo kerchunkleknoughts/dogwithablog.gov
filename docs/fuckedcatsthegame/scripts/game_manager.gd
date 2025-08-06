@@ -195,12 +195,30 @@ func advancedmovetonode(mag,node1,node2):
 	#that velcity vector, and assigns 
 	#the subject node that velocity. 
 	var vectordif=self.find_vector_difference(node1,node2)
+	
+	
+	
+	#if(node2.position.x>node1.position.x):
+	#	vectordif=vectordif*-1;
+	
+	print("VECTOR DIF!: "+ str(vectordif))
+	
 	var angle=self.find_angle(vectordif);
+	
+	#if(node1.position.x<node2.position.x):
+	#	angle=angle+180
+	
+	
 	var opposite=sin(angle)*mag;
 	var adjacent=cos(angle)*mag;
 	var b = Vector2()
 	b.x = adjacent
 	b.y = opposite
+	
+	if(node1.position.x>node2.position.x):
+		b.x=b.x*-1
+		b.y=b.y*-1
+	
 	self.movenode(b,node1)
 	
 	
