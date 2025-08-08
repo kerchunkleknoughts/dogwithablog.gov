@@ -204,6 +204,8 @@ func find_nearest_cafe():
 	#This is just a simple linear search, 
 	#but if needed this will become a
 	#binary search in the future. 
+	
+	var cafe_count=0;
 	var shortest_distance=100000000000;
 	for child in cafes.get_children():
 		
@@ -212,7 +214,10 @@ func find_nearest_cafe():
 			shortest_distance=currentdist;
 			self.closest_cafe=child;
 	
-	closest_cafe.daowner=self
+		cafe_count=cafe_count+1;
+	
+	if(!(cafe_count==0)):
+		closest_cafe.daowner=self
 
 
 
@@ -232,16 +237,25 @@ func evalneeds():
 		
 	if(needfulfillment[needs.HUNGER]==1):
 		
-		find_nearest_cafe();
-		control.advancedmovetonode(sleepvel,self,self.closest_cafe)
-		self.state=states.MOVING
+		if(!(cafes.get_child_count()==0)):
+			
+			find_nearest_cafe();
+			
+			control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+			self.state=states.MOVING
 		
 	
 	
 	if(needfulfillment[needs.SLEEP]==1):
-	
-		control.advancedmovetonode(sleepvel,self,self.myhouse)
-		self.state=states.MOVING
+		
+		
+		
+		if(!(houses.get_child_count()==0)):
+			
+			find_my_house()
+			
+			control.advancedmovetonode(sleepvel,self,self.myhouse)
+			self.state=states.MOVING
 
 
 
