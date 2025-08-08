@@ -3,10 +3,12 @@ extends Node2D
 
 @onready var anime=$AnimatedSprite2D
 @onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
-
+@onready var cafes=get_tree().get_root().get_node("game2/cafes")#$"../houses"
 
 
 @onready var myhouse;
+
+@onready var closest_cafe;
 
 
 var state=states.WAIT;
@@ -78,6 +80,7 @@ var yvel=0;
 
 
 var onticksleepdep=1;
+var ontickhungerdep=10;
 
 #this is an array which is processed on a FCFS basis. 
 var needfulfillment = [0,0,0]
@@ -170,7 +173,13 @@ func report():
 
 func depsleep():
 	if(self.sleep>0):
-		self.sleep=sleep-onticksleepdep
+		self.sleep=self.sleep-onticksleepdep
+
+
+func dephunger():
+	if(self.hunger>0):
+		self.hunger=self.hunger-self.ontickhungerdep
+
 
 
 
@@ -191,6 +200,18 @@ func checkhunger():
 
 
 
+func find_nearest_cafe():
+	#This is just a simple linear search, 
+	#but if needed this will become a
+	#binary search in the future. 
+	var shortest_distance=100000000000;
+	for child in cafes.get_children():
+		
+		var currentdist=control.find_distance(self,child)
+		if(currentdist<shortest_distance):
+			shortest_distance=currentdist;
+			self.closest_cafe=child;
+			
 
 
 
@@ -208,10 +229,15 @@ func evalneeds():
 		
 		
 	if(needfulfillment[needs.HUNGER]==1):
-		var a
+		
+		find_nearest_cafe();
+		control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+		self.state=states.MOVING
+		
+	
 	
 	if(needfulfillment[needs.SLEEP]==1):
-		var a 
+	
 		control.advancedmovetonode(sleepvel,self,self.myhouse)
 		self.state=states.MOVING
 
@@ -341,7 +367,10 @@ func sb_anime_change():
 func evalstate(delta):
 	if(self.state==states.WAIT):
 		evalphy(delta)
+		
 		depsleep()
+		dephunger()
+		
 		checkneeds()
 		evalneeds() #something is done about needs only if not currently fulfilling a need.
 		sb_anime_change()
@@ -351,7 +380,12 @@ func evalstate(delta):
 	
 	if(self.state==states.MOVING):
 		evalphy(delta)
+		
+		
 		depsleep()
+		dephunger()
+		
+		
 		checkneeds()
 		sb_anime_change()
 		self.visible=true;

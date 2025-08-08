@@ -249,8 +249,8 @@ func find_distance(node1,node2):
 	var dv = Vector2()
 	
 	dv=find_vector_difference(node1,node2);
-	var asq=(dv.x)^2
-	var bsq=(dv.y)^2
+	var asq=pow(dv.x,2)
+	var bsq=pow(dv.y,2)
 	var csq=sqrt(asq+bsq)
 	
 	return csq
