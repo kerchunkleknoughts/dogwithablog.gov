@@ -113,6 +113,8 @@ func report():
 
 
 
+
+
 func depsleep():
 	if(self.sleep>0):
 		self.sleep=sleep-onticksleepdep
