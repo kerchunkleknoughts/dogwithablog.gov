@@ -9,6 +9,8 @@ extends Node
 @onready var kittys=get_tree().get_root().get_node("game2/kittys")#$"../houses"
 
 
+@onready var cafes=get_tree().get_root().get_node("game2/cafes")#$"../houses"
+
 
 
 func money_change(change):
@@ -60,6 +62,27 @@ func new_house(xpos,ypos):
 	print("scene hid"+str(scene.hid))
 	print("global hid"+ str(GlobalVariables.h_id_counter))
 	#print("here3!")
+
+
+
+func new_cafe(xpos,ypos):
+	#this function will create a new house, then 
+	#it will update the house id, then store it in the houses array.
+	var path="res://scenes/cafe.tscn"
+	var targetnode=cafes
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	#print("here1!")
+	scene.caid=GlobalVariables.ca_id_counter;
+	GlobalVariables.ca_id_counter=GlobalVariables.ca_id_counter+1
+	targetnode.add_child(scene)
+	print("scene hid"+str(scene.caid))
+	print("global hid"+ str(GlobalVariables.ca_id_counter))
+	#print("here3!")
+
+
 
 
 func new_cat(xpos,ypos):

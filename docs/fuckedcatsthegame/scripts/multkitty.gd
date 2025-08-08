@@ -60,11 +60,12 @@ func change_state(changeto):
 var health=10;
 var healthmax=10;
 
-var hunger=50;
-var hungermax=100;
+var hunger=1200;
+var hungermax=2000;
+var hungermin=1000
 
 var sleep=1200;
-var sleepmax=17;
+var sleepmax=2000;
 var sleepmin=1000;
 #sleepmin is the threshold that
 #determines if npc navigates to 
@@ -181,6 +182,13 @@ func checksleep():
 		return 0;	
 		
 
+func checkhunger():
+	if(self.hunger<self.hungermin):
+		return 1;
+	else:
+		return 0;	
+		
+
 
 
 
@@ -188,14 +196,20 @@ func checksleep():
 
 func checkneeds():
 	needfulfillment[needs.SLEEP]=checksleep();
+	needfulfillment[needs.HUNGER]=checkhunger();
+
 
 
 
 func evalneeds():
-	if(needfulfillment[needs.HUNGER]==1):
-		var a
+	
 	if(needfulfillment[needs.WATER]==1):
 		var a 
+		
+		
+	if(needfulfillment[needs.HUNGER]==1):
+		var a
+	
 	if(needfulfillment[needs.SLEEP]==1):
 		var a 
 		control.advancedmovetonode(sleepvel,self,self.myhouse)
@@ -329,7 +343,7 @@ func evalstate(delta):
 		evalphy(delta)
 		depsleep()
 		checkneeds()
-		evalneeds()
+		evalneeds() #something is done about needs only if not currently fulfilling a need.
 		sb_anime_change()
 		self.visible=true;
 	

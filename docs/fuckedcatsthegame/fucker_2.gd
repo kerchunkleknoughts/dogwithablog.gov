@@ -45,17 +45,21 @@ func _physics_process(delta: float) -> void:
 		
 		
 		
+		
 	if Input.is_action_just_pressed("mpress"):
 		print("time to summon some dogshit I guess")
 		#control.create_house(1000, 800)
 		control.create_mult_house(self.position.x+100,self.position.y+100)
 		
 			
+			
 	if Input.is_action_just_pressed("kpress"):
 		print("khasbeenpressed")
+		control.new_cafe(self.position.x+100,self.position.y+100);
+		
 		#kitty.report()
-		for child in houses.get_children():
-			print(control.find_vector_difference(self,child))
+		#for child in houses.get_children():
+		#	print(control.find_vector_difference(self,child))
 			
 	
 	

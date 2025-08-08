@@ -15,6 +15,8 @@ script = ExtResource("1_8j387")
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_xrrf0")
 
+[node name="cafes" type="Node" parent="."]
+
 [node name="houses" type="Node" parent="."]
 
 [node name="kittys" type="Node" parent="."]

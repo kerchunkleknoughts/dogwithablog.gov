@@ -13,3 +13,5 @@ var kittyhome=0;
 
 var h_id_counter=0;
 var ki_id_counter=0;
+
+var ca_id_counter=0;
