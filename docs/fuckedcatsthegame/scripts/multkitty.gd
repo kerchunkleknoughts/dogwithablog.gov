@@ -211,7 +211,9 @@ func find_nearest_cafe():
 		if(currentdist<shortest_distance):
 			shortest_distance=currentdist;
 			self.closest_cafe=child;
-			
+	
+	closest_cafe.daowner=self
+
 
 
 
