@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd7loij83pavx"]
+[gd_scene load_steps=8 format=3 uid="uid://bd7loij83pavx"]
 
 [ext_resource type="PackedScene" uid="uid://bhxiiu0lcw6s1" path="res://scenes/fucker2.tscn" id="1_7pxbb"]
 [ext_resource type="Script" uid="uid://dfkvsp2tnbncy" path="res://scripts/game_2.gd" id="1_8j387"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://0qid8hlvuoo" path="res://fucker_2.gd" id="2_u48pd"]
 [ext_resource type="PackedScene" uid="uid://wnnxsfj3ylgx" path="res://scenes/Creaturee.tscn" id="3_btr28"]
 [ext_resource type="PackedScene" uid="uid://dwkbehlv5eve0" path="res://scenes/Creaturee2.tscn" id="4_h21dd"]
-[ext_resource type="PackedScene" uid="uid://bm6lb6odmicmd" path="res://scenes/house.tscn" id="5_dflkw"]
 
 [sub_resource type="TileSet" id="TileSet_u48pd"]
 
@@ -36,7 +35,7 @@ offset_bottom = 185.0
 text = "oh yeah Im feelin it"
 
 [node name="Node2D" parent="." instance=ExtResource("3_btr28")]
-position = Vector2(907, 541)
+position = Vector2(1458, 237)
 
 [node name="Node2D2" parent="." instance=ExtResource("4_h21dd")]
 position = Vector2(272, 937)
@@ -54,6 +53,3 @@ offset_top = 235.0
 offset_right = 1023.0
 offset_bottom = 258.0
 text = "0"
-
-[node name="Node2D3" parent="." instance=ExtResource("5_dflkw")]
-position = Vector2(637, 384)
