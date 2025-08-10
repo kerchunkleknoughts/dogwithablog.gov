@@ -274,3 +274,7 @@ frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_r7qoi")
+
+[node name="idle_move_timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="idle_move_timer" to="." method="_on_idle_move_timer_timeout"]

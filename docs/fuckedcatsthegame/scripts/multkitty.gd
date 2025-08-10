@@ -5,6 +5,9 @@ extends Node2D
 @onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
 @onready var cafes=get_tree().get_root().get_node("game2/cafes")#$"../houses"
 
+@onready var idle_move_timer: Timer =$idle_move_timer
+
+
 
 @onready var myhouse;
 
@@ -21,7 +24,8 @@ var state=states.WAIT;
 enum states{
 	WAIT=0,
 	MOVING=1,
-	RECHARGE=2
+	RECHARGE=2,
+	IDLEMOVE=3,
 }
 
 
@@ -372,24 +376,103 @@ func anime_change():
 func sb_anime_change():
 	if(self.state==states.MOVING):
 		self.anistate=anistates.MOVEMENT
+		
+	if(self.state==states.IDLEMOVE):
+		self.anistate=anistates.MOVEMENT
+		
+		
 	if(self.state==states.WAIT):
 		self.anistate=anistates.IDLE;
+		
 	
 	anime_change()
 
 
 
+var idle_move_timer_active=0;
+
+var rnga = RandomNumberGenerator.new()
+var my_random_numbera = rnga.randf_range(0, 100)
+
+
+func idle_movement():
+	
+	var velo=30;
+	var diags=5;
+	
+
+	
+	#var movementen=0
+	var rng = RandomNumberGenerator.new()
+	var my_random_number = rng.randf_range(0, 1000)
+	if((my_random_number <100) && (idle_move_timer_active==0) ):
+		#movementen=1;
+		print("timer activated!")
+		
+		idle_move_timer.start()
+		idle_move_timer_active=1;
+		my_random_numbera = rnga.randf_range(0, 100)
+		
+	
+	
+	
+	
+	if(idle_move_timer_active):
+		self.state=self.states.IDLEMOVE;
+		
+		if(my_random_numbera<=25):
+			print("case1")
+			control.movenode(Vector2(velo,0),self); 
+		else:
+			if(my_random_numbera<=50):
+				control.movenode(Vector2(0,velo),self); 
+				print("case2")
+			else:
+				
+				if(my_random_numbera<=75):
+					control.movenode(Vector2(0,velo*-1),self); 
+					print("case3")
+				else:
+					
+					
+					if(my_random_numbera<=100):
+						control.movenode(Vector2(velo*-1,0),self); 
+						print("case4")
+						
+	else:
+		print("no movee 4 u")
+		control.movenode(Vector2(0,0),self); 
+		self.state=self.states.WAIT
+		
+		
+		
+
+
+
+
+
+
+func _on_idle_move_timer_timeout() -> void:
+	idle_move_timer_active=0;
+	pass # Replace with function body.
+	
+	
+	
+	
 
 func evalstate(delta):
 	if(self.state==states.WAIT):
 		evalphy(delta)
 		
-		depsleep()
-		dephunger()
+		#depsleep()
+		#dephunger()
+		idle_movement()
 		
 		checkneeds()
 		evalneeds() #something is done about needs only if not currently fulfilling a need.
 		sb_anime_change()
+		
+		
 		self.visible=true;
 	
 	
@@ -409,6 +492,25 @@ func evalstate(delta):
 		#evalneeds()
 		#for now, only one need is served at a time. 
 		#
+		
+		
+		
+	if(self.state==states.IDLEMOVE):
+		
+		idle_movement()
+		
+		evalphy(delta)
+		
+		
+		depsleep()
+		dephunger()
+		
+		
+		checkneeds()
+		sb_anime_change()
+		self.visible=true;
+
+
 	if(self.state==states.RECHARGE):
 		self.xvel=0
 		self.yvel=0
