@@ -11,6 +11,7 @@ extends Node
 
 
 
+
 #@onready var house_hitbox=$CollisionShape2D
 
 
@@ -18,6 +19,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
+	self.z_index=100;
 
 	#connect("body_entered", self, "_on_body_entered")
 	pass # Replace with function body.

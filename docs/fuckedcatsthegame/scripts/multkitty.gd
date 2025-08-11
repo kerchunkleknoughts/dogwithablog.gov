@@ -7,6 +7,8 @@ extends Node2D
 
 @onready var idle_move_timer: Timer =$idle_move_timer
 
+@onready var idle_animate_timer: Timer =$idle_animation_timer
+
 
 
 @onready var myhouse;
@@ -20,6 +22,18 @@ var state=states.WAIT;
 
 @onready var ktid;
 
+
+
+
+
+enum mydirection{
+	LEFT=0,
+	RIGHT=1,
+	STOPPED=2,
+	VERTICAL=3
+}
+
+var currentdirection=mydirection.VERTICAL;
 
 enum states{
 	WAIT=0,
@@ -73,7 +87,7 @@ var hungermin=1000
 var sleep=1200;
 var sleepmax=2000;
 var sleepmin=1000;
-var sleep_recharge_thresh=1200;
+var sleep_recharge_thresh=2000;
 #sleepmin is the threshold that
 #determines if npc navigates to 
 #nearist station to regenerate sleep. 
@@ -377,7 +391,14 @@ func anime_change():
 		#anime.play("blink")
 		
 	if(self.anistate==anistates.MOVEMENT):
-		anime.play("walk")
+		
+		if(self.currentdirection==self.mydirection.LEFT):
+			anime.play("lefty_walk")
+		if(self.currentdirection==self.mydirection.RIGHT):
+			anime.play("righty_walk")
+		if(self.currentdirection==self.mydirection.VERTICAL):
+			anime.play("walk")
+		
 				
 
 		
@@ -409,22 +430,35 @@ var my_random_numbera = rnga.randf_range(0, 100)
 
 func idle_movement():
 	
-	var velo=30;
+	var velo=50;
 	var diags=5;
 	
 
 	
 	#var movementen=0
 	var rng = RandomNumberGenerator.new()
-	var my_random_number = rng.randf_range(0, 1000)
-	if((my_random_number <100) && (idle_move_timer_active==0) ):
+	var my_random_number = rng.randf_range(0, 10)
+	
+	
+	
+	if((my_random_number <5) && (idle_move_timer_active==0) && (idle_animation_timer_active==0) ):
 		#movementen=1;
-		print("timer activated!")
+		#print("timer activated!")
 		
 		idle_move_timer.start()
 		idle_move_timer_active=1;
 		my_random_numbera = rnga.randf_range(0, 100)
+	
+	
+	else:
+		if(idle_animation_timer_active==0):
+			idle_animate_timer.start()
+		idle_animation_timer_active=1;
 		
+		
+		
+	
+	
 	
 	
 	
@@ -433,26 +467,31 @@ func idle_movement():
 		self.state=self.states.IDLEMOVE;
 		
 		if(my_random_numbera<=25):
-			print("case1")
+			#print("case1")
 			control.movenode(Vector2(velo,0),self); 
+			self.currentdirection=self.mydirection.LEFT
+			
 		else:
 			if(my_random_numbera<=50):
 				control.movenode(Vector2(0,velo),self); 
-				print("case2")
+				self.currentdirection=self.mydirection.VERTICAL
+				#print("case2")
 			else:
 				
 				if(my_random_numbera<=75):
 					control.movenode(Vector2(0,velo*-1),self); 
-					print("case3")
+					self.currentdirection=self.mydirection.VERTICAL
+					#print("case3")
 				else:
 					
 					
 					if(my_random_numbera<=100):
 						control.movenode(Vector2(velo*-1,0),self); 
-						print("case4")
+						self.currentdirection=self.mydirection.RIGHT
+						#print("case4")
 						
 	else:
-		print("no movee 4 u")
+		#print("no movee 4 u")
 		control.movenode(Vector2(0,0),self); 
 		self.state=self.states.WAIT
 		
@@ -462,14 +501,19 @@ func idle_movement():
 
 
 
-
+var idle_animation_timer_active=0;
 
 func _on_idle_move_timer_timeout() -> void:
 	idle_move_timer_active=0;
 	pass # Replace with function body.
 	
-	
-	
+
+
+func _on_idle_animation_timer_timeout() -> void:
+	idle_animation_timer_active=0;
+	print("timeout!")
+	pass # Replace with function body.
+
 	
 
 func evalstate(delta):
@@ -521,6 +565,8 @@ func evalstate(delta):
 		checkneeds()
 		sb_anime_change()
 		self.visible=true;
+
+
 
 
 	if(self.state==states.RECHARGE):

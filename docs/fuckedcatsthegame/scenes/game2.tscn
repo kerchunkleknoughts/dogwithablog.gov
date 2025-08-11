@@ -15,11 +15,9 @@ script = ExtResource("1_8j387")
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_xrrf0")
 
-[node name="cafes" type="Node" parent="."]
-
 [node name="houses" type="Node" parent="."]
 
-[node name="kittys" type="Node" parent="."]
+[node name="cafes" type="Node" parent="."]
 
 [node name="fucker2" parent="." instance=ExtResource("1_7pxbb")]
 position = Vector2(591, 787)
@@ -55,3 +53,5 @@ offset_top = 235.0
 offset_right = 1023.0
 offset_bottom = 258.0
 text = "0"
+
+[node name="kittys" type="Node" parent="."]
