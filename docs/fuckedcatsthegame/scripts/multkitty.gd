@@ -73,6 +73,7 @@ var hungermin=1000
 var sleep=1200;
 var sleepmax=2000;
 var sleepmin=1000;
+var sleep_recharge_thresh=1200;
 #sleepmin is the threshold that
 #determines if npc navigates to 
 #nearist station to regenerate sleep. 
@@ -84,7 +85,13 @@ var yvel=0;
 
 
 var onticksleepdep=1;
-var ontickhungerdep=10;
+
+var onticksleepadd=10;
+
+var ontickhungerdep=4;
+
+var ontickhungeradd=13;
+
 
 #this is an array which is processed on a FCFS basis. 
 var needfulfillment = [0,0,0]
@@ -183,6 +190,11 @@ func depsleep():
 func dephunger():
 	if(self.hunger>0):
 		self.hunger=self.hunger-self.ontickhungerdep
+
+
+
+func addsleep():
+	self.sleep=self.sleep+onticksleepdep
 
 
 
@@ -514,12 +526,21 @@ func evalstate(delta):
 	if(self.state==states.RECHARGE):
 		self.xvel=0
 		self.yvel=0
+		addsleep()
 		evalphy(delta)
 		checkneeds()
 		self.visible=false;
 	
+		#add condition to return back to idle state:
+		idle_check();
+		
 		
 
+
+
+func idle_check():
+	if(self.sleep>=sleep_recharge_thresh):
+		self.state=self.states.WAIT
 
 
 
