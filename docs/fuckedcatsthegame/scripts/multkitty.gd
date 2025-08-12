@@ -11,6 +11,7 @@ extends Node2D
 
 
 var ani_start=0;
+var anime_switch_toggle=0;
 
 var idle_move_timer_active=0;
 
@@ -355,8 +356,10 @@ func anime_change():
 	
 	if(self.anistate==anistates.IDLE):
 		
-		
-	
+		if(anime_switch_toggle==1):
+			anime_switch_toggle=0;
+			anime.play("center")
+
 				
 				
 				
@@ -473,12 +476,18 @@ func anime_change():
 		
 	if(self.anistate==anistates.MOVEMENT):
 		
+		if(anime_switch_toggle==0):
+			anime_switch_toggle=1;
+			anime.play("center")
+		
+		
 		if(self.currentdirection==self.mydirection.LEFT):
 			anime.play("lefty_walk")
 		if(self.currentdirection==self.mydirection.RIGHT):
 			anime.play("righty_walk")
 		if(self.currentdirection==self.mydirection.VERTICAL):
 			anime.play("walk")
+		
 		
 
 func sb_anime_change():
@@ -582,7 +591,7 @@ func evalstate(delta):
 		
 		#depsleep()
 		#dephunger()
-		#idle_movement()
+		idle_movement()
 		
 		checkneeds()
 		evalneeds() #something is done about needs only if not currently fulfilling a need.
