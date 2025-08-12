@@ -584,7 +584,7 @@ func _on_idle_animation_timer_timeout() -> void:
 
 func evalstate(delta):
 	
-	self.report()
+	#self.report()
 	
 	if(self.state==states.WAIT):
 		evalphy(delta)
