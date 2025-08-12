@@ -10,6 +10,13 @@ extends Node2D
 @onready var idle_animate_timer: Timer =$idle_animation_timer
 
 
+var ani_start=0;
+
+var idle_move_timer_active=0;
+
+var rnga = RandomNumberGenerator.new()
+var my_random_numbera = rnga.randf_range(0, 100)
+
 
 @onready var myhouse;
 
@@ -22,6 +29,7 @@ var state=states.WAIT;
 
 @onready var ktid;
 
+var idle_animation_timer_active=0;
 
 
 
@@ -70,11 +78,6 @@ enum subanistates{
 var anistate=anistates.IDLE;
 
 var subanistate=subanistates.CENTER;
-
-
-func change_state(changeto):
-	self.state=changeto
-	
 
 
 var health=10;
@@ -140,27 +143,92 @@ var my_random_number = rng.randf_range(-10.0, 10.0)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 func _ready() -> void:
 	
 	find_my_house()
 	
 	pass # Replace with function body.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 func find_my_house():
@@ -170,19 +238,10 @@ func find_my_house():
 				self.myhouse.howner=self
 			
 
-
-
-
-
-
-
-
-
-
-
-
 func report():
 	#reporting function which returns attributes of current instance. 
+	print("                             ")
+	print("                             ")
 	print("report of "+ str(self.name))
 	print("health " + str(self.health))
 	print("healthmax " + str(self.healthmax))
@@ -192,6 +251,10 @@ func report():
 	print("hungermax " + str(self.hungermax))
 	print("x velocity "+ str(self.xvel))
 	print("y velocity "+ str(self.yvel))
+	print("State: "+ str(self.state))
+	print("anistate: "+ str(self.anistate))
+	print("subanistate: "+ str(self.subanistate))
+	
 
 
 
@@ -205,14 +268,8 @@ func dephunger():
 	if(self.hunger>0):
 		self.hunger=self.hunger-self.ontickhungerdep
 
-
-
 func addsleep():
 	self.sleep=self.sleep+onticksleepdep
-
-
-
-
 
 func checksleep():
 	if(self.sleep<self.sleepmin):
@@ -227,8 +284,6 @@ func checkhunger():
 	else:
 		return 0;	
 		
-
-
 
 func find_nearest_cafe():
 	#This is just a simple linear search, 
@@ -249,14 +304,9 @@ func find_nearest_cafe():
 	if(!(cafe_count==0)):
 		closest_cafe.daowner=self
 
-
-
-
 func checkneeds():
 	needfulfillment[needs.SLEEP]=checksleep();
 	needfulfillment[needs.HUNGER]=checkhunger();
-
-
 
 
 func evalneeds():
@@ -288,100 +338,131 @@ func evalneeds():
 			self.state=states.MOVING
 
 
-
-
-
 func check_boxes():
 	var a 
 	#if(GlobalVariables.kittyhome==1):
 	#	self.state=self.states.RECHARGE
 
 
-
-var ani_start=0;
-
-
-
-
-
-
 func anime_change():
+	
+	
 	
 	#print(self.subanistate)
 	#print(anime.get("parameters/playback") )	
 	
 	
+	
 	if(self.anistate==anistates.IDLE):
-		if(self.subanistate==subanistates.CENTER):
-			
-			anime.play("center")
-			var rng = RandomNumberGenerator.new()
-			var my_random_number = rng.randf_range(-10.0, 10.0)
-			if(my_random_number >5):
-				#print("GREATER THAN!")
-				self.subanistate=subanistates.LEFTLOOK;
+		
+		
+	
 				
-			if(my_random_number<5):
-				#print("LESS THAN!")
-				self.subanistate=subanistates.RIGHTLOOK;
-			
-			ani_start=1
 				
 				
 				
 				
 		if(self.subanistate==subanistates.LEFTLOOK):
-			ani_start=1
 			
-			if(!(anime.is_playing())):
+			
+			if((ani_start==0) && !(anime.is_playing())):
+				anime.play("center_to_left")
+				ani_start=ani_start+1;
+				
+			if((ani_start==1) && !(anime.is_playing())):
 				self.subanistate=subanistates.IVLEFTLOOK
+				ani_start=0;
+				
+				
+			
+
+			
 				
 		
-			if(ani_start):
-				anime.play("center_to_left")
-				ani_start=0		
-			
-			
+
 		if(self.subanistate==subanistates.RIGHTLOOK):
-			ani_start=1
 			
-			if(!(anime.is_playing())):
-				self.subanistate=subanistates.IVRIGHTLOOK
-				
-			if(ani_start):
+			if((ani_start==0) && !(anime.is_playing())):
 				anime.play("center_to_right")
-				ani_start=0		
-			
+				ani_start=ani_start+1;
+				
+			if((ani_start==1) && !(anime.is_playing())):
+				self.subanistate=subanistates.IVRIGHTLOOK
+				ani_start=0;
+				
+
 			
 			
 		if(self.subanistate==subanistates.IVLEFTLOOK):
-			ani_start=1
-			
-			if(!(anime.is_playing())):
-				self.subanistate=subanistates.CENTER
-				
-				
-			if(ani_start):
+
+			if((ani_start==0) && !(anime.is_playing())):
 				anime.play("Left_to_center")
-				ani_start=0		
+				ani_start=ani_start+1;
+				
+			if((ani_start==1) && !(anime.is_playing())):
+				self.subanistate=subanistates.CENTER
+				ani_start=0;
+							
+			
+			
 			
 		if(self.subanistate==subanistates.IVRIGHTLOOK):
-			ani_start=1
-			
-			if(!(anime.is_playing())):
-				self.subanistate=subanistates.CENTER
-				
-			
-			if(ani_start):
+
+			if((ani_start==0) && !(anime.is_playing())):
 				anime.play("Right_to_center")
-				ani_start=0		
-	
+				ani_start=ani_start+1;
+				
+			if((ani_start==1) && !(anime.is_playing())):
+				self.subanistate=subanistates.CENTER
+				ani_start=0;
+							
+			
+
+
+		if(self.subanistate==subanistates.BLINK):
+
+			if((ani_start==0) && !(anime.is_playing())):
+				anime.play("blink")
+				ani_start=ani_start+1;
+				
+			if((ani_start==1) && !(anime.is_playing())):
+				self.subanistate=subanistates.CENTER
+				ani_start=0;
+							
+
+
+
+		if(self.subanistate==subanistates.CENTER):
+			ani_start=0
+			anime.play("center")
+			var rng = RandomNumberGenerator.new()
+			var my_random_number = rng.randf_range(0, 10)
+			
+			print("RANDO NUM:"+ str(my_random_number))
+			
+			if(my_random_number <3):
+				print("GREATER THAN!")
+				self.subanistate=subanistates.LEFTLOOK;
+			else:
+			
+				if(my_random_number<6):
+					print("LESS THAN!")
+					self.subanistate=subanistates.RIGHTLOOK;
+					
+				else:
+					
+					if(my_random_number<9):
+						self.subanistate=subanistates.BLINK;
+						print("OTHER!")
+					
+					
+			
 	#if(self.anistate==anistates.MOVEMENT):
 		#anime.play("walk")
 		
 	#if(self.anistate==anistates.BLINK):
 		#anime.play("blink")
-		var a
+
 		
 	#if(self.anistate==anistates.CENTERLOOK):
 		#var rng = RandomNumberGenerator.new()
@@ -399,16 +480,11 @@ func anime_change():
 		if(self.currentdirection==self.mydirection.VERTICAL):
 			anime.play("walk")
 		
-				
-
-		
-		
-
-
 
 func sb_anime_change():
 	if(self.state==states.MOVING):
 		self.anistate=anistates.MOVEMENT
+		
 		
 	if(self.state==states.IDLEMOVE):
 		self.anistate=anistates.MOVEMENT
@@ -419,13 +495,6 @@ func sb_anime_change():
 		
 	
 	anime_change()
-
-
-
-var idle_move_timer_active=0;
-
-var rnga = RandomNumberGenerator.new()
-var my_random_numbera = rnga.randf_range(0, 100)
 
 
 func idle_movement():
@@ -494,35 +563,26 @@ func idle_movement():
 		#print("no movee 4 u")
 		control.movenode(Vector2(0,0),self); 
 		self.state=self.states.WAIT
-		
-		
-		
-
-
-
-
-var idle_animation_timer_active=0;
 
 func _on_idle_move_timer_timeout() -> void:
 	idle_move_timer_active=0;
 	pass # Replace with function body.
-	
-
 
 func _on_idle_animation_timer_timeout() -> void:
 	idle_animation_timer_active=0;
-	print("timeout!")
+	#print("timeout!")
 	pass # Replace with function body.
 
-	
-
 func evalstate(delta):
+	
+	self.report()
+	
 	if(self.state==states.WAIT):
 		evalphy(delta)
 		
 		#depsleep()
 		#dephunger()
-		idle_movement()
+		#idle_movement()
 		
 		checkneeds()
 		evalneeds() #something is done about needs only if not currently fulfilling a need.
@@ -579,23 +639,15 @@ func evalstate(delta):
 	
 		#add condition to return back to idle state:
 		idle_check();
-		
-		
-
-
+	
 
 func idle_check():
 	if(self.sleep>=sleep_recharge_thresh):
 		self.state=self.states.WAIT
 
-
-
-
-
 func evalphy(delta):
 	position.x+=direction*self.xvel*delta;
 	position.y+=direction*self.yvel*delta;
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -617,7 +669,5 @@ func _process(delta: float) -> void:
 	
 	evalstate(delta)
 	
-	
-
-	
-	
+func change_state(changeto):
+	self.state=changeto

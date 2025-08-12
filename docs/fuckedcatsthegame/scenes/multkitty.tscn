@@ -241,7 +241,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r7qoi")
 }],
-"loop": true,
+"loop": false,
 "name": &"center",
 "speed": 5.0
 }, {
@@ -365,7 +365,7 @@ script = ExtResource("1_nwhc1")
 position = Vector2(3, 2)
 scale = Vector2(0.73625, 0.56125)
 sprite_frames = SubResource("SpriteFrames_r7qoi")
-animation = &"righty_walk"
+animation = &"center"
 autoplay = "center"
 
 [node name="Area2D" type="Area2D" parent="."]
