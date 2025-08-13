@@ -28,6 +28,7 @@ var state=states.WAIT;
 #default state. equal to just waiting. This is evaluated every tick via the state machine eval function
 
 
+
 @onready var ktid;
 
 var idle_animation_timer_active=0;
@@ -86,7 +87,8 @@ var healthmax=10;
 
 var hunger=1200;
 var hungermax=2000;
-var hungermin=1000
+var hungermin=1100
+var hunger_recharge_thresh=2000;
 
 var sleep=1200;
 var sleepmax=2000;
@@ -120,6 +122,10 @@ enum needs{
 	HUNGER=1,
 	SLEEP=2,
 }
+
+
+var need_to_recharge=0;
+
 
 
 @onready var control=get_tree().get_root().get_node("game2/GameManager")#$"../houses"
@@ -255,6 +261,7 @@ func report():
 	print("State: "+ str(self.state))
 	print("anistate: "+ str(self.anistate))
 	print("subanistate: "+ str(self.subanistate))
+	print("Current need to fulfill: "+ str(need_to_recharge))
 	
 
 
@@ -273,7 +280,7 @@ func addsleep():
 	self.sleep=self.sleep+onticksleepadd
 
 func addhunger():
-	self.hunger=self.sleep+ontickhungeradd
+	self.hunger=self.hunger+ontickhungeradd
 
 func checksleep():
 	if(self.sleep<self.sleepmin):
@@ -316,22 +323,36 @@ func checkneeds():
 
 func evalneeds():
 	
+	
+	print(str(needfulfillment[needs.WATER]))
+	print(str(needfulfillment[needs.HUNGER]))
+	print(str(needfulfillment[needs.SLEEP]))
+	
 	if(needfulfillment[needs.WATER]==1):
 		var a 
+		print("WATERNEED!!!!")
 		
+		need_to_recharge=needs.WATER;
+	
+			
 		
 	if(needfulfillment[needs.HUNGER]==1):
 		
+		print("HUNGERNEED!!!!")
 		if(!(cafes.get_child_count()==0)):
 			
 			find_nearest_cafe();
 			
 			control.advancedmovetonode(sleepvel,self,self.closest_cafe)
 			self.state=states.MOVING
+			need_to_recharge=needs.HUNGER
+			
+		
 		
 	
-	
 	if(needfulfillment[needs.SLEEP]==1):
+		
+		print("SLEEPNEED!")
 		
 		
 		
@@ -341,6 +362,7 @@ func evalneeds():
 			
 			control.advancedmovetonode(sleepvel,self,self.myhouse)
 			self.state=states.MOVING
+			need_to_recharge=needs.SLEEP
 
 
 func check_boxes():
@@ -445,22 +467,22 @@ func anime_change():
 			var rng = RandomNumberGenerator.new()
 			var my_random_number = rng.randf_range(0, 10)
 			
-			print("RANDO NUM:"+ str(my_random_number))
+			#print("RANDO NUM:"+ str(my_random_number))
 			
 			if(my_random_number <3):
-				print("GREATER THAN!")
+				#print("GREATER THAN!")
 				self.subanistate=subanistates.LEFTLOOK;
 			else:
 			
 				if(my_random_number<6):
-					print("LESS THAN!")
+					#print("LESS THAN!")
 					self.subanistate=subanistates.RIGHTLOOK;
 					
 				else:
 					
 					if(my_random_number<9):
 						self.subanistate=subanistates.BLINK;
-						print("OTHER!")
+						#print("OTHER!")
 					
 					
 			
@@ -645,12 +667,22 @@ func evalstate(delta):
 	if(self.state==states.RECHARGE):
 		self.xvel=0
 		self.yvel=0
-		addsleep()
-		addhunger()
+		
+		if(need_to_recharge==needs.HUNGER):
+			addhunger()
+			
+		
+	
+		if(need_to_recharge==needs.SLEEP):
+			addsleep()
+			
 		evalphy(delta)
 		checkneeds()
+		
 		self.visible=false;
 	
+	
+		#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!THIS IS THE RETURN FUNCTION, STATE RETURN!!!!!!!!!!	
 		#add condition to return back to idle state:
 		idle_check();
 	
@@ -658,6 +690,12 @@ func evalstate(delta):
 func idle_check():
 	if(self.sleep>=sleep_recharge_thresh):
 		self.state=self.states.WAIT
+		
+	if(self.hunger>=hunger_recharge_thresh):
+		self.state=self.states.WAIT	
+		
+		
+		
 
 func evalphy(delta):
 	position.x+=direction*self.xvel*delta;
