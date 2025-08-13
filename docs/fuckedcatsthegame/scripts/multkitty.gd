@@ -106,7 +106,7 @@ var onticksleepdep=1;
 
 var onticksleepadd=10;
 
-var ontickhungerdep=4;
+var ontickhungerdep=2;
 
 var ontickhungeradd=13;
 
@@ -270,7 +270,10 @@ func dephunger():
 		self.hunger=self.hunger-self.ontickhungerdep
 
 func addsleep():
-	self.sleep=self.sleep+onticksleepdep
+	self.sleep=self.sleep+onticksleepadd
+
+func addhunger():
+	self.hunger=self.sleep+ontickhungeradd
 
 func checksleep():
 	if(self.sleep<self.sleepmin):
@@ -287,6 +290,7 @@ func checkhunger():
 		
 
 func find_nearest_cafe():
+	
 	#This is just a simple linear search, 
 	#but if needed this will become a
 	#binary search in the future. 
@@ -302,8 +306,8 @@ func find_nearest_cafe():
 	
 		cafe_count=cafe_count+1;
 	
-	if(!(cafe_count==0)):
-		closest_cafe.daowner=self
+	#if(!(cafe_count==0)):
+		#closest_cafe.daowner=self
 
 func checkneeds():
 	needfulfillment[needs.SLEEP]=checksleep();
@@ -642,6 +646,7 @@ func evalstate(delta):
 		self.xvel=0
 		self.yvel=0
 		addsleep()
+		addhunger()
 		evalphy(delta)
 		checkneeds()
 		self.visible=false;

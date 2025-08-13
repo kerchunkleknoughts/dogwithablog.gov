@@ -7,7 +7,11 @@ extends Node
 #anytime a cafe is being targeted, da owner changes to the kitty which is walking towards it. 
 @onready var daowner;
 
+
+@onready var kittys=get_tree().get_root().get_node("game2/kittys")
+
 @onready var caid;
+
 
 
 
@@ -51,8 +55,12 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	var radius=100;
 	print("COL!")
 	
-	daowner.state=daowner.states.RECHARGE
-	if((daowner.position.x<=self.position.x+radius)&&(daowner.position.x>=self.position.x-radius)):
-		
-			daowner.state=daowner.states.RECHARGE
+	#daowner.state=daowner.states.RECHARGE
+	
+	#loop through each npc and check if located in the cafe, if so, set to recharge. 
+	for kitty in kittys.get_children():
+		daowner=kitty;
+		if(((daowner.position.x<=self.position.x+radius)&&(daowner.position.x>=self.position.x-radius)) && ((daowner.position.y<=self.position.y+radius)&&(daowner.position.y>=self.position.y-radius))):
+				if(daowner.checkhunger()):
+					daowner.state=daowner.states.RECHARGE
 	pass # Replace with function body.
