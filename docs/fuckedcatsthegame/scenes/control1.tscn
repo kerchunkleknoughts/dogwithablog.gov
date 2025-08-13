@@ -25,6 +25,10 @@ position = Vector2(-664.5, 264)
 scale = Vector2(2.60462, 1.4538)
 texture = ExtResource("1_jj5tx")
 
+[node name="Polygon2D" type="Polygon2D" parent="A6e24a6530a86e07Fd182a44Fb46d18a"]
+position = Vector2(695.111, -109.369)
+polygon = PackedVector2Array(-767.866, 74.2881, -692.231, -36.4562, -572.444, -34.3926, -569.757, 160.958, -657.677, 268.95, -710.66, 216.674, -799.733, 213.922)
+
 [node name="pause" type="Node" parent="."]
 
 [node name="Polygon2D" type="Polygon2D" parent="pause"]
@@ -75,4 +79,29 @@ text = "0
 
 [node name="hope" type="Node" parent="."]
 
-[node name="Node3D" type="Node3D" parent="."]
+[node name="Label2" type="Label" parent="."]
+offset_left = -687.0
+offset_top = 81.0
+offset_right = -281.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0.766796, 0.310737, 0.931637, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "CONTROLS:"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -744.0
+offset_top = 168.0
+offset_right = -338.0
+offset_bottom = 400.0
+scale = Vector2(1.01042, 1.09384)
+theme_override_colors/font_color = Color(0.766796, 0.310737, 0.931637, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "Summon new cat: o
+Create a cat cafe: k
+Add money: y
+buy cat house: m
+"

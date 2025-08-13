@@ -5,7 +5,7 @@ extends Control
 
 
 var timer1 := Timer.new()
-var delay: float = 1
+var delay: float = 5
 
 
 
