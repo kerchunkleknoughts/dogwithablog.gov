@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbtmtpp7dvuu1"]
+[gd_scene load_steps=3 format=3 uid="uid://dbtmtpp7dvuu1"]
 
 [ext_resource type="Script" uid="uid://bxih6518mijyg" path="res://scripts/control_1.gd" id="1_6sxdk"]
 [ext_resource type="Texture2D" uid="uid://dtrix53vdoso2" path="res://Game assets/a6e24a6530a86e07fd182a44fb46d18a.jpg" id="1_jj5tx"]
-[ext_resource type="Texture2D" uid="uid://dlwpstga7k5qf" path="res://Game assets/98236.webp" id="2_rh54p"]
-[ext_resource type="Texture2D" uid="uid://bx6lhth6qalsb" path="res://Game assets/hope.png" id="4_d6dm8"]
 
 [node name="Control1" type="Control"]
 layout_mode = 3
@@ -60,7 +58,7 @@ theme_override_colors/font_color = Color(0.766796, 0.310737, 0.931637, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 44
-text = "Drugs:"
+text = "Money:"
 
 [node name="Label3" type="Label" parent="drugs"]
 offset_left = -1162.0
@@ -75,43 +73,6 @@ text = "0
 
 "
 
-[node name="98236" type="Sprite2D" parent="drugs"]
-position = Vector2(-1446, 312)
-scale = Vector2(0.3, 0.265333)
-texture = ExtResource("2_rh54p")
-
 [node name="hope" type="Node" parent="."]
-
-[node name="Hope" type="Sprite2D" parent="hope"]
-position = Vector2(-1426.75, 560.625)
-scale = Vector2(1.37791, 1.21667)
-texture = ExtResource("4_d6dm8")
-
-[node name="Polygon2D3" type="Polygon2D" parent="hope"]
-position = Vector2(-277.5, 194)
-polygon = PackedVector2Array(-1039, 342, -1006, 315, -966, 316, -940, 326, -913, 319, -897, 337, -866, 311, -807, 302, -797, 332, -778, 334, -758, 324, -744, 300, -721, 310, -716, 326, -710, 350, -687, 360, -739, 368, -770, 379, -803, 374, -823, 398, -858, 400, -886, 392, -903, 403, -932, 414, -960, 406, -979, 390, -1011, 392, -1014, 403, -1022, 410, -1045, 397, -1051, 382, -1048, 360)
-
-[node name="Label4" type="Label" parent="hope"]
-offset_left = -1312.5
-offset_top = 512.0
-offset_right = -906.5
-offset_bottom = 701.0
-theme_override_colors/font_color = Color(0.766796, 0.310737, 0.931637, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 44
-text = "Hope:"
-
-[node name="Label5" type="Label" parent="hope"]
-offset_left = -1178.5
-offset_top = 514.0
-offset_right = -772.5
-offset_bottom = 703.0
-theme_override_colors/font_color = Color(0.766796, 0.310737, 0.931637, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 44
-text = "-100
-"
 
 [node name="Node3D" type="Node3D" parent="."]

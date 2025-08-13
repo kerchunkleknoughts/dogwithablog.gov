@@ -28,13 +28,6 @@ script = ExtResource("2_u48pd")
 tile_set = SubResource("TileSet_u48pd")
 format = 2
 
-[node name="Label" type="Label" parent="TileMap"]
-offset_left = 820.0
-offset_top = 162.0
-offset_right = 969.0
-offset_bottom = 185.0
-text = "oh yeah Im feelin it"
-
 [node name="Node2D" parent="." instance=ExtResource("3_btr28")]
 position = Vector2(1458, 237)
 

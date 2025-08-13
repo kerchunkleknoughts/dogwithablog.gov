@@ -1,9 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://yqxrobmknin"]
+[gd_scene load_steps=5 format=3 uid="uid://yqxrobmknin"]
 
-[ext_resource type="Texture2D" uid="uid://crl7eiqia3plh" path="res://Game assets/etch2.jpg" id="1_5p55f"]
 [ext_resource type="Script" uid="uid://dfhsy6r63oxlg" path="res://scripts/control.gd" id="1_8n18e"]
-[ext_resource type="Texture2D" uid="uid://b8e3ulmi8e8f7" path="res://Game assets/true.png" id="2_r67kn"]
-[ext_resource type="Texture2D" uid="uid://co7gj4ecv3nj0" path="res://Game assets/xok.png" id="3_brbbq"]
+[ext_resource type="Texture2D" uid="uid://cdd8mh5qmabmn" path="res://Game assets/title/free-photo-of-abandoned-warehouse-with-hole-in-floor.jpeg" id="2_8n18e"]
 [ext_resource type="AudioStream" uid="uid://cj4a7xe6ixfq6" path="res://audio/neco arc dilemma (meow) extended 4.mp3" id="3_lt2xq"]
 [ext_resource type="PackedScene" uid="uid://bjf6dyvn7w7dj" path="res://scenes/music0.tscn" id="5_lpubu"]
 
@@ -25,67 +23,18 @@ one_shot = true
 autostart = true
 
 [node name="Etch2" type="Sprite2D" parent="."]
-position = Vector2(-669.125, 410)
-scale = Vector2(0.580875, 0.488463)
-texture = ExtResource("1_5p55f")
+position = Vector2(-383, -169)
+scale = Vector2(0.520331, 0.423956)
+texture = ExtResource("2_8n18e")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-667, 264)
 scale = Vector2(0.52775, 0.488463)
 
-[node name="True" type="Sprite2D" parent="."]
-position = Vector2(-1167, 5)
-scale = Vector2(0.0334628, 0.0314865)
-texture = ExtResource("2_r67kn")
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = -850.0
-offset_top = 10.0
-offset_right = -444.0
-offset_bottom = 71.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 44
-text = "WELCOME TO HELL"
-
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = -1213.0
-offset_top = 147.0
-offset_right = -807.0
-offset_bottom = 208.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 44
-text = "Plot: YOU ARE A SPONGE! A sponge of the bob
-variety, will you be able to escape this wretched 
-hellscape? Who knows. 
-
-CONTROLS: wouldn't you like to know "
-
-[node name="Xok" type="Sprite2D" parent="."]
-position = Vector2(-228, 471)
-scale = Vector2(0.335625, 0.265625)
-texture = ExtResource("3_brbbq")
-
-[node name="Label3" type="Label" parent="."]
-layout_mode = 0
-offset_left = -850.0
-offset_top = 10.0
-offset_right = -444.0
-offset_bottom = 71.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 44
-text = "WELCOME TO HELL"
-
-[node name="Label4" type="Label" parent="."]
-layout_mode = 0
-offset_left = -984.0
-offset_top = 541.0
-offset_right = 41.0
-offset_bottom = 858.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 38
-text = "(esc to pause)"
-
 [node name="music" parent="." instance=ExtResource("5_lpubu")]
 stream = ExtResource("3_lt2xq")
+
+[node name="Kitten1" type="Sprite2D" parent="."]
+position = Vector2(-383, -169)
+scale = Vector2(0.520331, 0.423956)
+texture = ExtResource("2_8n18e")
