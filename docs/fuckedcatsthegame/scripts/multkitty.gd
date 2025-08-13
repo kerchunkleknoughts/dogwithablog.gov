@@ -324,13 +324,13 @@ func checkneeds():
 func evalneeds():
 	
 	
-	print(str(needfulfillment[needs.WATER]))
-	print(str(needfulfillment[needs.HUNGER]))
-	print(str(needfulfillment[needs.SLEEP]))
+	#print(str(needfulfillment[needs.WATER]))
+	#print(str(needfulfillment[needs.HUNGER]))
+	#print(str(needfulfillment[needs.SLEEP]))
 	
 	if(needfulfillment[needs.WATER]==1):
 		var a 
-		print("WATERNEED!!!!")
+	#	print("WATERNEED!!!!")
 		
 		need_to_recharge=needs.WATER;
 	
@@ -338,7 +338,7 @@ func evalneeds():
 		
 	if(needfulfillment[needs.HUNGER]==1):
 		
-		print("HUNGERNEED!!!!")
+	#	print("HUNGERNEED!!!!")
 		if(!(cafes.get_child_count()==0)):
 			
 			find_nearest_cafe();
@@ -352,7 +352,7 @@ func evalneeds():
 	
 	if(needfulfillment[needs.SLEEP]==1):
 		
-		print("SLEEPNEED!")
+	#	print("SLEEPNEED!")
 		
 		
 		
