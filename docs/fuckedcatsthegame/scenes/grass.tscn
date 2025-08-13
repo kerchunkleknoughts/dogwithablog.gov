@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddyxj7ddh8df2"]
+
+[ext_resource type="Texture2D" uid="uid://d3p58e713dh2s" path="res://Game assets/pc krita art/kitty game/Regular ground texture.png" id="1_e1kak"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.5, 1)
+scale = Vector2(1.015, 0.99)
+texture = ExtResource("1_e1kak")

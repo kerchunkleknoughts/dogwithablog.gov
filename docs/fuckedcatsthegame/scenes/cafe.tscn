@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byh6jyrh0thg5" path="res://scripts/cafe.gd" id="1_de0wi"]
 [ext_resource type="Script" uid="uid://cnc0c54dqni2i" path="res://scripts/game_manager.gd" id="2_qifwr"]
-[ext_resource type="Texture2D" uid="uid://cbt665ur34h5s" path="res://Game assets/ProjectUtumno_full.png" id="3_de0wi"]
+[ext_resource type="Texture2D" uid="uid://bk6g0dkm5rtpa" path="res://Game assets/pc krita art/kitty game/cafe png.png" id="3_de0wi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qtlar"]
 radius = 33.1361
@@ -18,7 +18,7 @@ position = Vector2(4, -5)
 scale = Vector2(1.81493, 1.76969)
 texture = ExtResource("3_de0wi")
 region_enabled = true
-region_rect = Rect2(224, 3, 31, 29)
+region_rect = Rect2(34, 28, 126, 138)
 
 [node name="Area2D" type="Area2D" parent="."]
 
