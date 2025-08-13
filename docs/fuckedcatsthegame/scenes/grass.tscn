@@ -5,6 +5,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.5, 1)
-scale = Vector2(1.015, 0.99)
+z_index = -2
+position = Vector2(53, 30)
+scale = Vector2(4.3075, 2.795)
 texture = ExtResource("1_e1kak")
