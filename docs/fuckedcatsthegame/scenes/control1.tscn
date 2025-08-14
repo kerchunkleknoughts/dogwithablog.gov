@@ -80,6 +80,7 @@ text = "0
 [node name="hope" type="Node" parent="."]
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = -687.0
 offset_top = 81.0
 offset_right = -281.0
@@ -91,6 +92,7 @@ theme_override_font_sizes/font_size = 44
 text = "CONTROLS:"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = -744.0
 offset_top = 168.0
 offset_right = -338.0

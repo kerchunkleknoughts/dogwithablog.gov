@@ -11,6 +11,9 @@ extends Node
 
 @onready var cafes=get_tree().get_root().get_node("game2/cafes")#$"../houses"
 
+@onready var yarnballs=get_tree().get_root().get_node("game2/yarnballs")#$"../houses"
+
+
 
 
 func money_change(change):
@@ -117,7 +120,7 @@ func house_report():
 
 
 
-
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!THIS IS A DEPRECIATED FUNCTION!!!!!!!!!!!!!!
 func create_house(xpos,ypos):
 	
 	var money_req=50;
@@ -137,6 +140,27 @@ func create_house(xpos,ypos):
 	#var origin = Vector2(1000, 800)
 	#house.set_position(origin)
 	#add_child(house)
+
+
+
+func new_yarn(xpos,ypos):
+	#this function will create a new house, then 
+	#it will update the house id, then store it in the houses array.
+	var path="res://scenes/yarn.tscn"
+	var targetnode=yarnballs
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	#print("here1!")
+	#scene.hid=GlobalVariables.h_id_counter;
+	#GlobalVariables.h_id_counter=GlobalVariables.h_id_counter+1
+	targetnode.add_child(scene)
+	#print("scene hid"+str(scene.hid))
+	#print("global hid"+ str(GlobalVariables.h_id_counter))
+	#print("here3!")
+
+
 
 
 

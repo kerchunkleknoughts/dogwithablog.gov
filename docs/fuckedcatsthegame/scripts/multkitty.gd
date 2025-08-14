@@ -29,9 +29,15 @@ var state=states.WAIT;
 
 
 
+
 @onready var ktid;
 
 var idle_animation_timer_active=0;
+
+var yarn_summon_odds=5
+#this is the chance that a kitty will summon yarn
+#each tick. 
+#this is out of a hundred.
 
 
 
@@ -618,6 +624,7 @@ func evalstate(delta):
 		#depsleep()
 		#dephunger()
 		idle_movement()
+		yarn_summon_eval(1000)
 		
 		checkneeds()
 		evalneeds() #something is done about needs only if not currently fulfilling a need.
@@ -655,6 +662,7 @@ func evalstate(delta):
 		
 		depsleep()
 		dephunger()
+		yarn_summon_eval(1000)
 		
 		
 		checkneeds()
@@ -723,3 +731,16 @@ func _process(delta: float) -> void:
 	
 func change_state(changeto):
 	self.state=changeto
+
+
+
+func yarn_summon_eval(outof):
+	#generate a random number, then based on yarn summon odds determine if 
+	#yarn should be summoned. 
+	var rng = RandomNumberGenerator.new()
+	var my_random_number = rng.randf_range(0, outof)
+	if(yarn_summon_odds>my_random_number):
+		control.new_yarn(self.position.x,self.position.y)
+		
+	
+	

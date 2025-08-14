@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv16l082syun"]
+
+[ext_resource type="Texture2D" uid="uid://27dxaqj05f8t" path="res://Game assets/pc krita art/kitty game/yarn sprite.png" id="1_c8m1u"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.99994, 3.00006)
+scale = Vector2(0.4725, 0.4775)
+texture = ExtResource("1_c8m1u")

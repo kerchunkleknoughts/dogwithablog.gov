@@ -44,6 +44,10 @@ func _physics_process(delta: float) -> void:
 		#control.house_report()
 		
 		
+	if Input.is_action_just_pressed("hpress"):
+		print("h has been pressed.")
+		control.new_yarn(self.position.x+100,self.position.y+100)
+		
 		
 		
 		
