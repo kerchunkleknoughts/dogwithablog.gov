@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://eo2k2sus0p6l"]
 
-[ext_resource type="AudioStream" uid="uid://cu3eg0pegdr32" path="res://audio/Tommy Wright III - Street Type Nigga 4.mp3" id="1_05ggv"]
+[ext_resource type="AudioStream" uid="uid://dh11snerkgrvb" path="res://Game assets/audio/Moon Germs.mp3" id="1_05ggv"]
 
 [node name="music" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_05ggv")

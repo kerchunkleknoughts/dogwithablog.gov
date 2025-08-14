@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://yqxrobmknin"]
 
 [ext_resource type="Script" uid="uid://dfhsy6r63oxlg" path="res://scripts/control.gd" id="1_8n18e"]
-[ext_resource type="AudioStream" uid="uid://cj4a7xe6ixfq6" path="res://audio/neco arc dilemma (meow) extended 4.mp3" id="3_lt2xq"]
+[ext_resource type="AudioStream" uid="uid://dlpj6g0jvyfrc" path="res://Game assets/audio/Captain Beefheart & His Magic Band - Hair Pie_ Bake 1 (1969).mp3" id="3_tjwpk"]
 [ext_resource type="Texture2D" uid="uid://d0k6bajae0wc0" path="res://Game assets/title/free-photo-of-farm-on-a-hill-at-the-foot-of-the-mountain.jpeg" id="4_tjwpk"]
 [ext_resource type="PackedScene" uid="uid://bjf6dyvn7w7dj" path="res://scenes/music0.tscn" id="5_lpubu"]
 [ext_resource type="Texture2D" uid="uid://igicn6x3kr33" path="res://Game assets/title/actual_t_fucker.png" id="5_lt2xq"]
@@ -28,7 +28,7 @@ position = Vector2(-667, 264)
 scale = Vector2(0.52775, 0.488463)
 
 [node name="music" parent="." instance=ExtResource("5_lpubu")]
-stream = ExtResource("3_lt2xq")
+stream = ExtResource("3_tjwpk")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(-666, 269)
