@@ -230,23 +230,22 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jc0xi"]
 size = Vector2(35, 35)
 
-[node name="fucker" type="CharacterBody2D"]
+[node name="fucker" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_gxu70")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -120)
+position = Vector2(1.5, -5)
 sprite_frames = SubResource("SpriteFrames_lo6bx")
 animation = &"gnometime"
 autoplay = "gnometime"
 frame_progress = 0.302323
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -122.5)
-shape = SubResource("RectangleShape2D_jc0xi")
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
 
-[node name="TileMap" type="TileMap" parent="."]
-format = 2
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["player"]]
+position = Vector2(3, -4)
+shape = SubResource("RectangleShape2D_jc0xi")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
