@@ -123,7 +123,7 @@ func house_report():
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!THIS IS A DEPRECIATED FUNCTION!!!!!!!!!!!!!!
 func create_house(xpos,ypos):
 	
-	var money_req=50;
+	var money_req=10;
 	
 	#this code creates a creature at the given position.
 	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
