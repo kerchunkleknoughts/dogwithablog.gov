@@ -349,7 +349,15 @@ func evalneeds():
 			
 			find_nearest_cafe();
 			
-			control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+			var isright=0
+			isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+			
+			if(isright):
+				
+				self.currentdirection=self.mydirection.RIGHT
+			else:
+				self.currentdirection=self.mydirection.LEFT
+			
 			self.state=states.MOVING
 			need_to_recharge=needs.HUNGER
 			

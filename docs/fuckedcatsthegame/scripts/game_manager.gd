@@ -14,6 +14,7 @@ extends Node
 @onready var yarnballs=get_tree().get_root().get_node("game2/yarnballs")#$"../houses"
 
 
+@onready var c1ml=get_tree().get_root().get_node("control1/drugs/c1moneylabel")
 
 
 func money_change(change):
@@ -36,7 +37,12 @@ func money_change(change):
 
 
 func update_label():
-	money_label.text=str(GlobalVariables.money)
+	
+	if(!(money_label==null)):
+		money_label.text=str(GlobalVariables.money)
+	
+	if(!(c1ml==null)):
+		c1ml.text=str(GlobalVariables.money)
 	
 
 
@@ -298,11 +304,21 @@ func advancedmovetonode(mag,node1,node2):
 	b.x = adjacent
 	b.y = opposite
 	
+	var isright=0;
+	
+	
+	
 	if(node1.position.x>node2.position.x):
 		b.x=b.x*-1
 		b.y=b.y*-1
-	
+		isright=1;
+		
 	self.movenode(b,node1)
+	
+	return isright
+	
+	
+	
 	
 	
 func find_distance(node1,node2):
