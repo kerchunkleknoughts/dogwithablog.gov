@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 			
 	if Input.is_action_just_pressed("kpress"):
 		print("khasbeenpressed")
-		control.new_cafe(self.position.x+100,self.position.y+100);
+		control.create_cafe(self.position.x+100,self.position.y+100);
 		
 		#kitty.report()
 		#for child in houses.get_children():

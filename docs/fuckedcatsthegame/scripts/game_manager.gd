@@ -183,7 +183,7 @@ func create_mult_house(xpos,ypos):
 	if(GlobalVariables.money>=money_req):
 		new_house(xpos,ypos);
 		#Create a new house, store in the houses array. 
-		GlobalVariables.money=0;
+		GlobalVariables.money=GlobalVariables.money-money_req;
 		
 		
 		
@@ -196,8 +196,35 @@ func create_mult_house(xpos,ypos):
 
 
 
+
+
+
 #func set_mult_house_ownership(houseid):
 	
+
+func create_cafe(xpos,ypos):
+	
+	var money_req=10;
+	
+	#this code creates a creature at the given position.
+	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
+	#var origin = Vector2(1000, 800)
+	#house.set_position(origin)
+	#add_child(house)
+	
+	if(GlobalVariables.money>=money_req):
+		new_cafe(xpos,ypos);
+		#Create a new house, store in the houses array. 
+		GlobalVariables.money=GlobalVariables.money-money_req;
+		
+		
+		
+	
+	update_label()
+	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
+	#var origin = Vector2(1000, 800)
+	#house.set_position(origin)
+	#add_child(house)
 
 
 
@@ -218,6 +245,7 @@ func find_vector_difference(node1,node2):
 	b.y = dify
 	
 	return b
+	
 	
 	
 func find_angle(differencevector):

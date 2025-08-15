@@ -108,7 +108,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Polygon2D3" type="Polygon2D" parent="."]
 position = Vector2(2497.52, 152)
 scale = Vector2(5.00206, 1.20833)
-polygon = PackedVector2Array(-824, 496, -736, 496, -824, 544, -736, 544)
+polygon = PackedVector2Array(-696, 280, -608, 280, -696, 328, -608, 328)
 uv = PackedVector2Array(-232, -64, -144, -64, -232, -16, -144, -16)
 polygons = [PackedInt32Array(0, 2, 3, 1)]
 internal_vertex_count = 4
@@ -116,10 +116,10 @@ internal_vertex_count = 4
 [node name="Label2" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.727987
-anchor_top = 0.806822
-anchor_right = -0.402198
-anchor_bottom = 0.806822
+anchor_left = -0.344426
+anchor_top = 0.556822
+anchor_right = -0.0186368
+anchor_bottom = 0.556822
 offset_left = -381.709
 offset_top = -101.55
 offset_right = 370.291
