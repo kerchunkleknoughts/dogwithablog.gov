@@ -2,7 +2,7 @@ extends Node
 
 
 
-var money=48;
+var money=20;
 
 
 

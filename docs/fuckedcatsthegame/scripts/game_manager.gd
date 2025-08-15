@@ -173,6 +173,7 @@ func new_yarn(xpos,ypos):
 func create_mult_house(xpos,ypos):
 	
 	var money_req=10;
+	var house_creation_successful=0;
 	
 	#this code creates a creature at the given position.
 	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
@@ -181,6 +182,7 @@ func create_mult_house(xpos,ypos):
 	#add_child(house)
 	
 	if(GlobalVariables.money>=money_req):
+		house_creation_successful=1
 		new_house(xpos,ypos);
 		#Create a new house, store in the houses array. 
 		GlobalVariables.money=GlobalVariables.money-money_req;
@@ -189,6 +191,12 @@ func create_mult_house(xpos,ypos):
 		
 	
 	update_label()
+	
+	print("is house creation succ?: " +str(house_creation_successful))
+	
+	return house_creation_successful;
+	
+	
 	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
 	#var origin = Vector2(1000, 800)
 	#house.set_position(origin)
@@ -327,6 +335,18 @@ func check_building_collision(node1,building):
 		
 		
 		
+		#control.create_mult_house(self.position.x+100,self.position.y+100)
+		#control.new_cat(self.position.x+100,self.position.y+100)
+
+func create_house_kitty_moves_in(xpos,ypos):
+	
+	var offset=100;
+	var issucc=create_mult_house(xpos,ypos)
+	print(str(issucc))
+	
+	#new_cat(xpos,ypos)
+	if(issucc==1):	
+		new_cat(xpos+offset,ypos+offset)
 		
 		
 		

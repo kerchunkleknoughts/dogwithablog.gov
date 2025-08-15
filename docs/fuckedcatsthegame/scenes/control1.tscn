@@ -26,8 +26,8 @@ scale = Vector2(2.60462, 1.4538)
 texture = ExtResource("1_jj5tx")
 
 [node name="Polygon2D" type="Polygon2D" parent="A6e24a6530a86e07Fd182a44Fb46d18a"]
-position = Vector2(695.111, -109.369)
-polygon = PackedVector2Array(-767.866, 74.2881, -692.231, -36.4562, -572.444, -34.3926, -569.757, 160.958, -657.677, 268.95, -710.66, 216.674, -799.733, 213.922)
+position = Vector2(691.656, -117.623)
+polygon = PackedVector2Array(-767.866, 74.2881, -692.231, -36.4562, -572.444, -34.3926, -580.123, 99.7386, -639.249, 178.842, -693.767, 141.01, -765.179, 148.576)
 
 [node name="pause" type="Node" parent="."]
 
@@ -102,8 +102,7 @@ theme_override_colors/font_color = Color(0.766796, 0.310737, 0.931637, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
-text = "Summon new cat: o
-Create a cat cafe: k
-Add money: y
-buy cat house: m
+text = "buy new cat house: z
+buy cat cafe: k
+
 "

@@ -363,12 +363,12 @@ func evalneeds():
 		
 		
 		if(!(houses.get_child_count()==0)):
-			
-			find_my_house()
-			
-			control.advancedmovetonode(sleepvel,self,self.myhouse)
-			self.state=states.MOVING
-			need_to_recharge=needs.SLEEP
+			if(!(self.myhouse==null)):
+				find_my_house()
+				
+				control.advancedmovetonode(sleepvel,self,self.myhouse)
+				self.state=states.MOVING
+				need_to_recharge=needs.SLEEP
 
 
 func check_boxes():
