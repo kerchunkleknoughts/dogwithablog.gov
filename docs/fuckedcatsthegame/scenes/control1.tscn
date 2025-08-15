@@ -110,3 +110,24 @@ text = "buy new cat house: z
 buy cat cafe: k
 
 "
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-2, -173)
+polygon = PackedVector2Array(-1120, 568, -808, 705, -672, 780, -993, 852, -1226, 829, -1252, 754)
+
+[node name="Label4" type="Label" parent="."]
+offset_left = -1155.0
+offset_top = 450.0
+offset_right = -749.0
+offset_bottom = 729.0
+scale = Vector2(1.01042, 1.09384)
+theme_override_colors/font_color = Color(0.766796, 0.310737, 0.931637, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "PRICES:
+
+CAFE: 10 dollar
+CAT HOUSE: 10 dollar
+
+"
