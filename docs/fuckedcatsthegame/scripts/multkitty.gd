@@ -250,8 +250,9 @@ var voicelines = [
 	 "I want to go back to bed",
 	 "fucking hell...",
 	 "...",
-	 "what time is it?"
-	
+	 "what time is it?",
+	 "meow.",
+	 "I want dinner."	
 	]
 
 
@@ -259,15 +260,13 @@ var voicelines = [
 func talk():
 	
 	var rng = RandomNumberGenerator.new()
-	var my_random_number = rng.randf_range(0, 4)
+	var my_random_number = rng.randf_range(0, voicelines.size())
+	#inclusive of min, exclusive of max (like most floating-point RNGs).
 	
 	var rando_talk = rng.randf_range(0, 1000)
 	
 	if(talk_odds>rando_talk):
-		
-	
-		if(my_random_number<=voicelines.size()):
-			control.new_text(self.position.x,self.position.y-50,1,voicelines[my_random_number])
+		control.new_text(self.position.x,self.position.y-50,1,voicelines[my_random_number])
 		
 
 
