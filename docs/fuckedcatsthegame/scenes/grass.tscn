@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddyxj7ddh8df2"]
+[gd_scene load_steps=4 format=3 uid="uid://ddyxj7ddh8df2"]
 
 [ext_resource type="Texture2D" uid="uid://d3p58e713dh2s" path="res://Game assets/pc krita art/kitty game/Regular ground texture.png" id="1_e1kak"]
+[ext_resource type="PackedScene" uid="uid://wyac0eke3l62" path="res://scenes/shrub1.tscn" id="2_yarb5"]
+[ext_resource type="PackedScene" uid="uid://c726833q0wuu8" path="res://scenes/shrub2.tscn" id="3_3kunl"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,3 +11,9 @@ z_index = -2
 position = Vector2(53, 30)
 scale = Vector2(4.3075, 2.795)
 texture = ExtResource("1_e1kak")
+
+[node name="Node2D" parent="." instance=ExtResource("2_yarb5")]
+position = Vector2(136, 103)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_3kunl")]
+position = Vector2(-109, 34)

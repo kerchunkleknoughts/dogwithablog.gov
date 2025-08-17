@@ -63,4 +63,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if(((daowner.position.x<=self.position.x+radius)&&(daowner.position.x>=self.position.x-radius)) && ((daowner.position.y<=self.position.y+radius)&&(daowner.position.y>=self.position.y-radius))):
 				if(daowner.checkhunger()):
 					daowner.state=daowner.states.RECHARGE
+					daowner.building_type_currently_at=daowner.building_types.CAFE;
 	pass # Replace with function body.

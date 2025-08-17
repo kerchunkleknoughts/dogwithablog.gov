@@ -17,6 +17,8 @@ extends Node
 @onready var c1ml=get_tree().get_root().get_node("control1/drugs/c1moneylabel")
 
 
+@onready var text=get_tree().get_root().get_node("game2/text")
+
 func money_change(change):
 	GlobalVariables.money += change
 	#Global.score+=1
@@ -90,6 +92,23 @@ func new_cafe(xpos,ypos):
 	print("scene hid"+str(scene.caid))
 	print("global hid"+ str(GlobalVariables.ca_id_counter))
 	#print("here3!")
+
+
+func new_text(xpos,ypos,expsec,textval):
+	#this function will create a new house, then 
+	#it will update the house id, then store it in the houses array.
+	var path="res://scenes/text.tscn"
+	var targetnode=text
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	#print("here1!")
+	scene.expsec=expsec
+	scene.textval=textval
+	targetnode.add_child(scene)
+	
+
 
 
 

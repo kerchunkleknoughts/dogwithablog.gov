@@ -51,33 +51,6 @@ enum mydirection{
 
 var currentdirection=mydirection.VERTICAL;
 
-enum states{
-	WAIT=0,
-	MOVING=1,
-	RECHARGE=2,
-	IDLEMOVE=3,
-}
-
-
-
-enum anistates{
-	IDLE=1,
-	MOVEMENT=2
-	
-}
-
-
-enum subanistates{
-	BLINK=1,
-	LEFTLOOK=2,
-	RIGHTLOOK=3,
-	IVLEFTLOOK=4,
-	IVRIGHTLOOK=5,
-	LEFTMOVE=6,
-	RIGHTMOVE=7,
-	CENTER=8,
-	
-}
 
 
 
@@ -130,6 +103,44 @@ enum needs{
 }
 
 
+enum building_types{
+	OUTSIDE=0,
+	HOME=1,
+	CAFE=2,
+	
+}
+
+
+enum states{
+	WAIT=0,
+	MOVING=1,
+	RECHARGE=2,
+	IDLEMOVE=3,
+}
+
+
+
+enum anistates{
+	IDLE=1,
+	MOVEMENT=2
+	
+}
+
+
+enum subanistates{
+	BLINK=1,
+	LEFTLOOK=2,
+	RIGHTLOOK=3,
+	IVLEFTLOOK=4,
+	IVRIGHTLOOK=5,
+	LEFTMOVE=6,
+	RIGHTMOVE=7,
+	CENTER=8,
+	
+}
+
+
+
 var need_to_recharge=0;
 
 
@@ -153,7 +164,9 @@ var my_random_number = rng.randf_range(-10.0, 10.0)
 
 
 
+var building_type_currently_at=building_types.OUTSIDE;
 
+var talk_odds=5
 
 
 
@@ -231,9 +244,31 @@ var my_random_number = rng.randf_range(-10.0, 10.0)
 
 
 
+var voicelines = [
+	"my feet hurt.", 
+	"where am I?",
+	 "I want to go back to bed",
+	 "fucking hell...",
+	 "...",
+	 "what time is it?"
+	
+	]
 
 
 
+func talk():
+	
+	var rng = RandomNumberGenerator.new()
+	var my_random_number = rng.randf_range(0, 4)
+	
+	var rando_talk = rng.randf_range(0, 1000)
+	
+	if(talk_odds>rando_talk):
+		
+	
+		if(my_random_number<=voicelines.size()):
+			control.new_text(self.position.x,self.position.y-50,1,voicelines[my_random_number])
+		
 
 
 
@@ -626,6 +661,8 @@ func evalstate(delta):
 	
 	#self.report()
 	
+	talk()
+	
 	if(self.state==states.WAIT):
 		evalphy(delta)
 		
@@ -663,6 +700,8 @@ func evalstate(delta):
 		
 	if(self.state==states.IDLEMOVE):
 		
+		
+		
 		idle_movement()
 		
 		evalphy(delta)
@@ -684,12 +723,12 @@ func evalstate(delta):
 		self.xvel=0
 		self.yvel=0
 		
-		if(need_to_recharge==needs.HUNGER):
+		if(building_type_currently_at==building_types.CAFE):
 			addhunger()
 			
 		
 	
-		if(need_to_recharge==needs.SLEEP):
+		if(building_type_currently_at==building_types.HOME):
 			addsleep()
 			
 		evalphy(delta)

@@ -57,4 +57,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if((howner.position.x<=self.position.x+radius)&&(howner.position.x>=self.position.x-radius)):
 		
 				howner.state=howner.states.RECHARGE
+				howner.building_type_currently_at=howner.building_types.HOME;
 	pass # Replace with function body.
