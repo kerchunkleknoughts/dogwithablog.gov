@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bd7loij83pavx"]
+[gd_scene load_steps=11 format=3 uid="uid://bd7loij83pavx"]
 
 [ext_resource type="PackedScene" uid="uid://bhxiiu0lcw6s1" path="res://scenes/fucker2.tscn" id="1_7pxbb"]
 [ext_resource type="Script" uid="uid://dfkvsp2tnbncy" path="res://scripts/game_2.gd" id="1_8j387"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dwkbehlv5eve0" path="res://scenes/Creaturee2.tscn" id="4_h21dd"]
 [ext_resource type="PackedScene" uid="uid://ddyxj7ddh8df2" path="res://scenes/grass.tscn" id="7_kh4a2"]
 [ext_resource type="PackedScene" uid="uid://dv16l082syun" path="res://scenes/yarn.tscn" id="8_8j387"]
+[ext_resource type="PackedScene" uid="uid://cy5strb44qkrt" path="res://scenes/fingee.tscn" id="9_5dhap"]
 
 [sub_resource type="TileSet" id="TileSet_u48pd"]
 
@@ -46,12 +47,27 @@ position = Vector2(1458, 237)
 [node name="Node2D2" parent="." instance=ExtResource("4_h21dd")]
 position = Vector2(272, 937)
 
-[node name="Label" type="Label" parent="."]
+[node name="premoneylabel" type="Label" parent="."]
 offset_left = 801.0
 offset_top = 234.0
 offset_right = 950.0
 offset_bottom = 257.0
 text = "money:"
+
+[node name="prefingerlabel" type="Label" parent="."]
+offset_left = 799.0
+offset_top = 279.0
+offset_right = 948.0
+offset_bottom = 302.0
+text = "fingers:
+"
+
+[node name="fingerlabel" type="Label" parent="."]
+offset_left = 872.0
+offset_top = 279.0
+offset_right = 1021.0
+offset_bottom = 302.0
+text = "0"
 
 [node name="moneylabel" type="Label" parent="."]
 offset_left = 874.0
@@ -78,7 +94,7 @@ position = Vector2(1555, 888)
 position = Vector2(931, 535)
 
 [node name="Node2D7" parent="Node2D7" instance=ExtResource("7_kh4a2")]
-position = Vector2(626, -12)
+position = Vector2(626, -2)
 
 [node name="Node2D8" parent="." instance=ExtResource("7_kh4a2")]
 position = Vector2(917, 186)
@@ -124,3 +140,6 @@ position = Vector2(-110, 151)
 
 [node name="Node2D3" parent="Node2D15" instance=ExtResource("8_8j387")]
 position = Vector2(287, 844)
+
+[node name="Node2D16" parent="." instance=ExtResource("9_5dhap")]
+position = Vector2(873, 684)

@@ -8,7 +8,10 @@ extends Node
 
 @onready var howner
 
+@onready var currenthousetype=house_types.DOUGHHOUSE;
 
+@onready var cathouse_sprite=$cat_house
+@onready var doughhousesprite=$dough_house
 
 
 #@onready var house_hitbox=$CollisionShape2D
@@ -19,12 +22,30 @@ enum states{
 	RECHARGE=2
 }
 
+enum house_types{
+	CATHOUSE=0,
+	DOUGHHOUSE=1
+
+	}
+	
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
+	if(currenthousetype==house_types.CATHOUSE):
+			cathouse_sprite.visible=true;
+	else:
+			cathouse_sprite.visible=false;
+		
+
+	if(currenthousetype==house_types.DOUGHHOUSE):
+			doughhousesprite.visible=true;
+	else:
+			doughhousesprite.visible=false;
+		
+
 
 	#connect("body_entered", self, "_on_body_entered")
 	pass # Replace with function body.

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://caci2cy1bv2hg"]
+[gd_scene load_steps=6 format=3 uid="uid://caci2cy1bv2hg"]
 
 [ext_resource type="Script" uid="uid://bifs0eki58vsh" path="res://scripts/multhouse.gd" id="1_jhj3f"]
 [ext_resource type="Script" uid="uid://cnc0c54dqni2i" path="res://scripts/game_manager.gd" id="2_v8xm8"]
 [ext_resource type="Texture2D" uid="uid://bm22732tgr2ee" path="res://Game assets/house1.png" id="3_jhj3f"]
+[ext_resource type="Texture2D" uid="uid://cdptpyc0gbi1b" path="res://Game assets/doughhouse.png" id="4_v8xm8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qtlar"]
 radius = 33.1361
@@ -13,12 +14,16 @@ script = ExtResource("1_jhj3f")
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("2_v8xm8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="cat_house" type="Sprite2D" parent="."]
 position = Vector2(-2, -39)
 scale = Vector2(1.81493, 1.76969)
 texture = ExtResource("3_jhj3f")
 region_enabled = true
 region_rect = Rect2(32, 18, 77, 127)
+
+[node name="dough_house" type="Sprite2D" parent="."]
+position = Vector2(5, -60)
+texture = ExtResource("4_v8xm8")
 
 [node name="Area2D" type="Area2D" parent="."]
 

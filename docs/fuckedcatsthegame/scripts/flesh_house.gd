@@ -10,19 +10,6 @@ extends Node
 
 
 
-@onready var currenthousetype=house_types.CATHOUSE;
-
-@onready var cathouse_sprite=$cat_house
-@onready var doughhousesprite=$dough_house
-
-
-enum house_types{
-	CATHOUSE=0,
-	DOUGHHOUSE=1
-
-	}
-	
-
 
 
 #@onready var house_hitbox=$CollisionShape2D
@@ -33,8 +20,6 @@ enum house_types{
 func _ready() -> void:
 	
 	self.z_index=100;
-	
-	
 
 	#connect("body_entered", self, "_on_body_entered")
 	pass # Replace with function body.
@@ -52,22 +37,6 @@ func _process(delta: float) -> void:
 
 	
 	
-func animation_init():
-		
-	if(currenthousetype==house_types.CATHOUSE):
-			cathouse_sprite.visible=true;
-	else:
-			cathouse_sprite.visible=false;
-		
-
-	if(currenthousetype==house_types.DOUGHHOUSE):
-			doughhousesprite.visible=true;
-	else:
-			doughhousesprite.visible=false;
-		
-
-
-
 
 
 #func _on_area_2d_area_entered(area: Area2D) -> void:

@@ -1,7 +1,7 @@
 extends Node2D
 
 
-@onready var anime=$AnimatedSprite2D
+
 @onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
 @onready var cafes=get_tree().get_root().get_node("game2/cafes")#$"../houses"
 
@@ -170,11 +170,20 @@ var talk_odds=5
 
 
 
+@onready var catanimation=$cat_animation
+@onready var doughanimation=$dough_animation
 
 
+enum npc_type{
+	CATNPC=0,
+	DOUGHNPC=1
+	
+}
+
+@onready var current_npc_type=npc_type.CATNPC
 
 
-
+@onready var anime=$cat_animation
 
 
 
@@ -245,7 +254,7 @@ var talk_odds=5
 
 
 var voicelines = [
-	"my feet hurt.", 
+	 
 	"where am I?",
 	 "I want to go back to bed",
 	 "fucking hell...",
@@ -271,11 +280,34 @@ func talk():
 
 
 
+
+
 func _ready() -> void:
+	
+
+	
+	
 	
 	find_my_house()
 	
 	pass # Replace with function body.
+
+
+
+func animation_init():
+		
+	if(current_npc_type==npc_type.CATNPC):
+			catanimation.visible=true;
+			anime=catanimation
+	else:
+			catanimation.visible=false;
+		
+	if(current_npc_type==npc_type.DOUGHNPC):
+			doughanimation.visible=true;
+			anime=doughanimation
+	else:
+			doughanimation.visible=false;
+		
 
 
 func find_my_house():

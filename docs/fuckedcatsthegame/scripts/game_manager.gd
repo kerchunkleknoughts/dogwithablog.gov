@@ -34,7 +34,7 @@ func money_change(change):
 	#moneylabel.text="Drugs consumed: " + str(score)
 	
 
-
+@onready var finger_label=get_tree().get_root().get_node("game2/fingerlabel")#$"../moneylabel"
 
 
 
@@ -42,6 +42,10 @@ func update_label():
 	
 	if(!(money_label==null)):
 		money_label.text=str(GlobalVariables.money)
+	
+	if(!(finger_label==null)):
+		finger_label.text=str(GlobalVariables.fingers)
+	
 	
 	if(!(c1ml==null)):
 		c1ml.text=str(GlobalVariables.money)
@@ -57,13 +61,16 @@ func lloadsc(path,targetnode):
 
 
 
-func new_house(xpos,ypos):
+func new_house(xpos,ypos,housetype):
 	#this function will create a new house, then 
 	#it will update the house id, then store it in the houses array.
 	var path="res://scenes/multhouse.tscn"
 	var targetnode=houses
 	#print("here2!")
 	var scene = load(path).instantiate()
+	
+
+	
 	var origin = Vector2(xpos, ypos)
 	scene.set_position(origin)
 	#print("here1!")
@@ -73,6 +80,20 @@ func new_house(xpos,ypos):
 	print("scene hid"+str(scene.hid))
 	print("global hid"+ str(GlobalVariables.h_id_counter))
 	#print("here3!")
+	
+	
+	if(housetype==0):
+		scene.currenthousetype=scene.house_types.CATHOUSE
+		scene.animation_init()
+	if(housetype==1):
+		scene.currenthousetype=scene.house_types.DOUGHHOUSE
+		scene.animation_init()
+	
+	
+
+
+
+
 
 
 
@@ -113,7 +134,7 @@ func new_text(xpos,ypos,expsec,textval):
 
 
 
-func new_cat(xpos,ypos):
+func new_cat(xpos,ypos,npctype):
 	var path="res://scenes/multkitty.tscn"
 	var targetnode=kittys
 	#print("here2!")
@@ -126,6 +147,13 @@ func new_cat(xpos,ypos):
 	targetnode.add_child(scene)
 	print("scene hid"+str(scene.ktid))
 	print("global hid"+ str(GlobalVariables.ki_id_counter))
+	
+	if(npctype==0):
+		scene.current_npc_type=scene.npc_type.CATNPC
+		scene.animation_init()
+	if(npctype==1):
+		scene.current_npc_type=scene.npc_type.DOUGHNPC
+		scene.animation_init()	
 	#print("here3!")
 
 
@@ -195,7 +223,7 @@ func new_yarn(xpos,ypos):
 
 
 
-func create_mult_house(xpos,ypos):
+func create_mult_house(xpos,ypos,housetype):
 	
 	var money_req=10;
 	var house_creation_successful=0;
@@ -208,7 +236,7 @@ func create_mult_house(xpos,ypos):
 	
 	if(GlobalVariables.money>=money_req):
 		house_creation_successful=1
-		new_house(xpos,ypos);
+		new_house(xpos,ypos,housetype);
 		#Create a new house, store in the houses array. 
 		GlobalVariables.money=GlobalVariables.money-money_req;
 		
@@ -373,15 +401,16 @@ func check_building_collision(node1,building):
 		#control.create_mult_house(self.position.x+100,self.position.y+100)
 		#control.new_cat(self.position.x+100,self.position.y+100)
 
-func create_house_kitty_moves_in(xpos,ypos):
+
+func create_house_kitty_moves_in(xpos,ypos,npctype):
 	
 	var offset=100;
-	var issucc=create_mult_house(xpos,ypos)
+	var issucc=create_mult_house(xpos,ypos,npctype)
 	print(str(issucc))
 	
 	#new_cat(xpos,ypos)
 	if(issucc==1):	
-		new_cat(xpos+offset,ypos+offset)
+		new_cat(xpos+offset,ypos+offset,npctype)
 		
 		
 		

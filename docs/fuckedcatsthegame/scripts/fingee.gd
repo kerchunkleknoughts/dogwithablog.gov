@@ -12,6 +12,8 @@ func _ready() -> void:
 
 
 
+
+
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var radius=150;
 	print("YARN COL!")
@@ -21,7 +23,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("player"):
 		print("PICKUP!")
 		self.queue_free()
-		GlobalVariables.money=GlobalVariables.money+1;
+		GlobalVariables.fingers=GlobalVariables.fingers+1;
 		
 	
 	
