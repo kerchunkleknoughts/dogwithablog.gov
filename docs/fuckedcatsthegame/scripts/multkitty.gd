@@ -279,6 +279,40 @@ func talk():
 		
 
 
+func talk_init():
+	
+	if(current_npc_type==npc_type.CATNPC):
+			voicelines = [
+		 
+
+		 
+	"where am I?",
+	 "I want to go back to bed",
+	 "fucking hell...",
+	 "...",
+	 "what time is it?",
+	 "meow.",
+	 "I want dinner."	
+		
+		]
+	
+	
+	if(current_npc_type==npc_type.DOUGHNPC):
+		voicelines = [
+	 
+
+	 
+	 "I want blood.",
+	 "I need to get my toaster repaired.",
+	"What a lovely day!",	
+	"Cant wait for sundays service!",
+	"Boy! what a nice lawn!",
+	"I wonder what the joneses are up to?"
+	
+	
+	]
+
+
 
 
 
@@ -296,6 +330,8 @@ func _ready() -> void:
 
 func animation_init():
 		
+	talk_init()
+	
 	if(current_npc_type==npc_type.CATNPC):
 			catanimation.visible=true;
 			anime=catanimation
@@ -774,6 +810,9 @@ func evalstate(delta):
 	
 
 func idle_check():
+	
+	talk_init();
+	
 	if(self.sleep>=sleep_recharge_thresh):
 		self.state=self.states.WAIT
 		

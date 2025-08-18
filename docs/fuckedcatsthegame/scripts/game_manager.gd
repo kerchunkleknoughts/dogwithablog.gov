@@ -412,6 +412,7 @@ func create_house_kitty_moves_in(xpos,ypos,npctype):
 	if(issucc==1):	
 		new_cat(xpos+offset,ypos+offset,npctype)
 		
+	
 		
 		
 		
