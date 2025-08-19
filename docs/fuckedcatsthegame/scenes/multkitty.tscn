@@ -773,7 +773,6 @@ shape = SubResource("CircleShape2D_r7qoi")
 [node name="idle_animation_timer" type="Timer" parent="."]
 
 [node name="deathtimer" type="Timer" parent="."]
-wait_time = 0.5
 
 [connection signal="timeout" from="idle_move_timer" to="." method="_on_idle_move_timer_timeout"]
 [connection signal="timeout" from="idle_animation_timer" to="." method="_on_idle_animation_timer_timeout"]

@@ -2,6 +2,9 @@ extends Node2D
 
 
 
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!TO CONVERT GIFS INTO SPRITESHEETS!!!::::::: https://ezgif.com/gif-to-sprite/ezgif-4eb7ff1703391.gif
+#untill I figure out a better way to do this that doesnt involve a website.
+
 @onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
 @onready var cafes=get_tree().get_root().get_node("game2/cafes")#$"../houses"
 
