@@ -82,12 +82,11 @@ func new_house(xpos,ypos,housetype):
 	#print("here3!")
 	
 	
-	if(housetype==0):
-		scene.currenthousetype=scene.house_types.CATHOUSE
-		scene.animation_init()
-	if(housetype==1):
-		scene.currenthousetype=scene.house_types.DOUGHHOUSE
-		scene.animation_init()
+	
+	scene.currenthousetype=housetype;
+	scene.animation_init()
+
+
 	
 	
 
@@ -148,13 +147,10 @@ func new_cat(xpos,ypos,npctype):
 	print("scene hid"+str(scene.ktid))
 	print("global hid"+ str(GlobalVariables.ki_id_counter))
 	
-	if(npctype==0):
-		scene.current_npc_type=scene.npc_type.CATNPC
-		scene.animation_init()
-	if(npctype==1):
-		scene.current_npc_type=scene.npc_type.DOUGHNPC
-		scene.animation_init()	
-	#print("here3!")
+	
+	scene.current_npc_type=npctype
+	scene.animation_init()
+
 
 
 
@@ -196,7 +192,7 @@ func create_house(xpos,ypos):
 
 
 
-func new_yarn(xpos,ypos):
+func new_yarn(xpos,ypos, type):
 	#this function will create a new house, then 
 	#it will update the house id, then store it in the houses array.
 	var path="res://scenes/yarn.tscn"
@@ -205,6 +201,9 @@ func new_yarn(xpos,ypos):
 	var scene = load(path).instantiate()
 	var origin = Vector2(xpos, ypos)
 	scene.set_position(origin)
+	
+	
+	
 	#print("here1!")
 	#scene.hid=GlobalVariables.h_id_counter;
 	#GlobalVariables.h_id_counter=GlobalVariables.h_id_counter+1
@@ -212,6 +211,9 @@ func new_yarn(xpos,ypos):
 	#print("scene hid"+str(scene.hid))
 	#print("global hid"+ str(GlobalVariables.h_id_counter))
 	#print("here3!")
+	scene.current_item_type=type; 
+	scene.yarn_init();
+	
 
 
 

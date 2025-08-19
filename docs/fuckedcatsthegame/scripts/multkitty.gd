@@ -857,7 +857,7 @@ func yarn_summon_eval(outof):
 	var rng = RandomNumberGenerator.new()
 	var my_random_number = rng.randf_range(0, outof)
 	if(yarn_summon_odds>my_random_number):
-		control.new_yarn(self.position.x,self.position.y)
+		control.new_yarn(self.position.x,self.position.y,current_npc_type)
 		
 	
 	
