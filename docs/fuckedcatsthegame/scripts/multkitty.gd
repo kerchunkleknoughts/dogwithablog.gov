@@ -9,6 +9,8 @@ extends Node2D
 
 @onready var idle_animate_timer: Timer =$idle_animation_timer
 
+@onready var death_timer: Timer =$deathtimer
+
 
 var ani_start=0;
 var anime_switch_toggle=0;
@@ -63,10 +65,18 @@ var subanistate=subanistates.CENTER;
 
 var health=10;
 var healthmax=10;
+var healthmin=0;
+
+var isdead=0;
+
 
 var hunger=1200;
 var hungermax=2000;
 var hungermin=1100
+#var hungerdam=900;
+var hungerdam=200
+
+#this is the hunger at which starvation occurs, and health is reduced. 
 var hunger_recharge_thresh=2000;
 
 var sleep=1200;
@@ -172,6 +182,7 @@ var talk_odds=5
 
 @onready var catanimation=$cat_animation
 @onready var doughanimation=$dough_animation
+@onready var deathanimation=$death_animation
 
 
 enum npc_type{
@@ -184,6 +195,7 @@ enum npc_type{
 
 
 @onready var anime=$cat_animation
+
 
 
 
@@ -330,6 +342,8 @@ func _ready() -> void:
 
 func animation_init():
 		
+	deathanimation.visible=false;	
+		
 	talk_init()
 	
 	if(current_npc_type==npc_type.CATNPC):
@@ -427,6 +441,7 @@ func find_nearest_cafe():
 func checkneeds():
 	needfulfillment[needs.SLEEP]=checksleep();
 	needfulfillment[needs.HUNGER]=checkhunger();
+	checkstarve();
 
 
 func evalneeds():
@@ -745,6 +760,7 @@ func evalstate(delta):
 		
 		self.visible=true;
 	
+		lossconditioneval()
 	
 	
 	if(self.state==states.MOVING):
@@ -763,7 +779,7 @@ func evalstate(delta):
 		#for now, only one need is served at a time. 
 		#
 		
-		
+		lossconditioneval()
 		
 	if(self.state==states.IDLEMOVE):
 		
@@ -784,6 +800,7 @@ func evalstate(delta):
 		self.visible=true;
 
 
+		lossconditioneval()
 
 
 	if(self.state==states.RECHARGE):
@@ -808,6 +825,9 @@ func evalstate(delta):
 		#add condition to return back to idle state:
 		idle_check();
 	
+	
+		lossconditioneval()
+
 
 func idle_check():
 	
@@ -859,5 +879,38 @@ func yarn_summon_eval(outof):
 	if(yarn_summon_odds>my_random_number):
 		control.new_yarn(self.position.x,self.position.y,current_npc_type)
 		
+		
+		
+func lossconditioneval():
 	
-	
+	checkhealth()
+	eval_death()
+		
+		
+func checkstarve():
+	if(hunger<hungerdam):
+		health=health-1;
+
+func checkhealth():
+	if(health<healthmin):
+		isdead=1;
+
+
+var deathtoggle=1;
+func eval_death():
+	if(isdead==1):
+		if(deathtoggle==1):
+			death_timer.start()
+			deathtoggle=0;
+		
+		deathanimation.visible=true
+		deathanimation.play("explode")
+		
+		
+
+
+
+
+func _on_deathtimer_timeout() -> void:
+	self.queue_free()	
+	pass # Replace with function body.
