@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("opress"):
 		print("ohasbeenpressed")
-		control.new_cat(self.position.x+100,self.position.y+100)
+		#control.new_cat(self.position.x+100,self.position.y+100)
 		
 		#kitty.report()
 		#control.house_report()

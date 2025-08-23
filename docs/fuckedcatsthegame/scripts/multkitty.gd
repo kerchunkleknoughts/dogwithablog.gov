@@ -469,6 +469,7 @@ func evalneeds():
 			
 			find_nearest_cafe();
 			
+			
 			var isright=0
 			isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
 			
@@ -778,7 +779,7 @@ func evalstate(delta):
 		sb_anime_change()
 		self.visible=true;
 
-		#evalneeds()
+
 		#for now, only one need is served at a time. 
 		#
 		
@@ -810,6 +811,7 @@ func evalstate(delta):
 		self.xvel=0
 		self.yvel=0
 		
+		
 		if(building_type_currently_at==building_types.CAFE):
 			addhunger()
 			
@@ -817,6 +819,7 @@ func evalstate(delta):
 	
 		if(building_type_currently_at==building_types.HOME):
 			addsleep()
+			
 			
 		evalphy(delta)
 		checkneeds()
@@ -829,7 +832,8 @@ func evalstate(delta):
 		idle_check();
 	
 	
-		lossconditioneval()
+		
+
 
 
 func idle_check():
@@ -840,8 +844,22 @@ func idle_check():
 		self.state=self.states.WAIT
 		
 	if(self.hunger>=hunger_recharge_thresh):
-		self.state=self.states.WAIT	
 		
+		find_nearest_cafe();
+		#I am not sure why but at this point sometimes 
+		#npc will lose their reference to the nearest cafe, 
+		#so for the time being, run the function again I guess. 
+		
+		
+		if(!(closest_cafe==null)):
+			var a
+			
+			
+		#closest_cafe.occupant_cnt=closest_cafe.occupant_cnt-1;
+		closest_cafe.queoccrem()
+		closest_cafe.update_labels();
+		
+		self.state=self.states.WAIT	
 		
 		
 
