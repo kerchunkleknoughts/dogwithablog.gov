@@ -84,6 +84,7 @@ var hungermin=9999;
 var hungerdam=200
 #this is the hunger at which starvation occurs, and health is reduced. 
 var hunger_recharge_thresh=10500;
+	
 
 
 
@@ -369,7 +370,23 @@ func talk_init():
 func _ready() -> void:
 	
 
+	hunger=2000;
+	hungermax=3000;
+	hungermin=1500;
+	#value at which npc seeks out cafe
 	
+		#var hungerdam=900;
+	hungerdam=200
+		#this is the hunger at which starvation occurs, and health is reduced. 
+	hunger_recharge_thresh=3000;
+		
+		
+	sleep=3000;
+	sleepmax=4000;
+	sleepmin=1500;
+	#value at which npc seeks out home.
+	
+	sleep_recharge_thresh=4000;
 	
 	
 	find_my_house()
@@ -504,18 +521,22 @@ func checkneeds():
 func evalneeds():
 	
 	
+
 	#print(str(needfulfillment[needs.WATER]))
 	#print(str(needfulfillment[needs.HUNGER]))
 	#print(str(needfulfillment[needs.SLEEP]))
+	
 	
 	if(needfulfillment[needs.WATER]==1):
 		var a 
 	#	print("WATERNEED!!!!")
 		
 		need_to_recharge=needs.WATER;
-	
-			
 		
+			
+	
+	
+	
 	if(needfulfillment[needs.HUNGER]==1):
 		
 	#	print("HUNGERNEED!!!!")
@@ -535,7 +556,8 @@ func evalneeds():
 			
 			self.state=states.MOVING
 			need_to_recharge=needs.HUNGER
-			
+		return;
+
 		
 		
 	
@@ -552,6 +574,13 @@ func evalneeds():
 				control.advancedmovetonode(sleepvel,self,self.myhouse)
 				self.state=states.MOVING
 				need_to_recharge=needs.SLEEP
+
+		return;
+
+		
+
+	
+
 
 
 func check_boxes():
@@ -822,23 +851,25 @@ func evalstate(delta):
 	
 	
 	if(self.state==states.MOVING):
+		
 		evalphy(delta)
 		
 		
 		depsleep()
 		dephunger()
-		
-		
 		checkneeds()
+		
+		
+		
 		sb_anime_change()
 		self.visible=true;
 
 
-		#for now, only one need is served at a time. 
-		#
 		
 		
+		#check if npc should die while moving to a building.
 		lossconditioneval()
+		
 		building_check()
 		
 		
@@ -988,30 +1019,34 @@ func eval_death():
 
 
 func building_check():
+	
 	var a 
 	#this function checks if the building that 
 	#an npc is navigating to is still available to 
 	#accommodate the npc.
-	if(!(closest_cafe.check_if_space_avaliable())):
-		var aa 
-		find_nearest_cafe()
-		
-		#reposition to next cafe
-		
-		var isright=0
-		isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
-		
-		if(isright):
-			
-			self.currentdirection=self.mydirection.RIGHT
-		else:
-			self.currentdirection=self.mydirection.LEFT
-		
-		self.state=states.MOVING
-		need_to_recharge=needs.HUNGER
-		
-		
 	
+	if(need_to_recharge==needs.HUNGER):
+			
+		if(!(closest_cafe.check_if_space_avaliable())):
+			var aa 
+			find_nearest_cafe()
+			
+			#reposition to next cafe
+			
+			var isright=0
+			isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+			
+			if(isright):
+				
+				self.currentdirection=self.mydirection.RIGHT
+			else:
+				self.currentdirection=self.mydirection.LEFT
+			
+			self.state=states.MOVING
+			need_to_recharge=needs.HUNGER
+			
+			
+		
 
 
 
