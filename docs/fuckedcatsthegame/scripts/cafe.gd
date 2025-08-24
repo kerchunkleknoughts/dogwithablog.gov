@@ -129,6 +129,13 @@ func queoccrem():
 	pass
 
 
+
+
+
+
+
+
+
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var radius=100;
 	print("COL!")
@@ -144,6 +151,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	
 	if area.is_in_group("kitties"):
 		
+		
+		queoccadd();
+		
 		print("KITTY COLLISION!!")
 		
 		daowner=area.get_parent();
@@ -156,9 +166,25 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				daowner.state=daowner.states.RECHARGE
 				daowner.building_type_currently_at=daowner.building_types.CAFE;
 				#occupant_cnt=occupant_cnt+1;
-				queoccadd();
+				
 				
 				
 	update_labels()
 					
 	pass # Replace with function body.
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.is_in_group("kitties"):
+		queoccrem()
+		update_labels();
+	
+	pass # Replace with function body.
+
+
+
+func check_if_space_avaliable():
+	if(occupant_cnt<occupant_limit):
+		return true;
+	else:
+		return false;

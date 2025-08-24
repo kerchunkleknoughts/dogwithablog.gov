@@ -73,14 +73,21 @@ var healthmin=0;
 var isdead=0;
 
 
-var hunger=1200;
+
+
+
+
+var hunger=10000;
 var hungermax=2000;
-var hungermin=1100
+var hungermin=9999;
 #var hungerdam=900;
 var hungerdam=200
-
 #this is the hunger at which starvation occurs, and health is reduced. 
-var hunger_recharge_thresh=2000;
+var hunger_recharge_thresh=10500;
+
+
+
+
 
 var sleep=1200;
 var sleepmax=2000;
@@ -245,6 +252,7 @@ enum npc_type{
 
 
 
+	
 
 
 
@@ -253,17 +261,44 @@ enum npc_type{
 
 
 
+enum initstates
+{
+NEVER_STAVE_ALWAYS_HUNGRY=0,
+REGULAR_GAMEPLAY=1,
+	
+}
 
 
 
+@onready var needdebugvariable=initstates.REGULAR_GAMEPLAY;
+
+func kitty_init():
+	
+
+	if(needdebugvariable==initstates.NEVER_STAVE_ALWAYS_HUNGRY):
+	
+		hunger=10000;
+		hungermax=2000;
+		hungermin=9999;
+		#var hungerdam=900;
+		hungerdam=200
+		#this is the hunger at which starvation occurs, and health is reduced. 
+		hunger_recharge_thresh=10500;
+			
 
 
+	if(needdebugvariable==initstates.REGULAR_GAMEPLAY):
+	
+		hunger=2000;
+		hungermax=3000;
+		hungermin=12;
+		#var hungerdam=900;
+		hungerdam=200
+		#this is the hunger at which starvation occurs, and health is reduced. 
+		hunger_recharge_thresh=1500;
+			
 
-
-
-
-
-
+	pass
 
 
 
@@ -429,17 +464,36 @@ func find_nearest_cafe():
 	
 	var cafe_count=0;
 	var shortest_distance=100000000000;
+	var cafe_found=0;
+	
 	for child in cafes.get_children():
 		
 		var currentdist=control.find_distance(self,child)
 		if(currentdist<shortest_distance):
 			shortest_distance=currentdist;
-			self.closest_cafe=child;
+			
+			if(child.check_if_space_avaliable()):
+				self.closest_cafe=child;
+				cafe_found=1;
 	
 		cafe_count=cafe_count+1;
+		
+	
+	
 	
 	#if(!(cafe_count==0)):
 		#closest_cafe.daowner=self
+	if(!(cafe_found)):
+		
+		#if a cafe is not found, pick furthest anyway and walk towards it. 
+		#this will lead to either a death condition, or by then the cafe
+		#will have occupancy. I am picking the furthest because this 
+		#gives pawns a chance to free up cafe space. 
+		#if village is completely overloaded, that is players fault and the npc will die. 
+		
+		for child in cafes.get_children():
+			self.closest_cafe=child;
+
 
 func checkneeds():
 	needfulfillment[needs.SLEEP]=checksleep();
@@ -783,7 +837,10 @@ func evalstate(delta):
 		#for now, only one need is served at a time. 
 		#
 		
+		
 		lossconditioneval()
+		building_check()
+		
 		
 	if(self.state==states.IDLEMOVE):
 		
@@ -845,19 +902,19 @@ func idle_check():
 		
 	if(self.hunger>=hunger_recharge_thresh):
 		
-		find_nearest_cafe();
+		#find_nearest_cafe();
 		#I am not sure why but at this point sometimes 
 		#npc will lose their reference to the nearest cafe, 
 		#so for the time being, run the function again I guess. 
 		
 		
-		if(!(closest_cafe==null)):
-			var a
+		#if(!(closest_cafe==null)):
+		#	var a
 			
 			
 		#closest_cafe.occupant_cnt=closest_cafe.occupant_cnt-1;
-		closest_cafe.queoccrem()
-		closest_cafe.update_labels();
+		#closest_cafe.queoccrem()
+		#closest_cafe.update_labels();
 		
 		self.state=self.states.WAIT	
 		
@@ -929,6 +986,32 @@ func eval_death():
 		
 		
 
+
+func building_check():
+	var a 
+	#this function checks if the building that 
+	#an npc is navigating to is still available to 
+	#accommodate the npc.
+	if(!(closest_cafe.check_if_space_avaliable())):
+		var aa 
+		find_nearest_cafe()
+		
+		#reposition to next cafe
+		
+		var isright=0
+		isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+		
+		if(isright):
+			
+			self.currentdirection=self.mydirection.RIGHT
+		else:
+			self.currentdirection=self.mydirection.LEFT
+		
+		self.state=states.MOVING
+		need_to_recharge=needs.HUNGER
+		
+		
+	
 
 
 

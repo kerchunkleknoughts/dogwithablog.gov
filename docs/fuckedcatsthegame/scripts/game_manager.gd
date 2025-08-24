@@ -150,6 +150,17 @@ func new_cat(xpos,ypos,npctype):
 	
 	scene.current_npc_type=npctype
 	scene.animation_init()
+	
+	
+	#I have no fucking clue why this causes the building check function to crash, 
+	#this for whatever reason makes the npc have a null pointer to the cafe. 
+	# why am I cursed with such incomprehensible bugs? 
+	# did I do something horrible in a past life and I am now just 
+	# paying for it? 
+	
+	#scene.kitty_init();
+	
+	pass
 
 
 

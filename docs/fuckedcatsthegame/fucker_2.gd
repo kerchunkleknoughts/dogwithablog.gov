@@ -73,6 +73,7 @@ func _physics_process(delta: float) -> void:
 		#control.create_house(1000, 800)
 		control.create_house_kitty_moves_in(self.position.x+100,self.position.y+100,0)
 		
+		
 	
 	if Input.is_action_just_pressed("xpress"):
 		print("zpressed")
