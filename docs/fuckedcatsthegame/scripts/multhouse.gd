@@ -14,11 +14,13 @@ extends Node
 
 @onready var cathouse_sprite=$cat_house
 @onready var doughhousesprite=$dough_house
+@onready var ramidhousesprite=$ramid_house
 
 
 enum house_types{
 	CATHOUSE=0,
-	DOUGHHOUSE=1
+	DOUGHHOUSE=1,
+	RAMIDHOUSE=2,
 
 	}
 	
@@ -64,6 +66,13 @@ func animation_init():
 			doughhousesprite.visible=true;
 	else:
 			doughhousesprite.visible=false;
+	
+	
+	
+	if(currenthousetype==house_types.RAMIDHOUSE):
+			ramidhousesprite.visible=true;
+	else:
+			ramidhousesprite.visible=false;
 		
 
 

@@ -96,7 +96,7 @@ func new_house(xpos,ypos,housetype):
 
 
 
-func new_cafe(xpos,ypos):
+func new_cafe(xpos,ypos,cafe_type):
 	#this function will create a new house, then 
 	#it will update the house id, then store it in the houses array.
 	var path="res://scenes/cafe.tscn"
@@ -112,6 +112,8 @@ func new_cafe(xpos,ypos):
 	print("scene hid"+str(scene.caid))
 	print("global hid"+ str(GlobalVariables.ca_id_counter))
 	#print("here3!")
+	scene.current_building_type=cafe_type;
+	scene.sprite_init();
 
 
 func new_text(xpos,ypos,expsec,textval):
@@ -276,7 +278,7 @@ func create_mult_house(xpos,ypos,housetype):
 #func set_mult_house_ownership(houseid):
 	
 
-func create_cafe(xpos,ypos):
+func create_cafe(xpos,ypos,cafe_type):
 	
 	var money_req=10;
 	
@@ -287,7 +289,7 @@ func create_cafe(xpos,ypos):
 	#add_child(house)
 	
 	if(GlobalVariables.money>=money_req):
-		new_cafe(xpos,ypos);
+		new_cafe(xpos,ypos,cafe_type);
 		#Create a new house, store in the houses array. 
 		GlobalVariables.money=GlobalVariables.money-money_req;
 		

@@ -55,13 +55,13 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("mpress"):
 		print("time to summon some dogshit I guess")
 		#control.create_house(1000, 800)
-		control.create_mult_house(self.position.x+100,self.position.y+100)
+		control.create_cafe(self.position.x+100,self.position.y+100,1);
 		
 			
 			
 	if Input.is_action_just_pressed("kpress"):
 		print("khasbeenpressed")
-		control.create_cafe(self.position.x+100,self.position.y+100);
+		control.create_cafe(self.position.x+100,self.position.y+100,0);
 		
 		#kitty.report()
 		#for child in houses.get_children():
@@ -81,6 +81,11 @@ func _physics_process(delta: float) -> void:
 		control.create_house_kitty_moves_in(self.position.x+100,self.position.y+100,1)
 		
 	
+	if Input.is_action_just_pressed("cpress"):
+		print("zpressed")
+		#control.create_house(1000, 800)
+		control.create_house_kitty_moves_in(self.position.x+100,self.position.y+100,2)
+		
 	
 	if(!Music_player.playing):
 		Music_player.play()

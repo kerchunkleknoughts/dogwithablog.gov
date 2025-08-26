@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdl80huhk5fj1"]
+[gd_scene load_steps=6 format=3 uid="uid://bdl80huhk5fj1"]
 
 [ext_resource type="Script" uid="uid://byh6jyrh0thg5" path="res://scripts/cafe.gd" id="1_de0wi"]
 [ext_resource type="Script" uid="uid://cnc0c54dqni2i" path="res://scripts/game_manager.gd" id="2_qifwr"]
 [ext_resource type="Texture2D" uid="uid://bk6g0dkm5rtpa" path="res://Game assets/laptop krita art/kitty game/cafe png.png" id="3_de0wi"]
+[ext_resource type="Texture2D" uid="uid://cjeohqq4gqpru" path="res://Game assets/chest.png" id="4_qifwr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qtlar"]
 radius = 33.1361
@@ -13,10 +14,18 @@ script = ExtResource("1_de0wi")
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("2_qifwr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="cafesprite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(4, -5)
 scale = Vector2(1.81493, 1.76969)
 texture = ExtResource("3_de0wi")
+region_enabled = true
+region_rect = Rect2(34, 28, 126, 138)
+
+[node name="chestsprite" type="Sprite2D" parent="."]
+position = Vector2(-7, -5)
+scale = Vector2(1.40941, 1.26107)
+texture = ExtResource("4_qifwr")
 region_enabled = true
 region_rect = Rect2(34, 28, 126, 138)
 

@@ -26,6 +26,51 @@ extends Node
 @onready var totaladds=0;
 @onready var totalrems=0;
 
+@onready var cafesprite=$cafesprite
+@onready var chestsprite=$chestsprite
+
+
+@onready var sprite_array=[cafesprite,chestsprite]
+
+
+
+@onready var current_building_type=cafe_types.CAFE;
+
+
+enum cafe_types{
+	CAFE=0,
+	CHEST=1
+	
+}
+
+
+
+
+
+
+func sprite_init():
+	
+
+	
+	
+	for types in cafe_types:
+		
+		var cafeindex=cafe_types[types]
+		
+		print("building init")
+		print(types)
+		print(cafe_types[types])
+		print(current_building_type)
+		if(current_building_type==cafeindex):
+			sprite_array[cafeindex].visible=true;
+		else:
+			sprite_array[cafeindex].visible=false;
+				
+			
+
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -144,34 +189,70 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	
 	
 	
+	
+	
 	#daowner.state=daowner.states.RECHARGE
 	
 	#loop through each npc and check if located in the cafe, if so, set to recharge. 
 	
-	
-	if area.is_in_group("kitties"):
-		
-		
-		queoccadd();
-		
-		print("KITTY COLLISION!!")
-		
-		daowner=area.get_parent();
-		
-		
-		#if(((daowner.position.x<=self.position.x+radius)&&(daowner.position.x>=self.position.x-radius)) && ((daowner.position.y<=self.position.y+radius)&&(daowner.position.y>=self.position.y-radius))):
-		
-		if(occupant_cnt<occupant_limit):
-			if(daowner.checkhunger()):
-				daowner.state=daowner.states.RECHARGE
-				daowner.building_type_currently_at=daowner.building_types.CAFE;
-				#occupant_cnt=occupant_cnt+1;
-				
-				
-				
-	update_labels()
+	if(current_building_type==cafe_types.CAFE):
+		if area.is_in_group("kitties"):
+			
+			
+			queoccadd();
+			
+			print("KITTY COLLISION!!")
+			
+			daowner=area.get_parent();
+			
+			
+			#if(((daowner.position.x<=self.position.x+radius)&&(daowner.position.x>=self.position.x-radius)) && ((daowner.position.y<=self.position.y+radius)&&(daowner.position.y>=self.position.y-radius))):
+			
+			if(occupant_cnt<occupant_limit):
+				if(daowner.checkhunger()):
+					daowner.state=daowner.states.RECHARGE
+					daowner.building_type_currently_at=daowner.building_types.CAFE;
+					#occupant_cnt=occupant_cnt+1;
 					
-	pass # Replace with function body.
+					
+					
+		update_labels()
+						
+		pass # Replace with function body.
+		
+		
+		
+		
+		
+	#will be exact same for now. 
+	if(current_building_type==cafe_types.CHEST):
+		
+		if area.is_in_group("kitties"):
+			
+			
+			queoccadd();
+			
+			print("KITTY COLLISION!!")
+			
+			daowner=area.get_parent();
+			
+			
+			#if(((daowner.position.x<=self.position.x+radius)&&(daowner.position.x>=self.position.x-radius)) && ((daowner.position.y<=self.position.y+radius)&&(daowner.position.y>=self.position.y-radius))):
+			
+			if(occupant_cnt<occupant_limit):
+				if(daowner.checkhunger()):
+					daowner.state=daowner.states.RECHARGE
+					daowner.building_type_currently_at=daowner.building_types.CAFE;
+					#occupant_cnt=occupant_cnt+1;
+					
+					
+		update_labels()
+						
+		pass # Replace with function body.					
+					
+					
+							
+		
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
@@ -180,6 +261,9 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 		update_labels();
 	
 	pass # Replace with function body.
+
+
+
 
 
 

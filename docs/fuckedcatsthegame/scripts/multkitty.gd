@@ -194,11 +194,13 @@ var talk_odds=5
 @onready var catanimation=$cat_animation
 @onready var doughanimation=$dough_animation
 @onready var deathanimation=$death_animation
+@onready var pyramid_animation=$pyramid_animation
 
 
 enum npc_type{
 	CATNPC=0,
-	DOUGHNPC=1
+	DOUGHNPC=1,
+	PYRAMID=2,
 	
 }
 
@@ -362,6 +364,22 @@ func talk_init():
 	
 	
 	]
+	
+	
+	if(current_npc_type==npc_type.PYRAMID):
+		voicelines = [
+	 
+
+	 
+	 "J'ai hâte de rentrer à la maison et de regarder The Mighty Morphin Power Rangers: The Movie (1995)",
+	 "Bon sang, on dirait que j'ai encore perdu mon bébé",
+	 "mais sérieusement, qui coupe les cheveux des coiffeurs ?",
+	"J'aimerais vraiment être un chien",
+	"Je pourrais aller manger de la soupe tout de suite"
+	
+	
+	]
+
 
 
 
@@ -407,11 +425,20 @@ func animation_init():
 	else:
 			catanimation.visible=false;
 		
+		
+		
 	if(current_npc_type==npc_type.DOUGHNPC):
 			doughanimation.visible=true;
 			anime=doughanimation
 	else:
 			doughanimation.visible=false;
+			
+	
+	if(current_npc_type==npc_type.PYRAMID):
+		pyramid_animation.visible=true;
+		anime=pyramid_animation
+	else:
+			pyramid_animation.visible=false;
 		
 
 
@@ -518,6 +545,53 @@ func checkneeds():
 	checkstarve();
 
 
+
+
+func goto_nearest_cafe():
+	var a;
+	if(!(cafes.get_child_count()==0)):
+			
+			find_nearest_cafe();
+			
+			
+			var isright=0
+			isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+			
+			if(isright):
+				
+				self.currentdirection=self.mydirection.RIGHT
+			else:
+				self.currentdirection=self.mydirection.LEFT
+			
+			self.state=states.MOVING
+			need_to_recharge=needs.HUNGER
+	return;
+	
+	
+	
+func goto_nearest_chest():
+	var a;
+	if(!(cafes.get_child_count()==0)):
+			
+			find_nearest_cafe();
+			
+			
+			var isright=0
+			isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+			
+			if(isright):
+				
+				self.currentdirection=self.mydirection.RIGHT
+			else:
+				self.currentdirection=self.mydirection.LEFT
+			
+			self.state=states.MOVING
+			need_to_recharge=needs.HUNGER
+	return;
+
+
+
+
 func evalneeds():
 	
 	
@@ -540,22 +614,9 @@ func evalneeds():
 	if(needfulfillment[needs.HUNGER]==1):
 		
 	#	print("HUNGERNEED!!!!")
-		if(!(cafes.get_child_count()==0)):
-			
-			find_nearest_cafe();
-			
-			
-			var isright=0
-			isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
-			
-			if(isright):
-				
-				self.currentdirection=self.mydirection.RIGHT
-			else:
-				self.currentdirection=self.mydirection.LEFT
-			
-			self.state=states.MOVING
-			need_to_recharge=needs.HUNGER
+	
+		goto_nearest_cafe();
+		
 		return;
 
 		
