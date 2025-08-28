@@ -4,6 +4,7 @@ extends Node
 
 var money=20;
 var fingers=0;
+var cigs=0;
 
 
 

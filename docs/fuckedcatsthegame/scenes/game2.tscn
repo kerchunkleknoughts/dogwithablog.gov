@@ -11,6 +11,13 @@
 [node name="game2" type="Node2D"]
 script = ExtResource("1_8j387")
 
+[node name="ciglabel" type="Label" parent="."]
+offset_left = 842.0
+offset_top = 316.0
+offset_right = 1753.0
+offset_bottom = 573.0
+text = "0"
+
 [node name="text" type="Node" parent="."]
 
 [node name="Label2" type="Label" parent="."]
@@ -43,6 +50,14 @@ offset_top = 234.0
 offset_right = 950.0
 offset_bottom = 257.0
 text = "money:"
+
+[node name="preciglabel" type="Label" parent="premoneylabel"]
+offset_left = 2.0
+offset_top = 82.0
+offset_right = 950.0
+offset_bottom = 257.0
+text = "cigs:
+"
 
 [node name="prefingerlabel" type="Label" parent="."]
 offset_left = 799.0

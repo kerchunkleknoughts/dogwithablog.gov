@@ -134,6 +134,7 @@ enum building_types{
 }
 
 
+
 enum states{
 	WAIT=0,
 	MOVING=1,
@@ -357,6 +358,9 @@ func kitty_init():
 			
 
 	pass
+
+
+
 
 
 

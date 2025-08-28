@@ -36,9 +36,13 @@ func money_change(change):
 
 @onready var finger_label=get_tree().get_root().get_node("game2/fingerlabel")#$"../moneylabel"
 
+@onready var cig_label=get_tree().get_root().get_node("game2/ciglabel")#$"../moneylabel"
+
+
 
 
 func update_label():
+
 	
 	if(!(money_label==null)):
 		money_label.text=str(GlobalVariables.money)
@@ -46,9 +50,16 @@ func update_label():
 	if(!(finger_label==null)):
 		finger_label.text=str(GlobalVariables.fingers)
 	
+
+	if(!(cig_label==null)):
+		cig_label.text=str(GlobalVariables.cigs)
+	
+	
 	
 	if(!(c1ml==null)):
 		c1ml.text=str(GlobalVariables.money)
+
+
 	
 
 
@@ -87,7 +98,36 @@ func new_house(xpos,ypos,housetype):
 	scene.animation_init()
 
 
+
+
+
 	
+func new_ramid_house(xpos,ypos,housetype):
+	#this function will create a new house, then 
+	#it will update the house id, then store it in the houses array.
+	var path="res://scenes/ramidhouse.tscn"
+	var targetnode=houses
+	#print("here2!")
+	var scene = load(path).instantiate()
+	
+
+	
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	#print("here1!")
+	scene.hid=GlobalVariables.h_id_counter;
+	GlobalVariables.h_id_counter=GlobalVariables.h_id_counter+1
+	targetnode.add_child(scene)
+	print("scene hid"+str(scene.hid))
+	print("global hid"+ str(GlobalVariables.h_id_counter))
+	#print("here3!")
+	
+	
+	
+	scene.currenthousetype=housetype;
+	scene.animation_init()
+
+
 	
 
 
@@ -260,6 +300,31 @@ func new_yarn(xpos,ypos, type):
 
 
 
+func new_cig(xpos,ypos, type):
+	#this function will create a new house, then 
+	#it will update the house id, then store it in the houses array.
+	var path="res://scenes/cig.tscn"
+	var targetnode=yarnballs
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	
+	
+	
+	#print("here1!")
+	#scene.hid=GlobalVariables.h_id_counter;
+	#GlobalVariables.h_id_counter=GlobalVariables.h_id_counter+1
+	targetnode.add_child(scene)
+	#print("scene hid"+str(scene.hid))
+	#print("global hid"+ str(GlobalVariables.h_id_counter))
+	#print("here3!")
+	scene.current_item_type=type; 
+	scene.yarn_init();
+	
+
+
+
 
 
 #func create_mult_kitty(xpos,ypos):
@@ -299,6 +364,46 @@ func create_mult_house(xpos,ypos,housetype):
 	#var origin = Vector2(1000, 800)
 	#house.set_position(origin)
 	#add_child(house)
+
+
+
+
+
+func create_ramid_house(xpos,ypos,housetype):
+	
+
+
+	var money_req=10;
+	var house_creation_successful=0;
+	
+
+	#this code creates a creature at the given position.
+	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
+	#var origin = Vector2(1000, 800)
+	#house.set_position(origin)
+	#add_child(house)
+	
+	if(GlobalVariables.money>=money_req):
+		house_creation_successful=1
+		new_ramid_house(xpos,ypos,housetype);
+		#Create a new house, store in the houses array. 
+		GlobalVariables.money=GlobalVariables.money-money_req;
+		
+		
+		
+	
+	update_label()
+	
+	print("is house creation succ?: " +str(house_creation_successful))
+	
+	return house_creation_successful;
+	
+	
+	#var house = preload("res://scenes/Creaturee2.tscn").instantiate()
+	#var origin = Vector2(1000, 800)
+	#house.set_position(origin)
+	#add_child(house)
+
 
 
 
@@ -440,8 +545,9 @@ func check_building_collision(node1,building):
 func create_house_pyramid_moves_in(xpos,ypos,npctype):
 	
 	var offset=100;
-	var issucc=create_mult_house(xpos,ypos,npctype)
+	var issucc=create_ramid_house(xpos,ypos,npctype)
 	print(str(issucc))
+	
 	
 	#new_cat(xpos,ypos)
 	if(issucc==1):	
