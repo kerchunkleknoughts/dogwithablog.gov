@@ -1,14 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bd7loij83pavx"]
+[gd_scene load_steps=7 format=3 uid="uid://bd7loij83pavx"]
 
 [ext_resource type="PackedScene" uid="uid://bhxiiu0lcw6s1" path="res://scenes/fucker2.tscn" id="1_7pxbb"]
 [ext_resource type="Script" uid="uid://dfkvsp2tnbncy" path="res://scripts/game_2.gd" id="1_8j387"]
 [ext_resource type="Script" uid="uid://cnc0c54dqni2i" path="res://scripts/game_manager.gd" id="1_xrrf0"]
 [ext_resource type="Script" uid="uid://0qid8hlvuoo" path="res://fucker_2.gd" id="2_u48pd"]
-[ext_resource type="PackedScene" uid="uid://wnnxsfj3ylgx" path="res://scenes/Creaturee.tscn" id="3_btr28"]
-[ext_resource type="PackedScene" uid="uid://dwkbehlv5eve0" path="res://scenes/Creaturee2.tscn" id="4_h21dd"]
 [ext_resource type="PackedScene" uid="uid://ddyxj7ddh8df2" path="res://scenes/grass.tscn" id="7_kh4a2"]
-[ext_resource type="PackedScene" uid="uid://dv16l082syun" path="res://scenes/yarn.tscn" id="8_8j387"]
-[ext_resource type="PackedScene" uid="uid://cy5strb44qkrt" path="res://scenes/fingee.tscn" id="9_5dhap"]
 
 [sub_resource type="TileSet" id="TileSet_u48pd"]
 
@@ -40,12 +36,6 @@ script = ExtResource("2_u48pd")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_u48pd")
 format = 2
-
-[node name="Node2D" parent="." instance=ExtResource("3_btr28")]
-position = Vector2(1458, 237)
-
-[node name="Node2D2" parent="." instance=ExtResource("4_h21dd")]
-position = Vector2(272, 937)
 
 [node name="premoneylabel" type="Label" parent="."]
 offset_left = 801.0
@@ -137,9 +127,3 @@ position = Vector2(-22, 8)
 
 [node name="Node2D7" parent="Node2D15/Node2D15" instance=ExtResource("7_kh4a2")]
 position = Vector2(-110, 151)
-
-[node name="Node2D3" parent="Node2D15" instance=ExtResource("8_8j387")]
-position = Vector2(287, 844)
-
-[node name="Node2D16" parent="." instance=ExtResource("9_5dhap")]
-position = Vector2(873, 684)

@@ -45,6 +45,17 @@ enum cafe_types{
 
 
 
+@onready var current_item_type=items_held.YARN;
+
+enum items_held{
+	YARN=0,
+	FINGERS=1,
+	
+}
+
+@onready var itemcount=0;
+
+
 
 
 
@@ -230,7 +241,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if area.is_in_group("kitties"):
 			
 			
-			queoccadd();
+			
 			
 			print("KITTY COLLISION!!")
 			
@@ -239,10 +250,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			
 			#if(((daowner.position.x<=self.position.x+radius)&&(daowner.position.x>=self.position.x-radius)) && ((daowner.position.y<=self.position.y+radius)&&(daowner.position.y>=self.position.y-radius))):
 			
-			if(occupant_cnt<occupant_limit):
-				if(daowner.checkhunger()):
-					daowner.state=daowner.states.RECHARGE
-					daowner.building_type_currently_at=daowner.building_types.CAFE;
+			
+			
+			itemcount=itemcount+1;
+			occupant_cnt=itemcount;
+			
+			daowner.state=daowner.states.WAIT
+					
 					#occupant_cnt=occupant_cnt+1;
 					
 					

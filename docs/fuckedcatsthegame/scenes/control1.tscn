@@ -31,7 +31,11 @@ texture = ExtResource("1_jj5tx")
 
 [node name="Polygon2D" type="Polygon2D" parent="A6e24a6530a86e07Fd182a44Fb46d18a"]
 position = Vector2(691.656, -117.623)
-polygon = PackedVector2Array(-767.866, 74.2881, -692.231, -36.4562, -572.444, -34.3926, -580.123, 99.7386, -639.249, 178.842, -693.767, 141.01, -765.179, 148.576)
+polygon = PackedVector2Array(-767.866, 74.2881, -692.231, -36.4562, -572.444, -34.3926, -580.123, 99.7386, -584, 232, -704, 224, -765.179, 148.576)
+
+[node name="Polygon2D" type="Polygon2D" parent="A6e24a6530a86e07Fd182a44Fb46d18a/Polygon2D"]
+position = Vector2(691.656, -117.623)
+polygon = PackedVector2Array(-767.866, 74.2881, -692.231, -36.4562, -572.444, -34.3926, -580.123, 99.7386, -584, 232, -704, 224, -765.179, 148.576)
 
 [node name="pause" type="Node" parent="."]
 
@@ -108,6 +112,8 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 31
 text = "buy new cat house: z
 buy cat cafe: k
+buy flesh house: x
+buy pyramid house: c
 
 "
 
@@ -116,6 +122,7 @@ position = Vector2(-2, -173)
 polygon = PackedVector2Array(-1120, 568, -808, 705, -672, 780, -993, 852, -1226, 829, -1252, 754)
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = -1155.0
 offset_top = 450.0
 offset_right = -749.0
@@ -131,3 +138,20 @@ CAFE: 10 dollar
 CAT HOUSE: 10 dollar
 
 "
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(765, -141)
+polygon = PackedVector2Array(-1243, 634, -1022, 648, -678, 692, -632, 869, -1226, 829, -1252, 754)
+
+[node name="Label5" type="Label" parent="."]
+offset_left = -452.0
+offset_top = 555.0
+offset_right = 59.0
+offset_bottom = 834.0
+scale = Vector2(1.01042, 1.09384)
+theme_override_colors/font_color = Color(0.766796, 0.310737, 0.931637, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 31
+text = "Remember, if you 
+dont feed your cats, they will die :("
