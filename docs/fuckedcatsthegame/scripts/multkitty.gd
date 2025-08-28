@@ -2,8 +2,10 @@ extends Node2D
 
 
 
+
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!TO CONVERT GIFS INTO SPRITESHEETS!!!::::::: https://ezgif.com/gif-to-sprite/ezgif-4eb7ff1703391.gif
 #untill I figure out a better way to do this that doesnt involve a website.
+
 
 @onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
 @onready var cafes=get_tree().get_root().get_node("game2/cafes")#$"../houses"
@@ -15,13 +17,13 @@ extends Node2D
 @onready var death_timer: Timer =$deathtimer
 
 
-var ani_start=0;
-var anime_switch_toggle=0;
+@onready var ani_start=0;
+@onready var anime_switch_toggle=0;
 
-var idle_move_timer_active=0;
+@onready var idle_move_timer_active=0;
 
-var rnga = RandomNumberGenerator.new()
-var my_random_numbera = rnga.randf_range(0, 100)
+@onready var rnga = RandomNumberGenerator.new()
+@onready var my_random_numbera = rnga.randf_range(0, 100)
 
 
 @onready var myhouse;
@@ -29,7 +31,7 @@ var my_random_numbera = rnga.randf_range(0, 100)
 @onready var closest_cafe;
 
 
-var state=states.WAIT;
+@onready var state=states.WAIT;
 #default state. equal to just waiting. This is evaluated every tick via the state machine eval function
 
 
@@ -37,9 +39,9 @@ var state=states.WAIT;
 
 @onready var ktid;
 
-var idle_animation_timer_active=0;
+@onready var idle_animation_timer_active=0;
 
-var yarn_summon_odds=5
+@onready var yarn_summon_odds=5
 #this is the chance that a kitty will summon yarn
 #each tick. 
 #this is out of a hundred.
@@ -54,67 +56,67 @@ enum mydirection{
 	VERTICAL=3
 }
 
-var currentdirection=mydirection.VERTICAL;
+@onready var currentdirection=mydirection.VERTICAL;
 
 
 
 
 
 
-var anistate=anistates.IDLE;
+@onready var anistate=anistates.IDLE;
 
-var subanistate=subanistates.CENTER;
-
-
-var health=10;
-var healthmax=10;
-var healthmin=0;
-
-var isdead=0;
+@onready var subanistate=subanistates.CENTER;
 
 
+@onready var health=10;
+@onready var healthmax=10;
+@onready var healthmin=0;
+
+@onready var isdead=0;
 
 
 
 
-var hunger=10000;
-var hungermax=2000;
-var hungermin=9999;
+
+
+@onready var hunger=10000;
+@onready var hungermax=2000;
+@onready var hungermin=9999;
 #var hungerdam=900;
-var hungerdam=200
+@onready var hungerdam=200
 #this is the hunger at which starvation occurs, and health is reduced. 
-var hunger_recharge_thresh=10500;
+@onready var hunger_recharge_thresh=10500;
 	
 
 
 
 
 
-var sleep=1200;
-var sleepmax=2000;
-var sleepmin=1000;
-var sleep_recharge_thresh=2000;
+@onready var sleep=1200;
+@onready var sleepmax=2000;
+@onready var sleepmin=1000;
+@onready var sleep_recharge_thresh=2000;
 #sleepmin is the threshold that
 #determines if npc navigates to 
 #nearist station to regenerate sleep. 
 
-var sleepvel=50;
+@onready var sleepvel=50;
 
-var xvel=0;
-var yvel=0;
+@onready var xvel=0;
+@onready var yvel=0;
 
 
-var onticksleepdep=1;
+@onready var onticksleepdep=1;
 
-var onticksleepadd=10;
+@onready var onticksleepadd=10;
 
-var ontickhungerdep=2;
+@onready var ontickhungerdep=2;
 
-var ontickhungeradd=13;
+@onready var ontickhungeradd=13;
 
 
 #this is an array which is processed on a FCFS basis. 
-var needfulfillment = [0,0,0]
+@onready var needfulfillment = [0,0,0]
 
 #I guess this enum is literally 
 enum needs{
@@ -162,7 +164,7 @@ enum subanistates{
 
 
 
-var need_to_recharge=0;
+@onready var need_to_recharge=0;
 
 
 
@@ -175,19 +177,19 @@ var need_to_recharge=0;
 
 #const speed=70;
 
-var direction=1;
+@onready var direction=1;
 
-var rng = RandomNumberGenerator.new()
-var my_random_number = rng.randf_range(-10.0, 10.0)
+@onready var rng = RandomNumberGenerator.new()
+@onready var my_random_number = rng.randf_range(-10.0, 10.0)
 	
 	
 
 
 
 
-var building_type_currently_at=building_types.OUTSIDE;
+@onready var building_type_currently_at=building_types.OUTSIDE;
 
-var talk_odds=5
+@onready var talk_odds=5
 
 
 
@@ -236,6 +238,7 @@ enum npc_type{
 
 
 
+ 
 
 
 
@@ -250,11 +253,63 @@ enum npc_type{
 
 
 
+func _ready() -> void:
+	
+	
+	idle_move_timer.timeout.connect(_on_idle_move_timer_timeout)
+	idle_animate_timer.timeout.connect(_on_idle_animation_timer_timeout)
+	death_timer.timeout.connect(_on_deathtimer_timeout)
+
+
+	hunger=2000;
+	hungermax=3000;
+	hungermin=1500;
+	#value at which npc seeks out cafe
+	
+		#var hungerdam=900;
+	hungerdam=200
+		#this is the hunger at which starvation occurs, and health is reduced. 
+	hunger_recharge_thresh=3000;
+		
+		
+	sleep=3000;
+	sleepmax=4000;
+	sleepmin=1500;
+	#value at which npc seeks out home.
+	
+	sleep_recharge_thresh=4000;
+	
+	
+	find_my_house()
+	
+	pass # Replace with function body.
 
 
 
 
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	
+	#my_random_number = rng.randf_range(-1, 10)
+	#my_random_number = floor(my_random_number)
+	
+	#print("random value!")
+	#print(my_random_number)
+	
+	#if(my_random_number >5):
+	#	direction=direction*-1
+		
+	#direction=direction*my_random_number
+
+	
+	#run physical processes on the creature :)
+	
+	
+	evalstate(delta)
+	
+	pass
+	
 	
 
 
@@ -306,7 +361,7 @@ func kitty_init():
 
 
 
-var voicelines = [
+@onready var voicelines = [
 	 
 	"where am I?",
 	 "I want to go back to bed",
@@ -383,33 +438,6 @@ func talk_init():
 
 
 
-
-
-func _ready() -> void:
-	
-
-	hunger=2000;
-	hungermax=3000;
-	hungermin=1500;
-	#value at which npc seeks out cafe
-	
-		#var hungerdam=900;
-	hungerdam=200
-		#this is the hunger at which starvation occurs, and health is reduced. 
-	hunger_recharge_thresh=3000;
-		
-		
-	sleep=3000;
-	sleepmax=4000;
-	sleepmin=1500;
-	#value at which npc seeks out home.
-	
-	sleep_recharge_thresh=4000;
-	
-	
-	find_my_house()
-	
-	pass # Replace with function body.
 
 
 
@@ -1016,26 +1044,7 @@ func evalphy(delta):
 	position.x+=direction*self.xvel*delta;
 	position.y+=direction*self.yvel*delta;
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	
-	#my_random_number = rng.randf_range(-1, 10)
-	#my_random_number = floor(my_random_number)
-	
-	#print("random value!")
-	#print(my_random_number)
-	
-	#if(my_random_number >5):
-	#	direction=direction*-1
-		
-	#direction=direction*my_random_number
 
-	
-	#run physical processes on the creature :)
-	
-	
-	evalstate(delta)
-	
 func change_state(changeto):
 	self.state=changeto
 
@@ -1066,7 +1075,7 @@ func checkhealth():
 		isdead=1;
 
 
-var deathtoggle=1;
+@onready var deathtoggle=1;
 func eval_death():
 	if(isdead==1):
 		if(deathtoggle==1):

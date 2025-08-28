@@ -12,7 +12,7 @@ var time=0;
 var kittyhome=0;
 
 
-@onready var kitty=$john
+
 
 var h_id_counter=0;
 var ki_id_counter=0;

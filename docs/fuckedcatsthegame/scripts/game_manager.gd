@@ -168,6 +168,36 @@ func new_cat(xpos,ypos,npctype):
 
 
 
+func new_pyramid(xpos,ypos,npctype):
+	var path="res://scenes/pyramid.tscn"
+	var targetnode=kittys
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	#print("here1!")
+	scene.ktid=GlobalVariables.ki_id_counter;
+	GlobalVariables.ki_id_counter=GlobalVariables.ki_id_counter+1
+	targetnode.add_child(scene)
+	print("scene hid"+str(scene.ktid))
+	print("global hid"+ str(GlobalVariables.ki_id_counter))
+	
+	
+	scene.current_npc_type=npctype
+	scene.animation_init()
+	
+	
+	#I have no fucking clue why this causes the building check function to crash, 
+	#this for whatever reason makes the npc have a null pointer to the cafe. 
+	# why am I cursed with such incomprehensible bugs? 
+	# did I do something horrible in a past life and I am now just 
+	# paying for it? 
+	
+	#scene.kitty_init();
+	
+	pass
+
+
 
 func report_node(targetnode):
 	for child in targetnode.get_children():
@@ -406,6 +436,16 @@ func check_building_collision(node1,building):
 	
 	
 
+		
+func create_house_pyramid_moves_in(xpos,ypos,npctype):
+	
+	var offset=100;
+	var issucc=create_mult_house(xpos,ypos,npctype)
+	print(str(issucc))
+	
+	#new_cat(xpos,ypos)
+	if(issucc==1):	
+		new_pyramid(xpos+offset,ypos+offset,npctype)
 		
 
 		

@@ -14,8 +14,12 @@
 
 
  "comment 1 make the following variable equal to one for plampton site          censor1":1,
+
+ " do not copy and paste docs from vs code, it shits the bed immediately and doenst include all files. terrible, just do via file explorer":1,
+
+  " if it doesnt take 1000 million years to copy over, then you have done something wrong. ":1,
   
-  
+  "censor1":1,
 
   "random": 200
   

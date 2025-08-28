@@ -12,7 +12,7 @@ const JUMP_VELOCITY = -400.0
 @onready var control=$"../GameManager"
 
 
-@onready var kitty=$"../john"
+
 
 
 @onready var houses=$"../houses"
@@ -55,8 +55,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("mpress"):
 		print("time to summon some dogshit I guess")
 		#control.create_house(1000, 800)
-		control.create_cafe(self.position.x+100,self.position.y+100,1);
-		
+		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
+		#control.create_cafe(self.position.x+100,self.position.y+100,1);
+		control.create_house_pyramid_moves_in(self.position.x+100,self.position.y+100,2)
 			
 			
 	if Input.is_action_just_pressed("kpress"):

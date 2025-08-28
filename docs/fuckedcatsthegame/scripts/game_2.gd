@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var kitty=$john
+
 
 @onready var control=$GameManager
 
