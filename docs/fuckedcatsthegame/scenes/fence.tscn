@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjyrli8e6wxp4"]
+
+[ext_resource type="Texture2D" uid="uid://o7rxxvggxghl" path="res://Game assets/laptop krita art/kitty game/fence.png" id="1_tphf0"]
+
+[node name="fence" type="Node2D"]
+
+[node name="ramid_house" type="Sprite2D" parent="."]
+position = Vector2(11, -37)
+scale = Vector2(2.06331, 1.91634)
+texture = ExtResource("1_tphf0")
+region_enabled = true
+region_rect = Rect2(19, 49, 64, 101)

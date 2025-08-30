@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://7p03jpdcx3yd"]
+
+[ext_resource type="PackedScene" uid="uid://bvp3shjfjfp36" path="res://scenes/twofence.tscn" id="1_x34cm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_x34cm")]
+position = Vector2(-94, 12)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_x34cm")]
+position = Vector2(91, 13)

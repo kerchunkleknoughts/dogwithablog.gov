@@ -544,6 +544,7 @@ func check_building_collision(node1,building):
 		
 func create_house_pyramid_moves_in(xpos,ypos,npctype):
 	
+	
 	var offset=100;
 	var issucc=create_ramid_house(xpos,ypos,npctype)
 	print(str(issucc))

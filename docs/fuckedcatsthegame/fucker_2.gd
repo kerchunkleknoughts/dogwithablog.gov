@@ -59,6 +59,18 @@ func _physics_process(delta: float) -> void:
 		#control.create_cafe(self.position.x+100,self.position.y+100,1);
 		control.create_house_pyramid_moves_in(self.position.x+100,self.position.y+100,0)
 			
+		
+
+
+
+
+
+
+
+
+
+
+
 			
 	if Input.is_action_just_pressed("kpress"):
 		print("khasbeenpressed")
@@ -87,6 +99,62 @@ func _physics_process(delta: float) -> void:
 		#control.create_house(1000, 800)
 		control.create_house_kitty_moves_in(self.position.x+100,self.position.y+100,2)
 		
+
+
+
+
+
+
+	if Input.is_action_just_pressed("bpress"):
+		print("time to summon some dogshit I guess")
+		#control.create_house(1000, 800)
+		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
+		#control.create_cafe(self.position.x+100,self.position.y+100,1);
+		scene_manager.generate_scene();
+			
+
+
+
+	if Input.is_action_just_pressed("vpress"):
+		print("time to summon some dogshit I guess")
+		#control.create_house(1000, 800)
+		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
+		#control.create_cafe(self.position.x+100,self.position.y+100,1);
+		scene_manager.swap_scene(3)
+
+
+
+
+
+
+	if Input.is_action_just_pressed("gpress"):
+		print("time to summon some dogshit I guess")
+		#control.create_house(1000, 800)
+		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
+		#control.create_cafe(self.position.x+100,self.position.y+100,1);
+		scene_manager.swap_scene(0)
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	if(!Music_player.playing):
 		Music_player.play()

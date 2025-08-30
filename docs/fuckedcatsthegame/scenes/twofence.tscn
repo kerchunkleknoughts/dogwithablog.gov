@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvp3shjfjfp36"]
+
+[ext_resource type="PackedScene" uid="uid://bjyrli8e6wxp4" path="res://scenes/fence.tscn" id="1_8g1nh"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fence" parent="." instance=ExtResource("1_8g1nh")]
+position = Vector2(-52, 29)
+
+[node name="fence2" parent="." instance=ExtResource("1_8g1nh")]
+position = Vector2(41, 29)

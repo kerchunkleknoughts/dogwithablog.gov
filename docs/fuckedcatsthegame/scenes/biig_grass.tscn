@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://brx7t878pbvbq"]
+
+[ext_resource type="PackedScene" uid="uid://ddyxj7ddh8df2" path="res://scenes/grass.tscn" id="1_h5y4t"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(289, 161)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(288, 510)
+
+[node name="Node2D3" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(930, 163)
+
+[node name="Node2D4" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(931, 509)
+
+[node name="Node2D5" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(1579, 162)
+
+[node name="Node2D6" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(1579, 507)
+
+[node name="Node2D7" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(286, 859)
+
+[node name="Node2D8" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(932, 861)
+
+[node name="Node2D9" parent="." instance=ExtResource("1_h5y4t")]
+position = Vector2(1568, 859)

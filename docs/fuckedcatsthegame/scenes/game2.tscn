@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dfkvsp2tnbncy" path="res://scripts/game_2.gd" id="1_8j387"]
 [ext_resource type="Script" uid="uid://cnc0c54dqni2i" path="res://scripts/game_manager.gd" id="1_xrrf0"]
 [ext_resource type="Script" uid="uid://0qid8hlvuoo" path="res://fucker_2.gd" id="2_u48pd"]
-[ext_resource type="PackedScene" uid="uid://ddyxj7ddh8df2" path="res://scenes/grass.tscn" id="7_kh4a2"]
+[ext_resource type="PackedScene" uid="uid://brx7t878pbvbq" path="res://scenes/biig_grass.tscn" id="5_dflkw"]
 
 [sub_resource type="TileSet" id="TileSet_u48pd"]
 
@@ -52,6 +52,7 @@ offset_bottom = 257.0
 text = "money:"
 
 [node name="preciglabel" type="Label" parent="premoneylabel"]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 82.0
 offset_right = 950.0
@@ -83,62 +84,29 @@ text = "0"
 
 [node name="kittys" type="Node" parent="."]
 
-[node name="Node2D3" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(1555, 870)
+[node name="Node2D" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(2, -2)
 
-[node name="Node2D4" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(905, 535)
+[node name="Node2D2" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(1905, -1)
 
-[node name="Node2D5" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(1555, 186)
+[node name="Node2D3" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(-16, 1043)
 
-[node name="Node2D6" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(1555, 888)
+[node name="Node2D4" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(1894, 1038)
 
-[node name="Node2D7" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(931, 535)
+[node name="Node2D5" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(1921, -1046)
 
-[node name="Node2D7" parent="Node2D7" instance=ExtResource("7_kh4a2")]
-position = Vector2(626, -2)
+[node name="Node2D6" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(-3, -1026)
 
-[node name="Node2D8" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(917, 186)
+[node name="Node2D7" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(-1920, -1039)
 
-[node name="Node2D9" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(917, 888)
+[node name="Node2D8" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(-1893, -10)
 
-[node name="Node2D10" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(288, 533)
-
-[node name="Node2D7" parent="Node2D10" instance=ExtResource("7_kh4a2")]
-position = Vector2(84, 158)
-
-[node name="Node2D11" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(288, 184)
-
-[node name="Node2D12" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(288, 886)
-
-[node name="Node2D13" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(1560, 87)
-
-[node name="Node2D7" parent="Node2D13" instance=ExtResource("7_kh4a2")]
-position = Vector2(-56, 170)
-
-[node name="Node2D14" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(952, 85)
-
-[node name="Node2D7" parent="Node2D14" instance=ExtResource("7_kh4a2")]
-position = Vector2(-56, 170)
-
-[node name="Node2D15" parent="." instance=ExtResource("7_kh4a2")]
-position = Vector2(325, 83)
-
-[node name="Node2D7" parent="Node2D15" instance=ExtResource("7_kh4a2")]
-position = Vector2(-56, 170)
-
-[node name="Node2D15" parent="Node2D15" instance=ExtResource("7_kh4a2")]
-position = Vector2(-22, 8)
-
-[node name="Node2D7" parent="Node2D15/Node2D15" instance=ExtResource("7_kh4a2")]
-position = Vector2(-110, 151)
+[node name="Node2D9" parent="." instance=ExtResource("5_dflkw")]
+position = Vector2(-1846, 1040)

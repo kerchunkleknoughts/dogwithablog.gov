@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm6nd7m0nsw2m"]
+
+[ext_resource type="Texture2D" uid="uid://ca0fheaf5jv27" path="res://Game assets/laptop krita art/kitty game/ghoul post.png" id="1_r8jln"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ramid_house" type="Sprite2D" parent="."]
+position = Vector2(5.6802, -77.9954)
+scale = Vector2(2.45333, 2.15391)
+texture = ExtResource("1_r8jln")
+region_enabled = true
+region_rect = Rect2(62, 5, 72, 143)

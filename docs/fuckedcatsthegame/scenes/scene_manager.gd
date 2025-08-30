@@ -17,6 +17,25 @@ var game = preload("res://scenes/game2.tscn").instantiate()
 var splash = preload("res://scenes/control.tscn").instantiate()
 
 
+@onready var generated_scenes=get_tree().get_root().get_node("scene_manager/generated_scenes")#$"../houses"
+
+
+
+
+
+func generate_scene():
+	var path="res://scenes/game2.tscn"
+	#var targetnode=generated_scenes
+	
+	var scene = load(path).instantiate()
+	
+	scene_array.append(scene)
+
+
+	#targetnode.add_child(scene)
+
+
+
 
 
 
