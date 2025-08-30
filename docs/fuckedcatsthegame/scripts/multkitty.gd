@@ -263,14 +263,17 @@ func _ready() -> void:
 
 
 	hunger=2000;
-	hungermax=3000;
-	hungermin=1500;
+	hungermax=4000;
+
+	hungermin=2000;
 	#value at which npc seeks out cafe
 	
 		#var hungerdam=900;
 	hungerdam=200
 		#this is the hunger at which starvation occurs, and health is reduced. 
-	hunger_recharge_thresh=3000;
+
+
+	hunger_recharge_thresh=4000;
 		
 		
 	sleep=3000;
