@@ -12,7 +12,7 @@ func _ready() -> void:
 
 	
 
-	if(self.get_parent().bottom_room_index==-1):
+	if(self.get_parent().get_parent().bottom_room_index==-1):
 		isgen=0;
 	else:
 		isgen=1;
@@ -63,4 +63,3 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			
 			scene_manager.call_deferred("scene_nav_swap", 1)
 		
-

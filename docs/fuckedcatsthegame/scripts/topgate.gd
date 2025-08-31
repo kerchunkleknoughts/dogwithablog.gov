@@ -9,7 +9,10 @@ extends Node2D
 func _ready() -> void:
 
 
-	if(self.get_parent().top_room_index==-1):
+
+
+
+	if(self.get_parent().get_parent().top_room_index==-1):
 		isgen=0;
 	else:
 		isgen=1;
@@ -28,6 +31,8 @@ func _process(delta: float) -> void:
 
 
 @onready var isgen=0;
+
+
 
 
 
