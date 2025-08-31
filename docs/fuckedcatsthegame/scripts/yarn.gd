@@ -35,12 +35,12 @@ var current_item_type=item_types.YARN;
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	var radius=150;
-	print("YARN COL!")
+	#print("YARN COL!")
 	#howner.state=howner.states.RECHARGE
 	
 	
 	if area.is_in_group("player"):
-		print("PICKUP!")
+		#print("PICKUP!")
 		self.queue_free()
 		
 		if(current_item_type==item_types.YARN):

@@ -21,6 +21,14 @@ var splash = preload("res://scenes/control.tscn").instantiate()
 
 
 
+var scene_x_pos=0;
+var scene_y_pos=0;
+
+
+
+@onready var room_index_counter=2;
+
+
 
 
 func generate_scene():
@@ -30,9 +38,98 @@ func generate_scene():
 	var scene = load(path).instantiate()
 	
 	scene_array.append(scene)
+	room_index_counter=room_index_counter+1;
+	print("ROOM INDEX COUNTER: "+str(room_index_counter));
+	scene.current_room_index=room_index_counter;
 
 
 	#targetnode.add_child(scene)
+
+
+
+
+
+
+
+func generate_and_append_top():
+
+	print("GENERATING AND APPENDING TOP!")
+	var path="res://scenes/game2.tscn"
+	#var targetnode=generated_scenes
+	
+	var scene = load(path).instantiate()
+	
+	scene_array.append(scene)
+	room_index_counter=room_index_counter+1;
+	print("ROOM INDEX COUNTER: "+str(room_index_counter));
+	scene.current_room_index=room_index_counter;
+	scene.bottom_room_index=currentscene;
+	print("ohyeah ")
+
+
+	scene_array[currentscene].top_room_index=room_index_counter;
+
+
+
+
+
+
+
+
+
+func generate_and_append_bottom():
+
+	print("GENERATING AND APPENDING BOTTOM!")
+	var path="res://scenes/game2.tscn"
+	#var targetnode=generated_scenes
+	
+	var scene = load(path).instantiate()
+	
+	scene_array.append(scene)
+	room_index_counter=room_index_counter+1;
+	print("ROOM INDEX COUNTER: "+str(room_index_counter));
+	scene.current_room_index=room_index_counter;
+	scene.top_room_index=currentscene;
+	print("ohyeah ")
+
+	scene_array[currentscene].bottom_room_index=room_index_counter;
+
+
+
+
+
+
+
+
+
+func scene_nav_swap(direction):
+
+
+	#top
+	if(direction==0):
+	
+		swap_scene(scene_array[currentscene].top_room_index)
+
+
+
+	#bottom
+	if(direction==1):
+
+		swap_scene(scene_array[currentscene].bottom_room_index)
+
+
+	#left
+	#if(direction==2):
+
+
+	#right
+	#if(direction==3):
+
+
+
+
+
+
 
 
 
@@ -43,6 +140,9 @@ var currentscene=-1
 var scene_array=[game,pause,splash]
 
 const scene_path_array=["res://scenes/game2.tscn","res://scenes/control1.tscn","res://scenes/control.tscn"]
+
+
+
 
 
 func swap_scene(scene_index: int)->void:

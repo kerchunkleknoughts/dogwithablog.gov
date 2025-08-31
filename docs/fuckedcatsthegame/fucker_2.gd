@@ -30,14 +30,15 @@ var toggle=1;
 func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("ypress"):
-		print("YUHHHH!")
-		print(self.position)
+		#print("YUHHHH!")
+		#print(self.position)
 		
 		control.money_change(50)
 		
 		
 	if Input.is_action_just_pressed("opress"):
-		print("ohasbeenpressed")
+		var a;
+		#print("ohasbeenpressed")
 		#control.new_cat(self.position.x+100,self.position.y+100)
 		
 		#kitty.report()
@@ -45,7 +46,7 @@ func _physics_process(delta: float) -> void:
 		
 		
 	if Input.is_action_just_pressed("hpress"):
-		print("h has been pressed.")
+		#print("h has been pressed.")
 		#control.new_yarn(self.position.x+100,self.position.y+100)
 		control.new_text(self.position.x+100,self.position.y+100,1,"test")
 		
@@ -53,7 +54,7 @@ func _physics_process(delta: float) -> void:
 		
 		
 	if Input.is_action_just_pressed("mpress"):
-		print("time to summon some dogshit I guess")
+		#print("time to summon some dogshit I guess")
 		#control.create_house(1000, 800)
 		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
 		#control.create_cafe(self.position.x+100,self.position.y+100,1);
@@ -73,7 +74,7 @@ func _physics_process(delta: float) -> void:
 
 			
 	if Input.is_action_just_pressed("kpress"):
-		print("khasbeenpressed")
+		#print("khasbeenpressed")
 		control.create_cafe(self.position.x+100,self.position.y+100,0);
 		
 		#kitty.report()
@@ -82,20 +83,20 @@ func _physics_process(delta: float) -> void:
 			
 	
 	if Input.is_action_just_pressed("zpress"):
-		print("zpressed")
+		#print("zpressed")
 		#control.create_house(1000, 800)
 		control.create_house_kitty_moves_in(self.position.x+100,self.position.y+100,0)
 		
 		
 	
 	if Input.is_action_just_pressed("xpress"):
-		print("zpressed")
+		#print("zpressed")
 		#control.create_house(1000, 800)
 		control.create_house_kitty_moves_in(self.position.x+100,self.position.y+100,1)
 		
 	
 	if Input.is_action_just_pressed("cpress"):
-		print("zpressed")
+		#print("zpressed")
 		#control.create_house(1000, 800)
 		control.create_house_kitty_moves_in(self.position.x+100,self.position.y+100,2)
 		
@@ -106,7 +107,7 @@ func _physics_process(delta: float) -> void:
 
 
 	if Input.is_action_just_pressed("bpress"):
-		print("time to summon some dogshit I guess")
+		#print("time to summon some dogshit I guess")
 		#control.create_house(1000, 800)
 		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
 		#control.create_cafe(self.position.x+100,self.position.y+100,1);
@@ -116,7 +117,7 @@ func _physics_process(delta: float) -> void:
 
 
 	if Input.is_action_just_pressed("vpress"):
-		print("time to summon some dogshit I guess")
+		#print("time to summon some dogshit I guess")
 		#control.create_house(1000, 800)
 		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
 		#control.create_cafe(self.position.x+100,self.position.y+100,1);
@@ -128,7 +129,7 @@ func _physics_process(delta: float) -> void:
 
 
 	if Input.is_action_just_pressed("gpress"):
-		print("time to summon some dogshit I guess")
+		#print("time to summon some dogshit I guess")
 		#control.create_house(1000, 800)
 		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
 		#control.create_cafe(self.position.x+100,self.position.y+100,1);

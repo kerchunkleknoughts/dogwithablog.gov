@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bd7loij83pavx"]
+[gd_scene load_steps=9 format=3 uid="uid://bd7loij83pavx"]
 
 [ext_resource type="PackedScene" uid="uid://bhxiiu0lcw6s1" path="res://scenes/fucker2.tscn" id="1_7pxbb"]
 [ext_resource type="Script" uid="uid://dfkvsp2tnbncy" path="res://scripts/game_2.gd" id="1_8j387"]
 [ext_resource type="Script" uid="uid://cnc0c54dqni2i" path="res://scripts/game_manager.gd" id="1_xrrf0"]
 [ext_resource type="Script" uid="uid://0qid8hlvuoo" path="res://fucker_2.gd" id="2_u48pd"]
 [ext_resource type="PackedScene" uid="uid://brx7t878pbvbq" path="res://scenes/biig_grass.tscn" id="5_dflkw"]
+[ext_resource type="PackedScene" uid="uid://lu4expvs0vi1" path="res://scenes/topgate.tscn" id="6_xrrf0"]
+[ext_resource type="PackedScene" uid="uid://cs80a26jdavek" path="res://scenes/bottom_gate.tscn" id="7_kh4a2"]
 
 [sub_resource type="TileSet" id="TileSet_u48pd"]
 
@@ -110,3 +112,9 @@ position = Vector2(-1893, -10)
 
 [node name="Node2D9" parent="." instance=ExtResource("5_dflkw")]
 position = Vector2(-1846, 1040)
+
+[node name="topgate" parent="." instance=ExtResource("6_xrrf0")]
+position = Vector2(597, 666)
+
+[node name="bottomgate" parent="." instance=ExtResource("7_kh4a2")]
+position = Vector2(592, 937)

@@ -19,14 +19,37 @@ extends Node
 
 @onready var text=get_tree().get_root().get_node("game2/text")
 
+
+
+
+
+@onready var player=get_tree().get_root().get_node("game2/fucker2")#$"../houses"
+
+
+
+
+func move_player(x,y):
+	player.position.x=player.position.x+x;
+	player.position.y=player.position.y+y;
+
+
+
+
+
+
+
+
+
+
+
 func money_change(change):
 	GlobalVariables.money += change
 	#Global.score+=1
 	
 	#print("GLOBAL SCORE")
 	#print(Global.score)
-	print("Test")
-	print(GlobalVariables.money)
+	#print("Test")
+	#print(GlobalVariables.money)
 	update_label()
 	#create_house()
 	
@@ -186,8 +209,8 @@ func new_cat(xpos,ypos,npctype):
 	scene.ktid=GlobalVariables.ki_id_counter;
 	GlobalVariables.ki_id_counter=GlobalVariables.ki_id_counter+1
 	targetnode.add_child(scene)
-	print("scene hid"+str(scene.ktid))
-	print("global hid"+ str(GlobalVariables.ki_id_counter))
+	#print("scene hid"+str(scene.ktid))
+	#print("global hid"+ str(GlobalVariables.ki_id_counter))
 	
 	
 	scene.current_npc_type=npctype
@@ -355,7 +378,7 @@ func create_mult_house(xpos,ypos,housetype):
 	
 	update_label()
 	
-	print("is house creation succ?: " +str(house_creation_successful))
+	#print("is house creation succ?: " +str(house_creation_successful))
 	
 	return house_creation_successful;
 	
@@ -570,6 +593,7 @@ func create_house_kitty_moves_in(xpos,ypos,npctype):
 	var issucc=create_mult_house(xpos,ypos,npctype)
 	print(str(issucc))
 	
+
 	#new_cat(xpos,ypos)
 	if(issucc==1):	
 		new_cat(xpos+offset,ypos+offset,npctype)
@@ -580,3 +604,5 @@ func create_house_kitty_moves_in(xpos,ypos,npctype):
 		
 		
 		
+
+
