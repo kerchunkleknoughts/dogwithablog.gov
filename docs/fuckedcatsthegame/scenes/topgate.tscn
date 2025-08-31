@@ -10,8 +10,8 @@ size = Vector2(61.5, 67)
 script = ExtResource("1_tag45")
 
 [node name="gatesprite" type="Sprite2D" parent="."]
-position = Vector2(86, -69)
-scale = Vector2(1.65031, 1.47594)
+position = Vector2(166, -139)
+scale = Vector2(3.14504, 2.68949)
 texture = ExtResource("1_itb70")
 
 [node name="Area2D" type="Area2D" parent="."]

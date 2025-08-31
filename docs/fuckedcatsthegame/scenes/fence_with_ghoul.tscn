@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bft088ot5723d"]
+
+[ext_resource type="PackedScene" uid="uid://7p03jpdcx3yd" path="res://scenes/fourfence.tscn" id="1_qu4c7"]
+[ext_resource type="PackedScene" uid="uid://bvp3shjfjfp36" path="res://scenes/twofence.tscn" id="2_2wqn5"]
+[ext_resource type="PackedScene" uid="uid://bm6nd7m0nsw2m" path="res://scenes/ghoul_post.tscn" id="3_jykio"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_qu4c7")]
+position = Vector2(206, 234)
+
+[node name="Node2D2" parent="." instance=ExtResource("2_2wqn5")]
+position = Vector2(526, 245)
+
+[node name="Node2D3" parent="." instance=ExtResource("3_jykio")]
+position = Vector2(414, 264)

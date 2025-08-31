@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://5t8wif7d2yrh"]
+
+[ext_resource type="PackedScene" uid="uid://7p03jpdcx3yd" path="res://scenes/fourfence.tscn" id="1_rw1ye"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_rw1ye")]
+position = Vector2(27, 314)
+rotation = 1.5708
+scale = Vector2(2, 1)
+skew = -1.24791
