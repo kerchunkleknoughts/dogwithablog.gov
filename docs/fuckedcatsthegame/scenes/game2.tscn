@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bd7loij83pavx"]
+[gd_scene load_steps=12 format=3 uid="uid://bd7loij83pavx"]
 
 [ext_resource type="PackedScene" uid="uid://bhxiiu0lcw6s1" path="res://scenes/fucker2.tscn" id="1_7pxbb"]
 [ext_resource type="Script" uid="uid://dfkvsp2tnbncy" path="res://scripts/game_2.gd" id="1_8j387"]
 [ext_resource type="Script" uid="uid://cnc0c54dqni2i" path="res://scripts/game_manager.gd" id="1_xrrf0"]
+[ext_resource type="PackedScene" uid="uid://lqfemjgyr6pj" path="res://scenes/gamemanager.tscn" id="2_5dhap"]
 [ext_resource type="Script" uid="uid://0qid8hlvuoo" path="res://fucker_2.gd" id="2_u48pd"]
 [ext_resource type="PackedScene" uid="uid://brx7t878pbvbq" path="res://scenes/biig_grass.tscn" id="5_dflkw"]
 [ext_resource type="PackedScene" uid="uid://dw0qpsn8k7nbl" path="res://scenes/fence_top.tscn" id="7_8j387"]
@@ -14,6 +15,8 @@
 
 [node name="game2" type="Node2D"]
 script = ExtResource("1_8j387")
+
+[node name="effects" type="Node" parent="."]
 
 [node name="ciglabel" type="Label" parent="."]
 offset_left = 842.0
@@ -31,8 +34,10 @@ offset_right = 968.0
 offset_bottom = 225.0
 text = "Press esc for controls."
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager3" type="Node" parent="."]
 script = ExtResource("1_xrrf0")
+
+[node name="GameManager" parent="." instance=ExtResource("2_5dhap")]
 
 [node name="houses" type="Node" parent="."]
 

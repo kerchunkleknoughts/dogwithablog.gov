@@ -8,6 +8,7 @@ extends Node
 
 @onready var kittys=get_tree().get_root().get_node("game2/kittys")#$"../houses"
 
+@onready var effects=get_tree().get_root().get_node("game2/effects")#$"../houses"
 
 @onready var cafes=get_tree().get_root().get_node("game2/cafes")#$"../houses"
 
@@ -27,10 +28,169 @@ extends Node
 
 
 
+@onready var dramadeath_timer: Timer =$dramadeath_timer
+
+
+
 
 func move_player(x,y):
 	player.position.x=player.position.x+x;
 	player.position.y=player.position.y+y;
+
+
+
+
+
+
+
+var effectcounter=0;
+
+func _on_dramadeath_timer_timeout() -> void:
+	
+
+	effectcounter+=1;
+	var range=50;
+	var amount=100;
+
+
+	var rng = RandomNumberGenerator.new()
+	var my_random_numberx = rng.randf_range(-range, range);
+	var my_random_numbery = rng.randf_range(-range, range);
+	var my_random_scale = rng.randf_range(0,1.3);
+
+	if(effectcounter<gamount):
+
+		create_effect(gtargetnode.position.x+my_random_numberx,gtargetnode.position.y+my_random_numbery,0,gduration,my_random_scale)
+	else:
+		dramadeath_timer.stop()
+		if(gisdestructive):
+			print("Get fucked bro")
+			gtargetnode.queue_free();
+
+	pass # Replace with function body.
+
+
+
+
+
+
+
+func dramatic_death(targetnode):
+
+	var range=100;
+	var amount=100;
+
+	var rng = RandomNumberGenerator.new()
+
+
+
+	for it in amount:
+		var my_random_numberx = rng.randf_range(-range, range);
+		var my_random_numbery = rng.randf_range(-range, range);
+		var my_random_scale = rng.randf_range(0,2);
+
+
+		create_effect(targetnode.position.x+my_random_numberx,targetnode.position.y+my_random_numbery,0,1,my_random_scale)
+
+
+
+
+
+var gtargetnode;
+
+var ginbetween_dur;
+var gduration;
+var gamount=0;
+var gisdestructive=0;
+
+
+
+func dramatic_death2(targetnode,inbetween_dur,duration,amount,isdestructive):
+
+
+	effectcounter=0;
+	gtargetnode=targetnode;
+	ginbetween_dur=inbetween_dur;
+
+	dramadeath_timer.wait_time=inbetween_dur
+
+	gduration=duration;
+	gamount=amount;
+
+	gisdestructive=isdestructive;
+
+	dramadeath_timer.start()
+
+
+	
+
+
+
+		
+
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+func create_effect(x,y,index,duration,scale):
+
+	#this function plays an animation at a given point.
+	#it does so by generating an effect node at 
+	# a given x y index, for the number of seconds specified by
+	#the duration.
+
+
+	var path="res://scenes/effect.tscn";
+	var targetnode=effects
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(x, y)
+	scene.set_position(origin)
+	#print("here1!")
+
+	scene.animation_to_play=index;
+	scene.waittime=duration;
+
+	targetnode.add_child(scene)
+
+	scene.animation_to_play=index;
+	scene.waittime=duration;
+
+	var scalev=Vector2(scale,scale)
+	scene.scale=scalev;
+
+
+	#scene.animation_to_play=index;
+	#scene.waittime=duration;
+
+	
+	#print("scene hid"+str(scene.ktid))
+	#print("global hid"+ str(GlobalVariables.ki_id_counter))
+	
+	#I have no fucking clue why this causes the building check function to crash, 
+	#this for whatever reason makes the npc have a null pointer to the cafe. 
+	# why am I cursed with such incomprehensible bugs? 
+	# did I do something horrible in a past life and I am now just 
+	# paying for it? 
+	
+	#scene.kitty_init();
+	
+	pass
+
 
 
 
@@ -604,5 +764,3 @@ func create_house_kitty_moves_in(xpos,ypos,npctype):
 		
 		
 		
-
-

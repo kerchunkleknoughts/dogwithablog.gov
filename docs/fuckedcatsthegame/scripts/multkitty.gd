@@ -1091,6 +1091,10 @@ func eval_death():
 		
 		deathanimation.visible=true
 		deathanimation.play("explode")
+		myhouse.get_child(0).dramatic_death2(myhouse,.5,1,10,1)	
+		
+		
+
 		
 		
 

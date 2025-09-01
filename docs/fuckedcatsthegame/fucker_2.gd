@@ -111,8 +111,12 @@ func _physics_process(delta: float) -> void:
 		#control.create_house(1000, 800)
 		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
 		#control.create_cafe(self.position.x+100,self.position.y+100,1);
-		scene_manager.generate_scene();
-			
+		
+		
+		#scene_manager.generate_scene();
+
+		control.create_effect(self.position.x+100,self.position.y+100,0,.5,2)
+
 
 
 
@@ -121,8 +125,10 @@ func _physics_process(delta: float) -> void:
 		#control.create_house(1000, 800)
 		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
 		#control.create_cafe(self.position.x+100,self.position.y+100,1);
-		scene_manager.swap_scene(3)
+		
+		#scene_manager.swap_scene(3)
 
+		control.dramatic_death(self)
 
 
 
@@ -133,8 +139,10 @@ func _physics_process(delta: float) -> void:
 		#control.create_house(1000, 800)
 		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
 		#control.create_cafe(self.position.x+100,self.position.y+100,1);
-		scene_manager.swap_scene(0)
-			
+		#scene_manager.swap_scene(0)
+
+		control.dramatic_death2(self,.5,1,10)	
+
 
 
 
