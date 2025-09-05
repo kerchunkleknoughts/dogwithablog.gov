@@ -2,6 +2,12 @@ extends Node
 
 
 
+var npc_house_type_array=["res://scenes/ramidhouse.tscn", "res://scenes/toilethouse.tscn"]
+
+var npc_array=["res://scenes/pyramid.tscn","res://scenes/toilet.tscn"]
+
+
+
 @onready var money_label=get_tree().get_root().get_node("game2/moneylabel")#$"../moneylabel"
 
 @onready var houses=get_tree().get_root().get_node("game2/houses")#$"../houses"
@@ -284,11 +290,13 @@ func new_house(xpos,ypos,housetype):
 
 
 
+
+
 	
 func new_ramid_house(xpos,ypos,housetype):
 	#this function will create a new house, then 
 	#it will update the house id, then store it in the houses array.
-	var path="res://scenes/ramidhouse.tscn"
+	var path=npc_house_type_array[housetype]
 	var targetnode=houses
 	#print("here2!")
 	var scene = load(path).instantiate()
@@ -307,7 +315,7 @@ func new_ramid_house(xpos,ypos,housetype):
 	
 	
 	
-	scene.currenthousetype=housetype;
+	scene.currenthousetype=0;
 	scene.animation_init()
 
 
@@ -391,8 +399,15 @@ func new_cat(xpos,ypos,npctype):
 
 
 
+
+
+
+
+
+
+
 func new_pyramid(xpos,ypos,npctype):
-	var path="res://scenes/pyramid.tscn"
+	var path=npc_array[npctype]
 	var targetnode=kittys
 	#print("here2!")
 	var scene = load(path).instantiate()
@@ -406,7 +421,7 @@ func new_pyramid(xpos,ypos,npctype):
 	print("global hid"+ str(GlobalVariables.ki_id_counter))
 	
 	
-	scene.current_npc_type=npctype
+	scene.current_npc_type=0;
 	scene.animation_init()
 	
 	
@@ -419,6 +434,9 @@ func new_pyramid(xpos,ypos,npctype):
 	#scene.kitty_init();
 	
 	pass
+
+
+
 
 
 
@@ -547,6 +565,8 @@ func create_mult_house(xpos,ypos,housetype):
 	#var origin = Vector2(1000, 800)
 	#house.set_position(origin)
 	#add_child(house)
+
+
 
 
 
@@ -725,8 +745,10 @@ func check_building_collision(node1,building):
 	
 
 		
+
 func create_house_pyramid_moves_in(xpos,ypos,npctype):
 	
+
 	
 	var offset=100;
 	var issucc=create_ramid_house(xpos,ypos,npctype)
@@ -739,6 +761,7 @@ func create_house_pyramid_moves_in(xpos,ypos,npctype):
 		
 
 		
+
 		
 		
 		
