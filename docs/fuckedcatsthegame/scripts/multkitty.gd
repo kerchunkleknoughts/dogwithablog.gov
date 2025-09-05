@@ -394,6 +394,9 @@ func talk():
 		
 
 
+
+
+
 func talk_init():
 	
 	if(current_npc_type==npc_type.CATNPC):

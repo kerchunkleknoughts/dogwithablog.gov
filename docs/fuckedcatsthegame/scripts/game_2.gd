@@ -25,6 +25,7 @@ var current_room_index=0;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 
+	control.insult_engine_init()
 	pass # Replace with function body.
 
 

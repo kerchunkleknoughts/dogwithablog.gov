@@ -128,7 +128,10 @@ func _physics_process(delta: float) -> void:
 		
 		#scene_manager.swap_scene(3)
 
-		control.dramatic_death(self)
+		#control.dramatic_death(self)
+
+
+		control.new_moving_text(self.position.x,self.position.y-50,-1,"fuck youu",1,1,2);
 
 
 
@@ -142,7 +145,7 @@ func _physics_process(delta: float) -> void:
 		#scene_manager.swap_scene(0)
 
 		#control.dramatic_death2(self,.5,1,10)	
-		control.create_house_pyramid_moves_in(self.position.x+100,self.position.y+100,1)
+		control.create_house_pyramid_moves_in(self.position.x+100,self.position.y+100,2)
 
 
 

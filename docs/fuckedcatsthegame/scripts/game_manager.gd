@@ -35,6 +35,79 @@ var npc_array=["res://scenes/pyramid.tscn","res://scenes/toilet.tscn"]
 
 
 @onready var dramadeath_timer: Timer =$dramadeath_timer
+@onready var insult_timer: Timer =$insult_timer
+
+
+
+
+
+
+
+
+
+
+func insult_engine_init():
+
+	insult_timer.start();
+
+	pass;
+
+
+
+var insults=[
+"toe sucker.",
+"bed wetter",
+"I bet you still believe in santa claus",
+"nice socks loser, lmao",
+"fuck yoouuu",
+"piss on me coward",
+"gonna cry?",
+
+
+
+]
+
+
+
+
+
+func generate_insult():
+
+
+
+	var rng = RandomNumberGenerator.new()
+	var my_random_number = rng.randf_range(0, 1500)
+	
+	var my_random_insult = rng.randf_range(0, insults.size())
+
+	new_moving_text(-1000,my_random_number,15,insults[my_random_insult],5,0,2);
+
+	var a;
+
+
+
+
+
+
+
+func _on_insult_timer_timeout() -> void:
+	
+	generate_insult();
+	pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -361,6 +434,32 @@ func new_text(xpos,ypos,expsec,textval):
 	scene.textval=textval
 	targetnode.add_child(scene)
 	
+
+
+
+func new_moving_text(xpos,ypos,expsec,textval,xvel,yvel,mode):
+	#this function will create a new house, then 
+	#it will update the house id, then store it in the houses array.
+	var path="res://scenes/text.tscn"
+	var targetnode=text
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	#print("here1!")
+	scene.expsec=expsec
+	scene.textval=textval
+	
+	targetnode.add_child(scene)
+
+	scene.xvel=xvel;
+	scene.yvel=yvel;
+	scene.textmode=mode;
+
+
+	
+
+
 
 
 
