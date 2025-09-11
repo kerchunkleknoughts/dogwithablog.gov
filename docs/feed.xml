@@ -199,21 +199,23 @@
 
   
 
+  <item>
+    <title>KITTY LAND GAME MAJOR UPDATES!</title>
+    <description>Made some pretty decent progress with the game, current features are ::: 1 three different npcs+npc houses 2 custom voice lines 3 need system/basic pathfinding. Its still a WIP but feel free to come on down and give it a play! 
 
-
-  <!-- 11ty AUTOMATED CONTENT UPDATES! -->
+    </description>
+    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/feed_updates/update1.html</link>
+    <guid>https://kerchunkleknoughts.github.io/dogwithablog.gov/feed_updates/update1.html</guid>
+    <pubDate>Wed, 27 Aug 2025 18:00:00 -0600</pubDate>
+  </item>
 
 
   
 
-  <item>
-    <title>Photos! Game update! Journal entries!</title>
-    <description> Added some more photos to photo page, along with some journal entries! Also Made some decent progress on the godot game, just need to clean up some of the textures and expand the world a bit and I think it will be complete!
- 
-    </description>
-    <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/projects/project00.html</link>
-    <pubDate>Mon, 12 May 2025 10:53:30 -0600</pubDate>
-  </item>
+
+
+  <!-- 11ty AUTOMATED CONTENT UPDATES! -->
+
 
   
 
@@ -223,42 +225,7 @@
     <!-- 11ty AUTOMATED SITE UPDATE UPDATES!-->
 
 
-    
-
-    <item>
-      <title>Added Photos page</title>
-      <description>Added a page to put random photos from the depths of my hard-drive
-    
-      </description>
-      <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/photos.html</link>
-      <pubDate>Fri, 18 Apr 2025 10:53:30 -0600</pubDate>
-    </item>
-  
-    
-
-    <item>
-      <title>Major art page refactor + MORE ART YIPPIE</title>
-      <description>Yeah it should be way easier to add new artwork to my website now, 11ty rocks dude.
-    
-      </description>
-      <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/drawings.html</link>
-      <pubDate>Fri, 18 Jul 2025 10:53:30 -0600</pubDate>
-    </item>
-  
-    
-
-    <item>
-      <title>KITTY LAND GAME MAJOR UPDATES</title>
-      <description>Make some pretty decent progress with the game, current features are ::: 1 three different npcs+npc houses 2 custom voice lines 3 need system/basic pathfinding. Its still a WIP but feel free to come on down and give it a play! 
-    
-      </description>
-      <link>https://kerchunkleknoughts.github.io/dogwithablog.gov/projects/project01.html</link>
-      <pubDate>Thu, 28 Aug 2025 10:53:30 -0600</pubDate>
-    </item>
-  
-    
-  
-
+ 
 
     
 
