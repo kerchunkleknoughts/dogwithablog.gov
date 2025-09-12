@@ -103,6 +103,48 @@ func _on_insult_timer_timeout() -> void:
 
 
 
+var yarn_per_finger=12;
+
+var finger_per_yarn=int(1/yarn_per_finger);
+
+
+
+
+
+
+func currency_transfer(index, amount):
+
+	#this function transfers one currency type to the other based
+	#on the exchange rate. 
+
+
+	#yarn to finger;
+	if(index==0):
+
+		var amount_removed=amount*yarn_per_finger;
+		var t_currency_gain=1;
+		if(GlobalVariables.money-amount_removed<0):
+			var a;
+		else:
+
+			GlobalVariables.money=GlobalVariables.money-amount_removed;
+			GlobalVariables.fingers=GlobalVariables.fingers+t_currency_gain;
+			
+
+		
+	if(index==1):
+
+		var amount_removed=amount*yarn_per_finger;
+		var t_currency_gain=1;
+		if(GlobalVariables.fingers-amount_removed<0):
+			var a;
+		else:
+
+			GlobalVariables.fingers=GlobalVariables.fingers-amount_removed;
+			GlobalVariables.cigs=GlobalVariables.cigs+t_currency_gain;
+			
+
+
 
 
 

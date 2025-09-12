@@ -140,3 +140,21 @@ position = Vector2(10, 734)
 
 [node name="Node2D12" parent="." instance=ExtResource("9_s427y")]
 position = Vector2(9, 1157)
+
+[node name="money_to_finger" type="Button" parent="."]
+offset_left = 674.0
+offset_top = 273.0
+offset_right = 769.0
+offset_bottom = 304.0
+text = "Buy finger"
+
+[node name="finger_to_cig" type="Button" parent="."]
+offset_left = 886.0
+offset_top = 311.0
+offset_right = 949.0
+offset_bottom = 342.0
+text = "buy cig
+"
+
+[connection signal="pressed" from="money_to_finger" to="." method="_on_money_to_finger_pressed"]
+[connection signal="pressed" from="finger_to_cig" to="." method="_on_finger_to_cig_pressed"]

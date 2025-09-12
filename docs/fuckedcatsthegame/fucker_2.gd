@@ -145,11 +145,21 @@ func _physics_process(delta: float) -> void:
 		#scene_manager.swap_scene(0)
 
 		#control.dramatic_death2(self,.5,1,10)	
-		control.create_house_pyramid_moves_in(self.position.x+100,self.position.y+100,2)
+		control.create_house_pyramid_moves_in(self.position.x+100,self.position.y+100,1)
 
 
 
 
+
+	if Input.is_action_just_pressed("tpress"):
+		#print("time to summon some dogshit I guess")
+		#control.create_house(1000, 800)
+		#ontrol.create_cafe(self.position.x+100,self.position.y+100,1);
+		#control.create_cafe(self.position.x+100,self.position.y+100,1);
+		#scene_manager.swap_scene(0)
+
+		#control.dramatic_death2(self,.5,1,10)	
+		control.currency_transfer(0, 1)
 
 
 
