@@ -6,6 +6,21 @@ var money=20;
 var fingers=0;
 var cigs=0;
 
+var ca=[money,fingers,cigs]
+
+
+
+func update_vars():
+	money=ca[0];
+	fingers=ca[1];
+	cigs=ca[2];
+
+
+func update_array():
+	ca[0]=money;
+	ca[1]=fingers;
+	ca[2]=cigs;
+
 
 
 var time=0;

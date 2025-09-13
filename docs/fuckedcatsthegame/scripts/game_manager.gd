@@ -118,32 +118,29 @@ func currency_transfer(index, amount):
 	#on the exchange rate. 
 
 
+
+	GlobalVariables.update_array()
+
 	#yarn to finger;
-	if(index==0):
+	
 
-		var amount_removed=amount*yarn_per_finger;
-		var t_currency_gain=1;
-		if(GlobalVariables.money-amount_removed<0):
-			var a;
-		else:
+	var amount_removed=amount*yarn_per_finger;
+	var t_currency_gain=1;
+	
+	if(GlobalVariables.ca[index]-amount_removed<0):
+		var a;
+		
+	else:
 
-			GlobalVariables.money=GlobalVariables.money-amount_removed;
-			GlobalVariables.fingers=GlobalVariables.fingers+t_currency_gain;
-			
+		GlobalVariables.ca[index]=GlobalVariables.ca[index]-amount_removed;
+		GlobalVariables.ca[index+1]=GlobalVariables.ca[index+1]+t_currency_gain;
+		GlobalVariables.update_vars();
+		
+	
+	
+
 
 		
-	if(index==1):
-
-		var amount_removed=amount*yarn_per_finger;
-		var t_currency_gain=1;
-		if(GlobalVariables.fingers-amount_removed<0):
-			var a;
-		else:
-
-			GlobalVariables.fingers=GlobalVariables.fingers-amount_removed;
-			GlobalVariables.cigs=GlobalVariables.cigs+t_currency_gain;
-			
-
 
 
 
@@ -677,6 +674,7 @@ func new_cig(xpos,ypos, type):
 
 func create_mult_house(xpos,ypos,housetype):
 	
+	
 	var money_req=10;
 	var house_creation_successful=0;
 	
@@ -686,14 +684,23 @@ func create_mult_house(xpos,ypos,housetype):
 	#house.set_position(origin)
 	#add_child(house)
 	
-	if(GlobalVariables.money>=money_req):
-		house_creation_successful=1
-		new_house(xpos,ypos,housetype);
-		#Create a new house, store in the houses array. 
-		GlobalVariables.money=GlobalVariables.money-money_req;
-		
-		
-		
+	
+	if(housetype==0):
+	
+		if(GlobalVariables.money>=money_req):
+			house_creation_successful=1
+			new_house(xpos,ypos,housetype);
+			#Create a new house, store in the houses array. 
+			GlobalVariables.money=GlobalVariables.money-money_req;
+			
+	else:
+			if(GlobalVariables.fingers>=money_req):
+				house_creation_successful=1
+				new_house(xpos,ypos,housetype);
+				#Create a new house, store in the houses array. 
+				GlobalVariables.fingers=GlobalVariables.fingers-money_req;
+				
+
 	
 	update_label()
 	
@@ -717,7 +724,7 @@ func create_ramid_house(xpos,ypos,housetype):
 	
 
 
-	var money_req=10;
+	var money_req=1;
 	var house_creation_successful=0;
 	
 
@@ -727,12 +734,18 @@ func create_ramid_house(xpos,ypos,housetype):
 	#house.set_position(origin)
 	#add_child(house)
 	
-	if(GlobalVariables.money>=money_req):
+	
+	GlobalVariables.update_array()
+	
+	
+	if(GlobalVariables.ca[housetype+2]>=money_req):
 		house_creation_successful=1
 		new_ramid_house(xpos,ypos,housetype);
 		#Create a new house, store in the houses array. 
-		GlobalVariables.money=GlobalVariables.money-money_req;
+		GlobalVariables.ca[housetype+2]=GlobalVariables.ca[housetype+2]-money_req;
 		
+		
+	GlobalVariables.update_vars();
 		
 		
 	
@@ -894,6 +907,7 @@ func create_house_pyramid_moves_in(xpos,ypos,npctype):
 	var offset=100;
 	var issucc=create_ramid_house(xpos,ypos,npctype)
 	print(str(issucc))
+	
 	
 	
 	#new_cat(xpos,ypos)
