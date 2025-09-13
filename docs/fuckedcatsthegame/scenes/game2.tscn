@@ -94,6 +94,20 @@ offset_right = 1023.0
 offset_bottom = 258.0
 text = "0"
 
+[node name="pretumorlabel" type="Label" parent="."]
+offset_left = 803.0
+offset_top = 346.0
+offset_right = 1747.0
+offset_bottom = 607.0
+text = "tumors:"
+
+[node name="tumorlabel" type="Label" parent="."]
+offset_left = 871.0
+offset_top = 347.0
+offset_right = 1897.0
+offset_bottom = 493.0
+text = "0"
+
 [node name="kittys" type="Node" parent="."]
 
 [node name="Node2D" parent="." instance=ExtResource("5_dflkw")]
@@ -156,5 +170,13 @@ offset_bottom = 342.0
 text = "buy cig
 "
 
+[node name="cig_to_tumor" type="Button" parent="."]
+offset_left = 680.0
+offset_top = 343.0
+offset_right = 775.0
+offset_bottom = 374.0
+text = "Buy tumor"
+
 [connection signal="pressed" from="money_to_finger" to="." method="_on_money_to_finger_pressed"]
 [connection signal="pressed" from="finger_to_cig" to="." method="_on_finger_to_cig_pressed"]
+[connection signal="pressed" from="cig_to_tumor" to="." method="_on_cig_to_tumor_pressed"]

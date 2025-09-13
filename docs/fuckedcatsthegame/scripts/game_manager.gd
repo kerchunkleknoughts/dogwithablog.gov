@@ -27,6 +27,7 @@ var npc_array=["res://scenes/pyramid.tscn","res://scenes/toilet.tscn"]
 @onready var text=get_tree().get_root().get_node("game2/text")
 
 
+@onready var tumor_label=get_tree().get_root().get_node("game2/tumorlabel")#$"../moneylabel"
 
 
 
@@ -103,10 +104,9 @@ func _on_insult_timer_timeout() -> void:
 
 
 
-var yarn_per_finger=12;
+var yarn_per_finger=1;
 
 var finger_per_yarn=int(1/yarn_per_finger);
-
 
 
 
@@ -359,6 +359,11 @@ func update_label():
 	
 	if(!(c1ml==null)):
 		c1ml.text=str(GlobalVariables.money)
+		
+
+	if(!(tumor_label==null)):
+		tumor_label.text=str(GlobalVariables.tumors)
+
 
 
 	
@@ -643,6 +648,32 @@ func new_cig(xpos,ypos, type):
 	#this function will create a new house, then 
 	#it will update the house id, then store it in the houses array.
 	var path="res://scenes/cig.tscn"
+	var targetnode=yarnballs
+	#print("here2!")
+	var scene = load(path).instantiate()
+	var origin = Vector2(xpos, ypos)
+	scene.set_position(origin)
+	
+	
+	
+	#print("here1!")
+	#scene.hid=GlobalVariables.h_id_counter;
+	#GlobalVariables.h_id_counter=GlobalVariables.h_id_counter+1
+	targetnode.add_child(scene)
+	#print("scene hid"+str(scene.hid))
+	#print("global hid"+ str(GlobalVariables.h_id_counter))
+	#print("here3!")
+	scene.current_item_type=type; 
+	scene.yarn_init();
+	
+
+
+
+
+func new_tumor(xpos,ypos, type):
+	#this function will create a new house, then 
+	#it will update the house id, then store it in the houses array.
+	var path="res://scenes/tumor.tscn"
 	var targetnode=yarnballs
 	#print("here2!")
 	var scene = load(path).instantiate()

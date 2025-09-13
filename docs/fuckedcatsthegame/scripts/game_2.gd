@@ -72,3 +72,14 @@ func _on_finger_to_cig_pressed() -> void:
 	
 	
 	pass # Replace with function body.
+
+
+
+
+func _on_cig_to_tumor_pressed() -> void:
+	print("AAHAHAH ITS PRESSED!")
+	
+	control.currency_transfer(2, 1)
+	
+	
+	pass # Replace with function body.
