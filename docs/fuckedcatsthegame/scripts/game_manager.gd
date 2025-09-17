@@ -836,6 +836,10 @@ func find_vector_difference(node1,node2):
 	#print(node1.position.x)
 	#print(node1.position.y)
 	
+	print("NODE XY COORDS:")
+	print("NODE1x : " + str(node1.position.x) + "NODE1y:"+   str(node1.position.y)  )
+	print("NODE2x : " + str(node2.position.x) + "NODE2y:"+   str(node2.position.y)  )
+	
 	var difx=node1.position.x-node2.position.x
 	var dify=node1.position.y-node2.position.y
 	
@@ -848,7 +852,7 @@ func find_vector_difference(node1,node2):
 	
 	
 func find_angle(differencevector):
-	var angle=atan(differencevector.y/differencevector.x)
+	var angle=atan2(differencevector.y,differencevector.x)
 	return angle;
 	
 	
@@ -868,6 +872,13 @@ func advancedmovetonode(mag,node1,node2):
 	#and calculates the x and y portions of
 	#that velcity vector, and assigns 
 	#the subject node that velocity. 
+	print("ADVANCED MOVE TO NODE CALLED!")
+	
+	
+	#here node 2 is the destination node, 
+	#and node 1 is the target node, which is moved to the 
+	#destination node with magnitude mag. 
+	
 	var vectordif=self.find_vector_difference(node1,node2)
 	
 	
@@ -881,11 +892,18 @@ func advancedmovetonode(mag,node1,node2):
 	
 	#if(node1.position.x<node2.position.x):
 	#	angle=angle+180
+	print("da angle:" + str(angle))
 	
+	angle=angle+deg_to_rad(180);
 	
 	var opposite=sin(angle)*mag;
 	var adjacent=cos(angle)*mag;
+	
+	print("opposite calculated : " + str(opposite))
+	print("adjacent calculated : "+ str(adjacent))
+	
 	var b = Vector2()
+	
 	b.x = adjacent
 	b.y = opposite
 	
@@ -893,10 +911,7 @@ func advancedmovetonode(mag,node1,node2):
 	
 	
 	
-	if(node1.position.x>node2.position.x):
-		b.x=b.x*-1
-		b.y=b.y*-1
-		isright=1;
+	
 		
 	self.movenode(b,node1)
 	

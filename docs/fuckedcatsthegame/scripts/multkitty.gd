@@ -110,7 +110,7 @@ enum mydirection{
 
 @onready var onticksleepadd=10;
 
-@onready var ontickhungerdep=2;
+@onready var ontickhungerdep=6;
 
 @onready var ontickhungeradd=13;
 
@@ -593,7 +593,7 @@ func goto_nearest_cafe():
 			
 			
 			var isright=0
-			isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
+			isright=control.advancedmovetonode(sleepvel+200,self,self.closest_cafe)
 			
 			if(isright):
 				
