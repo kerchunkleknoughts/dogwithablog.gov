@@ -271,9 +271,21 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("kitties"):
+		#que removal
 		queoccrem()
+		
 		update_labels();
+		
+		daowner=area.get_parent()
 	
+	#this is to fix a bug where a npc will 
+	#attempt to navigate to a cafe when already within
+	#the cafe's collision box, so it never activates the 
+	#on area entered function.
+		if(daowner.checkhunger()):
+			var a 
+			daowner.state=daowner.states.RECHARGE
+		
 	pass # Replace with function body.
 
 

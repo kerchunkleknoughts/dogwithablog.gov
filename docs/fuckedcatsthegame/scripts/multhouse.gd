@@ -36,6 +36,9 @@ func _ready() -> void:
 	
 	self.z_index=100;
 	
+	$Area2D.connect("area_entered", Callable(self, "_on_area_2d_area_entered"))
+
+	
 	
 
 	#connect("body_entered", self, "_on_body_entered")
@@ -94,6 +97,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	#howner.state=howner.states.RECHARGE
 	
 	if(!(howner==null)):
+		
 		if((howner.position.x<=self.position.x+radius)&&(howner.position.x>=self.position.x-radius)):
 		
 				howner.state=howner.states.RECHARGE

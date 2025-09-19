@@ -100,7 +100,7 @@ enum mydirection{
 #determines if npc navigates to 
 #nearist station to regenerate sleep. 
 
-@onready var sleepvel=50;
+@onready var sleepvel=50+200;
 
 @onready var xvel=0;
 @onready var yvel=0;
@@ -593,7 +593,7 @@ func goto_nearest_cafe():
 			
 			
 			var isright=0
-			isright=control.advancedmovetonode(sleepvel+200,self,self.closest_cafe)
+			isright=control.advancedmovetonode(sleepvel,self,self.closest_cafe)
 			
 			if(isright):
 				
@@ -1108,6 +1108,7 @@ func building_check():
 	#this function checks if the building that 
 	#an npc is navigating to is still available to 
 	#accommodate the npc.
+	
 	
 	if(need_to_recharge==needs.HUNGER):
 			
