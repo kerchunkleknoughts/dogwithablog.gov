@@ -12,11 +12,17 @@ const JUMP_VELOCITY = -400.0
 @onready var control=$"../GameManager"
 
 
+@onready var game2=self.get_parent();
 
 
+@onready var controltext=get_tree().get_root().get_node("game2/controltext")
+
+@onready var tb1= (get_tree().get_root().get_node("game2/mailtext/box/text"))
 
 @onready var houses=$"../houses"
 
+
+@onready var current_interactable;
 
 #@onready var man = %GameManager
 
@@ -25,6 +31,12 @@ const JUMP_VELOCITY = -400.0
 
 
 var toggle=1;
+
+
+
+
+
+
 
 
 func _physics_process(delta: float) -> void:
@@ -148,6 +160,10 @@ func _physics_process(delta: float) -> void:
 		control.create_house_pyramid_moves_in(self.position.x+100,self.position.y+100,1)
 
 
+	var introtext="\nhello, welcome to kitty town! \nsince this is a test I am going to keep this short
+	\nhello, welcome to kitty town! \nsince this is a test I am going to keep this short
+	\nhello, welcome to kitty town! \nsince this is a test I am going to keep this short
+	\nhello, welcome to kitty town! \nsince this is a test I am going to keep this short"
 
 
 
@@ -159,9 +175,35 @@ func _physics_process(delta: float) -> void:
 		#scene_manager.swap_scene(0)
 
 		#control.dramatic_death2(self,.5,1,10)	
-		control.currency_transfer(0, 1)
+		#control.currency_transfer(0, 1)
+		
+		var a;
+		
+		#while(!(control.feed_label(controltext, "FUCK")==0)):
+		#	var asshole;
+	
+		#control.timed_feed(controltext, "FUCK", 1)
+		
+		
+		
+		control.timed_feed(tb1, introtext, .01)
+		
+		#control.timed_feed(controltext, "FUCK \n fuck", 1)
+		#It looks like the newline char is working.
 
 
+
+
+	if Input.is_action_just_pressed("rpress"):
+		control.open_mail_text()
+
+
+
+
+	if Input.is_action_just_pressed("epress"):
+		
+		if(current_interactable!=null):
+			current_interactable.context_action();
 
 
 

@@ -38,7 +38,7 @@ var npc_array=["res://scenes/pyramid.tscn","res://scenes/toilet.tscn"]
 @onready var dramadeath_timer: Timer =$dramadeath_timer
 @onready var insult_timer: Timer =$insult_timer
 
-
+@onready var feed_timer: Timer =$feed_timer
 
 
 
@@ -143,11 +143,21 @@ func currency_transfer(index, amount):
 		
 
 
+@onready var mailtext= (get_tree().get_root().get_node("game2/mailtext"))
 
 
+var mail_toggle=1;
 
-
-
+func open_mail_text():
+	
+	
+	if(mail_toggle):
+		var a; 
+		mailtext.visible=true;
+		mail_toggle=0
+	else:
+		mailtext.visible=false;
+		mail_toggle=1;
 
 
 
@@ -249,8 +259,11 @@ func dramatic_death2(targetnode,inbetween_dur,duration,amount,isdestructive):
 
 
 
-
-
+func complete_text(node,text):
+	node.text=text
+	feederindex=0
+	feed_timer.stop();
+	
 
 	
 	
@@ -259,8 +272,66 @@ func dramatic_death2(targetnode,inbetween_dur,duration,amount,isdestructive):
 
 
 
+var feederindex=0;
+var pnode;
+var plabeltext;
+var ptime;
 
 
+func timed_feed(node, labeltext, time):
+	#this function slowly types out a string over 
+	#the specified period. 
+	pnode=node;
+	plabeltext=labeltext;
+	ptime=time;
+	
+	feed_timer.wait_time=time;
+	feed_timer.start();
+	
+	var a;
+	
+	
+	#while(!(control.feed_label(controltext, "FUCK")==0)):
+	#		var asshole;
+	
+	
+	
+
+
+func _on_feed_timer_timeout() -> void:
+	
+	if(!(feed_label(pnode, plabeltext)==0)):
+		var a;
+	else:
+		feed_timer.stop();
+	
+	
+	pass # Replace with function body.
+
+	
+	
+
+func feed_label(node, labeltext):
+	
+	var a;
+	#this function will append the passed label node
+	#with one character. once final character is passed the 
+	#feeder index is reset. 
+	
+	if(feederindex==labeltext.length()):
+		feederindex=0;
+		return 0;
+
+	else:
+		
+		#print(node.text);
+		node.text=node.text+labeltext[feederindex];
+		feederindex+=1;
+		return 1;
+		
+
+	
+	
 
 
 
@@ -477,6 +548,8 @@ func new_text(xpos,ypos,expsec,textval):
 	scene.expsec=expsec
 	scene.textval=textval
 	targetnode.add_child(scene)
+	
+	
 	
 
 

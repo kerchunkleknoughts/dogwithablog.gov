@@ -34,6 +34,7 @@ func _ready() -> void:
 
 
 
+
 @onready var rng = RandomNumberGenerator.new()
 @onready var my_random_number = rng.randf_range(0, 1)
 

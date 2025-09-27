@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm4n1ifk3ep1g"]
+
+[ext_resource type="Texture2D" uid="uid://buiksu7s5c2f0" path="res://Game assets/iffy_mailbox.png" id="1_80nar"]
+[ext_resource type="Script" uid="uid://mg1fy4a75mwh" path="res://scripts/mailbox.gd" id="1_276df"]
+[ext_resource type="Texture2D" uid="uid://dtotbsy030bep" path="res://Game assets/laptop krita art/kitty game/fingernail_sprite.png" id="2_276df"]
+[ext_resource type="PackedScene" uid="uid://lqfemjgyr6pj" path="res://scenes/gamemanager.tscn" id="2_452jb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_452jb"]
+radius = 39.4588
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_276df")
+
+[node name="GameManager" parent="." instance=ExtResource("2_452jb")]
+position = Vector2(53, 23)
+
+[node name="yarnsprite" type="Sprite2D" parent="."]
+position = Vector2(15, -12)
+scale = Vector2(1.19437, 0.825625)
+texture = ExtResource("1_80nar")
+
+[node name="fingersprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1, 3)
+scale = Vector2(0.595625, 0.579375)
+texture = ExtResource("2_276df")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, -11)
+shape = SubResource("CircleShape2D_452jb")
+
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

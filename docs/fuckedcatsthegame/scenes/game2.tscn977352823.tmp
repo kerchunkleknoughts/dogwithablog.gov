@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bd7loij83pavx"]
+[gd_scene load_steps=13 format=3 uid="uid://bd7loij83pavx"]
 
 [ext_resource type="PackedScene" uid="uid://bhxiiu0lcw6s1" path="res://scenes/fucker2.tscn" id="1_7pxbb"]
 [ext_resource type="Script" uid="uid://dfkvsp2tnbncy" path="res://scripts/game_2.gd" id="1_8j387"]
@@ -10,8 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://5t8wif7d2yrh" path="res://scenes/fenceside.tscn" id="8_8j387"]
 [ext_resource type="PackedScene" uid="uid://dgyrsk1pche08" path="res://scenes/fence_side_left.tscn" id="9_5dhap"]
 [ext_resource type="PackedScene" uid="uid://bmr7j7web75ks" path="res://scenes/fence_bottom.tscn" id="9_s427y"]
-[ext_resource type="PackedScene" uid="uid://dm4n1ifk3ep1g" path="res://scenes/mailbox.tscn" id="12_8brng"]
-[ext_resource type="PackedScene" uid="uid://cs61mac28xl2r" path="res://scenes/mailbox_dialog.tscn" id="12_qyh6i"]
+[ext_resource type="PackedScene" uid="uid://bfne7gmnosadg" path="res://scenes/dim_screen.tscn" id="11_yblbm"]
 
 [sub_resource type="TileSet" id="TileSet_u48pd"]
 
@@ -179,12 +178,9 @@ offset_right = 775.0
 offset_bottom = 374.0
 text = "Buy tumor"
 
-[node name="mailtext" parent="." instance=ExtResource("12_qyh6i")]
+[node name="dim_screen_test" parent="." instance=ExtResource("11_yblbm")]
 visible = false
-position = Vector2(860, 530)
-
-[node name="Node2D13" parent="." instance=ExtResource("12_8brng")]
-position = Vector2(807, 768)
+position = Vector2(-328, -220)
 
 [connection signal="pressed" from="money_to_finger" to="." method="_on_money_to_finger_pressed"]
 [connection signal="pressed" from="finger_to_cig" to="." method="_on_finger_to_cig_pressed"]
