@@ -184,7 +184,7 @@ visible = false
 position = Vector2(860, 530)
 
 [node name="Node2D13" parent="." instance=ExtResource("12_8brng")]
-position = Vector2(807, 768)
+position = Vector2(858, 624)
 
 [connection signal="pressed" from="money_to_finger" to="." method="_on_money_to_finger_pressed"]
 [connection signal="pressed" from="finger_to_cig" to="." method="_on_finger_to_cig_pressed"]
