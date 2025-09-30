@@ -144,7 +144,7 @@ func currency_transfer(index, amount):
 
 
 @onready var mailtext= (get_tree().get_root().get_node("game2/mailtext"))
-
+@onready var extext= (get_tree().get_root().get_node("game2/exchange_menu"))
 
 var mail_toggle=1;
 
@@ -158,6 +158,23 @@ func open_mail_text():
 	else:
 		mailtext.visible=false;
 		mail_toggle=1;
+
+
+
+var ex_toggle=1;
+
+func open_ex_text():
+	
+	
+	if(ex_toggle):
+		var a; 
+		extext.visible=true;
+		ex_toggle=0
+	else:
+		extext.visible=false;
+		ex_toggle=1;
+
+
 
 
 
@@ -264,7 +281,10 @@ func complete_text(node,text):
 	feederindex=0
 	feed_timer.stop();
 	
-
+	
+func erase_text(node):
+	node.text=""
+	
 	
 	
 	
