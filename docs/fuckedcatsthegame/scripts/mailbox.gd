@@ -32,10 +32,16 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-var introtext="\nhello, welcome to kitty town! \nsince this is a test I am going to keep this short
-\nhello, welcome to kitty town! \nsince this is a test I am going to keep this short
-\nhello, welcome to kitty town! \nsince this is a test I am going to keep this short
-\nhello, welcome to kitty town! \nsince this is a test I am going to keep this short
+var introtext="\n
+hello, welcome to kitty town! \n
+We are currently in a dire need of meat 
+alternatives so you have been tasked with
+operating this experimental cat farm. 
+
+You are expected to maintain this farm for
+a minimum of 500 years, then with good behavior
+we will consider a re-examination of your case.
+ 
 \n\n 
 press e to e 
 "
@@ -47,8 +53,9 @@ press e to e
 "
 var text3="
 \nAnyways, if you are ever in the bartering spirit 
-I am the obligitory game shopkeeper to purchase
-your goods from!
+I am also the obligitory game shopkeeper to purchase
+your goods from! Just send your items in the mail and 
+I'll be sure to ship you what you want in 50-2.5 business days. 
 \n\n\n\n 
 press e to e
 "
