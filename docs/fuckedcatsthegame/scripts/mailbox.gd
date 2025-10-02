@@ -5,7 +5,13 @@ extends Node2D
 @onready var yarnsprite=$yarnsprite
 @onready var fingersprite=$fingersprite
 
-@onready var tb1=(get_tree().get_root().get_node("game2/mailtext/box/text"))
+#@onready var tb1=(get_tree().get_root().get_node("game2/mailtext/box/text"))
+
+
+
+@onready var mailtext= $mailtext
+@onready var extext= $exchange_menu
+@onready var tb1=mailtext.get_node("box/text");
 
 
 @onready var control=$GameManager
@@ -54,6 +60,38 @@ var menu_type=0;
 var text_array=[introtext,text2,text3]
 
 var text_index=0;
+
+
+
+
+var mail_toggle=1;
+
+func open_mail_text():
+	
+	
+	if(mail_toggle):
+		var a; 
+		mailtext.visible=true;
+		mail_toggle=0
+	else:
+		mailtext.visible=false;
+		mail_toggle=1;
+
+
+
+var ex_toggle=1;
+
+func open_ex_text():
+	
+	
+	if(ex_toggle):
+		var a; 
+		extext.visible=true;
+		ex_toggle=0
+	else:
+		extext.visible=false;
+		ex_toggle=1;
+
 
 
 
@@ -138,8 +176,8 @@ func context_action():
 		var a
 		context_state=2;
 		control_counter=0;	
-		control.open_mail_text();
-		control.open_ex_text();
+		open_mail_text();
+		open_ex_text();
 		context_action();
 		return;
 		
@@ -174,9 +212,9 @@ func context_action():
 	
 func eval_menus():
 		if(menu_type==0):
-			control.open_mail_text()
+			open_mail_text()
 		if(menu_type==1):
-			control.open_ex_text()
+			open_ex_text()
 
 
 

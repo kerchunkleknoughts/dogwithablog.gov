@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm4n1ifk3ep1g"]
+[gd_scene load_steps=8 format=3 uid="uid://dm4n1ifk3ep1g"]
 
 [ext_resource type="Texture2D" uid="uid://buiksu7s5c2f0" path="res://Game assets/iffy_mailbox.png" id="1_80nar"]
 [ext_resource type="Script" uid="uid://mg1fy4a75mwh" path="res://scripts/mailbox.gd" id="1_276df"]
 [ext_resource type="Texture2D" uid="uid://dtotbsy030bep" path="res://Game assets/laptop krita art/kitty game/fingernail_sprite.png" id="2_276df"]
 [ext_resource type="PackedScene" uid="uid://lqfemjgyr6pj" path="res://scenes/gamemanager.tscn" id="2_452jb"]
+[ext_resource type="PackedScene" uid="uid://cs61mac28xl2r" path="res://scenes/mailbox_dialog.tscn" id="5_p65c8"]
+[ext_resource type="PackedScene" uid="uid://d4beion478rs4" path="res://scenes/exchange_menu.tscn" id="6_8jpdh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_452jb"]
 radius = 39.4588
@@ -30,5 +32,13 @@ texture = ExtResource("2_276df")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(2, -11)
 shape = SubResource("CircleShape2D_452jb")
+
+[node name="mailtext" parent="." instance=ExtResource("5_p65c8")]
+visible = false
+position = Vector2(-184, -176)
+
+[node name="exchange_menu" parent="." instance=ExtResource("6_8jpdh")]
+visible = false
+position = Vector2(-120, -94)
 
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

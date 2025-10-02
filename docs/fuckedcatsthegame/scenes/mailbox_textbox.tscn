@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cou77t2100drp"]
+[gd_scene load_steps=2 format=3 uid="uid://cou77t2100drp"]
+
+[ext_resource type="PackedScene" uid="uid://bfuumhyh6qbst" path="res://scenes/square_sqigg.tscn" id="1_aw4s7"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,7 +14,11 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="text"]
+visible = false
 z_index = -2
 position = Vector2(437, 63)
 polygon = PackedVector2Array(-496, -88, 48, -88, 48, 392, -496, 392)
 uv = PackedVector2Array(-496, -88, -304, -88, -304, 0, -496, 0)
+
+[node name="Node2D" parent="text" instance=ExtResource("1_aw4s7")]
+position = Vector2(16, 2)
