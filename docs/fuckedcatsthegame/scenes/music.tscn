@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://eo2k2sus0p6l"]
-
-[ext_resource type="AudioStream" uid="uid://dh11snerkgrvb" path="res://Game assets/audio/Moon Germs.mp3" id="1_05ggv"]
-
-[node name="music" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_05ggv")
-max_distance = 1e+07
-panning_strength = 0.0
-parameters/looping = false
