@@ -667,6 +667,16 @@ overflow: auto; /* Enables scrolling when content exceeds max height */
  
  
   
+  .indicator7 {
+  
+  display: flex;
+  width: 300px;
+  height: auto; /* Maintains aspect ratio */
+ 
+ }
+ 
+
+  
  .indicator10 {
   
   display: flex;
