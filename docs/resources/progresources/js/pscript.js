@@ -1,5 +1,14 @@
 
 
+let urls = [
+  "project00.html", 
+  "project01.html", 
+  "project02.html", 
+  "project03.html"
+
+];
+
+
 
 let value = localStorage.getItem('enablemusic');
 console.log("MUSIC ENABLE VALUE:")
@@ -30,13 +39,6 @@ let option=0;
 
 
 
-let urls = [
-  "project00.html", 
-  "project01.html", 
-  "project02.html", 
-  "project03.html"
-
-];
 
 
  

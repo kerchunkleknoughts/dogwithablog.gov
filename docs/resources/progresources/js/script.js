@@ -1,6 +1,22 @@
 
 
 
+let urls = [
+  "dream00.html", 
+  "dream01.html", 
+  "dream02.html", 
+  "dream03.html", 
+  "dream04.html", 
+  "dream05.html", 
+  "dream06.html",
+  "dream07.html",
+  "dream08.html",
+  "dream09.html",
+  "dream10.html"
+
+];
+
+
 let option=0;
 
 
@@ -20,20 +36,6 @@ if(true){
   checkboxx();
 }
 
-let urls = [
-  "dream00.html", 
-  "dream01.html", 
-  "dream02.html", 
-  "dream03.html", 
-  "dream04.html", 
-  "dream05.html", 
-  "dream06.html",
-  "dream07.html",
-  "dream08.html",
-  "dream09.html",
-  "dream10.html"
-
-];
 
  
 
