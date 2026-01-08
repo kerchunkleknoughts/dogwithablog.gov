@@ -1,4 +1,24 @@
 [
+
+
+
+ { 
+  "path": "./resources/art/drawings/art 1-8-2026/20260101_124151.jpg"
+ },
+  { 
+    "path": "./resources/art/drawings/art 1-8-2026/20260101_124207.jpg" 
+  },
+  { "path": "./resources/art/drawings/art 1-8-2026/20260101_124225.jpg" },
+
+  { "path": "./resources/art/drawings/art 1-8-2026/20260107_192016.jpg" },
+
+  { "path": "./resources/art/drawings/art 1-8-2026/20260107_192033.jpg" },
+
+  { "path": "./resources/art/drawings/art 1-8-2026/20260107_192043.jpg" },
+
+
+
+
   {
     "path": "./resources/art/drawings/art 7-18-2025/20250718_093212.jpg"
   },
