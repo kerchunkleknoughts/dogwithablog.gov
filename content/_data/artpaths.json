@@ -1,6 +1,33 @@
 [
 
 
+ { 
+  "path": "./resources/art/drawings/new_art_6-6-2026/20260606_150122.jpg"
+ },
+ { 
+  "path": "./resources/art/drawings/new_art_6-6-2026/20260606_150401.jpg"
+ }, { 
+  "path": "./resources/art/drawings/new_art_6-6-2026/fuck you.png"
+ }, 
+ 
+ 
+ { 
+  "path": "./resources/art/drawings/new_art_6-6-2026/20260606_150217.jpg"
+ }, { 
+  "path": "./resources/art/drawings/new_art_6-6-2026/20260606_150324.jpg"
+ },
+
+
+ { 
+  "path": "./resources/art/drawings/new_art_6-6-2026/20260606_150311.jpg"
+ },
+
+  { 
+  "path": "./resources/art/drawings/new_art_6-6-2026/20260606_152216.jpg"
+ }
+
+  ,
+
 
  { 
   "path": "./resources/art/drawings/art 1-8-2026/20260101_124151.jpg"
@@ -228,4 +255,9 @@
   {
     "path": "./resources/art/drawings/oldest 4/soundofpreserverance.png"
   }
+
+
+
+
+
 ]
